@@ -1,0 +1,19 @@
+C:\Users\Public\Documents\01_PROGRAMACION\aa- plantilla de aplicacion REVIT\PlantillaDeAplicacionREVIT\bin\Debug\PlantillaDeAplicacionREVIT.bmp
+C:\Users\Public\Documents\01_PROGRAMACION\aa- plantilla de aplicacion REVIT\PlantillaDeAplicacionREVIT\bin\Debug\PlantillaDeAplicacionREVIT.addin
+C:\Users\Public\Documents\01_PROGRAMACION\aa- plantilla de aplicacion REVIT\PlantillaDeAplicacionREVIT\bin\Debug\PlantillaDeAplicacionREVIT.dll
+C:\Users\Public\Documents\01_PROGRAMACION\aa- plantilla de aplicacion REVIT\PlantillaDeAplicacionREVIT\bin\Debug\PlantillaDeAplicacionREVIT.pdb
+C:\Users\Public\Documents\01_PROGRAMACION\aa- plantilla de aplicacion REVIT\PlantillaDeAplicacionREVIT\obj\Debug\MainWindow.g.cs
+C:\Users\Public\Documents\01_PROGRAMACION\aa- plantilla de aplicacion REVIT\PlantillaDeAplicacionREVIT\obj\Debug\PlantillaDeAplicacionREVIT_MarkupCompile.cache
+C:\Users\Public\Documents\01_PROGRAMACION\aa- plantilla de aplicacion REVIT\PlantillaDeAplicacionREVIT\obj\Debug\PlantillaDeAplicacionREVIT_MarkupCompile.lref
+C:\Users\Public\Documents\01_PROGRAMACION\aa- plantilla de aplicacion REVIT\PlantillaDeAplicacionREVIT\obj\Debug\MainWindow.baml
+C:\Users\Public\Documents\01_PROGRAMACION\aa- plantilla de aplicacion REVIT\PlantillaDeAplicacionREVIT\obj\Debug\PlantillaDeAplicacionREVIT.g.resources
+C:\Users\Public\Documents\01_PROGRAMACION\aa- plantilla de aplicacion REVIT\PlantillaDeAplicacionREVIT\obj\Debug\PlantillaDeAplicacionREVIT.csproj.CoreCompileInputs.cache
+C:\Users\Public\Documents\01_PROGRAMACION\aa- plantilla de aplicacion REVIT\PlantillaDeAplicacionREVIT\obj\Debug\PlantillaDeAplicacionREVIT.dll
+C:\Users\Public\Documents\01_PROGRAMACION\aa- plantilla de aplicacion REVIT\PlantillaDeAplicacionREVIT\obj\Debug\PlantillaDeAplicacionREVIT.pdb
+C:\Users\Public\Documents\01_PROGRAMACION\aa- plantilla de aplicacion REVIT\PlantillaDeAplicacionREVIT\obj\Debug\PlantillaDeAplicacionREVIT.csprojAssemblyReference.cache
+C:\Users\Public\Documents\01_PROGRAMACION\aa- plantilla de aplicacion REVIT\PlantillaDeAplicacionREVIT\bin\Debug\es\PlantillaDeAplicacionREVIT.resources.dll
+C:\Users\Public\Documents\01_PROGRAMACION\aa- plantilla de aplicacion REVIT\PlantillaDeAplicacionREVIT\obj\Debug\PlantillaDeAplicacionREVIT.translations.MainWindow.resources
+C:\Users\Public\Documents\01_PROGRAMACION\aa- plantilla de aplicacion REVIT\PlantillaDeAplicacionREVIT\obj\Debug\PlantillaDeAplicacionREVIT.translations.MainWindow.es.resources
+C:\Users\Public\Documents\01_PROGRAMACION\aa- plantilla de aplicacion REVIT\PlantillaDeAplicacionREVIT\obj\Debug\PlantillaDeAplicacionREVIT.csproj.GenerateResource.cache
+C:\Users\Public\Documents\01_PROGRAMACION\aa- plantilla de aplicacion REVIT\PlantillaDeAplicacionREVIT\obj\Debug\es\PlantillaDeAplicacionREVIT.resources.dll
+C:\Users\Public\Documents\01_PROGRAMACION\aa- plantilla de aplicacion REVIT\PlantillaDeAplicacionREVIT\bin\Debug\tabla simple.rfa

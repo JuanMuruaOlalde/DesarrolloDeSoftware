@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>Pruebas_PAGES_Core</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CalculoSimple\CalculoSimple.csproj" />
+    <ProjectReference Include="..\Magnitudes\Magnitudes.csproj" />
+  </ItemGroup>
+
+</Project>

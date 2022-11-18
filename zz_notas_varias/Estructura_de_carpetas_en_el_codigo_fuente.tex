@@ -1,0 +1,158 @@
+\documentclass[spanish,12pt,a4paper,final,oneside]{article}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, total={15cm, 25cm}]{geometry}
+
+\addtolength{\skip\footins}{2pc plus 5pt}
+
+\usepackage{enumitem}
+\setlist{topsep=0pt}
+
+\usepackage{longtable}
+\setlength{\tabcolsep}{12pt}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\usepackage{graphicx}
+\graphicspath{ {./imagenes/} }
+
+\usepackage[colorlinks]{hyperref}
+\hypersetup{colorlinks=true}
+\hypersetup{urlcolor=blue}
+\usepackage{cleveref}
+
+\usepackage{fancyhdr}
+\fancyhf{}
+%\fancyhead[RE]{\small\scshape\nouppercase{\leftmark}}
+%\fancyhead[LO]{\small\scshape\nouppercase{\leftmark}}
+\fancyhead[LE,RO]{\small\thepage}
+\pagestyle{fancy}
+
+\usepackage{authoraftertitle}
+\title{Estructura de carpetas en el código fuente}
+\author{Juan Murua Olalde}
+\date{09/feb/2022}
+
+\begin{document}
+
+\begin{center}\begin{LARGE}
+\MyTitle
+\end{LARGE}\end{center}
+\begin{footnotesize}\rightline{inicio de redacción: \MyDate}
+\rightline{últimos cambios: \today}\end{footnotesize}
+
+\hypersetup{linkcolor=black}
+%\tableofcontents
+
+\vspace{1cm}
+
+Cada lenguaje tiene unas ``mejores prácticas'' y cada persona tiene sus propias preferencias personales. Así es que\ldots cada cual suele organizarse como le apetece.
+
+Esto es simplemente un resumen de ¿lo que suele ser más habitual?\ldots
+
+
+\section*{En C o C++}
+
+{\LARGE /} $\rightarrow$ directamente en la raiz suelen ir archivos tales como: CMakeLists.txt (makefile.txt,\ldots), README.md, LICENSE.md,\ldots 
+
+{\LARGE /bin/} $\rightarrow$ el programa ejecutable final resultante.
+
+{\LARGE /build/} $\rightarrow$ los productos intermedios del proceso de compilacion/linkado.
+
+{\LARGE /include/} $\rightarrow$ las cabeceras (.h) públicas.
+
+{\LARGE /installer/} $\rightarrow$ el código fuente o los archivos de configuración necesarios para preparar el programa instalador del programa ejecutable final para hacerlo llegar a las máquinas de los usuarios.
+
+{\LARGE /data/} $\rightarrow$ todo tipo de recursos necesarios para el funcionamiento del programa ejecutable final o de los test.
+
+{\LARGE /doc/} $\rightarrow$ documentación aclaratoria, información interesante,\ldots
+
+{\LARGE /lib/} $\rightarrow$ bibliotecas propias o de 3ros que se estén utilizando.
+
+{\LARGE /src/} $\rightarrow$ el código fuente (.h, .c, .cpp)
+
+{\LARGE /test/} $\rightarrow$ el código fuente de los test (.h, .c, .cpp)
+
+
+\vspace{0.5cm}
+
+nota: No tienen por qué utilizarse todas y cada una de las carpetas citadas. Por ejemplo, si no se usan bibliotecas, /lib/ no seria necesaria; o si no hay cabeceras públicas, /include/ no seria necesaria; o si no hay instalador, /installer/ no seria necesaria; etc. 
+\\La idea es crear cada carpeta cuando la necesitemos.
+
+\vspace{1cm}
+
+nota: Si el proyecto es muy grande, es muy posible que se necesiten subcarpetas dentro de algunas de las carpetas principales que se han citado.
+
+
+
+\section*{En java (Maven)} 
+
+{\LARGE /} $\rightarrow$ directamente en la raiz suelen ir archivos tales como: pom.xml, README.md, LICENSE.md,\ldots 
+
+{\LARGE /src/installer/} $\rightarrow$ el código fuente o los archivos de configuración necesarios para preparar el programa instalador del programa ejecutable final para hacerlo llegar a las máquinas de los usuarios.
+
+{\LARGE /src/main/java/} $\rightarrow$ el código fuente.
+
+{\LARGE /src/main/resources/} $\rightarrow$ todo tipo de recursos necesarios para el funcionamiento del programa ejecutable final.
+
+{\LARGE /src/test/java/} $\rightarrow$ el código fuente de los test.
+
+{\LARGE /src/test/resources/} $\rightarrow$ todo tipo de recursos necesarios para la ejecución de los test.
+
+{\LARGE /target/} $\rightarrow$ el programa ejecutable final resultante.
+
+\vspace{0.5cm}
+
+nota: En java se suelen utilizar `packages' para organizar el código y evitar colisiones de nombres (parecido a los `namespaces' en otros lenguajes). Y la convención es bastante estricta: la estructura de los nombres de los paquetes ha de coincidir con la estructura de las carpetas en el disco.
+\\Si tenemos un dominio distintivo propio (por ejemplo susosise.es), lo habitual es utilizar la convención de ``url inversa'': por ejemplo, el paquete con el módulo de almacén iría en la carpeta `es', con la carpeta `susosise' dentro de ella, con la carpeta `almacen' dentro de ella $\rightarrow$ package `es.susosise.almacen'.
+\\En Maven quedaria así $\rightarrow$  /src/main/java/es/susosise/almacen/
+
+
+\section*{En Python}
+
+{\LARGE /} $\rightarrow$ directamente en la raiz suelen ir archivos tales como: setup.py, README.md, LICENSE.md, requirements.txt,\ldots 
+
+{\LARGE /nombredeproyecto/} $\rightarrow$ el código fuente de nuestro proyecto ``nombredeproyecto''.
+
+Otras carpetas, si lo estimamos necesario.
+
+
+\section*{En C\#}
+
+Cuando se crea un proyecto en Visual Studio, el asistente genera un esqueleto base según el tipo de proyecto. Sobre él podemos ir construyendo. Eso sí, procurando seguir y respetar las convenciones plasmadas en él (si seguimos las convenciones propuestas por Microsoft, el trabajo será más fácil y nos ahorraremos problemas).
+
+
+\section*{En un servidor web}
+
+{\LARGE /} $\rightarrow$ directamente en la raiz suelen ir archivos tales como: {\LARGE index.html} (la página de inicio por defecto),\ldots.
+
+{\LARGE /styles} $\rightarrow$ los archivos .css y otros recursos para aplicar estilos generales.
+
+{\LARGE /images} $\rightarrow$ fotos y gráficos generales.
+
+{\LARGE /scripts} $\rightarrow$ código javascript.
+
+{\LARGE /lib} $\rightarrow$ bibliotecas que necesiten los scripts.
+
+{\LARGE /pages} $\rightarrow$ las páginas del sitio web
+\\nota: En webs grandes, en lugar de `pages', irán diferentes carpetas; una para cada categoria contemplada. Suele ser importante que las carpetas tengan nombres descriptivos, para que las URLs resultantes sean semáticamente significativas.
+
+\vspace{1cm}
+
+La gente que prefiere nombres cortos, suele usar tres letras:
+\begin{LARGE}
+\\/
+\\/css
+\\/img
+\\/js
+\\/lib
+\end{LARGE}
+
+
+
+
+\end{document}

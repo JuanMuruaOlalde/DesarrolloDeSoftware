@@ -1,0 +1,124 @@
+\expandafter\ifx\csname doTocEntry\endcsname\relax \expandafter\endinput\fi
+\doTocEntry\toclikechapter{}{\csname a:TocLink\endcsname{1}{x1-1000}{QQ2-1-1}{Índice general}}{2}\relax 
+\doTocEntry\toclikechapter{}{\csname a:TocLink\endcsname{1}{x1-2000}{QQ2-1-2}{Prefacio}}{5}\relax 
+\doTocEntry\tocchapter{1}{\csname a:TocLink\endcsname{1}{x1-30001}{QQ2-1-3}{Un entorno sobre el que practicar}}{6}\relax 
+\doTocEntry\tocsection{1.1}{\csname a:TocLink\endcsname{1}{x1-40001.1}{QQ2-1-4}{Las herramientas básicas: editor, compilador, enlazador, depurador,\ldots  }}{6}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-4005}{}{\numberline {1.1}{\ignorespaces \lst@@caption }}}{6}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-4015}{}{\numberline {1.2}{\ignorespaces \lst@@caption }}}{7}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-4027}{}{\numberline {1.3}{\ignorespaces \lst@@caption }}}{7}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-4039}{}{\numberline {1.4}{\ignorespaces \lst@@caption }}}{7}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-4050}{}{\numberline {1.5}{\ignorespaces \lst@@caption }}}{8}\relax 
+\doTocEntry\tocsection{1.2}{\csname a:TocLink\endcsname{1}{x1-50001.2}{QQ2-1-15}{Algunas sugerencias rápidas}}{8}\relax 
+\doTocEntry\tocsection{1.3}{\csname a:TocLink\endcsname{1}{x1-60001.3}{QQ2-1-16}{Comentarios acerca de otras posibilidades}}{10}\relax 
+\doTocEntry\tocchapter{2}{\csname a:TocLink\endcsname{1}{x1-70002}{QQ2-1-17}{Bibliotecas de funciones: el pilar de la programación.}}{12}\relax 
+\doTocEntry\tocchapter{3}{\csname a:TocLink\endcsname{1}{x1-80003}{QQ2-1-18}{Las variables: cómo se maneja información dentro de un programa.}}{15}\relax 
+\doTocEntry\tocsection{3.1}{\csname a:TocLink\endcsname{1}{x1-90003.1}{QQ2-1-19}{El concepto de `variable' \\ y el concepto de `tipo'}}{15}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-9002}{}{\numberline {3.1}{\ignorespaces \lst@@caption }}}{15}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-9022}{}{\numberline {3.2}{\ignorespaces \lst@@caption }}}{16}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-9046}{}{\numberline {3.3}{\ignorespaces \lst@@caption }}}{16}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-9080}{}{\numberline {3.4}{\ignorespaces \lst@@caption }}}{17}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-9099}{}{\numberline {3.5}{\ignorespaces \lst@@caption }}}{17}\relax 
+\doTocEntry\tocsection{3.2}{\csname a:TocLink\endcsname{1}{x1-100003.2}{QQ2-1-30}{El concepto de `alcance' (scope)}}{18}\relax 
+\doTocEntry\tocsection{3.3}{\csname a:TocLink\endcsname{1}{x1-110003.3}{QQ2-1-31}{Una variable puede contener un valor simple o un valor compuesto}}{19}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-11002}{}{\numberline {3.6}{\ignorespaces \lst@@caption }}}{20}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-11037}{}{\numberline {3.7}{\ignorespaces \lst@@caption }}}{21}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-11097}{}{\numberline {3.8}{\ignorespaces \lst@@caption }}}{22}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-11137}{}{\numberline {3.9}{\ignorespaces \lst@@caption }}}{23}\relax 
+\doTocEntry\tocsection{3.4}{\csname a:TocLink\endcsname{1}{x1-120003.4}{QQ2-1-40}{Algunos consejos prácticos}}{24}\relax 
+\doTocEntry\tocsubsection{3.4.1}{\csname a:TocLink\endcsname{1}{x1-130003.4.1}{QQ2-1-41}{La importancia de poner nombres claros y descriptivos a las variables.}}{25}\relax 
+\doTocEntry\tocsubsection{3.4.2}{\csname a:TocLink\endcsname{1}{x1-140003.4.2}{QQ2-1-42}{La importancia de los tipos de datos.}}{25}\relax 
+\doTocEntry\tocchapter{4}{\csname a:TocLink\endcsname{1}{x1-150004}{QQ2-1-43}{La consola de comandos: el interfaz de usuario más simple.}}{26}\relax 
+\doTocEntry\tocsection{4.1}{\csname a:TocLink\endcsname{1}{x1-160004.1}{QQ2-1-44}{Mostrar texto en la pantalla}}{26}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-16009}{}{\numberline {4.1}{\ignorespaces \lst@@caption }}}{26}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-16046}{}{\numberline {4.2}{\ignorespaces \lst@@caption }}}{27}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-16087}{}{\numberline {4.3}{\ignorespaces \lst@@caption }}}{28}\relax 
+\doTocEntry\tocsection{4.2}{\csname a:TocLink\endcsname{1}{x1-170004.2}{QQ2-1-51}{Recoger lo que se teclea en el teclado}}{30}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-17007}{}{\numberline {4.4}{\ignorespaces \lst@@caption }}}{30}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-17026}{}{\numberline {4.5}{\ignorespaces \lst@@caption }}}{31}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-17052}{}{\numberline {4.6}{\ignorespaces \lst@@caption }}}{31}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-17080}{}{\numberline {4.7}{\ignorespaces \lst@@caption }}}{32}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-17107}{}{\numberline {4.8}{\ignorespaces \lst@@caption }}}{33}\relax 
+\doTocEntry\tocchapter{5}{\csname a:TocLink\endcsname{1}{x1-180005}{QQ2-1-62}{El flujo de ejecución: cómo gobernar lo que se va ejecutando.}}{34}\relax 
+\doTocEntry\tocsection{5.1}{\csname a:TocLink\endcsname{1}{x1-190005.1}{QQ2-1-63}{Ramas condicionales: IF/ELSE}}{34}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-19006}{}{\numberline {5.1}{\ignorespaces \lst@@caption }}}{34}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-19037}{}{\numberline {5.2}{\ignorespaces \lst@@caption }}}{35}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-19078}{}{\numberline {5.3}{\ignorespaces \lst@@caption }}}{36}\relax 
+\doTocEntry\tocsection{5.2}{\csname a:TocLink\endcsname{1}{x1-200005.2}{QQ2-1-70}{Múltiples ramas condicionales: SWITCH}}{37}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-20002}{}{\numberline {5.4}{\ignorespaces \lst@@caption }}}{37}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-20031}{}{\numberline {5.5}{\ignorespaces \lst@@caption }}}{37}\relax 
+\doTocEntry\tocsection{5.3}{\csname a:TocLink\endcsname{1}{x1-210005.3}{QQ2-1-75}{Bucles condicionales: WHILE}}{38}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-21006}{}{\numberline {5.6}{\ignorespaces \lst@@caption }}}{39}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-21045}{}{\numberline {5.7}{\ignorespaces \lst@@caption }}}{40}\relax 
+\doTocEntry\tocsection{5.4}{\csname a:TocLink\endcsname{1}{x1-220005.4}{QQ2-1-80}{Bucles repetitivos: FOR, FOREACH}}{41}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-22004}{}{\numberline {5.8}{\ignorespaces \lst@@caption }}}{41}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-22020}{}{\numberline {5.9}{\ignorespaces \lst@@caption }}}{42}\relax 
+\doTocEntry\tocchapter{6}{\csname a:TocLink\endcsname{1}{x1-230006}{QQ2-1-85}{Las estructuras de datos: cómo organizar la información a manejar.}}{43}\relax 
+\doTocEntry\tocsection{6.1}{\csname a:TocLink\endcsname{1}{x1-240006.1}{QQ2-1-86}{Colecciones simples de valores: ARRAY}}{43}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-24002}{}{\numberline {6.1}{\ignorespaces \lst@@caption }}}{43}\relax 
+\doTocEntry\tocsection{6.2}{\csname a:TocLink\endcsname{1}{x1-250006.2}{QQ2-1-89}{Valores predefinidos: ENUM}}{45}\relax 
+\doTocEntry\tocsection{6.3}{\csname a:TocLink\endcsname{1}{x1-260006.3}{QQ2-1-90}{Colecciones de valores:}}{45}\relax 
+\doTocEntry\tocsubsection{6.3.1}{\csname a:TocLink\endcsname{1}{x1-270006.3.1}{QQ2-1-91}{Listas de valores individuales: LIST}}{45}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-27002}{}{\numberline {6.2}{\ignorespaces \lst@@caption }}}{46}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-27062}{}{\numberline {6.3}{\ignorespaces \lst@@caption }}}{47}\relax 
+\doTocEntry\tocsubsection{6.3.2}{\csname a:TocLink\endcsname{1}{x1-280006.3.2}{QQ2-1-96}{Diccionarios de pares clave-valor: DICTIONARY}}{49}\relax 
+\doTocEntry\tocsection{6.4}{\csname a:TocLink\endcsname{1}{x1-290006.4}{QQ2-1-97}{Otras colecciones para usos especializados}}{49}\relax 
+\doTocEntry\tocsection{6.5}{\csname a:TocLink\endcsname{1}{x1-300006.5}{QQ2-1-98}{Un valor puede ser compuesto: OBJETOS y TUPLAS}}{50}\relax 
+\doTocEntry\tocchapter{7}{\csname a:TocLink\endcsname{1}{x1-310007}{QQ2-1-99}{Los archivos de texto plano: el almacenamiento persistente más simple.}}{52}\relax 
+\doTocEntry\tocsection{7.1}{\csname a:TocLink\endcsname{1}{x1-320007.1}{QQ2-1-100}{Escribir/leer algo en/de un archivo de texto}}{52}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-32002}{}{\numberline {7.1}{\ignorespaces \lst@@caption }}}{52}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-32037}{}{\numberline {7.2}{\ignorespaces \lst@@caption }}}{52}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-32106}{}{\numberline {7.3}{\ignorespaces \lst@@caption }}}{54}\relax 
+\doTocEntry\tocsection{7.2}{\csname a:TocLink\endcsname{1}{x1-330007.2}{QQ2-1-107}{Organizar la información dentro del archivo}}{55}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-33055}{}{\numberline {7.4}{\ignorespaces \lst@@caption }}}{57}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-33122}{}{\numberline {7.5}{\ignorespaces \lst@@caption }}}{58}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-33124}{}{\numberline {7.6}{\ignorespaces \lst@@caption }}}{58}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-33243}{}{\numberline {7.7}{\ignorespaces \lst@@caption }}}{61}\relax 
+\doTocEntry\tocchapter{8}{\csname a:TocLink\endcsname{1}{x1-340008}{QQ2-1-116}{Desarrollando buenos hábitos desde el principio: tratamiento de situaciones excepcionales, TRY\ldots  CATCH \ldots  FINALLY}}{65}\relax 
+\doTocEntry\tocchapter{9}{\csname a:TocLink\endcsname{1}{x1-350009}{QQ2-1-117}{Desarrollando buenos hábitos desde el principio: organizar el código en módulos, funciones,\ldots  }}{68}\relax 
+\doTocEntry\tocsection{9.1}{\csname a:TocLink\endcsname{1}{x1-360009.1}{QQ2-1-118}{Estructuración básica de una aplicación en funciones (programación `estructurada')}}{68}\relax 
+\doTocEntry\tocsection{9.2}{\csname a:TocLink\endcsname{1}{x1-370009.2}{QQ2-1-119}{Algunos consejos prácticos}}{68}\relax 
+\doTocEntry\tocsubsection{9.2.1}{\csname a:TocLink\endcsname{1}{x1-380009.2.1}{QQ2-1-120}{Usar nombres claros y descriptivos}}{68}\relax 
+\doTocEntry\tocsubsection{9.2.2}{\csname a:TocLink\endcsname{1}{x1-390009.2.2}{QQ2-1-121}{Organizar bien el código}}{68}\relax 
+\doTocEntry\tocsubsection{9.2.3}{\csname a:TocLink\endcsname{1}{x1-400009.2.3}{QQ2-1-122}{Refactorizar de forma continua (y sin miedo)}}{69}\relax 
+\doTocEntry\tocsection{9.3}{\csname a:TocLink\endcsname{1}{x1-410009.3}{QQ2-1-123}{Unas breves pinceladas acerca de formas más avanzadas de estructuración}}{70}\relax 
+\doTocEntry\tocsubsection{9.3.1}{\csname a:TocLink\endcsname{1}{x1-420009.3.1}{QQ2-1-124}{Programación `orientada a objeto' (OO)}}{70}\relax 
+\doTocEntry\tocsubsection{9.3.2}{\csname a:TocLink\endcsname{1}{x1-430009.3.2}{QQ2-1-125}{Arquitecturas `limpias' (multi-capa)}}{70}\relax 
+\doTocEntry\tocchapter{10}{\csname a:TocLink\endcsname{1}{x1-4400010}{QQ2-1-126}{Breve introducción al interface de usuario más utilizado hoy en día: \\GUI (Graphical User Interface)}}{72}\relax 
+\doTocEntry\tocsection{10.1}{\csname a:TocLink\endcsname{1}{x1-4500010.1}{QQ2-1-127}{Cómo mostrar una ventana y unos controles en ella}}{72}\relax 
+\doTocEntry\tocsection{10.2}{\csname a:TocLink\endcsname{1}{x1-4600010.2}{QQ2-1-128}{El concepto de `bucle de eventos'}}{72}\relax 
+\doTocEntry\tocsection{10.3}{\csname a:TocLink\endcsname{1}{x1-4700010.3}{QQ2-1-129}{La interacción básica: usuario$\rightarrow $control$\rightarrow $codigo \\ y viceversa, código$\rightarrow $control$\rightarrow $usuario}}{73}\relax 
+\doTocEntry\tocchapter{11}{\csname a:TocLink\endcsname{1}{x1-4800011}{QQ2-1-130}{Breve introducción a los almacenamientos persistentes más utilizados hoy en día.}}{74}\relax 
+\doTocEntry\tocsection{11.1}{\csname a:TocLink\endcsname{1}{x1-4900011.1}{QQ2-1-131}{Formatos para organizar información dentro de archivos de texto}}{74}\relax 
+\doTocEntry\tocsubsection{11.1.1}{\csname a:TocLink\endcsname{1}{x1-5000011.1.1}{QQ2-1-132}{valores delimitados con separadores}}{74}\relax 
+\doTocEntry\tocsubsection{11.1.2}{\csname a:TocLink\endcsname{1}{x1-5100011.1.2}{QQ2-1-133}{JSON}}{75}\relax 
+\doTocEntry\tocsubsection{11.1.3}{\csname a:TocLink\endcsname{1}{x1-5200011.1.3}{QQ2-1-134}{XML}}{75}\relax 
+\doTocEntry\tocsection{11.2}{\csname a:TocLink\endcsname{1}{x1-5300011.2}{QQ2-1-135}{Bases de datos relacionales.}}{75}\relax 
+\doTocEntry\tocsection{11.3}{\csname a:TocLink\endcsname{1}{x1-5400011.3}{QQ2-1-136}{Otros tipos de bases de datos: no-SQL, semáticas,\ldots  }}{76}\relax 
+\doTocEntry\tocchapter{12}{\csname a:TocLink\endcsname{1}{x1-5500012}{QQ2-1-137}{Desarrollando buenos hábitos desde el principio: implementar tests en el propio código.}}{77}\relax 
+\doTocEntry\tocchapter{13}{\csname a:TocLink\endcsname{1}{x1-5600013}{QQ2-1-138}{Desarrollando buenos hábitos desde el principio: guardar el código en un gestor de versiones.}}{78}\relax 
+\doTocEntry\tocchapter{14}{\csname a:TocLink\endcsname{1}{x1-5700014}{QQ2-1-139}{Apéndices}}{79}\relax 
+\doTocEntry\tocsection{14.1}{\csname a:TocLink\endcsname{1}{x1-5800014.1}{QQ2-1-140}{Manos a la obra (1): herramientas para el lenguaje escogido}}{79}\relax 
+\doTocEntry\tocsubsection{14.1.1}{\csname a:TocLink\endcsname{1}{x1-5900014.1.1}{QQ2-1-141}{lenguaje Python}}{79}\relax 
+\doTocEntry\tocsubsection{14.1.2}{\csname a:TocLink\endcsname{1}{x1-6000014.1.2}{QQ2-1-142}{lenguaje Java}}{79}\relax 
+\doTocEntry\tocsubsection{14.1.3}{\csname a:TocLink\endcsname{1}{x1-6100014.1.3}{QQ2-1-143}{lenguaje C#}}{80}\relax 
+\doTocEntry\tocsubsection{14.1.4}{\csname a:TocLink\endcsname{1}{x1-6200014.1.4}{QQ2-1-144}{lenguaje C o C++}}{80}\relax 
+\doTocEntry\tocsection{14.2}{\csname a:TocLink\endcsname{1}{x1-6300014.2}{QQ2-1-145}{Manos a la obra (2): un entorno de trabajo gráfico integrado (IDE)}}{81}\relax 
+\doTocEntry\tocsubsection{14.2.1}{\csname a:TocLink\endcsname{1}{x1-6400014.2.1}{QQ2-1-146}{Geany}}{81}\relax 
+\doTocEntry\tocsubsection{14.2.2}{\csname a:TocLink\endcsname{1}{x1-6500014.2.2}{QQ2-1-147}{BlueJ}}{82}\relax 
+\doTocEntry\tocsubsection{14.2.3}{\csname a:TocLink\endcsname{1}{x1-6600014.2.3}{QQ2-1-148}{Jet Brains edu}}{82}\relax 
+\doTocEntry\tocsubsection{14.2.4}{\csname a:TocLink\endcsname{1}{x1-6700014.2.4}{QQ2-1-149}{Visual Studio Code}}{82}\relax 
+\doTocEntry\tocsection{14.3}{\csname a:TocLink\endcsname{1}{x1-6800014.3}{QQ2-1-150}{Manos a la obra (3): comentarios y consejos varios}}{83}\relax 
+\doTocEntry\tocsubsection{14.3.1}{\csname a:TocLink\endcsname{1}{x1-6900014.3.1}{QQ2-1-151}{Algunas peculiaridades de la sintaxis de Python}}{83}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-69002}{}{\numberline {14.1}{\ignorespaces \lst@@caption }}}{83}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-69035}{}{\numberline {14.2}{\ignorespaces \lst@@caption }}}{84}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-69066}{}{\numberline {14.3}{\ignorespaces \lst@@caption }}}{85}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-69091}{}{\numberline {14.4}{\ignorespaces \lst@@caption }}}{85}\relax 
+\doTocEntry\tocsubsection{14.3.2}{\csname a:TocLink\endcsname{1}{x1-7000014.3.2}{QQ2-1-160}{El gestor de paquetes de Python}}{86}\relax 
+\doTocEntry\tocsubsection{14.3.3}{\csname a:TocLink\endcsname{1}{x1-7100014.3.3}{QQ2-1-161}{Uso del IDE Geany}}{87}\relax 
+\doTocEntry\tocsubsection{14.3.4}{\csname a:TocLink\endcsname{1}{x1-7200014.3.4}{QQ2-1-162}{Uso del IDE Visual Studio Code}}{88}\relax 
+\doTocEntry\tocsection{14.4}{\csname a:TocLink\endcsname{1}{x1-7300014.4}{QQ2-1-163}{Enlaces a referencias sobre la sintaxis de los lenguajes y sus bibliotecas base}}{89}\relax 
+\doTocEntry\tocsubsection{14.4.1}{\csname a:TocLink\endcsname{1}{x1-7400014.4.1}{QQ2-1-164}{referencias Python}}{89}\relax 
+\doTocEntry\tocsubsection{14.4.2}{\csname a:TocLink\endcsname{1}{x1-7500014.4.2}{QQ2-1-165}{referencias Java}}{89}\relax 
+\doTocEntry\tocsubsection{14.4.3}{\csname a:TocLink\endcsname{1}{x1-7600014.4.3}{QQ2-1-166}{referencias C#}}{90}\relax 
+\doTocEntry\tocsubsection{14.4.4}{\csname a:TocLink\endcsname{1}{x1-7700014.4.4}{QQ2-1-167}{referencias C o C++}}{90}\relax 
+\doTocEntry\tocsection{14.5}{\csname a:TocLink\endcsname{1}{x1-7800014.5}{QQ2-1-168}{Enlaces a referencias sobre bibliotecas de funciones}}{91}\relax 

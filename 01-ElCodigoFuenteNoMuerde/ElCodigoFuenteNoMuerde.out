@@ -1,0 +1,76 @@
+\BOOKMARK [0][-]{chapter.1}{Un entorno sobre el que practicar}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Las herramientas b\341sicas: editor, compilador, enlazador, depurador,\203}{chapter.1}% 2
+\BOOKMARK [1][-]{section.1.2}{Algunas sugerencias r\341pidas}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.3}{Comentarios acerca de otras posibilidades}{chapter.1}% 4
+\BOOKMARK [0][-]{chapter.2}{Bibliotecas de funciones: el pilar de la programaci\363n.}{}% 5
+\BOOKMARK [0][-]{chapter.3}{Las variables: c\363mo se maneja informaci\363n dentro de un programa.}{}% 6
+\BOOKMARK [1][-]{section.3.1}{El concepto de `variable' \040y el concepto de `tipo'}{chapter.3}% 7
+\BOOKMARK [1][-]{section.3.2}{El concepto de `alcance' \(scope\)}{chapter.3}% 8
+\BOOKMARK [1][-]{section.3.3}{Una variable puede contener un valor simple o un valor compuesto}{chapter.3}% 9
+\BOOKMARK [1][-]{section.3.4}{Algunos consejos pr\341cticos}{chapter.3}% 10
+\BOOKMARK [2][-]{subsection.3.4.1}{La importancia de poner nombres claros y descriptivos a las variables.}{section.3.4}% 11
+\BOOKMARK [2][-]{subsection.3.4.2}{La importancia de los tipos de datos.}{section.3.4}% 12
+\BOOKMARK [0][-]{chapter.4}{La consola de comandos: el interfaz de usuario m\341s simple.}{}% 13
+\BOOKMARK [1][-]{section.4.1}{Mostrar texto en la pantalla}{chapter.4}% 14
+\BOOKMARK [1][-]{section.4.2}{Recoger lo que se teclea en el teclado}{chapter.4}% 15
+\BOOKMARK [0][-]{chapter.5}{El flujo de ejecuci\363n: c\363mo gobernar lo que se va ejecutando.}{}% 16
+\BOOKMARK [1][-]{section.5.1}{Ramas condicionales: IF/ELSE}{chapter.5}% 17
+\BOOKMARK [1][-]{section.5.2}{M\372ltiples ramas condicionales: SWITCH}{chapter.5}% 18
+\BOOKMARK [1][-]{section.5.3}{Bucles condicionales: WHILE}{chapter.5}% 19
+\BOOKMARK [1][-]{section.5.4}{Bucles repetitivos: FOR, FOREACH}{chapter.5}% 20
+\BOOKMARK [0][-]{chapter.6}{Las estructuras de datos: c\363mo organizar la informaci\363n a manejar.}{}% 21
+\BOOKMARK [1][-]{section.6.1}{Colecciones simples de valores: ARRAY}{chapter.6}% 22
+\BOOKMARK [1][-]{section.6.2}{Valores predefinidos: ENUM}{chapter.6}% 23
+\BOOKMARK [1][-]{section.6.3}{Colecciones de valores:}{chapter.6}% 24
+\BOOKMARK [2][-]{subsection.6.3.1}{Listas de valores individuales: LIST}{section.6.3}% 25
+\BOOKMARK [2][-]{subsection.6.3.2}{Diccionarios de pares clave-valor: DICTIONARY}{section.6.3}% 26
+\BOOKMARK [1][-]{section.6.4}{Otras colecciones para usos especializados}{chapter.6}% 27
+\BOOKMARK [1][-]{section.6.5}{Un valor puede ser compuesto: OBJETOS y TUPLAS}{chapter.6}% 28
+\BOOKMARK [0][-]{chapter.7}{Los archivos de texto plano: el almacenamiento persistente m\341s simple.}{}% 29
+\BOOKMARK [1][-]{section.7.1}{Escribir/leer algo en/de un archivo de texto}{chapter.7}% 30
+\BOOKMARK [1][-]{section.7.2}{Organizar la informaci\363n dentro del archivo}{chapter.7}% 31
+\BOOKMARK [0][-]{chapter.8}{Desarrollando buenos h\341bitos desde el principio: tratamiento de situaciones excepcionales, TRY\203CATCH \203FINALLY}{}% 32
+\BOOKMARK [0][-]{chapter.9}{Desarrollando buenos h\341bitos desde el principio: organizar el c\363digo en m\363dulos, funciones,\203}{}% 33
+\BOOKMARK [1][-]{section.9.1}{Estructuraci\363n b\341sica de una aplicaci\363n en funciones \(programaci\363n `estructurada'\)}{chapter.9}% 34
+\BOOKMARK [1][-]{section.9.2}{Algunos consejos pr\341cticos}{chapter.9}% 35
+\BOOKMARK [2][-]{subsection.9.2.1}{Usar nombres claros y descriptivos}{section.9.2}% 36
+\BOOKMARK [2][-]{subsection.9.2.2}{Organizar bien el c\363digo}{section.9.2}% 37
+\BOOKMARK [2][-]{subsection.9.2.3}{Refactorizar de forma continua \(y sin miedo\)}{section.9.2}% 38
+\BOOKMARK [1][-]{section.9.3}{Unas breves pinceladas acerca de formas m\341s avanzadas de estructuraci\363n}{chapter.9}% 39
+\BOOKMARK [2][-]{subsection.9.3.1}{Programaci\363n `orientada a objeto' \(OO\)}{section.9.3}% 40
+\BOOKMARK [2][-]{subsection.9.3.2}{Arquitecturas `limpias' \(multi-capa\)}{section.9.3}% 41
+\BOOKMARK [0][-]{chapter.10}{Breve introducci\363n al interface de usuario m\341s utilizado hoy en d\355a: GUI \(Graphical User Interface\)}{}% 42
+\BOOKMARK [1][-]{section.10.1}{C\363mo mostrar una ventana y unos controles en ella}{chapter.10}% 43
+\BOOKMARK [1][-]{section.10.2}{El concepto de `bucle de eventos'}{chapter.10}% 44
+\BOOKMARK [1][-]{section.10.3}{La interacci\363n b\341sica: usuariocontrolcodigo \040y viceversa, c\363digocontrolusuario}{chapter.10}% 45
+\BOOKMARK [0][-]{chapter.11}{Breve introducci\363n a los almacenamientos persistentes m\341s utilizados hoy en d\355a.}{}% 46
+\BOOKMARK [1][-]{section.11.1}{Formatos para organizar informaci\363n dentro de archivos de texto}{chapter.11}% 47
+\BOOKMARK [2][-]{subsection.11.1.1}{valores delimitados con separadores}{section.11.1}% 48
+\BOOKMARK [2][-]{subsection.11.1.2}{JSON}{section.11.1}% 49
+\BOOKMARK [2][-]{subsection.11.1.3}{XML}{section.11.1}% 50
+\BOOKMARK [1][-]{section.11.2}{Bases de datos relacionales.}{chapter.11}% 51
+\BOOKMARK [1][-]{section.11.3}{Otros tipos de bases de datos: no-SQL, sem\341ticas,\203}{chapter.11}% 52
+\BOOKMARK [0][-]{chapter.12}{Desarrollando buenos h\341bitos desde el principio: implementar tests en el propio c\363digo.}{}% 53
+\BOOKMARK [0][-]{chapter.13}{Desarrollando buenos h\341bitos desde el principio: guardar el c\363digo en un gestor de versiones.}{}% 54
+\BOOKMARK [0][-]{chapter.14}{Ap\351ndices}{}% 55
+\BOOKMARK [1][-]{section.14.1}{Manos a la obra \(1\): herramientas para el lenguaje escogido}{chapter.14}% 56
+\BOOKMARK [2][-]{subsection.14.1.1}{lenguaje Python}{section.14.1}% 57
+\BOOKMARK [2][-]{subsection.14.1.2}{lenguaje Java}{section.14.1}% 58
+\BOOKMARK [2][-]{subsection.14.1.3}{lenguaje C\043}{section.14.1}% 59
+\BOOKMARK [2][-]{subsection.14.1.4}{lenguaje C o C++}{section.14.1}% 60
+\BOOKMARK [1][-]{section.14.2}{Manos a la obra \(2\): un entorno de trabajo gr\341fico integrado \(IDE\)}{chapter.14}% 61
+\BOOKMARK [2][-]{subsection.14.2.1}{Geany}{section.14.2}% 62
+\BOOKMARK [2][-]{subsection.14.2.2}{BlueJ}{section.14.2}% 63
+\BOOKMARK [2][-]{subsection.14.2.3}{Jet Brains edu}{section.14.2}% 64
+\BOOKMARK [2][-]{subsection.14.2.4}{Visual Studio Code}{section.14.2}% 65
+\BOOKMARK [1][-]{section.14.3}{Manos a la obra \(3\): comentarios y consejos varios}{chapter.14}% 66
+\BOOKMARK [2][-]{subsection.14.3.1}{Algunas peculiaridades de la sintaxis de Python}{section.14.3}% 67
+\BOOKMARK [2][-]{subsection.14.3.2}{El gestor de paquetes de Python}{section.14.3}% 68
+\BOOKMARK [2][-]{subsection.14.3.3}{Uso del IDE Geany}{section.14.3}% 69
+\BOOKMARK [2][-]{subsection.14.3.4}{Uso del IDE Visual Studio Code}{section.14.3}% 70
+\BOOKMARK [1][-]{section.14.4}{Enlaces a referencias sobre la sintaxis de los lenguajes y sus bibliotecas base}{chapter.14}% 71
+\BOOKMARK [2][-]{subsection.14.4.1}{referencias Python}{section.14.4}% 72
+\BOOKMARK [2][-]{subsection.14.4.2}{referencias Java}{section.14.4}% 73
+\BOOKMARK [2][-]{subsection.14.4.3}{referencias C\043}{section.14.4}% 74
+\BOOKMARK [2][-]{subsection.14.4.4}{referencias C o C++}{section.14.4}% 75
+\BOOKMARK [1][-]{section.14.5}{Enlaces a referencias sobre bibliotecas de funciones}{chapter.14}% 76

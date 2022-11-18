@@ -1,0 +1,229 @@
+\expandafter\ifx\csname doTocEntry\endcsname\relax \expandafter\endinput\fi 
+\doTocEntry\toclikechapter{}{\csname a:TocLink\endcsname{1}{x1-1000}{QQ2-1-1}{Índice general}}{2}\relax 
+\doTocEntry\toclikechapter{}{\csname a:TocLink\endcsname{1}{x1-2000}{QQ2-1-2}{Requisitos previos}}{3}\relax 
+\doTocEntry\tocchapter{1}{\csname a:TocLink\endcsname{1}{x1-30001}{QQ2-1-3}{Técnicas de trabajo}}{5}\relax 
+\doTocEntry\tocsection{1.1}{\csname a:TocLink\endcsname{1}{x1-40001.1}{QQ2-1-4}{Control de versiones}}{5}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{1}{x1-50001.1}{QQ2-1-5}{Breve introducción a Git y Sourcetree}}{5}\relax 
+\doTocEntry\tocsection{1.2}{\csname a:TocLink\endcsname{1}{x1-60001.2}{QQ2-1-6}{Test unitarios}}{9}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{1}{x1-70001.2}{QQ2-1-7}{Un ejemplo:}}{10}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{1}{x1-80001.2}{QQ2-1-8}{Otro ejemplo:}}{12}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{1}{x1-90001.2}{QQ2-1-9}{Breve introducción a JUnit4}}{13}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{1}{x1-100001.2}{QQ2-1-10}{Breve introducción a QTest}}{16}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{1}{x1-110001.2}{QQ2-1-11}{Breve introducción a los proyectos test de Visual Studio}}{16}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{1}{x1-120001.2}{QQ2-1-12}{Breve introducción a unittest}}{17}\relax 
+\doTocEntry\tocsection{1.3}{\csname a:TocLink\endcsname{1}{x1-130001.3}{QQ2-1-13}{Refactorizar}}{17}\relax 
+\doTocEntry\tocchapter{2}{\csname a:TocLink\endcsname{1}{x1-140002}{QQ2-1-14}{Interfaz gráfico de usuario: GUI \small  {(Graphic User Interface)}}}{19}\relax 
+\doTocEntry\tocsection{2.1}{\csname a:TocLink\endcsname{1}{x1-150002.1}{QQ2-1-15}{Formas de construirlos}}{19}\relax 
+\doTocEntry\tocsubsection{2.1.1}{\csname a:TocLink\endcsname{1}{x1-160002.1.1}{QQ2-1-16}{Indicando ubicaciones y dimensiones fijas}}{19}\relax 
+\doTocEntry\tocsubsection{2.1.2}{\csname a:TocLink\endcsname{1}{x1-170002.1.2}{QQ2-1-17}{Indicando relaciones y recomendando dimensiones}}{19}\relax 
+\doTocEntry\tocsection{2.2}{\csname a:TocLink\endcsname{1}{x1-180002.2}{QQ2-1-18}{Event Loop , Event Dispatcher ::: Reaccionar a lo que sucede \\ en la pantalla, en el ratón o en el teclado}}{20}\relax 
+\doTocEntry\tocsection{2.3}{\csname a:TocLink\endcsname{1}{x1-190002.3}{QQ2-1-19}{Responsive GUI ::: Reaccionar a lo que sucede \\ en el interior de la aplicación}}{20}\relax 
+\doTocEntry\tocsection{2.4}{\csname a:TocLink\endcsname{1}{x1-200002.4}{QQ2-1-20}{Elementos habituales en los GUIs}}{20}\relax 
+\doTocEntry\tocsubsection{2.4.1}{\csname a:TocLink\endcsname{1}{x1-210002.4.1}{QQ2-1-21}{Controles con los que el usuario puede interactuar}}{21}\relax 
+\doTocEntry\tocsubsection{2.4.2}{\csname a:TocLink\endcsname{1}{x1-220002.4.2}{QQ2-1-22}{Distribuciones generales con las que organizar la pantalla}}{22}\relax 
+\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{1}{x1-230002.4.2}{QQ2-1-23}{Algunos enlaces prácticos \let {\let \unhbox \voidb@x \futurelet \def 1{1}\def \def 1{1}{\par }\def 1{1}\relax \xdef {0}{}{{1}{{0}{}}}}\def \bgroup \def \def 1{1}{1}\tmp:cnt 1\afterassignment \xdef \def 1{1}{\def \def 1{1}{2}}\egroup \def 1{1}\mth:op \tmp:cnt {\gdef \ht:everypar {}}\bgroup \def \def 1{1}{1}\tmp:cnt 1\afterassignment \xdef \def 1{1}{\def \def 1{1}{2}}\egroup \def 1{1}\mth:op \tmp:cnt {\ht:everypar {}}\xdef \global \let }}{23}\relax 
+\doTocEntry\tocchapter{3}{\csname a:TocLink\endcsname{1}{x1-240003}{QQ2-1-24}{Ejercicios}}{24}\relax 
+\doTocEntry\tocsection{3.1}{\csname a:TocLink\endcsname{1}{x1-250003.1}{QQ2-1-25}{Hello, Benzirpi.}}{24}\relax 
+\doTocEntry\tocsection{3.2}{\csname a:TocLink\endcsname{1}{x1-260003.2}{QQ2-1-26}{Bocatas}}{24}\relax 
+\doTocEntry\tocsection{3.3}{\csname a:TocLink\endcsname{1}{x1-270003.3}{QQ2-1-27}{Selección plana}}{24}\relax 
+\doTocEntry\tocsection{3.4}{\csname a:TocLink\endcsname{1}{x1-280003.4}{QQ2-1-28}{Diálogos estándares}}{25}\relax 
+\doTocEntry\tocsection{3.5}{\csname a:TocLink\endcsname{1}{x1-290003.5}{QQ2-1-29}{Scroll}}{25}\relax 
+\doTocEntry\tocsection{3.6}{\csname a:TocLink\endcsname{1}{x1-300003.6}{QQ2-1-30}{Split}}{25}\relax 
+\doTocEntry\tocsection{3.7}{\csname a:TocLink\endcsname{1}{x1-310003.7}{QQ2-1-31}{Calendario}}{25}\relax 
+\doTocEntry\tocsection{3.8}{\csname a:TocLink\endcsname{1}{x1-320003.8}{QQ2-1-32}{Selección arbórea}}{25}\relax 
+\doTocEntry\tocsection{3.9}{\csname a:TocLink\endcsname{1}{x1-330003.9}{QQ2-1-33}{Barra de progreso}}{26}\relax 
+\doTocEntry\tocsection{3.10}{\csname a:TocLink\endcsname{1}{x1-340003.10}{QQ2-1-34}{Internacionalización (i18n) y localización (L10n)}}{26}\relax 
+\doTocEntry\tocsection{3.11}{\csname a:TocLink\endcsname{1}{x1-350003.11}{QQ2-1-35}{Ayudas y documentación}}{27}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{1}{x1-360003.11}{QQ2-1-36}{Algunas recomendaciones}}{27}\relax 
+\doTocEntry\tocchapter{4}{\csname a:TocLink\endcsname{1}{x1-370004}{QQ2-1-37}{Objetos: clases e instancias}}{29}\relax 
+\doTocEntry\tocsection{4.1}{\csname a:TocLink\endcsname{1}{x1-380004.1}{QQ2-1-38}{Encapsulación}}{29}\relax 
+\doTocEntry\tocsection{4.2}{\csname a:TocLink\endcsname{1}{x1-390004.2}{QQ2-1-39}{Polimorfismo}}{29}\relax 
+\doTocEntry\tocsection{4.3}{\csname a:TocLink\endcsname{1}{x1-400004.3}{QQ2-1-40}{Herencia}}{29}\relax 
+\doTocEntry\tocsection{4.4}{\csname a:TocLink\endcsname{1}{x1-410004.4}{QQ2-1-41}{Sobrecarga de funciones (overwrite)}}{29}\relax 
+\doTocEntry\tocsection{4.5}{\csname a:TocLink\endcsname{1}{x1-420004.5}{QQ2-1-42}{Interface (clase abstracta)}}{30}\relax 
+\doTocEntry\tocsection{4.6}{\csname a:TocLink\endcsname{1}{x1-430004.6}{QQ2-1-43}{Cuándo usar herencia y cuándo interface}}{30}\relax 
+\doTocEntry\tocsection{4.7}{\csname a:TocLink\endcsname{1}{x1-440004.7}{QQ2-1-44}{Factorias para ``fabricar'' objetos (inyección de dependencias)}}{31}\relax 
+\doTocEntry\tocchapter{5}{\csname a:TocLink\endcsname{1}{x1-450005}{QQ2-1-45}{Ejercicios}}{35}\relax 
+\doTocEntry\tocsection{5.1}{\csname a:TocLink\endcsname{1}{x1-460005.1}{QQ2-1-46}{Áreas y perímetros de figuras geométricas}}{35}\relax 
+\doTocEntry\tocsubsection{5.1.1}{\csname a:TocLink\endcsname{1}{x1-470005.1.1}{QQ2-1-47}{Utilizando herencia}}{35}\relax 
+\doTocEntry\tocsubsection{5.1.2}{\csname a:TocLink\endcsname{1}{x1-480005.1.2}{QQ2-1-48}{Utilizando interface}}{35}\relax 
+\doTocEntry\tocsection{5.2}{\csname a:TocLink\endcsname{1}{x1-490005.2}{QQ2-1-49}{Ascensores}}{35}\relax 
+\doTocEntry\tocchapter{6}{\csname a:TocLink\endcsname{1}{x1-500006}{QQ2-1-50}{Datos en memoria de trabajo}}{36}\relax 
+\doTocEntry\tocsection{6.1}{\csname a:TocLink\endcsname{1}{x1-510006.1}{QQ2-1-51}{Estructuras lineales (arrays, colas,\ldots  )}}{36}\relax 
+\doTocEntry\tocsection{6.2}{\csname a:TocLink\endcsname{1}{x1-520006.2}{QQ2-1-52}{Listas (list, vector,...)}}{39}\relax 
+\doTocEntry\tocsection{6.3}{\csname a:TocLink\endcsname{1}{x1-530006.3}{QQ2-1-53}{Diccionarios (dictionary, map,...)}}{41}\relax 
+\doTocEntry\tocsection{6.4}{\csname a:TocLink\endcsname{1}{x1-540006.4}{QQ2-1-54}{Estructuras arbóreas (trees) y grafos (graphs)}}{43}\relax 
+\doTocEntry\tocsection{6.5}{\csname a:TocLink\endcsname{1}{x1-550006.5}{QQ2-1-55}{Bases de datos}}{43}\relax 
+\doTocEntry\tocsection{6.6}{\csname a:TocLink\endcsname{1}{x1-560006.6}{QQ2-1-56}{La importancia de especificar el tipo de los datos: “generics”}}{44}\relax 
+\doTocEntry\tocsection{6.7}{\csname a:TocLink\endcsname{1}{x1-570006.7}{QQ2-1-57}{Las propias funciones como un tipo de dato más: “expresiones Lambda”}}{44}\relax 
+\doTocEntry\tocchapter{7}{\csname a:TocLink\endcsname{1}{x1-580007}{QQ2-1-58}{Datos almacenados (persistencia)}}{49}\relax 
+\doTocEntry\tocsection{7.1}{\csname a:TocLink\endcsname{1}{x1-590007.1}{QQ2-1-59}{Archivos de texto ``plano''}}{49}\relax 
+\doTocEntry\tocsection{7.2}{\csname a:TocLink\endcsname{1}{x1-600007.2}{QQ2-1-60}{Expresiones regulares}}{50}\relax 
+\doTocEntry\tocsection{7.3}{\csname a:TocLink\endcsname{1}{x1-610007.3}{QQ2-1-61}{Archivos XML}}{53}\relax 
+\doTocEntry\tocsection{7.4}{\csname a:TocLink\endcsname{1}{x1-620007.4}{QQ2-1-62}{Archivos JSON}}{55}\relax 
+\doTocEntry\tocsection{7.5}{\csname a:TocLink\endcsname{1}{x1-630007.5}{QQ2-1-63}{Archivos CBOR u otras representaciones binarias}}{55}\relax 
+\doTocEntry\tocsection{7.6}{\csname a:TocLink\endcsname{1}{x1-640007.6}{QQ2-1-64}{Bases de datos}}{56}\relax 
+\doTocEntry\tocchapter{8}{\csname a:TocLink\endcsname{1}{x1-650008}{QQ2-1-65}{Ejercicios}}{57}\relax 
+\doTocEntry\tocsection{8.1}{\csname a:TocLink\endcsname{1}{x1-660008.1}{QQ2-1-66}{Cuentas bancarias}}{57}\relax 
+\doTocEntry\tocsection{8.2}{\csname a:TocLink\endcsname{1}{x1-670008.2}{QQ2-1-67}{Gestión de accesos}}{59}\relax 
+\doTocEntry\tocsection{8.3}{\csname a:TocLink\endcsname{1}{x1-680008.3}{QQ2-1-68}{Gestión de pedidos}}{59}\relax 
+\doTocEntry\tocchapter{9}{\csname a:TocLink\endcsname{1}{x1-690009}{QQ2-1-69}{Tratamiento de incidencias y errores}}{60}\relax 
+\doTocEntry\tocsection{9.1}{\csname a:TocLink\endcsname{1}{x1-700009.1}{QQ2-1-70}{Excepciones}}{60}\relax 
+\doTocEntry\tocsection{9.2}{\csname a:TocLink\endcsname{1}{x1-710009.2}{QQ2-1-71}{Registro (log)}}{61}\relax 
+\doTocEntry\tocsection{9.3}{\csname a:TocLink\endcsname{1}{x1-720009.3}{QQ2-1-72}{Ejercicios}}{62}\relax 
+\doTocEntry\tocchapter{10}{\csname a:TocLink\endcsname{1}{x1-7300010}{QQ2-1-73}{Comunicaciones}}{63}\relax 
+\doTocEntry\tocsection{10.1}{\csname a:TocLink\endcsname{1}{x1-7400010.1}{QQ2-1-74}{Usando protocolo HTTP}}{63}\relax 
+\doTocEntry\tocsection{10.2}{\csname a:TocLink\endcsname{1}{x1-7500010.2}{QQ2-1-75}{Usando protocolos tcp/ip}}{64}\relax 
+\doTocEntry\tocsection{10.3}{\csname a:TocLink\endcsname{1}{x1-7600010.3}{QQ2-1-76}{Usando protocolos especializados para un tipo de tarea concreta}}{65}\relax 
+\doTocEntry\tocchapter{11}{\csname a:TocLink\endcsname{1}{x1-7700011}{QQ2-1-77}{Ejercicios}}{66}\relax 
+\doTocEntry\tocchapter{12}{\csname a:TocLink\endcsname{1}{x1-7800012}{QQ2-1-78}{Procesamiento paralelo}}{67}\relax 
+\doTocEntry\tocsection{12.1}{\csname a:TocLink\endcsname{1}{x1-7900012.1}{QQ2-1-79}{Estrategias para repartir tareas}}{67}\relax 
+\doTocEntry\tocsection{12.2}{\csname a:TocLink\endcsname{1}{x1-8000012.2}{QQ2-1-80}{Salvaguardas para evitar problemas}}{68}\relax 
+\doTocEntry\tocsubsection{12.2.1}{\csname a:TocLink\endcsname{1}{x1-8100012.2.1}{QQ2-1-81}{operaciones atómicas}}{68}\relax 
+\doTocEntry\tocsubsection{12.2.2}{\csname a:TocLink\endcsname{1}{x1-8200012.2.2}{QQ2-1-82}{transacciones}}{68}\relax 
+\doTocEntry\tocsubsection{12.2.3}{\csname a:TocLink\endcsname{1}{x1-8300012.2.3}{QQ2-1-83}{semáforos}}{69}\relax 
+\doTocEntry\tocsubsection{12.2.4}{\csname a:TocLink\endcsname{1}{x1-8400012.2.4}{QQ2-1-84}{bloqueos}}{70}\relax 
+\doTocEntry\tocsubsection{12.2.5}{\csname a:TocLink\endcsname{1}{x1-8500012.2.5}{QQ2-1-85}{Programación funcional}}{70}\relax 
+\doTocEntry\tocsection{12.3}{\csname a:TocLink\endcsname{1}{x1-8600012.3}{QQ2-1-86}{Algunos usos del procesamiento paralelo}}{71}\relax 
+\doTocEntry\tocsubsection{12.3.1}{\csname a:TocLink\endcsname{1}{x1-8700012.3.1}{QQ2-1-87}{Multitarea}}{71}\relax 
+\doTocEntry\tocsubsection{12.3.2}{\csname a:TocLink\endcsname{1}{x1-8800012.3.2}{QQ2-1-88}{Gráficos}}{71}\relax 
+\doTocEntry\tocsubsection{12.3.3}{\csname a:TocLink\endcsname{1}{x1-8900012.3.3}{QQ2-1-89}{Cálculos}}{72}\relax 
+\doTocEntry\tocchapter{13}{\csname a:TocLink\endcsname{1}{x1-9000013}{QQ2-1-90}{Ejercicios}}{73}\relax 
+\doTocEntry\tocchapter{14}{\csname a:TocLink\endcsname{1}{x1-9100014}{QQ2-1-91}{Organización interna del código}}{74}\relax 
+\doTocEntry\tocsection{14.1}{\csname a:TocLink\endcsname{1}{x1-9200014.1}{QQ2-1-92}{Orientación a eventos (event-driven)}}{74}\relax 
+\doTocEntry\tocsection{14.2}{\csname a:TocLink\endcsname{1}{x1-9300014.2}{QQ2-1-93}{Orientación a objetos (object-oriented)}}{75}\relax 
+\doTocEntry\tocsection{14.3}{\csname a:TocLink\endcsname{1}{x1-9400014.3}{QQ2-1-94}{Arquitecturas multi-capa (n-tier)}}{76}\relax 
+\doTocEntry\tocsection{14.4}{\csname a:TocLink\endcsname{1}{x1-9500014.4}{QQ2-1-95}{Aplicaciones distribuidas}}{83}\relax 
+\doTocEntry\tocsection{14.5}{\csname a:TocLink\endcsname{1}{x1-9600014.5}{QQ2-1-96}{Orientación a servicios \\ (SOA, SaaS, microservices,...) }}{84}\relax 
+\doTocEntry\tocsection{14.6}{\csname a:TocLink\endcsname{1}{x1-9700014.6}{QQ2-1-97}{Orientación a servicios, arquitectura REST \\(REpresentational State Transfer)}}{84}\relax 
+\doTocEntry\tocchapter{15}{\csname a:TocLink\endcsname{1}{x1-9800015}{QQ2-1-98}{Ejercicios}}{87}\relax 
+\doTocEntry\tocsection{15.1}{\csname a:TocLink\endcsname{1}{x1-9900015.1}{QQ2-1-99}{Multiinterface}}{87}\relax 
+\doTocEntry\tocsection{15.2}{\csname a:TocLink\endcsname{1}{x1-10000015.2}{QQ2-1-100}{Arquitectura en tres capas, MVC}}{88}\relax 
+\doTocEntry\tocsection{15.3}{\csname a:TocLink\endcsname{1}{x1-10100015.3}{QQ2-1-101}{Excursiones}}{89}\relax 
+\doTocEntry\tocsection{15.4}{\csname a:TocLink\endcsname{1}{x1-10200015.4}{QQ2-1-102}{Hotel}}{90}\relax 
+\doTocEntry\tocchapter{16}{\csname a:TocLink\endcsname{1}{x1-10300016}{QQ2-1-103}{apéndice A: ejemplos de posibles herramientas de trabajo}}{96}\relax 
+\doTocEntry\tocsection{16.1}{\csname a:TocLink\endcsname{1}{x1-10400016.1}{QQ2-1-104}{Para programar en Java}}{96}\relax 
+\doTocEntry\tocsection{16.2}{\csname a:TocLink\endcsname{1}{x1-10500016.2}{QQ2-1-105}{Para programar en C++}}{97}\relax 
+\doTocEntry\tocsection{16.3}{\csname a:TocLink\endcsname{1}{x1-10600016.3}{QQ2-1-106}{Para programar en C#}}{97}\relax 
+\doTocEntry\tocsection{16.4}{\csname a:TocLink\endcsname{1}{x1-10700016.4}{QQ2-1-107}{Para programar en Python}}{98}\relax 
+\doTocEntry\tocsection{16.5}{\csname a:TocLink\endcsname{1}{x1-10800016.5}{QQ2-1-108}{Para programar en HTML5,CSS,Javascript}}{99}\relax 
+\doTocEntry\tocsection{16.6}{\csname a:TocLink\endcsname{1}{x1-10900016.6}{QQ2-1-109}{Una herramienta transversal: almacenamiento de código con control de versiones}}{100}\relax 
+\doTocEntry\tocsection{16.7}{\csname a:TocLink\endcsname{1}{x1-11000016.7}{QQ2-1-110}{Otra herramienta transversal: motor de base de datos}}{100}\relax 
+\doTocEntry\tocchapter{17}{\csname a:TocLink\endcsname{1}{x1-11100017}{QQ2-1-111}{apéndice B: ejemplos de posibles soluciones...}}{101}\relax 
+\doTocEntry\tocsection{17.1}{\csname a:TocLink\endcsname{1}{x1-11200017.1}{QQ2-1-112}{...a los ejercicios del capítulo \o:ref {ejercicios_gui}}}{101}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{1}{x1-11300017.1}{QQ2-1-113}{\o:ref {ejercicio_hellobenzirpi} \{\nameref {ejercicio_hellobenzirpi}\}}}{101}\relax 
+\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{1}{x1-11400017.1}{QQ2-1-114}{En lenguaje Java (usando Swing)}}{101}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-114002}{}{\numberline {17.1}{\ignorespaces \lst@@caption }}}{101}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-114007}{}{\numberline {17.2}{\ignorespaces \lst@@caption }}}{101}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-114059}{}{\numberline {17.3}{\ignorespaces \lst@@caption }}}{102}\relax 
+\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{1}{x1-11500017.1}{QQ2-1-121}{En lenguaje Java (usando JavaFx)}}{103}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-115002}{}{\numberline {17.4}{\ignorespaces \lst@@caption }}}{103}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-115050}{}{\numberline {17.5}{\ignorespaces \lst@@caption }}}{104}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-115076}{}{\numberline {17.6}{\ignorespaces \lst@@caption }}}{105}\relax 
+\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{1}{x1-11600017.1}{QQ2-1-128}{En lenguaje Pyton}}{105}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-116002}{}{\numberline {17.7}{\ignorespaces \lst@@caption }}}{105}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-116033}{}{\numberline {17.8}{\ignorespaces \lst@@caption }}}{106}\relax 
+\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{1}{x1-11700017.1}{QQ2-1-133}{En lenguaje C++, (definición 'fija' del interfaz)}}{106}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-117002}{}{\numberline {17.9}{\ignorespaces \lst@@caption }}}{106}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-117028}{}{\numberline {17.10}{\ignorespaces \lst@@caption }}}{107}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-117050}{}{\numberline {17.11}{\ignorespaces \lst@@caption }}}{107}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-117063}{}{\numberline {17.12}{\ignorespaces \lst@@caption }}}{108}\relax 
+\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{1}{x1-11800017.1}{QQ2-1-142}{En lenguaje C++, (definición 'flexible' del interfaz)}}{109}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-118002}{}{\numberline {17.13}{\ignorespaces \lst@@caption }}}{110}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-118049}{}{\numberline {17.14}{\ignorespaces \lst@@caption }}}{111}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{1}{x1-11900017.1}{QQ2-1-147}{\o:ref {ejercicio_bocatas} \{\nameref {ejercicio_bocatas}\}}}{111}\relax 
+\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{1}{x1-12000017.1}{QQ2-1-148}{En lenguaje Java}}{111}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-120002}{}{\numberline {17.15}{\ignorespaces \lst@@caption }}}{111}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-120007}{}{\numberline {17.16}{\ignorespaces \lst@@caption }}}{112}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-120140}{}{\numberline {17.17}{\ignorespaces \lst@@caption }}}{114}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{1}{x1-12100017.1}{QQ2-1-155}{\o:ref {ejercicio_selecionplana} \{\nameref {ejercicio_selecionplana}\}}}{115}\relax 
+\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{1}{x1-12200017.1}{QQ2-1-156}{En lenguaje Java}}{115}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-122002}{}{\numberline {17.18}{\ignorespaces \lst@@caption }}}{115}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-122007}{}{\numberline {17.19}{\ignorespaces \lst@@caption }}}{115}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-122091}{}{\numberline {17.20}{\ignorespaces \lst@@caption }}}{117}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-122120}{}{\numberline {17.21}{\ignorespaces \lst@@caption }}}{117}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-122161}{}{\numberline {17.22}{\ignorespaces \lst@@caption }}}{118}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-122190}{}{\numberline {17.23}{\ignorespaces \lst@@caption }}}{119}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{1}{x1-12300017.1}{QQ2-1-169}{\o:ref {ejercicio_dialogos} \{\nameref {ejercicio_dialogos}\}}}{119}\relax 
+\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{1}{x1-12400017.1}{QQ2-1-170}{En lenguaje Java}}{120}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-124002}{}{\numberline {17.24}{\ignorespaces \lst@@caption }}}{120}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-124007}{}{\numberline {17.25}{\ignorespaces \lst@@caption }}}{120}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-124083}{}{\numberline {17.26}{\ignorespaces \lst@@caption }}}{121}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-124132}{}{\numberline {17.27}{\ignorespaces \lst@@caption }}}{122}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{1}{x1-12500017.1}{QQ2-1-179}{\o:ref {ejercicio_scroll}\{\nameref {ejercicio_scroll}\}}}{123}\relax 
+\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{1}{x1-12600017.1}{QQ2-1-180}{En lenguaje Java}}{123}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-126002}{}{\numberline {17.28}{\ignorespaces \lst@@caption }}}{123}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-126007}{}{\numberline {17.29}{\ignorespaces \lst@@caption }}}{123}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-126067}{}{\numberline {17.30}{\ignorespaces \lst@@caption }}}{125}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-126095}{}{\numberline {17.31}{\ignorespaces \lst@@caption }}}{125}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{1}{x1-12700017.1}{QQ2-1-189}{\o:ref {ejercicio_split} \{\nameref {ejercicio_split}\}}}{126}\relax 
+\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{1}{x1-12800017.1}{QQ2-1-190}{En lenguaje Java}}{126}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-128002}{}{\numberline {17.32}{\ignorespaces \lst@@caption }}}{126}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-128007}{}{\numberline {17.33}{\ignorespaces \lst@@caption }}}{126}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-128062}{}{\numberline {17.34}{\ignorespaces \lst@@caption }}}{127}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{1}{x1-12900017.1}{QQ2-1-197}{\o:ref {ejercicio_selecionarborea}\{\nameref {ejercicio_selecionarborea}\}}}{128}\relax 
+\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{1}{x1-13000017.1}{QQ2-1-198}{En lenguaje Java}}{128}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-130002}{}{\numberline {17.35}{\ignorespaces \lst@@caption }}}{128}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-130007}{}{\numberline {17.36}{\ignorespaces \lst@@caption }}}{128}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-130072}{}{\numberline {17.37}{\ignorespaces \lst@@caption }}}{129}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-130135}{}{\numberline {17.38}{\ignorespaces \lst@@caption }}}{131}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-130243}{}{\numberline {17.39}{\ignorespaces \lst@@caption }}}{133}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-130270}{}{\numberline {17.40}{\ignorespaces \lst@@caption }}}{133}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-130301}{}{\numberline {17.41}{\ignorespaces \lst@@caption }}}{134}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-130327}{}{\numberline {17.42}{\ignorespaces \lst@@caption }}}{135}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-130357}{}{\numberline {17.43}{\ignorespaces \lst@@caption }}}{135}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-130385}{}{\numberline {17.44}{\ignorespaces \lst@@caption }}}{136}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{1}{x1-13100017.1}{QQ2-1-219}{\o:ref {ejercicio_barradeprogreso}\{\nameref {ejercicio_barradeprogreso}\}}}{136}\relax 
+\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{1}{x1-13200017.1}{QQ2-1-220}{En lenguaje Java}}{137}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-132002}{}{\numberline {17.45}{\ignorespaces \lst@@caption }}}{137}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-132007}{}{\numberline {17.46}{\ignorespaces \lst@@caption }}}{137}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-132055}{}{\numberline {17.47}{\ignorespaces \lst@@caption }}}{138}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-132215}{}{\numberline {17.48}{\ignorespaces \lst@@caption }}}{141}\relax 
+\doTocEntry\tocsection{17.2}{\csname a:TocLink\endcsname{1}{x1-13300017.2}{QQ2-1-229}{...a los ejercicios del capítulo \o:ref {ejercicios_oop}}}{141}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{1}{x1-13400017.2}{QQ2-1-230}{\o:ref {ejercicio_ascensores} \{\nameref {ejercicio_ascensores}\}}}{142}\relax 
+\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{1}{x1-13500017.2}{QQ2-1-231}{En lenguaje Java}}{142}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-135002}{}{\numberline {17.49}{\ignorespaces \lst@@caption }}}{142}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-135008}{}{\numberline {17.50}{\ignorespaces \lst@@caption }}}{142}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-135056}{}{\numberline {17.51}{\ignorespaces \lst@@caption }}}{143}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-135100}{}{\numberline {17.52}{\ignorespaces \lst@@caption }}}{144}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-135167}{}{\numberline {17.53}{\ignorespaces \lst@@caption }}}{145}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-135227}{}{\numberline {17.54}{\ignorespaces \lst@@caption }}}{147}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-135298}{}{\numberline {17.55}{\ignorespaces \lst@@caption }}}{148}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-135419}{}{\numberline {17.56}{\ignorespaces \lst@@caption }}}{150}\relax 
+\doTocEntry\tocsection{17.3}{\csname a:TocLink\endcsname{1}{x1-13600017.3}{QQ2-1-248}{...a los ejercicios del capítulo \o:ref {ejercicios_datos}}}{151}\relax 
+\doTocEntry\tocsection{17.4}{\csname a:TocLink\endcsname{1}{x1-13700017.4}{QQ2-1-249}{...a los ejercicios del capítulo \o:ref {ejercicios_comunicaciones}}}{151}\relax 
+\doTocEntry\tocsection{17.5}{\csname a:TocLink\endcsname{1}{x1-13800017.5}{QQ2-1-250}{...a los ejercicios del capítulo \o:ref {ejercicios_paralelismo}}}{151}\relax 
+\doTocEntry\tocsection{17.6}{\csname a:TocLink\endcsname{1}{x1-13900017.6}{QQ2-1-251}{...a los ejercicios del capítulo \o:ref {ejercicios_organizacion}}}{151}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{1}{x1-14000017.6}{QQ2-1-252}{\o:ref {ejercicio_multiinterface} \{\nameref {ejercicio_multiinterface}\}}}{152}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{1}{x1-14100017.6}{QQ2-1-253}{El programa base, que se va a utilizar desde diversos interfaces de usuario…}}{152}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-141002}{}{\numberline {17.57}{\ignorespaces \lst@@caption }}}{152}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-141094}{}{\numberline {17.58}{\ignorespaces \lst@@caption }}}{154}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{1}{x1-14200017.6}{QQ2-1-258}{Utilizado desde un formulario Windows Forms}}{155}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-142002}{}{\numberline {17.59}{\ignorespaces \lst@@caption }}}{155}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{1}{x1-14300017.6}{QQ2-1-261}{Utilizado desde linea de comandos}}{156}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-143002}{}{\numberline {17.60}{\ignorespaces \lst@@caption }}}{156}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{1}{x1-14400017.6}{QQ2-1-264}{Utilizado para dar unos servicios web RESTfull}}{157}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-144002}{}{\numberline {17.61}{\ignorespaces \lst@@caption }}}{157}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{1}{x1-14500017.6}{QQ2-1-267}{Utilizando el servicio HttpGet a través de una url}}{159}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{1}{x1-14600017.6}{QQ2-1-268}{Utilizando el servicio HttpPut a través de un programilla de linea de comando}}{159}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-146002}{}{\numberline {17.62}{\ignorespaces \lst@@caption }}}{160}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{1}{x1-14700017.6}{QQ2-1-271}{Utilizando el servicio HttpPut desde una página web HTML/JavaScript}}{161}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-147002}{}{\numberline {17.63}{\ignorespaces \lst@@caption }}}{161}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{1}{x1-14800017.6}{QQ2-1-274}{Utilizando el servicio HttpPut desde una página web RAZOR/C#}}{163}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-148002}{}{\numberline {17.64}{\ignorespaces \lst@@caption }}}{163}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-148038}{}{\numberline {17.65}{\ignorespaces \lst@@caption }}}{164}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{1}{x1-14900017.6}{QQ2-1-279}{\o:ref {ejercicio_mvc} \{\nameref {ejercicio_mvc}\}}}{165}\relax 
+\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{1}{x1-15000017.6}{QQ2-1-280}{Dependencias directas:}}{165}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-150002}{}{\numberline {17.66}{\ignorespaces \lst@@caption }}}{166}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-150014}{}{\numberline {17.67}{\ignorespaces \lst@@caption }}}{166}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-150110}{}{\numberline {17.68}{\ignorespaces \lst@@caption }}}{168}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-150241}{}{\numberline {17.69}{\ignorespaces \lst@@caption }}}{170}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-150359}{}{\numberline {17.70}{\ignorespaces \lst@@caption }}}{173}\relax 
+\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{1}{x1-15100017.6}{QQ2-1-291}{Dependencias inversas (inversión de dependencias):}}{175}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-151002}{}{\numberline {17.71}{\ignorespaces \lst@@caption }}}{175}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-151039}{}{\numberline {17.72}{\ignorespaces \lst@@caption }}}{176}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-151134}{}{\numberline {17.73}{\ignorespaces \lst@@caption }}}{178}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-151265}{}{\numberline {17.74}{\ignorespaces \lst@@caption }}}{180}\relax 
+\doTocEntry\toclol{}{\csname a:TocLink\endcsname{1}{x1-151384}{}{\numberline {17.75}{\ignorespaces \lst@@caption }}}{183}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{1}{x1-15200017.6}{QQ2-1-302}{\o:ref {ejercicio_hotel} \{\nameref {ejercicio_hotel}\}}}{185}\relax 
+\par 

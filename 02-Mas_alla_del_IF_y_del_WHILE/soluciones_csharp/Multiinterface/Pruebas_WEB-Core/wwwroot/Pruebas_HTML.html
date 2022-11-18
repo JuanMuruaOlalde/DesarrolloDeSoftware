@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>CalculoSimple vía HTML</title>
+</head>
+<body>
+    <h2>Usando el cálculo desde una página HTML estandard</h2>
+
+    <div>
+        <form name="frmCalculoSimple" action="/api/CalculoSimple" target="_self">
+            <fieldset>
+                <legend>Calculo Simple:</legend>
+                <label for="unLado_valor unLado_unidaddemedida">Un lado: </label>
+                <input type="number" id="unLado_valor" name="unLado_valor" required value="2" />
+                <input type="text" id="unLado_unidaddemedida" name="unLado_unidaddemedida" size="4" placeholder="cm" required value="m" />
+                <br />
+                <label for="otroLado_valor otroLado_unidaddemedida">Otro lado: </label>
+                <input type="number" id="otroLado_valor" name="otroLado_valor" required value="300" />
+                <input type="text" id="otroLado_unidaddemedida" name="otroLado_unidaddemedida" size="4" placeholder="cm" required value="cm" />
+                <br />
+                <br />
+                <input type="submit" value="Calcular (HttpGet)" formmethod="get" />
+                <button type="button" onclick="CalcularYMostrarResultados()">Calcular (HttpPost) y mostrar resultados</button>
+            </fieldset>
+            <br />
+            <fieldset>
+                <label for="perimetro">Perímetro: </label>
+                <output id="perimetro"></output>
+                <br />
+                <label for="area">Área: </label>
+                <output id="area"></output>
+            </fieldset>
+        </form>
+    </div>
+
+    <script>
+        function CalcularYMostrarResultados() {
+
+            var solicitud = new XMLHttpRequest();
+
+            solicitud.onload = function () {
+                var respuesta = solicitud.responseText;
+                alert("RESPUESTA: " + respuesta);
+
+                if (solicitud.statusText = "OK") {
+                    var resultados = JSON.parse(respuesta)
+                    document.getElementById("perimetro").value = resultados.perimetro.valor + " " + resultados.perimetro.unidaddemedida;
+                    document.getElementById("area").value = resultados.area.valor + " " + resultados.area.unidaddemedida;
+                }
+            }
+
+            var esAsincrono = true;
+            solicitud.open("POST", "/api/CalculoSimple", esAsincrono);
+
+            solicitud.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+
+            var parametros = JSON.stringify(
+                {
+                    "unLado": {
+                        "valor": document.getElementById("unLado_valor").value
+                        , "unidaddemedida": document.getElementById("unLado_unidaddemedida").value
+                    }
+                    , "otroLado": {
+                        "valor": document.getElementById("otroLado_valor").value
+                        , "unidaddemedida": document.getElementById("otroLado_unidaddemedida").value
+                    }
+                }
+            )
+            alert("PARAMETROS: " + parametros);
+
+            solicitud.send(parametros);
+
+        }
+    </script>
+
+</body>
+</html>

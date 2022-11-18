@@ -1,0 +1,23 @@
+C:\Users\Public\Documents\01_PROGRAMACION\aa- plantilla de aplicacion REVIT\PlantillaDeAplicacionREVIT_tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Public\Documents\01_PROGRAMACION\aa- plantilla de aplicacion REVIT\PlantillaDeAplicacionREVIT_tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Public\Documents\01_PROGRAMACION\aa- plantilla de aplicacion REVIT\PlantillaDeAplicacionREVIT_tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Public\Documents\01_PROGRAMACION\aa- plantilla de aplicacion REVIT\PlantillaDeAplicacionREVIT_tests\bin\Debug\PlantillaDeAplicacionREVIT.bmp
+C:\Users\Public\Documents\01_PROGRAMACION\aa- plantilla de aplicacion REVIT\PlantillaDeAplicacionREVIT_tests\bin\Debug\PlantillaDeAplicacionREVIT.addin
+C:\Users\Public\Documents\01_PROGRAMACION\aa- plantilla de aplicacion REVIT\PlantillaDeAplicacionREVIT_tests\bin\Debug\_TESTS_.dll
+C:\Users\Public\Documents\01_PROGRAMACION\aa- plantilla de aplicacion REVIT\PlantillaDeAplicacionREVIT_tests\bin\Debug\_TESTS_.pdb
+C:\Users\Public\Documents\01_PROGRAMACION\aa- plantilla de aplicacion REVIT\PlantillaDeAplicacionREVIT_tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\Public\Documents\01_PROGRAMACION\aa- plantilla de aplicacion REVIT\PlantillaDeAplicacionREVIT_tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\Public\Documents\01_PROGRAMACION\aa- plantilla de aplicacion REVIT\PlantillaDeAplicacionREVIT_tests\bin\Debug\PlantillaDeAplicacionREVIT.dll
+C:\Users\Public\Documents\01_PROGRAMACION\aa- plantilla de aplicacion REVIT\PlantillaDeAplicacionREVIT_tests\bin\Debug\zz-PruebasYExperimentos.exe
+C:\Users\Public\Documents\01_PROGRAMACION\aa- plantilla de aplicacion REVIT\PlantillaDeAplicacionREVIT_tests\bin\Debug\PlantillaDeAplicacionREVIT.pdb
+C:\Users\Public\Documents\01_PROGRAMACION\aa- plantilla de aplicacion REVIT\PlantillaDeAplicacionREVIT_tests\bin\Debug\zz-PruebasYExperimentos.pdb
+C:\Users\Public\Documents\01_PROGRAMACION\aa- plantilla de aplicacion REVIT\PlantillaDeAplicacionREVIT_tests\bin\Debug\zz-PruebasYExperimentos.exe.config
+C:\Users\Public\Documents\01_PROGRAMACION\aa- plantilla de aplicacion REVIT\PlantillaDeAplicacionREVIT_tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\Public\Documents\01_PROGRAMACION\aa- plantilla de aplicacion REVIT\PlantillaDeAplicacionREVIT_tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\Public\Documents\01_PROGRAMACION\aa- plantilla de aplicacion REVIT\PlantillaDeAplicacionREVIT_tests\obj\Debug\PlantillaDeAplicacionREVIT_tests.csprojAssemblyReference.cache
+C:\Users\Public\Documents\01_PROGRAMACION\aa- plantilla de aplicacion REVIT\PlantillaDeAplicacionREVIT_tests\obj\Debug\PlantillaDeAplicacionREVIT_tests.csproj.CoreCompileInputs.cache
+C:\Users\Public\Documents\01_PROGRAMACION\aa- plantilla de aplicacion REVIT\PlantillaDeAplicacionREVIT_tests\obj\Debug\PlantillaDeAplicacionREVIT_tests.csproj.CopyComplete
+C:\Users\Public\Documents\01_PROGRAMACION\aa- plantilla de aplicacion REVIT\PlantillaDeAplicacionREVIT_tests\obj\Debug\_TESTS_.dll
+C:\Users\Public\Documents\01_PROGRAMACION\aa- plantilla de aplicacion REVIT\PlantillaDeAplicacionREVIT_tests\obj\Debug\_TESTS_.pdb
+C:\Users\Public\Documents\01_PROGRAMACION\aa- plantilla de aplicacion REVIT\PlantillaDeAplicacionREVIT_tests\bin\Debug\tabla simple.rfa
+C:\Users\Public\Documents\01_PROGRAMACION\aa- plantilla de aplicacion REVIT\PlantillaDeAplicacionREVIT_tests\bin\Debug\es\PlantillaDeAplicacionREVIT.resources.dll

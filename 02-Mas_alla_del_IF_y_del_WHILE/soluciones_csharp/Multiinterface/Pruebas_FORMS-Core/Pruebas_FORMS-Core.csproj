@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <RootNamespace>Pruebas_FORMS_Core</RootNamespace>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CalculoSimple\CalculoSimple.csproj" />
+    <ProjectReference Include="..\Magnitudes\Magnitudes.csproj" />
+  </ItemGroup>
+
+</Project>

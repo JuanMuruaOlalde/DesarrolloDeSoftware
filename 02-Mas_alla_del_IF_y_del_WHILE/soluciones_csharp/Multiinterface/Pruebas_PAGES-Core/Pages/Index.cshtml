@@ -1,0 +1,33 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "CalculoSimple vía RAZOR";
+}
+
+
+<div>
+    <form method="post">
+        <fieldset>
+            <legend>Calculo Simple:</legend>
+            <label for="unLado_valor unLado_unidaddemedida">Un lado: </label>
+            <input type="number" asp-for="unLado_valor" required />
+            <input type="text" asp-for="unLado_unidaddemedida" size="4" placeholder="cm" required />
+            <br />
+            <label for="otroLado_valor otroLado_unidaddemedida">Otro lado: </label>
+            <input type="number" asp-for="otroLado_valor" required />
+            <input type="text" asp-for="otroLado_unidaddemedida" size="4" placeholder="cm" required />
+            <br />
+            <br />
+            <button type="submit">Calcular y mostrar resultados</button>
+        </fieldset>
+        <br />
+        <fieldset>
+            <label for="perimetro">Perímetro: </label>
+            <input asp-for="perimetro" disabled />
+            <br />
+            <label for="area">Área: </label>
+            <input asp-for="area" disabled />
+        </fieldset>
+    </form>
+</div>
+

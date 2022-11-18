@@ -1,0 +1,263 @@
+.NET:
+https://docs.microsoft.com/en-us/dotnet/fundamentals/
+https://dotnet.microsoft.com/learn/dotnet/architecture-guides
+https://docs.microsoft.com/en-us/dotnet/core/sdk
+https://docs.microsoft.com/en-us/dotnet/core/tutorials/
+
+ASP.NET (para Core):
+https://docs.microsoft.com/en-us/aspnet/core/
+https://docs.microsoft.com/en-us/dotnet/api/?view=aspnetcore-5.0
+
+ASP.NET (para Framework):
+https://docs.microsoft.com/en-us/dotnet/api/?view=aspnet-webpages-3.2
+https://docs.microsoft.com/en-us/dotnet/api/?view=aspnet-mvc-5.2
+
+
+Tutoriales y otros recursos interesantes:
+(Framework) https://www.completecsharptutorial.com/asp-net-mvc5/
+https://www.webtrainingroom.com/webapi
+https://code-maze.com/ultimate-aspnet-core-web-api/
+
+
+Herramientas interesantes:
+https://www.postman.com/
+
+
+
+
+
+============
+Servicio web,  Web API
+============
+https://en.wikipedia.org/wiki/Web_service
+https://martinfowler.com/articles/microservices.html
+
+Un servicio web es conveniente que sea RESTfull: https://en.wikipedia.org/wiki/Representational_state_transfer
+
+El concepto de 'verbo': para solicitar las distintas "acciones" (llamadas a funciones) que se pueden realizar dentro del servicio web.
+https://www.w3schools.com/tags/ref_httpmethods.asp
+https://www.tutorialsteacher.com/mvc/actionverbs-in-mvc
+
+Los parámetros se pueden pasar:
+
+=> a través de la url de llamada (verbo HTTP GET); en este caso cada parametro va separado con & y expresado en formato nombre=valor
+.../api/Xxxxx?param1=valor1&param2=valor2&param3=valor3
+
+=> a través del cuerpo del mensaje Http de llamada (verbo HTTP POST); en este caso van expresados en un determinado formato de codificación, tal como  SOAP, XML, JSON,...
+
+El formato preferido en RESTfull es JSON.
+https://www.json.org/json-en.html
+https://docs.microsoft.com/en-us/dotnet/standard/serialization/system-text-json-how-to?pivots=dotnet-5-0
+
+
+
+Web API en .NET Core
+====================
+
+Create web APIs with ASP.NET Core
+https://docs.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-5.0
+
+(Core): una API web consiste en una o varias clases "controller" derivadas de Microsoft.AspNetCore.Mvc.ControllerBase:
+https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.controllerbase
+
+[Route("api/[controller]")]  // indica la ruta con la que llamar al servicio
+[ApiController]
+public class PruebasController : ControllerBase
+{  }
+
+nota: si se usa [controller] en la etiqueta el nombre de la clase ha de ser XxxxxController
+nota: en el ejemplo, al ser la etiqueta [Route("api/[controller]")] se llamaría al servicio con la ruta urldelaweb/api/Pruebas
+
+Routing to controller actions in ASP.NET Core:
+https://docs.microsoft.com/en-us/aspnet/core/mvc/controllers/routing?view=aspnetcore-5.0#attribute-routing-with-httpverb-attributes
+
+Cada 'verbo' ("acción") se corresponde con una función dentro de la clase. Con la correspondiente etiqueta para indicar si es [HttpGet], [HttpPost], [HttpPut], [HttpDelete], etc.
+
+Los parámetros sencillos, se pasan y se devuelven directamente; encargandose automaticamente los formateadores integrados en ASP.NET Core. 
+   Por ejemplo, a esta función se llamaria con la url: https://localhost:44310/api/CalculoSimple?unLado_valor=2&unLado_unidaddemedida=m&otroLado_valor=300&otroLado_unidaddemedida=cm
+        [HttpGet]
+        public IEnumerable<Magnitudes.Magnitud> Get(double unLado_valor, string unLado_unidaddemedida, double otroLado_valor, string otroLado_unidaddemedida)
+        {
+            CalculoSimple.CalculoSimple calculadora = new CalculoSimple.CalculoSimple();
+
+            calculadora.setDato_unlado(new Magnitudes.Magnitud(unLado_valor, unLado_unidaddemedida));
+            calculadora.setDato_otrolado(new Magnitudes.Magnitud(otroLado_valor, otroLado_unidaddemedida));
+
+            return new Magnitudes.Magnitud[] {   calculadora.getResultado_perimetro()
+                                              ,  calculadora.getResultado_area()
+                                             };
+        }
+        
+Para los resultados devueltos, se formatean y devuelven todos aquellos miembros de la clase que sean propiedades (que tengan get y set definidos).         
+Controller action return types in ASP.NET Core Web API: 
+https://docs.microsoft.com/en-us/aspnet/core/web-api/action-return-types?view=aspnetcore-5.0
+
+Para parámetros más elaborados, se ha de recurrir a implementar formateadores específicos.
+https://docs.microsoft.com/en-us/aspnet/core/web-api/advanced/formatting?view=aspnetcore-5.0
+Custom formatters in ASP.NET Core Web API:
+https://docs.microsoft.com/en-us/aspnet/core/web-api/advanced/custom-formatters?view=aspnetcore-5.0
+ 
+
+
+El comportamiento de los controladores se configura en el archivo de código 'Startup.cs', dentro de la función 'ConfigureServices'.
+
+
+
+Para usar un servicio web HttpPost, podemos utilizar:
+HttpClient: https://docs.microsoft.com/en-us/dotnet/api/system.net.http.httpclient?view=net-5.0
+(deprecated) WebClient: https://docs.microsoft.com/en-us/dotnet/api/system.net.webclient?view=net-5.0
+(deprecated) WebRequest: https://docs.microsoft.com/en-us/dotnet/api/system.net.webrequest?view=net-5.0
+
+
+
+
+Web API en .NET Framework
+=========================
+
+https://docs.microsoft.com/en-us/aspnet/web-api/
+
+(Framework): una API web consiste en una o varias clases "controller" derivadas de System.Web.Http.ApiController
+https://docs.microsoft.com/en-us/dotnet/api/system.web.http.apicontroller
+public class UnControllerDePruebas : ApiController
+{  }
+
+
+
+Para usar un servicio web HttpPost, podemos utilizar:
+HttpRequest: https://docs.microsoft.com/en-us/dotnet/api/system.web.httprequest?view=netframework-4.8
+
+
+
+
+
+notas varias
+============
+
+Esta disponible un mecanismo automático para documentar las APIs web:  Swagger . OpenAPI
+https://swagger.io/
+https://swagger.io/solutions/api-documentation/
+https://docs.microsoft.com/en-us/aspnet/core/tutorials/web-api-help-pages-using-swagger?view=aspnetcore-5.0
+(en Core) está integrado, y la documentación se muestra con el verbo 'swagger'.
+(en Framework) ?, y la documentación se muestra en la página de ayuda (en la plantilla por defecto está en la carpeta 'Areas' 'HelpPage').
+
+
+
+
+
+==================================
+Aplicación web HTML/CSS/JavaScript, Web App
+==================================
+https://www.w3.org/standards/webdesign/
+
+https://www.w3schools.com/html/default.asp
+https://www.w3schools.com/css/default.asp
+https://www.w3schools.com/js/default.asp
+
+
+Las páginas van en la carpeta 'Pages' (en Core).
+Se pueden escribir en HTML (.html) o en Razor (.cshtml).
+
+Los CSS para dar formato a las páginas web van en la carpeta ''wwwroot' 'css' (en Core) o en la carpeta 'Content' (en Framework).
+
+Las bibliotecas JavaScript utilizadas van en la carpeta ''wwwroot' 'lib' (en Core) o en la carpeta 'Scripts' (en Framework).
+
+Por defecto, el proyecto cuenta con las bibliotecas:
+"bootstrap" https://getbootstrap.com/docs/5.0/getting-started/introduction/
+"JQuery" https://api.jquery.com/
+y (en Framework) "modernizr"  https://modernizr.com/docs
+
+
+Formularios HTML:  https://www.w3.org/TR/html401/interact/forms.html
+
+Para interactuar con servicios web desde JavaScript, uno de los mecanismos más habituales es XMLHttpRequest:
+https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest
+https://www.w3schools.com/XML/ajax_xmlhttprequest_create.asp
+
+
+
+================================
+Aplicación Microsoft Web App MVC, "Web Forms" 
+================================
+nota: además de todo lo anterior (WebAPI RESTfull y WebApp JavaScript),
+      se puede utilizar también código C# mezclado con el HTML/CSS; 
+      obtenemos así toda la potencia de la biblioteca .NET
+      y podemos utilizar directamente todos los programas/DLLs que tengamos.
+
+
+Las páginas web se escriben en Razor (.cshtml)
+https://docs.microsoft.com/es-es/aspnet/core/razor-pages/?view=aspnetcore-5.0&tabs=visual-studio
+https://www.learnrazorpages.com/
+
+
+Para aplicaciones simples, se sigue el paradigma PageControler:
+=> La Page (.cshtml) maneja el interface con el usuario.
+=> El PageModel (.cshtml.cs) maneja la lógica de la aplicación (y todo lo demás)
+
+https://docs.microsoft.com/es-es/aspnet/core/razor-pages/?view=aspnetcore-5.0&tabs=visual-studio
+https://docs.microsoft.com/es-es/aspnet/core/tutorials/razor-pages/razor-pages-start?view=aspnetcore-5.0&tabs=visual-studio
+https://www.learnrazorpages.com/razor-pages/pagemodel
+
+La entrada de datos se hace igual que en las páginas HTML, usando la etiqueta <form>
+  https://www.learnrazorpages.com/razor-pages/forms
+Pero el procesamiento de esos datos se hace directamente en C#
+  https://www.learnrazorpages.com/razor-pages/model-binding
+
+
+
+Para aplicaciones más complejas, se sigue el paradigma MVC o el MVVM:
+=> La Vista (.cshtml) maneja el interface con el usuario (bien sea este humano o bien otro programa).
+=> El Controller (.cs) maneja la lógica de la aplicación, e interactua con la Vista y con el Model.
+=> El Model (.cs) maneja los datos y su persistencia (por ejemplo, en archivos o en bases de datos).
+
+https://docs.microsoft.com/en-us/aspnet/core/mvc/overview?view=aspnetcore-5.0
+https://docs.microsoft.com/es-es/aspnet/core/tutorials/first-mvc-app/start-mvc?view=aspnetcore-5.0&tabs=visual-studio
+
+Las vistas (inteface de usuario) van en la carpeta 'Views'.
+https://docs.microsoft.com/en-us/aspnet/core/mvc/views/overview?view=aspnetcore-5.0
+  La organización general de las páginas va en 'Shared' '_Layout.cshtml'.
+  El contenido de la primera página va en 'Home' 'Index.cshtml'.
+(en Framework) las vistas más allá de la primera página continuan en la carpeta 'Areas'.
+(en Core) todas las paginas van en la carpeta 'Views' (usar subcarpetas para organizarlas si es necesario)
+
+Los controladores (enlace entre vistas y modelos) van en la carpeta 'Controllers'.
+https://docs.microsoft.com/en-us/aspnet/core/mvc/controllers/actions?view=aspnetcore-5.0
+
+Los modelos (datos y lógica de la aplicación) van en la carpeta 'Models'.
+https://docs.microsoft.com/en-us/ef/
+
+
+
+
+
+=================================================
+Servicios WCF (Windows Communications Foundation)
+=================================================
+WCF es un framework para servicios propietario de Microsoft, más sofisticado que el estandar RESTfull WebAPI:
+https://docs.microsoft.com/en-us/dotnet/framework/wcf/whats-wcf
+Pero la propia Microsoft lo tiene marcado como "deprecated" (a no utilizar en proyectos nuevos).
+
+Microsoft ahora está potenciando RESTfull, para garantizar la interoperabilidad con otras plataformas.
+
+nota: para hacerse una idea del mercado, una lista de los frameworks más habituales para servicios web 
+se puede leer en https://en.wikipedia.org/wiki/List_of_web_service_frameworks
+
+
+
+
+
+
+
+
+
+===============================
+Para dibujar en una página web
+===============================
+HTML5 tiene un soporte bastante rico para gráficos: https://www.w3.org/standards/webdesign/graphics
+
+Para algo simple y rápido, se puede usar la etiqueta HTML5 <canvas> y JavaScript
+https://www.w3schools.com/html/html5_canvas.asp
+
+
+==========================
+Para dibujar en .NET Core
+==========================

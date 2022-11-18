@@ -1,0 +1,30 @@
+C:\Users\Public\Documents\01_PROGRAMACION\AssemblyAssemblerForRevit\zz-PruebasYExperimentos\bin\Debug\zz-PruebasYExperimentos.exe.config
+C:\Users\Public\Documents\01_PROGRAMACION\AssemblyAssemblerForRevit\zz-PruebasYExperimentos\bin\Debug\zz-PruebasYExperimentos.exe
+C:\Users\Public\Documents\01_PROGRAMACION\AssemblyAssemblerForRevit\zz-PruebasYExperimentos\bin\Debug\zz-PruebasYExperimentos.pdb
+C:\Users\Public\Documents\01_PROGRAMACION\AssemblyAssemblerForRevit\zz-PruebasYExperimentos\obj\Debug\MainWindow_paraPruebas.g.cs
+C:\Users\Public\Documents\01_PROGRAMACION\AssemblyAssemblerForRevit\zz-PruebasYExperimentos\obj\Debug\App.g.cs
+C:\Users\Public\Documents\01_PROGRAMACION\AssemblyAssemblerForRevit\zz-PruebasYExperimentos\obj\Debug\zz-PruebasYExperimentos_MarkupCompile.cache
+C:\Users\Public\Documents\01_PROGRAMACION\AssemblyAssemblerForRevit\zz-PruebasYExperimentos\obj\Debug\zz-PruebasYExperimentos_MarkupCompile.lref
+C:\Users\Public\Documents\01_PROGRAMACION\AssemblyAssemblerForRevit\zz-PruebasYExperimentos\obj\Debug\MainWindow_paraPruebas.baml
+C:\Users\Public\Documents\01_PROGRAMACION\AssemblyAssemblerForRevit\zz-PruebasYExperimentos\obj\Debug\zz-PruebasYExperimentos.g.resources
+C:\Users\Public\Documents\01_PROGRAMACION\AssemblyAssemblerForRevit\zz-PruebasYExperimentos\obj\Debug\StructureAssemblerForRevit.Properties.Resources.resources
+C:\Users\Public\Documents\01_PROGRAMACION\AssemblyAssemblerForRevit\zz-PruebasYExperimentos\obj\Debug\zz-PruebasYExperimentos.csproj.GenerateResource.cache
+C:\Users\Public\Documents\01_PROGRAMACION\AssemblyAssemblerForRevit\zz-PruebasYExperimentos\obj\Debug\zz-PruebasYExperimentos.csproj.CoreCompileInputs.cache
+C:\Users\Public\Documents\01_PROGRAMACION\AssemblyAssemblerForRevit\zz-PruebasYExperimentos\obj\Debug\zz-PruebasYExperimentos.exe
+C:\Users\Public\Documents\01_PROGRAMACION\AssemblyAssemblerForRevit\zz-PruebasYExperimentos\obj\Debug\zz-PruebasYExperimentos.pdb
+C:\Users\Public\Documents\01_PROGRAMACION\AssemblyAssemblerForRevit\zz-PruebasYExperimentos\obj\Debug\zz-PruebasYExperimentos.csprojAssemblyReference.cache
+C:\Users\Public\Documents\01_PROGRAMACION\aa- plantilla de aplicacion REVIT\zz-PruebasYExperimentos\bin\Debug\zz-PruebasYExperimentos.exe.config
+C:\Users\Public\Documents\01_PROGRAMACION\aa- plantilla de aplicacion REVIT\zz-PruebasYExperimentos\bin\Debug\zz-PruebasYExperimentos.exe
+C:\Users\Public\Documents\01_PROGRAMACION\aa- plantilla de aplicacion REVIT\zz-PruebasYExperimentos\bin\Debug\zz-PruebasYExperimentos.pdb
+C:\Users\Public\Documents\01_PROGRAMACION\aa- plantilla de aplicacion REVIT\zz-PruebasYExperimentos\obj\Debug\zz-PruebasYExperimentos.csprojAssemblyReference.cache
+C:\Users\Public\Documents\01_PROGRAMACION\aa- plantilla de aplicacion REVIT\zz-PruebasYExperimentos\obj\Debug\MainWindow_paraPruebas.g.cs
+C:\Users\Public\Documents\01_PROGRAMACION\aa- plantilla de aplicacion REVIT\zz-PruebasYExperimentos\obj\Debug\App.g.cs
+C:\Users\Public\Documents\01_PROGRAMACION\aa- plantilla de aplicacion REVIT\zz-PruebasYExperimentos\obj\Debug\zz-PruebasYExperimentos_MarkupCompile.cache
+C:\Users\Public\Documents\01_PROGRAMACION\aa- plantilla de aplicacion REVIT\zz-PruebasYExperimentos\obj\Debug\zz-PruebasYExperimentos_MarkupCompile.lref
+C:\Users\Public\Documents\01_PROGRAMACION\aa- plantilla de aplicacion REVIT\zz-PruebasYExperimentos\obj\Debug\MainWindow_paraPruebas.baml
+C:\Users\Public\Documents\01_PROGRAMACION\aa- plantilla de aplicacion REVIT\zz-PruebasYExperimentos\obj\Debug\zz-PruebasYExperimentos.g.resources
+C:\Users\Public\Documents\01_PROGRAMACION\aa- plantilla de aplicacion REVIT\zz-PruebasYExperimentos\obj\Debug\StructureAssemblerForRevit.Properties.Resources.resources
+C:\Users\Public\Documents\01_PROGRAMACION\aa- plantilla de aplicacion REVIT\zz-PruebasYExperimentos\obj\Debug\zz-PruebasYExperimentos.csproj.GenerateResource.cache
+C:\Users\Public\Documents\01_PROGRAMACION\aa- plantilla de aplicacion REVIT\zz-PruebasYExperimentos\obj\Debug\zz-PruebasYExperimentos.csproj.CoreCompileInputs.cache
+C:\Users\Public\Documents\01_PROGRAMACION\aa- plantilla de aplicacion REVIT\zz-PruebasYExperimentos\obj\Debug\zz-PruebasYExperimentos.exe
+C:\Users\Public\Documents\01_PROGRAMACION\aa- plantilla de aplicacion REVIT\zz-PruebasYExperimentos\obj\Debug\zz-PruebasYExperimentos.pdb

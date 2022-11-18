@@ -1,0 +1,113 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {chapter}{\numberline {1}Herramientas}{6}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Editor, compilador (``compiler'') y enlazador (``linker'')}{6}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Automatización del proceso de compilación}{7}{section.1.2}%
+\contentsline {section}{\numberline {1.3}El compilador es tu mejor aliado,... si le permites supervisar el código.}{7}{section.1.3}%
+\contentsline {section}{\numberline {1.4}El tratamiento de excepciones también es tu aliado,... si no lo usas para enterrar la cabeza bajo el suelo e ignorar las excepciones.}{8}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Depurador (``debugger'')}{9}{section.1.5}%
+\contentsline {section}{\numberline {1.6}Marco de ejecución de pruebas\\(``test framework'')}{10}{section.1.6}%
+\contentsline {section}{\numberline {1.7}Gestor de versiones (``version control'')}{11}{section.1.7}%
+\contentsline {section}{\numberline {1.8}La documentación del sistema}{13}{section.1.8}%
+\contentsline {section}{\numberline {1.9}Comprobador estático de código (``linter'')}{14}{section.1.9}%
+\contentsline {section}{\numberline {1.10}Analizador de rendimiento (``profiler'')}{15}{section.1.10}%
+\contentsline {section}{\numberline {1.11}Automatización de todo el proceso:\\estratégias ``CI/CD'' y enfoque ``DevOps''}{15}{section.1.11}%
+\contentsline {chapter}{\numberline {2}Organización: gestión de proyectos}{19}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Requisitos y tareas: funcionalidades a implementar}{21}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Estimación de lo que supone cada requisito o tarea}{22}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}coste de implementación}{22}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}valor aportado al cliente}{23}{subsection.2.2.2}%
+\contentsline {section}{\numberline {2.3}Prioridades: en qué orden abordar los trabajos}{23}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Secuenciación de tareas}{26}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Seguimiento del progreso}{26}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}control de recursos consumidos}{26}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}difusión de información}{27}{subsection.2.5.2}%
+\contentsline {chapter}{\numberline {3}Paradigmas y lenguajes de programación}{30}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Imperativo/procedural : máquina}{30}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Imperativo/procedural : estructurado}{32}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Orientado a objeto}{35}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Funcional}{40}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Arquitecturas de software}{44}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Monolítico}{44}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Desktop, ``de escritorio''}{44}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Cliente/Servidor}{44}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Servicios distribuidos}{45}{section.4.4}%
+\contentsline {chapter}{\numberline {5}Patrones de programación (patterns)}{46}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Rationale, el por qué de los patrones}{46}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Ejemplos de algunos patrones}{47}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}observer}{47}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}chain of responsibility}{47}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}command}{47}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}memento}{47}{subsection.5.2.4}%
+\contentsline {subsection}{\numberline {5.2.5}adapter}{47}{subsection.5.2.5}%
+\contentsline {subsection}{\numberline {5.2.6}decorator}{47}{subsection.5.2.6}%
+\contentsline {subsection}{\numberline {5.2.7}facade}{47}{subsection.5.2.7}%
+\contentsline {subsection}{\numberline {5.2.8}proxy}{48}{subsection.5.2.8}%
+\contentsline {chapter}{\numberline {6}Algoritmos}{49}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Ordenación, clasificación y búsqueda}{50}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}búsquedas directas}{50}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}estructuración arbórea}{50}{subsection.6.1.2}%
+\contentsline {subsection}{\numberline {6.1.3}estructuración indexada}{50}{subsection.6.1.3}%
+\contentsline {subsection}{\numberline {6.1.4}estructuración semántica}{50}{subsection.6.1.4}%
+\contentsline {section}{\numberline {6.2}Cálculo numérico o simbólico}{50}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}ecuaciones lineales}{50}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}derivación e integración}{51}{subsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.2.3}series de Taylor}{51}{subsection.6.2.3}%
+\contentsline {subsection}{\numberline {6.2.4}transformadas de Fourier}{51}{subsection.6.2.4}%
+\contentsline {section}{\numberline {6.3}Optimización, programación lineal}{51}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Combinatorios}{51}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}búsqueda por ``fuerza bruta''}{52}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}búsquedas reducidas, en profundidad o en anchura}{52}{subsection.6.4.2}%
+\contentsline {subsection}{\numberline {6.4.3}heurísticas}{53}{subsection.6.4.3}%
+\contentsline {subsection}{\numberline {6.4.4}métodos de Montecarlo}{53}{subsection.6.4.4}%
+\contentsline {section}{\numberline {6.5}Algoritmos que aprenden}{53}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Algoritmos que evolucionan}{53}{section.6.6}%
+\contentsline {chapter}{\numberline {7}¿Gigantes\ldots ? o ¿Molinos?\ldots }{55}{chapter.7}%
+\contentsline {section}{\numberline {7.1}cómo nombrar las variables ?!?}{55}{section.7.1}%
+\contentsline {section}{\numberline {7.2}cómo abrir-cerrar bloques ?!?}{55}{section.7.2}%
+\contentsline {section}{\numberline {7.3}qué usar para la indentación: tabuladores ?!? o espacios ?!? }{56}{section.7.3}%
+\contentsline {section}{\numberline {7.4}longitud de nombres para variables y funciones ?!?}{56}{section.7.4}%
+\contentsline {section}{\numberline {7.5}usar documentación/comentarios externos o hacer que el propio código sea claro de leer ?!?}{56}{section.7.5}%
+\contentsline {section}{\numberline {7.6}Un consejo:}{56}{section.7.6}%
+\contentsline {chapter}{\numberline {8}Algunos conceptos importantes para obtener software de calidad}{58}{chapter.8}%
+\contentsline {section}{\numberline {8.1}GIGO, la calidad en los datos es importante}{58}{section.8.1}%
+\contentsline {section}{\numberline {8.2}KISS, cuanto más simple, menos problemas}{59}{section.8.2}%
+\contentsline {section}{\numberline {8.3}YAGNI, flexibilidad para evolucionar}{60}{section.8.3}%
+\contentsline {section}{\numberline {8.4}Divide y vencerás}{61}{section.8.4}%
+\contentsline {section}{\numberline {8.5}Arquitecturas multi-capa}{61}{section.8.5}%
+\contentsline {section}{\numberline {8.6}SOLID, responsabilidades claras, cada parte hace lo suyo, y lo hace bien}{62}{section.8.6}%
+\contentsline {subsection}{\numberline {8.6.1}\textbf {S}RP (Single Responsibility Principle)}{62}{subsection.8.6.1}%
+\contentsline {subsection}{\numberline {8.6.2}\textbf {O}CP (Open Close Principle)}{62}{subsection.8.6.2}%
+\contentsline {subsection}{\numberline {8.6.3}\textbf {L}SP (Liskov Substitution Principle)}{62}{subsection.8.6.3}%
+\contentsline {subsection}{\numberline {8.6.4}\textbf {I}SP (Interface Segregation Principle)}{63}{subsection.8.6.4}%
+\contentsline {subsection}{\numberline {8.6.5}\textbf {D}IP (Dependency Inversion Principle)}{63}{subsection.8.6.5}%
+\contentsline {section}{\numberline {8.7}IDEALS, responsabilidades claras, cada parte hace lo suyo, y lo hace bien}{65}{section.8.7}%
+\contentsline {subsection}{\numberline {8.7.1}\textbf {I}nterface segregation}{65}{subsection.8.7.1}%
+\contentsline {subsection}{\numberline {8.7.2}\textbf {D}eployability}{65}{subsection.8.7.2}%
+\contentsline {subsection}{\numberline {8.7.3}\textbf {E}vent-driven}{66}{subsection.8.7.3}%
+\contentsline {subsection}{\numberline {8.7.4}\textbf {A}vailability over consistency}{66}{subsection.8.7.4}%
+\contentsline {subsection}{\numberline {8.7.5}\textbf {L}oose-coupling}{66}{subsection.8.7.5}%
+\contentsline {subsection}{\numberline {8.7.6}\textbf {S}ingle responsibility}{66}{subsection.8.7.6}%
+\contentsline {chapter}{\numberline {9}Sugerencias desde la cocina, algunas ideas prácticas}{67}{chapter.9}%
+\contentsline {section}{\numberline {9.1}La importancia de refactorizar}{67}{section.9.1}%
+\contentsline {subsection}{\numberline {9.1.1}rationale tras la refactorización}{68}{subsection.9.1.1}%
+\contentsline {subsection}{\numberline {9.1.2}disponer de una red de seguridad, facilita la refactorización}{68}{subsection.9.1.2}%
+\contentsline {section}{\numberline {9.2}La importancia de los tests internos}{68}{section.9.2}%
+\contentsline {section}{\numberline {9.3}La forma natural de construir software es construirlo de forma iterativa}{69}{section.9.3}%
+\contentsline {section}{\numberline {9.4}Cuando utilices un estandar o paradigma conocido\ldots }{70}{section.9.4}%
+\contentsline {section}{\numberline {9.5}Realizar ``Hello, world''s para aprender}{70}{section.9.5}%
+\contentsline {section}{\numberline {9.6}Números, Fechas y otras hierbas similares: cada cual las escribe diferente}{79}{section.9.6}%
+\contentsline {section}{\numberline {9.7}Magnitudes: números con unidad de medida}{79}{section.9.7}%
+\contentsline {section}{\numberline {9.8}Códigos: identificar elementos}{79}{section.9.8}%
+\contentsline {subsection}{\numberline {9.8.1}una nota histórica:}{79}{subsection.9.8.1}%
+\contentsline {subsection}{\numberline {9.8.2}algunos consejos:}{80}{subsection.9.8.2}%
+\contentsline {subsection}{\numberline {9.8.3}a tener en cuenta cuando haya varias partes que asignan codigos de forma distribuida}{81}{subsection.9.8.3}%
+\contentsline {subsection}{\numberline {9.8.4}algunas reflexiones acerca de la cantidad de códigos posibles:}{81}{subsection.9.8.4}%
+\contentsline {section}{\numberline {9.9}Un truco muy útil: usar UUIDs como identificadores internos de elementos}{82}{section.9.9}%
+\contentsline {section}{\numberline {9.10}Un truco muy útil: inactivar elementos en vez de borrarlos}{83}{section.9.10}%
+\contentsline {section}{\numberline {9.11}Una sugerencia para recoger especificaciones: BDD (Behavior Driven Development)}{83}{section.9.11}%
+\contentsline {section}{\numberline {9.12}Una reflexión acerca de las ventajas de manejar datos inmutables}{85}{section.9.12}%
+\contentsline {section}{\numberline {9.13}Una reflexión personal acerca de poner controles en el programa para evitar ``errores de usuario''}{87}{section.9.13}%
+\contentsline {chapter}{\numberline {10}apéndice: algo de bibliografia}{90}{chapter.10}%
+\contentsline {section}{\numberline {10.1}notas históricas: para situarnos en los distintos marcos temporales}{90}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Mis libros favoritos}{91}{section.10.2}%
+\contentsline {section}{\numberline {10.3}Otros libros, documentos, referencias,\ldots }{94}{section.10.3}%
