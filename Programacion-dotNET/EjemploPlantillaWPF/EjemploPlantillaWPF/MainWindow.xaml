@@ -1,0 +1,135 @@
+﻿<Window x:Class="EjemploPlantillaWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EjemploPlantillaWPF"
+        xmlns:recursos="clr-namespace:EjemploPlantillaWPF.Resources"
+        mc:Ignorable="d"
+        Title="{Binding tituloDeLaVentana}" SizeToContent="WidthAndHeight">
+    
+    <Window.DataContext>
+        <local:MainViewModel />
+    </Window.DataContext>
+
+    <Grid>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Right">
+            
+            <Button Command="{Binding MostrarVentanaDeAyuda}" Width="20" Height="20" HorizontalAlignment="Right">
+                <Button.Content>
+                    <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE897;" FontSize="12" />
+                </Button.Content>
+            </Button>
+            
+        </StackPanel>
+        
+
+        <WrapPanel Grid.Row="1" Margin="10">
+
+            <GroupBox Header="{x:Static recursos:MainWindowResources.EligeLaOpcion}" Margin="10" 
+                      MouseEnter="ElCursorEstaSobreLosRadiobuttons" MouseLeave="ElCursorYaNoEstaSobreLosRadiobuttons">
+                <StackPanel Orientation="Horizontal" Margin="15,5,0,0">
+                
+                    <RadioButton IsChecked="{Binding estaSeleccionadaLaOpcion1}" Margin="0,0,15,0">
+                        <RadioButton.Content>
+                            <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xED25;" FontSize="16" />
+                        </RadioButton.Content>
+                    </RadioButton>
+                
+                    <RadioButton IsChecked="{Binding estaSeleccionadaLaOpcion2}" Margin="0,0,15,0">
+                        <RadioButton.Content>
+                            <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xED43;" FontSize="16" />
+                        </RadioButton.Content>
+                    </RadioButton>
+                
+                    <RadioButton IsChecked="{Binding estaSeleccionadaLaOpcion3}" Margin="0,0,15,0">
+                        <RadioButton.Content>
+                            <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE8CE;" FontSize="16" />
+                        </RadioButton.Content>
+                    </RadioButton>
+            
+                </StackPanel>
+            </GroupBox>
+
+            <StackPanel Orientation="Vertical" Margin="10">
+            
+                <StackPanel Orientation="Horizontal" Margin="10,5,0,5">
+                    <TextBlock Text="{x:Static recursos:MainWindowResources.TeclearAquiLaPrueba1}" Margin="0,0,5,0" />
+                    <TextBox Text="{Binding textoDePrueba1}" Height="20" MinWidth="100"/>
+                </StackPanel>
+            
+                <StackPanel Orientation="Horizontal" Margin="10,5,0,5">
+                    <TextBlock Text="{x:Static recursos:MainWindowResources.TeclearAquiLaPrueba2}" Margin="0,0,5,0" />
+                    <TextBox Text="{Binding textoDePrueba2}" Height="20" MinWidth="100"/>
+                </StackPanel>
+
+                <Button Content="{x:Static recursos:MainWindowResources.ClicAquiParaProcesarLosTextosTecleados}" 
+                        Command="{Binding ProcesarLosTextosTecleados}" 
+                        HorizontalAlignment="Left" Margin="0,10,0,10" MinHeight="40" Padding="5" />
+            
+            </StackPanel>
+            
+            <StackPanel Orientation="Vertical">
+                
+                <StackPanel Orientation="Horizontal" Margin="10">
+                    <StackPanel.Resources>
+                        <local:ConversorDeTiposDeMonstruo x:Key="conversorDeTiposDeMonstruo" />
+                    </StackPanel.Resources>
+                    <TextBlock Text="{x:Static recursos:MainWindowResources.TipoDeMonstruo}" Margin="0,0,5,0" />
+                    <ComboBox ItemsSource="{Binding tiposDeMonstruoDisponibles}" MinWidth="70"
+                                SelectedItem="{Binding tipoDeMonstruoSeleccionado, Converter={StaticResource conversorDeTiposDeMonstruo}, Mode=TwoWay}" />
+                </StackPanel>
+            
+                <Button Content="{x:Static recursos:MainWindowResources.ClicAquiParaProcesarElMonstruoSeleccionado}" 
+                        Command="{Binding ProcesarElMonstruoSeleccionado}" 
+                        HorizontalAlignment="Left" Margin="20,5,0,10" MinHeight="40" Padding="5" />
+                
+            </StackPanel>
+            
+        </WrapPanel>
+
+        
+        <Grid Grid.Row="2" Margin="0,20,0,10">
+            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+            <Border Grid.Column="0" BorderBrush="Gray" BorderThickness="1" Background="LightGray" MaxHeight="300">
+                <Image Name="areaDeDibujo2D" Source="{Binding dibujante2D.dibujo}" MouseLeftButtonDown="AreaDeDibujo2D_MouseLeftButtonDown" />
+            </Border>
+
+            <Border Grid.Column="1" BorderBrush="Gray" BorderThickness="1" Background="LightGray" MaxHeight="300">
+                <Viewport3D Name="areaDeDibujo3D" MouseLeftButtonDown="AreaDeDibujo3D_MouseLeftButtonDown">
+                    <Viewport3D.Camera>
+                        <OrthographicCamera Position="0,0,2" LookDirection="0,0,-1" UpDirection="0,1,0" 
+                                            FarPlaneDistance="10" NearPlaneDistance="1"/>
+                    </Viewport3D.Camera>
+                    <Viewport3D.Children>
+                        <ModelVisual3D>
+                            <ModelVisual3D.Content>
+                                <Model3DGroup Children="{Binding dibujante3D.elementosDelMundoVirtual}"/>
+                            </ModelVisual3D.Content>
+                        </ModelVisual3D>
+                    </Viewport3D.Children>
+                </Viewport3D>
+            </Border>
+        
+        </Grid>
+
+        <StatusBar Grid.Row="3" Background="LightYellow" Margin="0,20,0,0" Height="20">
+            <TextBlock Text="{Binding mensajeEnLaBarraDeEstado}" />
+        </StatusBar>
+        
+    </Grid>
+
+</Window>
