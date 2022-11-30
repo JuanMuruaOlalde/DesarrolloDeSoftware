@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8) (preloaded format=pdflatex 2022.9.8)  30 NOV 2022 15:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8) (preloaded format=pdflatex 2022.9.8)  30 NOV 2022 15:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1087,9 +1087,9 @@ Overfull \hbox (23.10416pt too wide) in paragraph at lines 728--729
 -ci^^Son, (IF, SWITCH,...) 
  []
 
-LaTeX Info: Redefining \. on input line 741.
-LaTeX Info: Redefining \% on input line 741.
-Package cleveref Info: loaded `spanish' language definitions on input line 741.
+LaTeX Info: Redefining \. on input line 736.
+LaTeX Info: Redefining \% on input line 736.
+Package cleveref Info: loaded `spanish' language definitions on input line 736.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1100,9 +1100,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [31]
-LaTeX Info: Redefining \. on input line 803.
-LaTeX Info: Redefining \% on input line 803.
-Package cleveref Info: loaded `spanish' language definitions on input line 803.
+LaTeX Info: Redefining \. on input line 794.
+LaTeX Info: Redefining \% on input line 794.
+Package cleveref Info: loaded `spanish' language definitions on input line 794.
 
 
 
@@ -1114,7 +1114,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [32]
-<./imagenes//Paradigma de programacion - PROCEDURAL.png, id=843, 1064.97874pt x
+<./imagenes//Paradigma de programacion - PROCEDURAL.png, id=835, 1064.97874pt x
  773.89125pt>
 File: ./imagenes//Paradigma de programacion - PROCEDURAL.png Graphic file (type
  png)
@@ -1122,9 +1122,9 @@ File: ./imagenes//Paradigma de programacion - PROCEDURAL.png Graphic file (type
 Package pdftex.def Info: ./imagenes//Paradigma de programacion - PROCEDURAL.png
   used on input line 813.
 (pdftex.def)             Requested size: 426.79134pt x 310.12964pt.
-LaTeX Info: Redefining \. on input line 818.
-LaTeX Info: Redefining \% on input line 818.
-Package cleveref Info: loaded `spanish' language definitions on input line 818.
+LaTeX Info: Redefining \. on input line 815.
+LaTeX Info: Redefining \% on input line 815.
+Package cleveref Info: loaded `spanish' language definitions on input line 815.
 
 
 
@@ -1135,10 +1135,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[33 <./imagenes//Paradigma de programacion - PROCEDURAL.png>]
-LaTeX Info: Redefining \. on input line 869.
-LaTeX Info: Redefining \% on input line 869.
-Package cleveref Info: loaded `spanish' language definitions on input line 869.
+[33]
+LaTeX Info: Redefining \. on input line 837.
+LaTeX Info: Redefining \% on input line 837.
+Package cleveref Info: loaded `spanish' language definitions on input line 837.
 
 
 
@@ -1149,10 +1149,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[34]
-LaTeX Info: Redefining \. on input line 910.
-LaTeX Info: Redefining \% on input line 910.
-Package cleveref Info: loaded `spanish' language definitions on input line 910.
+[34 <./imagenes//Paradigma de programacion - PROCEDURAL.png>]
+LaTeX Info: Redefining \. on input line 890.
+LaTeX Info: Redefining \% on input line 890.
+Package cleveref Info: loaded `spanish' language definitions on input line 890.
 
 
 
@@ -1164,7 +1164,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [35]
-<./imagenes//Paradigma de programacion - ORIENTADO A OBJETO.png, id=928, 1090.0
+<./imagenes//Paradigma de programacion - ORIENTADO A OBJETO.png, id=927, 1090.0
 725pt x 800.9925pt>
 File: ./imagenes//Paradigma de programacion - ORIENTADO A OBJETO.png Graphic fi
 le (type png)
@@ -1172,9 +1172,9 @@ le (type png)
 Package pdftex.def Info: ./imagenes//Paradigma de programacion - ORIENTADO A OB
 JETO.png  used on input line 919.
 (pdftex.def)             Requested size: 426.79134pt x 313.60803pt.
-LaTeX Info: Redefining \. on input line 931.
-LaTeX Info: Redefining \% on input line 931.
-Package cleveref Info: loaded `spanish' language definitions on input line 931.
+LaTeX Info: Redefining \. on input line 923.
+LaTeX Info: Redefining \% on input line 923.
+Package cleveref Info: loaded `spanish' language definitions on input line 923.
 
 
 
@@ -1185,10 +1185,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[36 <./imagenes//Paradigma de programacion - ORIENTADO A OBJETO.png>]
-LaTeX Info: Redefining \. on input line 984.
-LaTeX Info: Redefining \% on input line 984.
-Package cleveref Info: loaded `spanish' language definitions on input line 984.
+[36]
+LaTeX Info: Redefining \. on input line 947.
+LaTeX Info: Redefining \% on input line 947.
+Package cleveref Info: loaded `spanish' language definitions on input line 947.
 
 
 
@@ -1199,10 +1199,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[37]
-LaTeX Info: Redefining \. on input line 1037.
-LaTeX Info: Redefining \% on input line 1037.
-Package cleveref Info: loaded `spanish' language definitions on input line 1037
+[37 <./imagenes//Paradigma de programacion - ORIENTADO A OBJETO.png>]
+LaTeX Info: Redefining \. on input line 1001.
+LaTeX Info: Redefining \% on input line 1001.
+Package cleveref Info: loaded `spanish' language definitions on input line 1001
 .
 
 
@@ -1214,9 +1214,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [38]
-LaTeX Info: Redefining \. on input line 1092.
-LaTeX Info: Redefining \% on input line 1092.
-Package cleveref Info: loaded `spanish' language definitions on input line 1092
+LaTeX Info: Redefining \. on input line 1053.
+LaTeX Info: Redefining \% on input line 1053.
+Package cleveref Info: loaded `spanish' language definitions on input line 1053
 .
 
 
@@ -1228,9 +1228,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [39]
-LaTeX Info: Redefining \. on input line 1122.
-LaTeX Info: Redefining \% on input line 1122.
-Package cleveref Info: loaded `spanish' language definitions on input line 1122
+LaTeX Info: Redefining \. on input line 1106.
+LaTeX Info: Redefining \% on input line 1106.
+Package cleveref Info: loaded `spanish' language definitions on input line 1106
 .
 
 
@@ -1242,17 +1242,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [40]
-<./imagenes//Paradigma de programacion - FUNCIONAL.png, id=1128, 1075.01625pt x
- 733.74126pt>
-File: ./imagenes//Paradigma de programacion - FUNCIONAL.png Graphic file (type 
-png)
-<use ./imagenes//Paradigma de programacion - FUNCIONAL.png>
-Package pdftex.def Info: ./imagenes//Paradigma de programacion - FUNCIONAL.png 
- used on input line 1138.
-(pdftex.def)             Requested size: 426.79134pt x 291.29689pt.
-LaTeX Info: Redefining \. on input line 1141.
-LaTeX Info: Redefining \% on input line 1141.
-Package cleveref Info: loaded `spanish' language definitions on input line 1141
+LaTeX Info: Redefining \. on input line 1131.
+LaTeX Info: Redefining \% on input line 1131.
+Package cleveref Info: loaded `spanish' language definitions on input line 1131
 .
 
 
@@ -1264,9 +1256,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [41]
-LaTeX Info: Redefining \. on input line 1164.
-LaTeX Info: Redefining \% on input line 1164.
-Package cleveref Info: loaded `spanish' language definitions on input line 1164
+<./imagenes//Paradigma de programacion - FUNCIONAL.png, id=1132, 1075.01625pt x
+ 733.74126pt>
+File: ./imagenes//Paradigma de programacion - FUNCIONAL.png Graphic file (type 
+png)
+<use ./imagenes//Paradigma de programacion - FUNCIONAL.png>
+Package pdftex.def Info: ./imagenes//Paradigma de programacion - FUNCIONAL.png 
+ used on input line 1138.
+(pdftex.def)             Requested size: 426.79134pt x 291.29689pt.
+LaTeX Info: Redefining \. on input line 1152.
+LaTeX Info: Redefining \% on input line 1152.
+Package cleveref Info: loaded `spanish' language definitions on input line 1152
 .
 
 
@@ -1301,9 +1301,9 @@ Overfull \hbox (6.20848pt too wide) in paragraph at lines 1192--1194
 5 / MATH / michelucci /
  []
 
-LaTeX Info: Redefining \. on input line 1200.
-LaTeX Info: Redefining \% on input line 1200.
-Package cleveref Info: loaded `spanish' language definitions on input line 1200
+LaTeX Info: Redefining \. on input line 1194.
+LaTeX Info: Redefining \% on input line 1194.
+Package cleveref Info: loaded `spanish' language definitions on input line 1194
 .
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2171,7 +2171,7 @@ blic/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/
 cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
 <C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program 
 Files/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on Proyecto_Software.pdf (100 pages, 1792670 bytes).
+Output written on Proyecto_Software.pdf (100 pages, 1792870 bytes).
 PDF statistics:
  2121 PDF objects out of 2487 (max. 8388607)
  954 named destinations out of 1000 (max. 500000)
