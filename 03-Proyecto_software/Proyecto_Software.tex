@@ -671,7 +671,20 @@ nota: Hablando de diferencias, también hay algunas otras que no afectan directa
 \chapter{Paradigmas y lenguajes de programación}
 Es importante destacar que el paradigma seguido al programar puede ser independiente del lenguaje de programación utilizado. Un paradigma de programación es simplemente ``una forma de hacer las cosas''. Y en (casi) todos los lenguajes se puede hacer (casi) de todo.
 
-Hasta finales de la década de los 90, cada lenguaje tendia a especializarse en un paradigma concreto y solo soportaba específicamente ese. Pero hoy en día (finales de la década de los 10), los lenguajes más populares están tendiendo a implementar mecanismos propios de más de un paradigma. De ahí que sea importante conocer bien los paradigmas; para que el lenguaje no nos confunda cuando permite mezclar construcciones típicas de más de un paradigma en un mismo programa.
+Hasta finales de la década de los 90, cada lenguaje tendia a especializarse en un paradigma concreto y solo soportaba específicamente ese. Pero hoy en día (finales de la década de los 10), los lenguajes más populares están tendiendo a implementar mecanismos propios de más de un paradigma. Dejando en manos de la persona programadora la decisión de seguir uno u otro.
+
+Podriamos decir que cada paradigma, siendo como es ``una forma de hacer las cosas'', requiere una determinada forma de pensar al trabajar. 
+\begin{itemize}
+
+\item En la programación imperativa/procedural: en cada paso se comprueba el estado concreto en ese momento de tal y tal y tal para, en función de ello, realizar alguna acción; acción que modificará cual o cual o cual.
+
+\item En la programación orientada a objeto: en cada paso se utiliza el objeto pertinente, para pedirle que haga algo.
+
+\item En la programación funcional: en cada paso se llama a la función pertinente, para transformar de lo que se tiene en ese momento a lo que se desea tener.
+
+\end{itemize}
+
+En las seguientes secciones se verá cada uno de estos paradigmas con un poco más de detalle.
 
 \section{Imperativo/procedural : máquina}
 En este paradigma, se trabaja directamente con las instrucciones básicas de la plataforma hardware sobre el que va a funcionar el programa.
