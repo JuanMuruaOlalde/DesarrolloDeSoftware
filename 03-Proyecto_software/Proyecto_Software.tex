@@ -676,15 +676,15 @@ Hasta finales de la década de los 90, cada lenguaje tendia a especializarse en 
 Podriamos decir que cada paradigma, siendo como es ``una forma de hacer las cosas'', requiere una determinada forma de pensar al trabajar. 
 \begin{itemize}
 
-\item En la programación imperativa/procedural: en cada paso se comprueba el estado concreto en ese momento de tal y tal y tal para, en función de ello, realizar alguna acción; acción que modificará cual o cual o cual.
+\item En la programación imperativa/procedural: en cada paso indica exactamente qué hacer; se comprueba el estado concreto en ese momento de tal y tal y tal; para, en función de ello, realizar alguna acción; acción que modificará cual o cual o cual.
 
 \item En la programación orientada a objeto: en cada paso se utiliza el objeto pertinente, para pedirle que haga algo.
 
-\item En la programación funcional: en cada paso se llama a la función pertinente, para transformar de esto que se le pasa como parámetros a lo que se obtiene como resultado devuelto.
+\item En la programación funcional: en cada paso utiliza la función pertinente, para transformar de esto que se le ha de pasar como parámetros a eso que devuelve como resultado.
 
 \end{itemize}
 
-En las seguientes secciones se verá cada uno de estos paradigmas con un poco más de detalle.
+Según cual sea la problemática a resolver, su resolución puede ser más fácil o más complicada siguiendo uno u otro paradigma. De ahí la importancia de conocer al menos los fundamentos de los principales paradigmas. Y de ahí también la tendencia de los lenguajes de programación a soportar el trabajo en más de un paradigma.
 
 \section{Imperativo/procedural : máquina}
 En este paradigma, se trabaja directamente con las instrucciones básicas de la plataforma hardware sobre el que va a funcionar el programa.
@@ -1112,7 +1112,7 @@ public class Main
 \section{Funcional}
 En este paradigma se hace hincapié en el tratamiento abstracto de datos. Se utilizan una serie de funciones que actúan sobre unos ciertos datos de entrada para devolver unos nuevos datos de salida. Las  propias funciones también pueden ser datos de entrada o de salida de otras funciones, que se encargan de combinarlas.
 
-El formalismo teórico tras este tipo de programación funcional es $\lambda-calculus o \pi-calculus$
+El formalismo teórico tras este tipo de programación funcional es $\lambda$ (lambda) calculus.
 
 El funcionamiento del programa se centra en el flujo de datos a través de las funciones, para conseguir obtener el resultado deseado.
 
