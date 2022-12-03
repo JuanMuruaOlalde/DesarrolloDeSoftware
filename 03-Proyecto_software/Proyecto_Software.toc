@@ -1,4 +1,4 @@
-\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}
 \contentsline {chapter}{\numberline {1}Herramientas}{6}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Editor, compilador (``compiler'') y enlazador (``linker'')}{6}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Automatización del proceso de compilación}{7}{section.1.2}%
@@ -95,19 +95,20 @@
 \contentsline {section}{\numberline {9.3}La forma natural de construir software es construirlo de forma iterativa}{70}{section.9.3}%
 \contentsline {section}{\numberline {9.4}Cuando utilices un estandar o paradigma conocido\ldots }{71}{section.9.4}%
 \contentsline {section}{\numberline {9.5}Realizar ``Hello, world''s para aprender}{71}{section.9.5}%
-\contentsline {section}{\numberline {9.6}Números, Fechas y otras hierbas similares: cada cual las escribe diferente}{80}{section.9.6}%
-\contentsline {section}{\numberline {9.7}Magnitudes: números con unidad de medida}{80}{section.9.7}%
-\contentsline {section}{\numberline {9.8}Códigos: identificar elementos}{80}{section.9.8}%
-\contentsline {subsection}{\numberline {9.8.1}una nota histórica:}{80}{subsection.9.8.1}%
-\contentsline {subsection}{\numberline {9.8.2}algunos consejos:}{81}{subsection.9.8.2}%
-\contentsline {subsection}{\numberline {9.8.3}a tener en cuenta cuando haya varias partes que asignan codigos de forma distribuida}{82}{subsection.9.8.3}%
-\contentsline {subsection}{\numberline {9.8.4}algunas reflexiones acerca de la cantidad de códigos posibles:}{82}{subsection.9.8.4}%
-\contentsline {section}{\numberline {9.9}Un truco muy útil: usar UUIDs como identificadores internos de elementos}{83}{section.9.9}%
-\contentsline {section}{\numberline {9.10}Un truco muy útil: inactivar elementos en vez de borrarlos}{84}{section.9.10}%
-\contentsline {section}{\numberline {9.11}Una sugerencia para recoger especificaciones: BDD (Behavior Driven Development)}{84}{section.9.11}%
-\contentsline {section}{\numberline {9.12}Una reflexión acerca de las ventajas de manejar datos inmutables}{86}{section.9.12}%
-\contentsline {section}{\numberline {9.13}Una reflexión personal acerca de poner controles en el programa para evitar ``errores de usuario''}{88}{section.9.13}%
-\contentsline {chapter}{\numberline {10}apéndice: algo de bibliografia}{91}{chapter.10}%
-\contentsline {section}{\numberline {10.1}notas históricas: para situarnos en los distintos marcos temporales}{91}{section.10.1}%
-\contentsline {section}{\numberline {10.2}Mis libros favoritos}{92}{section.10.2}%
-\contentsline {section}{\numberline {10.3}Otros libros, documentos, referencias,\ldots }{95}{section.10.3}%
+\contentsline {section}{\numberline {9.6}Números, Fechas y otras hierbas similares: cada cual las escribe diferente}{75}{section.9.6}%
+\contentsline {section}{\numberline {9.7}Magnitudes: números con unidad de medida}{75}{section.9.7}%
+\contentsline {section}{\numberline {9.8}Códigos: identificar elementos}{75}{section.9.8}%
+\contentsline {subsection}{\numberline {9.8.1}Una nota histórica:}{75}{subsection.9.8.1}%
+\contentsline {subsection}{\numberline {9.8.2}Algunos consejos:}{76}{subsection.9.8.2}%
+\contentsline {subsection}{\numberline {9.8.3}A tener en cuenta cuando haya varias partes que asignan codigos de forma distribuida}{77}{subsection.9.8.3}%
+\contentsline {subsection}{\numberline {9.8.4}Algunas reflexiones acerca de la cantidad de códigos posibles:}{77}{subsection.9.8.4}%
+\contentsline {subsection}{\numberline {9.8.5}El uso de UUIDs como identificadores internos de elementos}{78}{subsection.9.8.5}%
+\contentsline {section}{\numberline {9.9}Un truco muy útil: identificadores internos solo para uso interno e identificadores externos solo para uso externo}{78}{section.9.9}%
+\contentsline {section}{\numberline {9.10}Un truco muy útil: inactivar elementos en vez de borrarlos}{79}{section.9.10}%
+\contentsline {section}{\numberline {9.11}Una forma de recoger especificaciones: BDD (Behavior Driven Development)}{80}{section.9.11}%
+\contentsline {section}{\numberline {9.12}Una reflexión acerca de las ventajas de manejar datos inmutables}{82}{section.9.12}%
+\contentsline {section}{\numberline {9.13}Una reflexión personal acerca de poner controles en el programa para evitar ``errores de usuario''}{84}{section.9.13}%
+\contentsline {chapter}{\numberline {10}apéndice: algo de bibliografia}{87}{chapter.10}%
+\contentsline {section}{\numberline {10.1}notas históricas: para situarnos en los distintos marcos temporales}{87}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Mis libros favoritos}{88}{section.10.2}%
+\contentsline {section}{\numberline {10.3}Otros libros, documentos, referencias,\ldots }{91}{section.10.3}%

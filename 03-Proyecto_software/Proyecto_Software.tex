@@ -1761,16 +1761,17 @@ Un ejemplo práctico: si en tu programa lees o escribes archivos XML como si fue
 
 
 \section{Realizar ``Hello, world''s para aprender}
-Cuando nos enfrentamos a un sistema nuevo por primera vez, un consejo: empezar a explorar el sistema centrandonos en conseguir una versión funcional de lo que se suele denominar un ``Hello, world'' (un sistema mínimo).  Evitar comenzar a trabajar directamente en lo que hemos de hacer con sistema (el trabajo real que nos han encargado).
+Cuando nos enfrentamos a un sistema nuevo por primera vez, un consejo: empezar a explorar el sistema centrandonos en conseguir una versión funcional de lo que se suele denominar un ``Hello, world'' (un sistema mínimo).  
 
-Es decir, primero aprender las bases del nuevo sistema construyendo una sencilla (pero completa) aplicación con él.
-El construir una sencilla aplicación que funcione nos permite:
+Evitar comenzar a trabajar intentando hacer directamente lo que hemos de hacer con sistema (el trabajo real que nos han encargado).
+
+Es decir, primero aprender las bases del nuevo sistema construyendo algunas sencillas aplicaciones con él. Con la idea:
 \begin{itemize}
-\item por un lado, permite aprender los detalles básicos necesarios;
-\item por otro lado, permite verificar que el sistema está correctamente instalado y configurado. 
+\item por un lado, de aprender los detalles básicos necesarios;
+\item por otro lado, de verificar que el sistema está correctamente instalado y configurado. 
 \end{itemize}
 
-Algunos ejemplos de lo que se entiende por construir un ``Hello, world'':
+Algunos ejemplos de lo que se podria entender por construir un ``Hello, world'':
 \begin{footnotesize}(nota: aquí solo se ha puesto parte del código, a modo de ejemplo, pero realmente hay que tener en cuenta también todos aquellos elementos detrás del código que permiten que este funcione: la configuración del editor/compilador/enlazador, las bibliotecas, el hardware, etc.)\end{footnotesize}
  
 $\Rightarrow$ Visualizar la famosa frasecita, programando en lenguaje C
@@ -1782,109 +1783,6 @@ int main()
     printf("Hola, mundo.\n");
     return 0;
 }
-\end{lstlisting}
-$\Rightarrow$ Visualizar la famosa frasecita, programando en lenguaje C++
-\begin{lstlisting}[frame=single]
-#include <iostream>
- 
-int main()
-{
-    std::cout << "Hola, mundo." << std::endl;
-    return 0;
-}
-$\Rightarrow$ Visualizar la famosa frasecita, programando en lenguaje Python
-print("Hola, mundo.")
-\end{lstlisting} 
-$\Rightarrow$ Algo un poco más completo: leer dos números y visualizar su suma
-en lenguaje c
-\begin{lstlisting}[frame=single]
-#include <stdio.h>
- 
-int main()
-{
-   	int primer_numero;
-   	printf("El primer número: \n");
-   	scanf("%i", &primer_numero);
- 
-   	int segundo_numero;
-   	printf("El segundo número: \n");
-   	scanf("%i", &segundo_numero);
- 
-   	int resultado;
-   	resultado = primer_numero + segundo_numero;
- 
-   	printf("La suma de %i y %i es %i \n", primer_numero, segundo_numero, resultado);
- 
-   	return 0;
-}
-\end{lstlisting}
-$\Rightarrow$ Algo un poco más completo: leer dos números y visualizar su suma en lenguaje c++
-\begin{lstlisting}[frame=single]
-#include <iostream>
- 
-int main()
-{
-   	int primer_numero;
-   	std::cout << "El primer numero: " << std::endl;
-   	std::cin >> primer_numero;
- 
-   	int segundo_numero;
-   	std::cout << "El segundo numero: " << std::endl;
-   	std::cin >> segundo_numero;
- 
-   	int resultado;
-   	resultado = primer_numero + segundo_numero;
- 
-   	std::cout << "La suma de " << primer_numero << " y " << segundo_numero
-             	<< " es " << resultado << std::endl;
- 
-   	return 0;
-}
-\end{lstlisting}
-$\Rightarrow$ Algo un poco más completo: leer dos números y visualizar su suma en lenguaje java
-\begin{lstlisting}[frame=single]
-package experimento_java;
- 
-import java.util.Scanner;
- 
-public class Main
-{
-   	public static void main()
-   	{
-         	Scanner lectorDeTeclado = new Scanner(System.in);
-         	
-         	Integer primerNumero;
-         	System.out.println("El primer numero: ");
-         	primerNumero = lectorDeTeclado.nextInt();
-   	
-         	Integer segundoNumero;
-         	System.out.println("El segundo numero: ");
-         	segundoNumero = lectorDeTeclado.nextInt();
-         	
-         	lectorDeTeclado.close();
-         	
-         	Integer resultado;
-         	resultado = primerNumero + segundoNumero;
-         	System.out.println("La suma de " + primerNumero + " y " + segundoNumero
-                            	+ " es " + resultado);
-   	}
-   	
-}
-\end{lstlisting}
-$\Rightarrow$ Algo un poco más completo: leer dos números y visualizar su suma en lenguaje python
-\begin{lstlisting}[frame=single]
-def PedirYSumarDosNumeros():
- 
-    primerNumero = input("El primer numero: ")
-    segundoNumero = input("El segundo numero: ")
- 
-	resultado = primerNumero + segundoNumero
- 
-	print("La suma de " + str(primerNumero) + " y " + str(segundoNumero)
-      	+ " es " + str(resultado))
- 
- 
-PedirYSumarDosNumeros()
 \end{lstlisting}
 
 $\Rightarrow$ Conectar un LED a una placa Rasberri Pi y hacer que parpadee:
@@ -1951,8 +1849,8 @@ namespace zz_pruebas_y_experimentos
  
     	public void Dibujar()
     	{
-            _entesADibujarEnNegro.Children.Clear();
-            _entesADibujarEnNaranja.Children.Clear();
+           _entesADibujarEnNegro.Children.Clear();
+           _entesADibujarEnNaranja.Children.Clear();
  
         	_entesADibujarEnNegro.Children.Add(new LineGeometry(new Point(0, 0), new Point(500, 500)));
         	_entesADibujarEnNaranja.Children.Add(new LineGeometry(new Point(500, 0), new Point(0, 500)));
@@ -1965,10 +1863,10 @@ namespace zz_pruebas_y_experimentos
     	private GlyphRun PrepararTexto(string texto, Point origen, double tamainoDeLetra)
     	{
         	Typeface tipoDeLetra = new Typeface(fontFamily: new FontFamily("Arial"),
-                                                style: FontStyles.Normal,
-	                                            weight: FontWeights.Normal,
-                                                stretch: FontStretches.Normal,
-                                                fallbackFontFamily: new FontFamily("Courier New"));
+                    style: FontStyles.Normal,
+	                weight: FontWeights.Normal,
+                    stretch: FontStretches.Normal,
+                    fallbackFontFamily: new FontFamily("Courier New"));
         	GlyphTypeface tipoDeLetraParaEscribir;
         	if (!tipoDeLetra.TryGetGlyphTypeface(out tipoDeLetraParaEscribir))
         	{
@@ -1987,18 +1885,18 @@ namespace zz_pruebas_y_experimentos
         	}
  
         	return new GlyphRun(glyphTypeface: tipoDeLetraParaEscribir ,
-                            	bidiLevel: 0,
-                            	isSideways: false,
-                                renderingEmSize: tamainoDeLetra,
-                            	glyphIndices: caracteresAEscribir,
-                            	baselineOrigin: new Point(origen.X, -origen.Y),
-                            	advanceWidths: espaciosAAvanzarConCadaCaracter,
-                            	glyphOffsets: null,
-                            	characters: null,
-                            	deviceFontName: null,
-                            	clusterMap: null,
-                            	caretStops: null,
-                            	language: null);
+            bidiLevel: 0,
+            isSideways: false,
+            renderingEmSize: tamainoDeLetra,
+            glyphIndices: caracteresAEscribir,
+            baselineOrigin: new Point(origen.X, -origen.Y),
+            advanceWidths: espaciosAAvanzarConCadaCaracter,
+            glyphOffsets: null,
+            characters: null,
+            deviceFontName: null,
+            clusterMap: null,
+            caretStops: null,
+            language: null);
     	}
  
  
@@ -2016,122 +1914,6 @@ namespace zz_pruebas_y_experimentos
 }
 \end{lstlisting}
 
-
-$\Rightarrow$ Dibujar un par de mallas triangulares 3D en el pipeline gráfico de WPF:
-\\ \includegraphics{Dibujar en el pipeline 3D de WPF}   
-
-\begin{lstlisting}[frame=single]
-using System.ComponentModel;
-using System.Windows.Media;
-using System.Windows.Media.Media3D;
- 
-namespace zz_pruebas_y_experimentos
-{
-	class v_Dibujante3D : INotifyPropertyChanged
-	{
- 
-    	public v_Dibujante3D()
-    	{
-            PrepararPipelineGrafico();
-        	Dibujar();
-    	}
- 
- 
-    	private GeometryModel3D _entesConMaterialAzul;
-    	private MeshGeometry3D _mallaDeTriangulosAzules;
- 
-    	private GeometryModel3D _entesConMaterialVerde;
-    	private MeshGeometry3D _mallaDeTriangulosVerdes;
- 
-    	private Model3DGroup _mundoVirtual;
-    	public Model3DCollection elementosDelMundoVirtual { get { return _mundoVirtual.Children; } }
- 
-    	private void PrepararPipelineGrafico()
-    	{
-        	_mundoVirtual = new Model3DGroup();
- 
-        	_entesConMaterialAzul = new GeometryModel3D();
-        	_mallaDeTriangulosAzules = new MeshGeometry3D();
-        	_entesConMaterialAzul.Geometry = _mallaDeTriangulosAzules;
-        	_entesConMaterialAzul.Material = new DiffuseMaterial(new SolidColorBrush(Colors.Blue));
- 	       _entesConMaterialAzul.Transform = new Transform3DGroup();
-            _mundoVirtual.Children.Add(_entesConMaterialAzul);
- 
-        	_entesConMaterialVerde = new GeometryModel3D();
-        	_mallaDeTriangulosVerdes = new MeshGeometry3D();
-        	_entesConMaterialVerde.Geometry = _mallaDeTriangulosVerdes;
-        	_entesConMaterialVerde.Material = new DiffuseMaterial(new SolidColorBrush(Colors.Green));
-        	_entesConMaterialVerde.Transform = new Transform3DGroup();
-            _mundoVirtual.Children.Add(_entesConMaterialVerde);
- 
-        	AmbientLight luzAmbiente = new AmbientLight(ambientColor: Colors.White);
-            _mundoVirtual.Children.Add(luzAmbiente);
-        	DirectionalLight luzDireccional = new DirectionalLight(diffuseColor: Colors.White, direction: new Vector3D(1,1,-1));
-            _mundoVirtual.Children.Add(luzDireccional);
-        }
- 
-    	public void Dibujar()
-    	{
-        	DibujarEnteAzul();
-        	DibujarEnteVerde();
-   	     NotifyPropertyChanged("elementosDelMundoVirtual");
-    	}
- 
-    	private void DibujarEnteAzul()
-    	{
-            _mallaDeTriangulosAzules.Positions.Clear();
-            _mallaDeTriangulosAzules.TriangleIndices.Clear();
-        	_mallaDeTriangulosAzules.Normals.Clear();
- 
-            for (int i = 0; i < 15; i = i = i + 3)
-            {
-            	double incremento = (i / 30);
-                _mallaDeTriangulosAzules.Positions.Add(new Point3D(-0.5 + incremento, 0 + incremento, 0 + incremento));
-                _mallaDeTriangulosAzules.Positions.Add(new Point3D(0.5 + incremento, 0.5 + incremento, 0.3 + incremento));
-                _mallaDeTriangulosAzules.Positions.Add(new Point3D(0 + incremento, 0.5 + incremento, 0 + incremento));
- 
-                _mallaDeTriangulosAzules.TriangleIndices.Add(i + 0);
-                _mallaDeTriangulosAzules.TriangleIndices.Add(i + 1);
-                _mallaDeTriangulosAzules.TriangleIndices.Add(i + 2);
- 
-            	_mallaDeTriangulosAzules.Normals.Add(new Vector3D(0, 0, 1));
-                _mallaDeTriangulosAzules.Normals.Add(new Vector3D(0, 0, 1));
-                _mallaDeTriangulosAzules.Normals.Add(new Vector3D(0, 0, 1));
-            }
- 
-        }
- 
-        private void DibujarEnteVerde()
-    	{
-            _mallaDeTriangulosVerdes.Positions.Clear();
-            _mallaDeTriangulosVerdes.TriangleIndices.Clear();
-            _mallaDeTriangulosVerdes.Normals.Clear();
- 
-            _mallaDeTriangulosVerdes.Positions.Add(new Point3D(-0.2, 0, 0));
-            _mallaDeTriangulosVerdes.Positions.Add(new Point3D(0.2, 0.2, 0.5));
-            _mallaDeTriangulosVerdes.Positions.Add(new Point3D(0, 0.2, 0));
- 
-            _mallaDeTriangulosVerdes.TriangleIndices.Add(0);
-            _mallaDeTriangulosVerdes.TriangleIndices.Add(1);
-            _mallaDeTriangulosVerdes.TriangleIndices.Add(2);
- 
-            _mallaDeTriangulosVerdes.Normals.Add(new Vector3D(0, 0, 1));
-            _mallaDeTriangulosVerdes.Normals.Add(new Vector3D(0, 0, 1));
-            _mallaDeTriangulosVerdes.Normals.Add(new Vector3D(0, 0, 1));
-        }
- 
-        public event PropertyChangedEventHandler PropertyChanged;
-        private void NotifyPropertyChanged(string propertyName)
-        {
-            if (PropertyChanged != null)
-            {
-            	PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-            }
-    	}
- 
-	}
-}
-\end{lstlisting}
 
 \section{Números, Fechas y otras hierbas similares: cada cual las escribe diferente}
 
@@ -2159,7 +1941,7 @@ una sugerencia interesante: \url{https://www.codeproject.com/Articles/611731/Wor
 
 \section{Códigos: identificar elementos}
 
-\subsection{una nota histórica:}
+\subsection{Una nota histórica:}
 ``códigos identificativos inteligentes'': códigos donde el propio código identificativo embebe dentro de sí información relativa a aspectos varios tales como: pais de procedencia, lote, familia de producto,...
 
 Antaño eran necesarios.  La compacticidad de la información es importante si se trabaja, por ejemplo, con formularios en papel, códigos de barras lineales o pantallas de ordenador de 80x24 caracteres.
@@ -2167,84 +1949,57 @@ Antaño eran necesarios.  La compacticidad de la información es importante si s
 Pero hoy en día, manejando directamente datos digitales con códigos QR o trabajando con pantallas gráficas de alta resolución. Es mejor reservar un código para garantizar la identificación unívoca del elemento codificado; aislandolo de otros usos. Es más, en los casos en que haya varias formas de identificación, es conveniente disponer de diversos campos separados donde almacenar cada código y luego tener índices relacionando los diversos códigos.
 
 
-\subsection{algunos consejos:}
+\subsection{Algunos consejos:}
 \begin{itemize}
 
 \item Los códigos identificativos no es necesario que vayan en ningún orden ni que sean correlativos; lo único importante es que sean únicos.
 
-\item Cada elemento ``nace y muere'' con su propio código; no se reutilizan códigos.
+\item Cada elemento ``nace y muere'' con su propio código; no se reutilizan códigos. Por eso, es importante dimensionar adecuadamente la cantidad de posibles códigos asignables según se prevea para cada tipo de elemento a identificar.
 
 
 \item Es importante realizar una clara distinción entre:
 
 \begin{itemize}
 
-\item Los códigos ``de uso'' visibles (por ejemplo: CodigoDeArticulo, CodigoDeArticuloSegunProveedorX, CodigoDeArticuloEnAlmacenIntermedio, CodigoDeArticuloEnPaisX, etc.), son igual a cualquier otra descripción relativa al elemento. Los podemos tratar como un campo más en la tabla.
+\item Los códigos ``de uso'' visibles (por ejemplo: CodigoDeArticulo, CodigoDeArticuloSegunProveedorX, CodigoDeArticuloEnAlmacenIntermedio, CodigoDeArticuloEnPaisX, etc.). Son igual a cualquier otra descripción relativa al elemento. Los podemos tratar como un campo más de datos en la tabla.
 
-\item Los códigos ``técnicos'' internos (por ejemplo: campos claves en una base de datos), utilizados para identificar elementos al recuperarlos/modificarlos y para relacionar tablas entre sí.
+\item Los códigos ``técnicos'' internos (por ejemplo: campos claves en una base de datos). Se utizan para identificar elementos al recuperarlos/modificarlos y para relacionar tablas entre sí. Conviene que se utilicen exclusivamente para ese fin.
 
 \end{itemize}
 
-\item Es importante que los elementos en nuestro programa se manejen con un código identificador interno oculto. Y que los usuarios utilicen otro u otros códigos para referirse a ellos tanto al teclearlos como al mostrarlos en pantalla, en listados,...
+Es decir, es importante que los elementos en nuestro programa se manejen con un código identificador interno oculto. Y que los usuarios utilicen otro u otros códigos para referirse a ellos tanto al teclearlos como al mostrarlos en pantalla, en listados,...
 
-Hacerlo de esta forma nos permite, por ejemplo:
-\begin{itemize}
-\item Recodificar artículos (ID visible), sin afectar a históricos o a otros puntos de la operatoria interna (ID interno).
-\item Mantener fácilmente códigos alternativos equivalentes (ID para un pais, ID para proveedor, ID para cliente,\ldots). Refiriendose todos ellos a un mismo  código interno único (ID interno), en cualquier momento de pueden crear o eliminar según se necesite.
-\end{itemize}
+Por ejemplo, hacerlo de esta forma permite recodificar artículos (ID visible), sin afectar a históricos o a otros puntos de la operatoria interna (ID interno).O permite disponer fácilmente códigos alternativos equivalentes (ID para un pais, ID para proveedor, ID para cliente,\ldots), refiriéndose todos ellos a un mismo elemento (ID interno).
 
 \end{itemize}
 
 
-\subsection{a tener en cuenta cuando haya varias partes que asignan codigos de forma distribuida}
+\subsection{A tener en cuenta cuando haya varias partes que asignan codigos de forma distribuida}
 En organizaciones grandes, donde para un mismo propósito se vayan dando códigos en distintas partes de la organización. Es imperativo reservar una parte del código (un prefijo) para poder asignar a cada parte un ``trozo'' del espacio de códigos posibles .
 
 Es decir, cada parte se convierte en ``autoridad única dadora de códigos'' para su ``trozo''. De esta forma, la responsabilidad de no duplicidad se puede distribuir entre las partes, a la vez que se aisla el peligro dentro de cada una de las partes. 
 
 
-\subsection{algunas reflexiones acerca de la cantidad de códigos posibles:}
-Trabajando con los diez dígitos naturales 0,1,2,....,7,8,9 $\Rightarrow$ 10 caracteres, se dispone de $10^n$ códigos posibles. Por ejemplo, con códigos de 6 números de longitud, se pueden identificar $10^6 = 1.000.000$ de elementos.
+\subsection{Algunas reflexiones acerca de la cantidad de códigos posibles:}
+Trabajando con los diez dígitos naturales 0,1,2,....,7,8,9 $\Rightarrow$ 10 caracteres, se dispone de $10^n$ códigos posibles. Por ejemplo, con códigos de 4 símbolos de longitud, se pueden identificar $10^4 = 1.000$  elementos.
 
 truco: Los códigos numéricos deben comenzar por una letra, para evitarnos problemas con los ceros a la izquierda.
 
 Por ejemplo, códigos tales como:  234987, 8273462, ...  no dan problemas; pero 003487, 000023,.... pueden plantear problemas  (por ejemplo, en una hoja Excel; que se ``come'' los ceros a la izquierda) Poniendole una letra delante: P234987, P8273462, P003487, P000023,.... queda siempre bien claro que es un código y no un número para operar con él.
 
-\vspace{0.5cm}
-Trabajando con las letras B,C,D,F,....,X,Y,Z $\Rightarrow$ 21 caracteres, se dispone de $21^n$ códigos posibles. Por ejemplo, con códigos de 6 letras de longitud, se pueden identificar $21^6 = 1.801.088.541$ de elementos.
+\vspace{1cm}
+Trabajando con las consonantes mayúsculas B,C,D,F,....,X,Y,Z $\Rightarrow$ 21 caracteres, se dispone de $21^n$ códigos posibles. Por ejemplo, con códigos de 4 símbolos de longitud, se pueden identificar $21^4 = 194.481$  elementos.
 
-¡ importante ! $\Rightarrow$ Utilizar SOLO LETRAS MAYUSCULAS del código ASCII (para evitar malentendidos mayus-minus y problemas multiculturales) y SIN VOCALES (para evitar la formacion de palabras con significado: HPUTA, STONTO,...)
+¡ importante ! $\Rightarrow$ Se utilizan SOLO LETRAS MAYUSCULAS,(para evitar malentendidos mayus-minus),  del código ASCII BÁSICO (para evitar problemas multiculturales) y SIN VOCALES (para evitar la formacion de palabras con significado: HPUTA, STONTO,...)
 
-truco: Al disponer de más elementos con la misma longitud de código, se pueden utilizar parte de las letras del código para hacer particiones. 
+\vspace{1cm}
+Trabajando con números 0,1,2,....,7,8,9 y consonantes B,C,D,F,....,X,Y,Z $\Rightarrow$ 31 caracteres, se dispone de $31^n$ códigos posibles. Por ejemplo, con códigos de 4 símbolos de longitud, se pueden identificar $31^4 = 923.521$  elementos. (Obligando a que el primer símbolo sea siempre una consonante, se quedan en $21x31^3 = 625.611$ elementos posibles.)
 
-Por ejemplo, en un código de 6 letras,
-\begin{itemize}
-\item con 2 letras de prefijo $\Rightarrow$ $21^2 = 441$ trozos posibles 
-\item con 4 letras $\Rightarrow$ $21^4 = 194.481$ códigos posibles por trozo,
-\end{itemize}
-España asignaría de BBxxxB hasta BBxxxxZ
-Francia asignaría de BCxxxB hasta BCxxxZ
-Alemania asignaría de BDxxxB hasta BDxxxZ
-etc.
-
-Hasta incluso se podria subtrocear cualquier trozo:
-\begin{itemize}
-\item con 1 letra asignada de prefijo $\Rightarrow$ $21^1 = 21$ subtrozos posibles
-\item con 3 letras $\Rightarrow$ $21^3 = 9.261$ códigos posibles
-\end{itemize}
-Bilbao asignaría de BBBxxB hasta BBBxxZ
-Toledo asignaría de BBCxxB hasta BBCxxZ
-Sevilla asignaría de BBDxxB hasta BBDxxZ
-etc.  
-
-\vspace{0.5cm}
-Trabajando con números 0,1,2,....,7,8,9 y letras B,C,D,F,....,X,Y,Z $\Rightarrow$ 31 caracteres, se dispone de $31^n$ códigos posibles. Por ejemplo, con códigos de 6 caracteres de longitud, se pueden identificar $31^6 = 887.503.681$ de elementos.
-
-
-\section{Un truco muy útil: usar UUIDs como identificadores internos de elementos}
+\subsection{El uso de UUIDs como identificadores internos de elementos}
 Se ha comentado anteriormente que merece la pena identificar cada elemento con un código único (ID interno),  de uso exclusivamente  ``informático'' (en el sentido de que, por ejemplo, sea ese el código con el que recuperamos ese elemento desde la base de datos donde esté almacenado o sean esos los códigos utilizados al realizar JOINs entre tablas). 
-\\Un código que los usuarios no verán ni utilizarán nunca. Para evitar que, por ejemplo, luego no se puedan recodificar elementos por la dificultad de modificar todos los registros y relaciones afectadas.
+\\Un código que los usuarios no verán ni utilizarán nunca. Para evitar que, por ejemplo, luego no se puedan recodificar elementos por la dificultad de modificar IDs en todos los registros y relaciones afectadas.
 
-Una manera muy práctica de generar estos identificadores internos es usar el estandar UUID (Universally Unique Identifier), {\scriptsize también conocido como GUID (Globally Unique Identifier) en el mundo Microsoft}. Un código de 128 bits ($2^{128}$ = unos 9 trillones de posibilidades) que garantiza códigos (prácticamente) únicos, sencillos de generar de forma distribuida, sin necesidad de una ``autoridad'' codificadora que vele por dicha unicidad.
+Una manera muy práctica de generar estos identificadores únicos internos es usar el estandar UUID (Universally Unique Identifier), {\scriptsize también conocido como GUID (Globally Unique Identifier) en el mundo Microsoft}. Un código de 128 bits ($2^{128}$ = unos 9 trillones de posibilidades) que garantiza códigos (prácticamente) únicos, sencillos de generar de forma distribuida, sin necesidad de una ``autoridad'' codificadora que vele por dicha unicidad.
 \\ \url{https://en.wikipedia.org/wiki/Universally_unique_identifier}
 
 Casi todas las plataforma de programación modernas permiten trabajar con ellos. Por ejemplo:
@@ -2257,27 +2012,52 @@ Casi todas las plataforma de programación modernas permiten trabajar con ellos.
 
 \vspace{1cm}
 
-aviso: Ciertos algoritmos pueden resentirse con el uso de índices no secuenciales y prácticamente totalmente aleatorios. Es conveniente informarse y ser consciente de posibles problemas de rendimiento en ciertos usos de UUIDs como índices primarios en según qué aplicaciones. 
+aviso: Ciertos algoritmos de búsqueda pueden resentirse con índices no secuenciales y totalmente aleatorios. Es conveniente informarse y ser consciente de posibles problemas de rendimiento en ciertos usos de UUIDs como índices primarios en según qué bases de datos y aplicaciones. 
 
-\newpage
+
+\section{Un truco muy útil: identificadores internos solo para uso interno e identificadores externos solo para uso externo}
+Se ha comentado anteriormente la conveniencia de mantener los códigos internos invisibles al mundo exterior. Es decir,
+
+\begin{itemize}
+
+\item Los códigos internos solo para identificar entes dentro del programa o base de datos.
+\\(Por ejemplo: El id de la tabla de artículos no conviene que sea también el código de artículo en un almacén. El id de la tabla de personas socias no conviene que sea también el número de socio en el carnet de un club.)
+
+\item Los códigos del mundo exterior solo para identificar entes en las interacciones con usuarios.
+\\(Por ejemplo: El código de barras EAN de un artículo no conviene que sea también su id en una tabla de artículos. El número de pasaporte de una persona no conviene que sea también su id en una tabla de socios.)
+
+\end{itemize}
+
+Por ejemplo: Se usa el número de pasaporte de la persona como id. Se da de alta a una nueva persona socia del club y se comienza a realizar anotaciones de consumos, reservas,\ldots; generando los correspondientes registros cruzados en las distintas tablas  A cabo de un tiempo la persona se da cuenta de que el número de pasaporte en su ficha está mal y se ha de corregir, ¿qué se hace con todos los registros en la tabla de consumos, en la tabla de reservas, en\ldots que hacen referencia a ese id?
+\\Sin embargo, si se hubieran puesto sendos campos independientes: uno para el id interno y otro para el pasaporte. Corregir el pasaporte seria trivial.
+
+Por ejemplo: Se usa como código de artículo el id que asigna automáticamente la base de datos. Ese código aparecerá en todas las tablas de líneas de pedidos, albaranes, facturas,\ldots Tras una fusión empresarial, se ve la necesidad de recodificar los artículos. Al cambiar el código a un artículo, ¿qué se hace con todos los registros y relaciones donde interviene el código/id antiguo?
+\\Sin embargo, si se hubieran puesto sendos campos independientes: uno para el id interno y otro para el código impreso en pedidos, albaranes, facturas,/ldots. Recodificar el artículo seria trivial (bueno, si es que no afecta el hecho de que en todos los pedidos, albaranes, facturas,\ldots antiguos aparezca con el nuevo código cuando vayamos a consultarlos o reimprimirlos)
+
+
 
 \section{Un truco muy útil: inactivar elementos en vez de borrarlos}
-Interesa incorporar a cada elemento un campo booleano para indicar si está o no `activo'.
+Interesa incorporar a cada elemento un campo booleano para indicar si está o no `activo'. 
+
+Y programar la aplicación para que solo permita trabajar con elementos activos. (Por ejemplo. Al elegir un cliente para registrar un nuevo pedido, ver solo los clientes activos. Al elegir un artículo para incluir una nueva línea en el pedido, ver solo los artículos activos. etc.)
 
 De esta forma:
 \begin{itemize}
-\item Podemos ``borrarlo'' del sistema (se puede preparar el sistema para que al poner `activo'=false a un elemento, ese elemento se deje de usar y ya no se puede emplear en nuevas operaciones),
-\item Pero la información pendiente de proceso o histórica seguirá funcionando (el elemento en sí sigue existiendo en el sistema).
+\item Podemos ``borrar'' el elemento del sistema (ese elemento ya no se puede emplear en nuevas operaciones).
+\item Pero las operaciones pendientes, las consultas de operaciones pasadas o de los históricos no se ven afectadas (el elemento en sí sigue existiendo en el sistema).
 \end{itemize}
 
+Borrar un elemento cuando se ha de dar de baja. Solo funciona si realmente ese elemento ha de desaparecer completamente de todas y cada una de las partes del sistema. Lo cual no suele ser el caso habitualmente.
 
-\section{Una sugerencia para recoger especificaciones: BDD (Behavior Driven Development)}
+Por eso es conveniente disponer de ese mecanismo extra de inactivarlo. En un principio, cuando se va a dar de baja, se inactiva. Más tarde, cuando ya no se necesite realmente para nada, se  borra.
 
-Para escribir especificaciones, requisitos o funcionalidades a implementar. Escribirllas de tal manera que cada una contenga ejemplos concretos explicitando formas concretas de validar su correcta implementación.
 
-En su forma más básica, consiste en hacer una serie de fichas. Cada ficha contempla un caso de uso concreto, un escenario concreto, una funcionalidad concreta. 
 
-Cada ficha consta de tres apartados:
+\section{Una forma de recoger especificaciones: BDD (Behavior Driven Development)}
+
+Para escribir especificaciones, requisitos o funcionalidades a implementar. Escribirlas de tal manera que cada una contenga ejemplos concretos explicitando formas concretas de validar su correcta implementación.
+
+Por ejemplo en tarjetas de tres apartados:
 \begin{itemize}
 
 \item El \textbf{contexto}: ``\textit{Yo como} \ldots rol desempeñado\ldots''. 
@@ -2288,9 +2068,7 @@ Cada ficha consta de tres apartados:
 
 \end{itemize}
 
-El código se va implementando una ficha cada vez.Asegurándose de dejar el trabajo bien completado al terminarla, es decir: lo implementado cumple todo lo indicado en la ficha, y no se deja ningún fleco suelto (no se acumula deuda técnica).
-
-El cumplimiento de lo acordado se puede probar con los ejemplos indicados en la ficha.
+De esta forma, el cumplimiento de lo acordado se puede probar con los ejemplos indicados en la tarjeta.
 
 Por ejemplo:
 
@@ -2299,19 +2077,9 @@ Por ejemplo:
 
 \hline
 
-Como cliente, necesito ingresar dinero.
-\newline \newline
-La forma de validar sera:
-\begin{itemize}
-\item consulto saldo.                                
-\item ingreso dinero.
-\item vuelvo a consultar saldo y compruebo que el ingreso se ha realizado correctamente.
-\end{itemize}
-
-&
-                
+               
 Como cajero, necesito identificar al cliente y verificar el numero de cuenta. 
-\newline \newline
+\newline 
 La forma de validar sera:
 \begin{itemize}
 \item introduzco el número de cuenta y consulto los datos del cliente titular de la misma.
@@ -2323,15 +2091,14 @@ Puede darse el caso de que el cliente no me de el número de cuenta. En ese caso
 \item el cliente me indica en cual de las cuentas desea operar.
 \end{itemize}
 
-\\ \hline
-                        
+&
                 
 Como dueño del banco, necesito tener un registro seguro de todas las transacciones realizadas.
 \newline \newline
  La forma de validar sera:                
 \begin{itemize}
 \item realizar cada una de las operaciones posibles en el sistema: consultar, crear, modificar, etc.
-\item consultar el registro para ver que todas y cada una de las operaciones se han registrado correctamente: fecha, hora, tipo de operación, datos afectados por la operación (nota: en las modificaciones, incluir tanto los datos ``antes'' como los datos ``después'').
+\item tras cada una, consultar el log para ver que ha sido adecuadamente registrada: fecha, hora, tipo de operación, datos afectados por la operación (nota: en las modificaciones, incluir tanto los datos ``antes'' como los datos ``después'').
 \end{itemize}
                         
 \\ \hline
@@ -2341,7 +2108,7 @@ Como dueño del banco, necesito tener un registro seguro de todas las transaccio
 
 
 
-nota: En el mercado existen incluso herramientas que permiten escribir las fichas en un formato tal que permite ligar cada una a su respectivo código de test automatizado para comprobar que se cumplen. (Ligando así BDD con TDD.) Por ejemplo:
+nota: En el mercado existen incluso herramientas que permiten escribir este tipo de tarjetas en un formato tal que permite ligar cada una a su respectivo código de test automatizado para comprobar que se cumplen. (Ligando así BDD con TDD.) Por ejemplo:
 \\ \url{https://cucumber.io/tools/cucumber-open/}
 \\ \url{https://specflow.org/learn/bdd/}
 
