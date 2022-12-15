@@ -2052,7 +2052,8 @@ Básicamente se trata de:
 
 \item La navegación por las diversas etapas o estados de la aplicación se realiza a través de hipervínculos. Cada paso guía al cliente hacia los siguientes pasos disponibles a partir de ahí.
 \\{\footnotesize (HATEOAS, Hypermedia as the Engine of Application State)}
-
+\\En cierta manera, se podria decir que para utilizar bien una buena API\footnote{API: exponer la lógica de un software (servidor) para poder ser consumida o utilizada por otros softwares (clientes)} REST no se necesitaría consultar instrucciones prefijadas de antemano.
+Bastaría conocer el punto de inicio (la primera URL a la que llamar). Y, a partir de ahí, se continuará a base de ir leyendo e interpretando la información intercambiada en cada paso.
 \end{itemize}
 
 \end{itemize}
@@ -2061,9 +2062,6 @@ Básicamente se trata de:
 Un enlace ilustrativo:
 \\ \url{https://martinfowler.com/articles/richardsonMaturityModel.html}
 
-
-\vspace{0.5cm}
-En cierta manera, se podria decir que para utilizar una buena API \footnote{API: exponer la lógica de un software (servidor) para poder ser consumida o utilizada por otros softwares (clientes)} REST no se necesita consultar instrucciones prefijadas de antemano. Si se conoce el punto de inicio ({\footnotesize la primera URL a la que llamar}); a partir de ahí se continua a base de ir leyendo e interpretando \footnote{Ese `leer e interpretar', obviamente, implica que se conoce el idioma en el que está escrita la información y que se conoce la jerga específica del dominio de aplicación que se esté tratando.} la información intercambiada en cada paso.
 
 \vspace{1cm}
 nota: 
