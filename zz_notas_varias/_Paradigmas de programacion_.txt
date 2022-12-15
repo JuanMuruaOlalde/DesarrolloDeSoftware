@@ -1,0 +1,26 @@
+Los dos principales:
+
+==> IMPERATIVO (procedural): vas diciendo qué hacer, las operaciones a realizar, qué pasos ir dando, pasito a pasito.
+==> DECLARATIVO: vas diciendo qué se desea obtener, y "el entorno" busca la mejor manera de darte eso.
+
+En la práctica se han ido concretando en:
+
+==> (procedural) ESTRUCTURADO: vas agrupando y organizando las operaciones en funciones y módulos...
+
+==> Orientado a OBJETO: divides la funcionalidad entre diversos objetos (clases) "autocontenidos" (encapsulación), 
+                        y vas diciendo a cada objeto (instancia) que haga esto o aquello...
+                        
+==> FUNCIONAL: vas creando funciones de transformación de información,
+               cada función depende solo de los 'parametros' que recibe y de lo que tenga dentro de sí,
+               cada función devuelve 'resultados' (sin causar ningún "efecto secundario" fuera de esos resultados),
+               y vas encadenando funciones, una detrás de otra...
+
+Nadie trabaja en modo puro en uno u otro paradigma. 
+Según que problema se desee resolver, es más sencillo (o más complicado) abordándolo de una u otra forma.
+Pero lo que sí es importante es mantener la mayoria del trabajo (la forma de pensar global) dentro del mismo paradigma.
+
+Y, obviamente, es importante tener al menos una idea general
+de todos los paradigmas y de las "construcciones y artefactos" propios de cada uno de ellos.
+==> instrucciones, funciones, módulos, namespaces, paquetes,...
+==> clases, instancias, encapsulación, herencia, polimorfismo,...
+==> funciones de primera clase (first-class), funciones lambda, inmutabilidad, closure, reduction, composition, map(), filter(), reduce(), pattern matching,...

@@ -671,16 +671,42 @@ nota: Hablando de diferencias, también hay algunas otras que no afectan directa
 \chapter{Paradigmas y lenguajes de programación}
 Es importante destacar que el paradigma seguido al programar puede ser independiente del lenguaje de programación utilizado. Un paradigma de programación es simplemente ``una forma de hacer las cosas''. Y en (casi) todos los lenguajes se puede hacer (casi) de todo.
 
-Hasta finales de la década de los 90, cada lenguaje tendia a especializarse en un paradigma concreto y solo soportaba específicamente ese. Pero hoy en día (finales de la década de los 10), los lenguajes más populares están tendiendo a implementar mecanismos propios de más de un paradigma. Dejando en manos de la persona programadora la decisión de seguir uno u otro.
+Desde los inicios de la informática, en los años 40, hasta finales de la década de los 90; cada lenguaje tendia a especializarse en un paradigma concreto y solo soportaba específicamente ese. Pero hoy en día los lenguajes y entornos de trabajo más populares están tendiendo a implementar mecanismos propios de más de un paradigma. Dejando en manos de la persona programadora la decisión de seguir uno u otro.
 
-Podriamos decir que cada paradigma, siendo como es ``una forma de hacer las cosas'', requiere una determinada forma de pensar al trabajar. 
+Los dos paradigmas principales son:
+
 \begin{itemize}
 
-\item En la programación imperativa/procedural: en cada paso indica exactamente qué hacer; se comprueba el estado concreto en ese momento de tal y tal y tal; para, en función de ello, realizar alguna acción; acción que modificará cual o cual o cual.
+\item IMPERATIVO (procedural): vas diciendo qué hacer, las operaciones a realizar, qué pasos ir dando, pasito a pasito. (por ejemplo, C)
+
+\item DECLARATIVO: vas diciendo qué se desea obtener, y ``el entorno'' busca la mejor manera de darte eso. (por ejemplo, SQL)
+
+\end{itemize}
+
+En la práctica se han ido concretando en:
+
+\begin{itemize}
+
+\item (procedural) ESTRUCTURADO: vas agrupando y organizando las operaciones en funciones y módulos, llamándolas según corresponda...
+
+\item Orientado a OBJETO: vas dividiendo la funcionalidad entre diversos objetos (clases) ``autocontenidos'' (encapsulación), 
+\\ y vas diciendo a cada objeto (instancia) que haga esto o aquello...
+                        
+\item FUNCIONAL: vas creando funciones de transformación de información, \\cada función depende solo de los `parametros' que recibe y de lo que tenga dentro de sí, cada función devuelve `resultados' (sin causar ningún ``efecto secundario'' fuera de esos resultados), 
+\\y vas encadenando funciones, una detrás de otra...
+
+\end{itemize}
+
+
+Podriamos decir que cada paradigma, siendo como es ``una forma de hacer las cosas'', requiere una determinada forma de pensar al trabajar. 
+
+\begin{itemize}
+
+\item En la programación imperativa/procedural: en cada paso se indica exactamente qué hacer; se comprueba el estado concreto en ese momento de tal y tal y tal; para, en función de ello, realizar alguna acción; acción que modificará cual o cual o cual.
 
 \item En la programación orientada a objeto: en cada paso se utiliza el objeto pertinente, para pedirle que haga algo.
 
-\item En la programación funcional: en cada paso utiliza la función pertinente, para transformar de esto que se le ha de pasar como parámetros a eso que devuelve como resultado.
+\item En la programación funcional: en cada paso se utiliza la función pertinente, para transformar de esto que se le pasa como parámetros a eso que devuelve como resultado.
 
 \end{itemize}
 
@@ -817,14 +843,14 @@ RaizCuadradaPorElMetodoDeNewton.java
 \begin{lstlisting}[frame=single]
 package ejerciciosMatematicos;
 
+double EPSILON = 0.001;
+double aproximacion = 1.0;
+
 public class RaizCuadradaPorElMetodoDeNewton
 {
     
     public static double CalcularRaizDe(double numero)
     {
-        double EPSILON = 0.001;
-        
-        double aproximacion = 1.0;
         while((Math.abs(aproximacion * aproximacion - numero) / numero) > EPSILON)
         {
             aproximacion = (aproximacion + (numero / aproximacion)) / 2;
@@ -839,7 +865,6 @@ public class RaizCuadradaPorElMetodoDeNewton
         System.out.println(RaizCuadradaPorElMetodoDeNewton.CalcularRaizDe(2));
         System.out.println(RaizCuadradaPorElMetodoDeNewton.CalcularRaizDe(385.23));
     }
-
     
 }
 \end{lstlisting}
@@ -1117,20 +1142,35 @@ El formalismo teórico tras este tipo de programación funcional es $\lambda$ (l
 El funcionamiento del programa se centra en el flujo de datos a través de las funciones, para conseguir obtener el resultado deseado.
 
 \subsection*{Conceptos básicos}
+
 \begin{description}
+
 \item[inmutabilidad]\footnote{Inmutabilidad implica que, cuando es necesario modificar, el componente entero se reemplaza por una nueva versión del mismo.}: Al contrario que en el paradigma imperativo, en el paradigma funcional (casi) todas las estructuras de datos son inmutables. Es decir, en lugar de que el programa cambie valores en unas estructuras de datos, en el paradigma funcional el programa procesa unos datos de entrada y devuelven otros datos en su salida.
+
 \item[closure]: conjunto de una función y su entorno.
-\item[reducción] (reduction semantics): cualquier ``programa'' puede irse reduciendo sucesivamente a otro más sencillo, hasta llegar a una `forma normal' que es su resultado. 
+
 \item[funciones de primera clase] (first-class functions): una función puede ser ``dato'' de otra función; es decir, una función puede tener otras funciones entre sus argumentos o una función puede devolver otra función como resultado. 
-\item[composición de funciones] ( ): aplicar primero una función a los argumentos y luego la otra función al resultado de la primera aplicación ( ).
+
+\item[funciones lambda]: funciones anónimas, sin nombre, que se definen directamente allá donde se van a pasar como argumento a otra función.
+
+\item[composición de funciones] f g (x): aplicar primero una función a los argumentos g(x) y luego la otra función al resultado de la primera aplicación f(g(x)) .
+
+\item[reducción] (reduction semantics): cualquier ``programa'' puede irse reduciendo sucesivamente a otro más sencillo, hasta llegar a una `forma normal' que es su resultado. 
+
 \end{description}
 
-Algunas operaciones básicas:
+\subsection*{Algunas operaciones básicas:}
+
 \begin{description}
-\item[apply( )], operación de aplicar una función a un argumento concreto. 
-\item[map( )], operación de aplicar una función a todos y cada uno de los elementos de una lista de argumentos individualmente, devolviendo una lista de resultados con el mismo número de elementos.
-\item[reduce], similar a map, solo que la función se aplica sobre todos los elementos secuencialmente y devuelve un resultado con menos elementos o con un solo elemento.
+
+\item[filter(lista, función)], aplicar una función (con resultado booleano) a todos y cada uno de los elementos de una lista, devolviendo otra lista con aquellos elementos donde la función devuelve 'verdadero'.
+
+\item[map(lista, función)], aplicar una función a todos y cada uno de los elementos de una lista, devolviendo otra lista con el mismo número de elementos (cada uno transformado por la función).
+
+\item[reduce(lista, función)], similar a map, solo que la función se aplica sobre los elementos secuencialmente, devolviendo un resultado único (acumulado a partir de los resultados parciales de la función en los distintos elementos).
+
 \item[pattern matching], comparar una expresión contra unos determinados patrones, para sustituirla por otra expresión dada según el patrón con el que coincida.
+
 \end{description}
 
 
@@ -1141,31 +1181,32 @@ Algunas operaciones básicas:
 \subsection*{Ejemplos de código}
 RaizCuadradaPorElMetodoDeNewton.sc
 \begin{lstlisting}[frame=single]
-package ejerciciosMatematicos
 
-object RaizCuadradaPorElMetodoDeNewton
-{
-
-  def ValorAbsolutoDe(numero: Double) =
-    if (numero < 0) -numero else numero  
-
+  def ValorAbsolutoDe(numero: Double) = {
+      if (numero < 0) -numero else numero  
+  }
+  
 //> ValorAbsolutoDe: (numero:Double)Double
 
     
-  def RaizCuadradaDe(numero: Double) =
-  {
-    def BucleDeTrabajo(aproximacion: Double): Double =
-      if (esSuficientementeBuenaLa(aproximacion: Double)) aproximacion
-      else BucleDeTrabajo(Mejorar(aproximacion))
+  def RaizCuadradaDe(numero: Double) = {
+      def BucleDeTrabajo(aproximacion: Double): Double = {
+        if (esSuficientementeBuenaLa(aproximacion: Double)) 
+            aproximacion
+        else 
+            BucleDeTrabajo(Mejorar(aproximacion))
+      }
       
-    def esSuficientementeBuenaLa(aproximacion: Double) =
-      (ValorAbsolutoDe(aproximacion * aproximacion - numero) / numero) < 0.001
+      def esSuficientementeBuenaLa(aproximacion: Double) = {
+          (ValorAbsolutoDe(aproximacion * aproximacion - numero) / numero) < 0.001
+      }
       
-    def Mejorar(aproximacion: Double) =
-      (aproximacion + (numero / aproximacion)) / 2
+      def Mejorar(aproximacion: Double) = {
+          (aproximacion + (numero / aproximacion)) / 2
+      }
     
-    val aproximacionInicial = 1.0
-    BucleDeTrabajo(aproximacionInicial)
+      val aproximacionInicial = 1.0
+      BucleDeTrabajo(aproximacionInicial)
   }
 
 //> RaizCuadradaDe: (numero: Double)Double
@@ -1194,35 +1235,45 @@ object RaizCuadradaPorElMetodoDeNewton
 
 
 \section*{Resumen del capítulo}
-El nivel más básico de programación de un ordenador es hablándole directamente en su propio lenguaje: ensamblador o algún lenguaje que permita llegar a ese nivel, tal como C o Ada. Este nivel de trabajo se suele utilizar allá donde se necesite aprovechar al máximo las capacidades de una máquina (sistemas embebidos) o allá donde se necesite saber con exactitud lo que está haciendo la máquina (sistemas de misión-crítica)
+El nivel más básico de programación de un ordenador es hablándole directamente en su propio lenguaje: lenguaje ensamblador o algún lenguaje que permita llegar a ese nivel, tal como C o Ada. Este nivel de trabajo se suele utilizar allá donde se necesite aprovechar al máximo las capacidades de una máquina (sistemas embebidos) o allá donde se necesite saber con exactitud lo que está haciendo la máquina (sistemas de misión-crítica)
 
 Pero los humanos necesitamos hablar un lenguaje que nos resulte comprensible a nosotros. Así es que, para un uso general, es preferible usar un lenguaje de más alto nivel. Uno que permita estructurar adecuadamente el código fuente, de tal forma que las personas podamos entender la estructura del programa. Ahí es donde surgen varios paradigmas.
 
 Cada lenguaje suele estar mejor preparado para programar según alguno de esos paradigmas:
 \begin{itemize}
-\item programación estructurada: prácticamente cualquier lenguaje moderno...
-\item programación orientada a objeto: C++, C\#, Objetive-C, Java, Phyton, JavaScript, PHP, Ruby, Perl,...
-\item programación funcional: Common Lisp, Scala, Scheme, ML, OCaml, F\#, Clojure, Haskell,... 
+\item programación estructurada: C, Pascal,...
+\item programación orientada a objeto: C++, C\#, Java, Phyton, JavaScript, PHP, Objetive-C, Ruby, Perl,...
+\item programación funcional: Haskell, Common Lisp, Scala, Scheme, ML, OCaml, F\#, Clojure, ... 
 \end{itemize}
 
-Pero prácticamente ningún lenguaje es puro en ese sentido. Sobre todo los lenguajes más populares, que tienden a mezclar construcciones de diversos paradigmas; permitiendo al programador trabajar en uno u otro estilo, según sus preferencias.
+Pero prácticamente ningún lenguaje es puro en ese sentido. Sobre todo los lenguajes más populares, tienden a mezclar construcciones de diversos paradigmas. Permitiendo al programador trabajar en uno u otro estilo, según sus preferencias y según el problema a resolver.
 
-De ahí la importancia de conocer los diversos paradigmas. Por lo menos a nivel de saber reconocer las construcciones típicas de cada uno de ellos.
+De ahí la importancia de conocer los diversos paradigmas. Por lo menos a nivel de reconocer las construcciones típicas de cada paradigma.
 
 
 \chapter{Arquitecturas de software}
 
-\section{Monolítico}
-Un solo programa se encarga de todo. Suele ser típico en pequeños sistemas embebidos.
+\section{Según su modularidad, se puede distinguir entre:}
+\begin{itemize}
 
-\section{Desktop, ``de escritorio''}
+\item Monolítico: Una sola parte (estructurada o no en funciones) se encarga de todo. Suele ser típico en pequeños sistemas embebidos.
+
+\item Monolito: El programa se estructura en partes (más o menos) diferenciadas. Idealmente, partes relacionadas entre sí con interfaces cláramente diferenciados. Pero todas las partes están en un solo cuerpo de código. Un cuerpo que se compila y se distribuye como un todo. 
+
+\item Distribuido: El ``programa'' se estructura en partes diferenciadas. Cada una de ellas tiene su propio cuerpo de código, se compila y se distribuye separadamente. Las distintas partes ``colaboran'' entre sí según unos interfaces y protocolos preestablecidos.
+
+\end{itemize}
+
+\section{Según cómo se reparte la funcionalidad, se puede distinguir entre:}
+
+\subsection{Desktop, ``de escritorio''}
 Existe una división de tareas entre una parte que podemos denominar `sistema operativo' y otra parte que es el programa en sí.
 
 El sistema operativo se encarga de interactuar con el hardware y de ofrecer unos servicios básicos de uso común. Servicios tales como el acceso a la CPU (multitarea), a la memoria (paginación), al sistema de almacenamiento de datos, a los periféricos (pantalla, teclado, ratón, impresora,...), a sistemas externos (comunicaciones), a mecanismos de seguridad (autentificación/permisos), etc.
 
 El programa realiza el trabajo concreto para el que ha sido desarrollado. Aprovechando, allá donde le sean útiles, los servicios del sistema operativo.
 
-\section{Cliente/Servidor}
+\subsection{Cliente/Servidor}
 La división de tareas es más avanzada y ya no está restringida al interior de una sola máquina. Una parte del programa se ubica en otra máquina externa.
 
 Habitualmente, 
@@ -1233,7 +1284,7 @@ Habitualmente,
 
 En cierto modo, se podrian englobar también en esta categoria las `aplicaciones web'. En ellas el cliente es un navegador web estándar y el servidor es quien lleva la mayor parte del peso del trabajo a realizar. De esta forma, se ahorran problemas derivados de la instalación/mantenimiento de un programa cliente ad-hoc.
 
-\section{Servicios distribuidos}
+\subsection{(micro)Servicios distribuidos}
 La división de tareas es total. El sistema lo componen multitud de pequeños programas, en una sola o en multitud de máquinas. Cada programa se encarga de una tarea concreta y es autosuficiente para realizarla; ofreciendo sus servicios al resto del sistema.
 
 Obviamente, son necesarios una serie de mecanismos estandarizados para:
@@ -1249,9 +1300,7 @@ El Santo Grial del software consiste en llegar a algo parecido a los componentes
 
 Es decir, llegar a tener módulos de software o servicios que podamos obtener directamente ``off-the-shelf'' (``comprandolos en el mostrador de una tienda''); y utilizarlos tal cual en la construcción de nuestros programas.
 
-
-\vspace{3cm}
-\footnote{Ver detalles prácticos sobre arquitectura en el capítulo 14 ``Organización interna del código'' del documento \url{https://www.susosise.es/documentos/Mas_alla_del_IF_y_del_WHILE.pdf}}
+nota: \footnotesize{Ver detalles prácticos sobre arquitecturas en el capítulo 14 ``Organización interna del código'' del documento \url{https://www.susosise.es/documentos/Mas_alla_del_IF_y_del_WHILE.pdf}}
 
 
 
