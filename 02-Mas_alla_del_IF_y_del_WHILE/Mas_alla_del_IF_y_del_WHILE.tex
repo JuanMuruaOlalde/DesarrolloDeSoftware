@@ -2019,34 +2019,39 @@ En los sistemas más sofisticados, suele haber algún mecanismo (un catálogo) p
 
 
 \section{Orientación a servicios, arquitectura REST \\(REpresentational State Transfer)}
-Requisitos que ha de cumplir un sistema para ser considerado REST:
-\begin{itemize}
 
-\item Es cliente-servidor: la parte cliente se encarga de interactuar con el usuario y la parte servidor se encarga de manipular la información (los recursos).
+REST no es un estandard ``per se'', sino una forma de trabajar. Son una serie de restricciones que nos autoimponemos en la arquitectura de nuestra aplicación. Para conseguir un software ``bien adaptado a la web'' (a la nube), uno que sea fácilmente escalable ``a escalas Internet'' (planetarias).
 
-\item No se guardan estados internos: cada llamada a un servicio es independiente, no depende de las llamadas previas a ese o a otros servicios.
-
-\item Permite ser cacheado: cada porción de información (cada recurso) establece con claridad si un cliente o un intermediario puede guardarla para reutilizarla cuantas veces la necesite sin volver a solicitarla al servidor; o si, por contra, es importante re-adquirirla cada vez que se necesite.
-
-\item Permite ser utilizado a través de varios niveles: las llamadas a los servicios se han de poder completar igualmente aunque haya intermediarios entre el cliente y el servidor final que provee los servicios. Esto es, posibles intermediarios (por ejemplo balanceadores de carga o sistemas de seguridad) han de ser transparentes para los clientes que utilizan el sistema. 
-
-\item Permite ser personalizado bajo demanda: el cliente puede recibir código desde el servidor para ampliar o personalizar alguna funcionalidad del sistema.
-
-\item Tiene un interfaz uniforme para todos los servicios involucrados:
+Básicamente se trata de:
 
 \begin{itemize}
 
-\item Los recursos afectados en cada llamada se identifican con claridad y sin ambigüedades.
-\\{\footnotesize (por ejemplo, utilizando URIs o UUIDs)}
+\item Ser cliente-servidor: la parte cliente (\textbf{frontend}) se encarga de interactuar con el usuario y la parte servidor (\textbf{backend}) se encarga de manipular la información (los recursos).
 
-\item Los recursos se manipulan a través de una representación de los mismos. Dicha representación contiene todo lo que un cliente necesita para hacer las llamadas adecuadas para consultarlos, crearlos, modificarlos o eliminarlos.
-\\{\footnotesize (por ejemplo llamadas GET, POST, PUT, PATCH, DELETE,\ldots)}
+\item No necesitar tener en cuenta estados internos de la aplicación (ser ``\textbf{stateless}''). Cada llamada a un servicio o acción (a un ``\textbf{endpoint}'') es independiente. No depende de las llamadas previas a ese mismo o a otros servicios o acciones.
 
-\item La información intercambiada en los mensajes es autodescriptiva. Cada mensaje contiene lo necesario para que su receptor sepa cómo ha de ha de tratarla.
-\\{\footnotesize (por ejemplo, utilizando identificadores MIME y formatos fácilmente reconocibles tales como HTML, XML, JSON,\ldots)}
+{\footnotesize nota: Es conveniente que también sea idempotente, que una misma llamada  pueda llegar repetida varias veces al servidor o al cliente sin causar efectos extraños ni duplicidades no deseadas.}
+
+\item Permitir poner intermediarios entre la parte cliente y la parte servidor. Siendo estos transparentes para la funcionalidad.
+\\{\footnotesize Por ejemplo: balanceadores de carga, cachés de información \footnote{Para poder ser cacheada, cada porción de información (cada recurso) ha de establecer con claridad si un cliente o un intermediario puede guardarla para reutilizarla cuantas veces la necesite sin volver a solicitarla al servidor; o si, por contra, es importante re-adquirirla cada vez que se necesite.}, sistemas de seguridad, etc.}
+
+\item Permitir personalización bajo demanda. El cliente puede recibir actualizaciones desde el servidor para ampliar o modificar la funcionalidad del sistema.
+
+\item Tener un interfaz uniforme para todos los ``endpoint'' (servicios o acciones) involucrados:
+
+\begin{itemize}
+
+\item Todos los recursos afectados en cada llamada se identifican con claridad y sin ambigüedades. 
+\\{\footnotesize (Por ejemplo, utilizando URIs o IDs o UUIDs o\ldots)}
+
+\item Los recursos se manipulan a través de una representación de los mismos. Dicha representación contiene en sí misma todo lo que un cliente necesita saber para poder consultarlos, crearlos, modificarlos o eliminarlos.
+\\{\footnotesize (Por ejemplo siguiendo los estandares de comandos de HTTP: GET, POST, PUT, PATCH, DELETE,\ldots)}
+
+\item Toda la información intercambiada, en todos los mensajes, es autodescriptiva. Cada mensaje contiene todo lo necesario para que su receptor sepa cómo ha de ha de tratarlo.
+\\{\footnotesize (Por ejemplo, utilizando identificadores MIME y formatos textuales fácilmente reconocibles, tales como HTML, XML, JSON,\ldots)}
 
 \item La navegación por las diversas etapas o estados de la aplicación se realiza a través de hipervínculos. Cada paso guía al cliente hacia los siguientes pasos disponibles a partir de ahí.
-\\(HATEOAS, Hypermedia as the Engine of Application State)
+\\{\footnotesize (HATEOAS, Hypermedia as the Engine of Application State)}
 
 \end{itemize}
 
@@ -2061,7 +2066,9 @@ Un enlace ilustrativo:
 En cierta manera, se podria decir que para utilizar una buena API \footnote{API: exponer la lógica de un software (servidor) para poder ser consumida o utilizada por otros softwares (clientes)} REST no se necesita consultar instrucciones prefijadas de antemano. Si se conoce el punto de inicio ({\footnotesize la primera URL a la que llamar}); a partir de ahí se continua a base de ir leyendo e interpretando \footnote{Ese `leer e interpretar', obviamente, implica que se conoce el idioma en el que está escrita la información y que se conoce la jerga específica del dominio de aplicación que se esté tratando.} la información intercambiada en cada paso.
 
 \vspace{1cm}
-nota: Habitualmente, las APIs REST se suelen implementar usando HTTP como protocolo de transporte/interacción y JSON como formato de estructuración de la información. Pero podrían ser implementadas de otras formas, utilizando cualquier otra combinación de estándares en el campo de aplicación y de texto legible por personas humanas.
+nota: 
+\\Habitualmente, las APIs REST se suelen implementar usando HTTP como protocolo de transporte/interacción y JSON como formato de estructuración de la información. 
+\\Pero podrían ser implementadas de otras formas. Utilizando información textual legible por personas humanas y cualquier otra combinación de estándares habituales en el campo de aplicación donde se esté trabajando.
 
 
 \chapter{Ejercicios}\label{ejercicios_organizacion}
