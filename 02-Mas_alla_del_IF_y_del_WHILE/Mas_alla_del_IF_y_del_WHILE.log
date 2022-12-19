@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8) (preloaded format=pdflatex 2022.9.8)  15 DEC 2022 15:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8) (preloaded format=pdflatex 2022.9.8)  19 DEC 2022 09:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1570,539 +1570,533 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\\' on input line 2021.
 
-
-Overfull \hbox (0.26587pt too wide) in paragraph at lines 2031--2032
-[]\OT1/cmr/m/n/12 No ne-ce-si-tar te-ner en cuen-ta es-ta-dos in-ter-nos de la 
-apli-ca-ci^^Son (ser ``\OT1/cmr/bx/n/12 stateless\OT1/cmr/m/n/12 '').
- []
-
-LaTeX Info: Redefining \. on input line 2035.
-LaTeX Info: Redefining \% on input line 2035.
-Package cleveref Info: loaded `spanish' language definitions on input line 2035
+LaTeX Info: Redefining \. on input line 2034.
+LaTeX Info: Redefining \% on input line 2034.
+Package cleveref Info: loaded `spanish' language definitions on input line 2034
 .
 [77]
-Overfull \hbox (19.60847pt too wide) in paragraph at lines 2062--2064
+Overfull \hbox (19.60847pt too wide) in paragraph at lines 2063--2065
 [][]$\OT1/pcr/m/n/12 https : / / martinfowler . com / articles / richardsonMatu
 rityModel . html$[][] 
  []
 
-LaTeX Info: Redefining \. on input line 2070.
-LaTeX Info: Redefining \% on input line 2070.
-Package cleveref Info: loaded `spanish' language definitions on input line 2070
+LaTeX Info: Redefining \. on input line 2065.
+LaTeX Info: Redefining \% on input line 2065.
+Package cleveref Info: loaded `spanish' language definitions on input line 2065
 .
 [78]
-LaTeX Info: Redefining \. on input line 2072.
-LaTeX Info: Redefining \% on input line 2072.
-Package cleveref Info: loaded `spanish' language definitions on input line 2072
+LaTeX Info: Redefining \. on input line 2073.
+LaTeX Info: Redefining \% on input line 2073.
+Package cleveref Info: loaded `spanish' language definitions on input line 2073
 .
  [79]
 Cap\'{\i }tulo 15.
 
-Underfull \hbox (badness 10000) in paragraph at lines 2074--2077
+Underfull \hbox (badness 10000) in paragraph at lines 2075--2078
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2074--2077
+Underfull \hbox (badness 10000) in paragraph at lines 2075--2078
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2078--2079
+Underfull \hbox (badness 10000) in paragraph at lines 2079--2080
 
  []
 
 [80
 
 ]
-Overfull \hbox (5.13945pt too wide) in paragraph at lines 2100--2101
+Overfull \hbox (5.13945pt too wide) in paragraph at lines 2101--2102
 []\OT1/cmr/m/n/12 Persistir los da-tos en di-ver-sos for-ma-tos. Por ejem-plo: 
 tex-to plano, JSON, XML,...(Sin
  []
 
-LaTeX Info: Redefining \. on input line 2136.
-LaTeX Info: Redefining \% on input line 2136.
-Package cleveref Info: loaded `spanish' language definitions on input line 2136
+LaTeX Info: Redefining \. on input line 2137.
+LaTeX Info: Redefining \% on input line 2137.
+Package cleveref Info: loaded `spanish' language definitions on input line 2137
 .
 [81]
-LaTeX Info: Redefining \. on input line 2177.
-LaTeX Info: Redefining \% on input line 2177.
-Package cleveref Info: loaded `spanish' language definitions on input line 2177
+LaTeX Info: Redefining \. on input line 2178.
+LaTeX Info: Redefining \% on input line 2178.
+Package cleveref Info: loaded `spanish' language definitions on input line 2178
 .
  [82]
-LaTeX Info: Redefining \. on input line 2224.
-LaTeX Info: Redefining \% on input line 2224.
-Package cleveref Info: loaded `spanish' language definitions on input line 2224
+LaTeX Info: Redefining \. on input line 2225.
+LaTeX Info: Redefining \% on input line 2225.
+Package cleveref Info: loaded `spanish' language definitions on input line 2225
 .
  [83]
-Underfull \hbox (badness 10000) in paragraph at lines 2230--2233
+Underfull \hbox (badness 10000) in paragraph at lines 2231--2234
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2243--2250
+Underfull \hbox (badness 10000) in paragraph at lines 2244--2251
 
  []
 
 
-Underfull \hbox (badness 3168) in paragraph at lines 2243--2250
+Underfull \hbox (badness 3168) in paragraph at lines 2244--2251
 \OT1/cmr/m/n/12 tros que con-vie-ne po-der mo-di-fi-car
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2243--2250
+Underfull \hbox (badness 10000) in paragraph at lines 2244--2251
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2243--2250
+Underfull \hbox (badness 10000) in paragraph at lines 2244--2251
 \OT1/cmr/m/n/12 va-ria-bles de en-torno, o al-gu-nos
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2253--2256
+Underfull \hbox (badness 10000) in paragraph at lines 2254--2257
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2253--2256
+Underfull \hbox (badness 10000) in paragraph at lines 2254--2257
 \OT1/cmr/m/n/12 Generando fac-tu-ra de-ta-lla-da de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2259--2262
+Underfull \hbox (badness 10000) in paragraph at lines 2260--2263
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2259--2262
+Underfull \hbox (badness 10000) in paragraph at lines 2260--2263
 \OT1/cmr/m/n/12 Normalmente, se iden-ti-fi-car^^Sa la
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2265--2276
+Underfull \hbox (badness 10000) in paragraph at lines 2266--2277
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2265--2276
+Underfull \hbox (badness 10000) in paragraph at lines 2266--2277
 
  []
 
 
-Underfull \hbox (badness 1509) in paragraph at lines 2265--2276
+Underfull \hbox (badness 1509) in paragraph at lines 2266--2277
 \OT1/cmr/m/n/12 es-ta no se sue-le cam-biar. Pe-ro en
  []
 
 
-Underfull \hbox (badness 7631) in paragraph at lines 2265--2276
+Underfull \hbox (badness 7631) in paragraph at lines 2266--2277
 \OT1/cmr/m/n/12 es-te ejer-ci-cio con-vie-ne pen-sar en
  []
 
 
-Underfull \hbox (badness 1189) in paragraph at lines 2265--2276
+Underfull \hbox (badness 1189) in paragraph at lines 2266--2277
 \OT1/cmr/m/n/12 im-ple-men-tar m^^Sas de un me-ca-nis-mo
  []
 
 
-Underfull \hbox (badness 4316) in paragraph at lines 2265--2276
+Underfull \hbox (badness 4316) in paragraph at lines 2266--2277
 \OT1/cmr/m/n/12 de per-sis-ten-cia pa-ra unos mis-mos
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2279--2287
+Underfull \hbox (badness 10000) in paragraph at lines 2280--2288
 
  []
 
 
-Underfull \hbox (badness 4403) in paragraph at lines 2279--2287
+Underfull \hbox (badness 4403) in paragraph at lines 2280--2288
 \OT1/cmr/m/n/12 preparar la pan-ta-lla ini-cial y los
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2279--2287
+Underfull \hbox (badness 10000) in paragraph at lines 2280--2288
 
  []
 
 
-Underfull \hbox (badness 7722) in paragraph at lines 2279--2287
+Underfull \hbox (badness 7722) in paragraph at lines 2280--2288
 \OT1/cmr/m/n/12 notas: En es-te ejer-ci-cio con-vie-ne
  []
 
 
-Underfull \hbox (badness 1609) in paragraph at lines 2279--2287
+Underfull \hbox (badness 1609) in paragraph at lines 2280--2288
 \OT1/cmr/m/n/12 pen-sar en im-ple-men-tar m^^Sas de un
  []
 
 
-Underfull \hbox (badness 1005) in paragraph at lines 2279--2287
+Underfull \hbox (badness 1005) in paragraph at lines 2280--2288
 \OT1/cmr/m/n/12 in-ter-fa-ce v^^S^^Pa ser-vi-cios (por ejem-plo,
  []
 
 
-Underfull \hbox (badness 5771) in paragraph at lines 2279--2287
+Underfull \hbox (badness 5771) in paragraph at lines 2280--2288
 \OT1/cmr/m/n/12 una API HTT-P/-REST). En teo-
  []
 
 
-Underfull \hbox (badness 1661) in paragraph at lines 2279--2287
+Underfull \hbox (badness 1661) in paragraph at lines 2280--2288
 \OT1/cmr/m/n/12 ria, se de-be-rian po-der usar am-bos
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2290--2293
+Underfull \hbox (badness 10000) in paragraph at lines 2291--2294
 
  []
 
 
-Underfull \hbox (badness 5563) in paragraph at lines 2290--2293
+Underfull \hbox (badness 5563) in paragraph at lines 2291--2294
 \OT1/cmr/m/n/12 Tanto los di-ri-gi-dos a ella per-so-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2300--2304
+Underfull \hbox (badness 10000) in paragraph at lines 2301--2305
 
  []
 
 
-Underfull \hbox (badness 3803) in paragraph at lines 2300--2304
+Underfull \hbox (badness 3803) in paragraph at lines 2301--2305
 \OT1/cmr/m/n/12 En ca-so de que va-rios hu^^Sespe-des
  []
 
 
-Underfull \hbox (badness 1092) in paragraph at lines 2308--2311
+Underfull \hbox (badness 1092) in paragraph at lines 2309--2312
 \OT1/cmr/m/n/12 No se pue-de re-gis-trar una es-tan-cia
  []
 
 
-Underfull \hbox (badness 1742) in paragraph at lines 2308--2311
+Underfull \hbox (badness 1742) in paragraph at lines 2309--2312
 \OT1/cmr/m/n/12 sin las fe-chas de en-tra-da y sa-li-da
  []
 
 
-Underfull \hbox (badness 3354) in paragraph at lines 2308--2311
+Underfull \hbox (badness 3354) in paragraph at lines 2309--2312
 \OT1/cmr/m/n/12 co-rrec-tas. En-tra-da hoy o an-te-rior.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2308--2311
+Underfull \hbox (badness 10000) in paragraph at lines 2309--2312
 
  []
 
 
-Underfull \hbox (badness 4024) in paragraph at lines 2308--2311
+Underfull \hbox (badness 4024) in paragraph at lines 2309--2312
 \OT1/cmr/m/n/12 No se pue-de re-gis-trar una nue-va
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2313--2316
+Underfull \hbox (badness 10000) in paragraph at lines 2314--2317
 
  []
 
 
-Underfull \hbox (badness 1895) in paragraph at lines 2313--2316
+Underfull \hbox (badness 1895) in paragraph at lines 2314--2317
 \OT1/cmr/m/n/12 Obviamente, si el nue-vo pre-cio de
  []
 
 
-Underfull \hbox (badness 2573) in paragraph at lines 2320--2327
+Underfull \hbox (badness 2573) in paragraph at lines 2321--2328
 []|\OT1/cmr/m/n/12 Altas/bajas/modificaciones de ser-vi-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2320--2327
+Underfull \hbox (badness 10000) in paragraph at lines 2321--2328
 
  []
 
 
-Underfull \hbox (badness 4492) in paragraph at lines 2320--2327
+Underfull \hbox (badness 4492) in paragraph at lines 2321--2328
 \OT1/cmr/m/n/12 ser-vi-cios dis-po-ni-bles, jun-to con el
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2320--2327
+Underfull \hbox (badness 10000) in paragraph at lines 2321--2328
 
  []
 
 
-Underfull \hbox (badness 7722) in paragraph at lines 2320--2327
+Underfull \hbox (badness 7722) in paragraph at lines 2321--2328
 \OT1/cmr/m/n/12 Como va a ha-ber mu-chos, ser^^Sa
  []
 
 
-Underfull \hbox (badness 1259) in paragraph at lines 2320--2327
+Underfull \hbox (badness 1259) in paragraph at lines 2321--2328
 \OT1/cmr/m/n/12 si-fi-ca-ci^^Son pa-ra ayu-dar a bus-car un
  []
 
 
-Underfull \hbox (badness 1137) in paragraph at lines 2320--2327
+Underfull \hbox (badness 1137) in paragraph at lines 2321--2328
 \OT1/cmr/m/n/12 la-van-de-ria, mi-ni-bar, ba-r/-res-tau-ran-te,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2330--2335
+Underfull \hbox (badness 10000) in paragraph at lines 2331--2336
 
  []
 
 
-Underfull \hbox (badness 6825) in paragraph at lines 2330--2335
+Underfull \hbox (badness 6825) in paragraph at lines 2331--2336
 \OT1/cmr/m/n/12 Lo ideal se-ria po-der pre-sen-tar-los
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2330--2335
+Underfull \hbox (badness 10000) in paragraph at lines 2331--2336
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2330--2335
+Underfull \hbox (badness 10000) in paragraph at lines 2331--2336
 \OT1/cmr/m/n/12 Seria in-tere-san-te tam-bi^^Sen alg^^Sun
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2341--2346
+Underfull \hbox (badness 10000) in paragraph at lines 2342--2347
 
  []
 
 
-Underfull \hbox (badness 3514) in paragraph at lines 2341--2346
+Underfull \hbox (badness 3514) in paragraph at lines 2342--2347
 \OT1/cmr/m/n/12 Para re-gis-trar lo que va pa-san-do
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2341--2346
+Underfull \hbox (badness 10000) in paragraph at lines 2342--2347
 [][]$\OT1/pcr/m/n/12 https : / / en . wikipedia . org /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2349--2354
+Underfull \hbox (badness 10000) in paragraph at lines 2350--2355
 
  []
 
 
-Underfull \hbox (badness 1715) in paragraph at lines 2349--2354
+Underfull \hbox (badness 1715) in paragraph at lines 2350--2355
 \OT1/cmr/m/n/12 (aque-llos re-gis-tra-dos co-mo `hu^^Sesped
  []
 
 
-Underfull \hbox (badness 1496) in paragraph at lines 2349--2354
+Underfull \hbox (badness 1496) in paragraph at lines 2350--2355
 \OT1/cmr/m/n/12 prin-ci-pal' de una es-tan-cia) han de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2349--2354
+Underfull \hbox (badness 10000) in paragraph at lines 2350--2355
 
  []
 
 
-Underfull \hbox (badness 7133) in paragraph at lines 2349--2354
+Underfull \hbox (badness 7133) in paragraph at lines 2350--2355
 \OT1/cmr/m/n/12 En un prin-ci-pio, no se con-tem-
  []
 
 
-Underfull \hbox (badness 2359) in paragraph at lines 2357--2362
+Underfull \hbox (badness 2359) in paragraph at lines 2358--2363
 []|\OT1/cmr/m/n/12 Altas/bajas/modificaciones de re-ser-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2357--2362
+Underfull \hbox (badness 10000) in paragraph at lines 2358--2363
 
  []
 
 
-Underfull \hbox (badness 5403) in paragraph at lines 2357--2362
+Underfull \hbox (badness 5403) in paragraph at lines 2358--2363
 \OT1/cmr/m/n/12 A to-dos los efec-tos, una re-ser-va
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2365--2370
+Underfull \hbox (badness 10000) in paragraph at lines 2366--2371
 
  []
 
 
-Underfull \hbox (badness 5203) in paragraph at lines 2365--2370
+Underfull \hbox (badness 5203) in paragraph at lines 2366--2371
 \OT1/cmr/m/n/12 lla-ves est^^San au-to-ri-za-das pa-ra qu^^Se
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2365--2370
+Underfull \hbox (badness 10000) in paragraph at lines 2366--2371
 
  []
 
 
-Underfull \hbox (badness 1466) in paragraph at lines 2365--2370
+Underfull \hbox (badness 1466) in paragraph at lines 2366--2371
 \OT1/cmr/m/n/12 Se ha de po-der au-to-ri-zar una lla-
  []
 
 
-Underfull \hbox (badness 1122) in paragraph at lines 2365--2370
+Underfull \hbox (badness 1122) in paragraph at lines 2366--2371
 \OT1/cmr/m/n/12 ve pa-ra que abra una de-ter-mi-na-da
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2373--2378
+Underfull \hbox (badness 10000) in paragraph at lines 2374--2379
 
  []
 
 
-Underfull \hbox (badness 1314) in paragraph at lines 2373--2378
+Underfull \hbox (badness 1314) in paragraph at lines 2374--2379
 \OT1/cmr/m/n/12 Ha de ir jun-to con un me-ca-nis-mo
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2373--2378
+Underfull \hbox (badness 10000) in paragraph at lines 2374--2379
 
  []
 
 
-Underfull \hbox (badness 7613) in paragraph at lines 2373--2378
+Underfull \hbox (badness 7613) in paragraph at lines 2374--2379
 \OT1/cmr/m/n/12 nota: Una mis-ma per-so-na pue-de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2385--2388
+Underfull \hbox (badness 10000) in paragraph at lines 2386--2389
 
  []
 
 
-Underfull \hbox (badness 7221) in paragraph at lines 2385--2388
+Underfull \hbox (badness 7221) in paragraph at lines 2386--2389
 \OT1/cmr/m/n/12 Tener en cuen-ta que se podr^^San
  []
 
 
-Underfull \hbox (badness 3849) in paragraph at lines 2391--2395
+Underfull \hbox (badness 3849) in paragraph at lines 2392--2396
 []|\OT1/cmr/m/n/12 Infraestructura de au-to-ri-za-cio-nes y
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2391--2395
+Underfull \hbox (badness 10000) in paragraph at lines 2392--2396
 
  []
 
 
-Underfull \hbox (badness 1728) in paragraph at lines 2391--2395
+Underfull \hbox (badness 1728) in paragraph at lines 2392--2396
 \OT1/cmr/m/n/12 Una vez ten-ga-mos usua-rios y ten-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2404--2409
+Underfull \hbox (badness 10000) in paragraph at lines 2405--2410
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2404--2409
+Underfull \hbox (badness 10000) in paragraph at lines 2405--2410
 \OT1/cmr/m/n/12 Los em-plea-dos ne-ce-si-tan tar-je-tas
  []
 
 
-Underfull \hbox (badness 3019) in paragraph at lines 2404--2409
+Underfull \hbox (badness 3019) in paragraph at lines 2405--2410
 \OT1/cmr/m/n/12 El uso de es-tas tar-je-tas maes-tras
  []
 
 
-Underfull \hbox (badness 1142) in paragraph at lines 2404--2409
+Underfull \hbox (badness 1142) in paragraph at lines 2405--2410
 \OT1/cmr/m/n/12 ha de que-dar au-di-ta-do. Y, ya que
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2413--2418
+Underfull \hbox (badness 10000) in paragraph at lines 2414--2419
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2413--2418
+Underfull \hbox (badness 10000) in paragraph at lines 2414--2419
 \OT1/cmr/m/n/12 Cada em-plea-do pue-de ges-tio-nar-se
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2421--2426
+Underfull \hbox (badness 10000) in paragraph at lines 2422--2427
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2421--2426
+Underfull \hbox (badness 10000) in paragraph at lines 2422--2427
 \OT1/cmr/m/n/12 Una apli-ca-ci^^Son ins-tru-men-ta-da y
  []
 
 
-Underfull \hbox (badness 1062) in paragraph at lines 2421--2426
+Underfull \hbox (badness 1062) in paragraph at lines 2422--2427
 \OT1/cmr/m/n/12 que re-por-ta es-tad^^S^^Psti-cas (te-le-metr^^S^^Pa)
  []
 
 
-Underfull \hbox (badness 1173) in paragraph at lines 2421--2426
+Underfull \hbox (badness 1173) in paragraph at lines 2422--2427
 \OT1/cmr/m/n/12 so-bre su fun-cio-na-mien-to in-terno, es
  []
 
 
-Underfull \hbox (badness 1215) in paragraph at lines 2421--2426
+Underfull \hbox (badness 1215) in paragraph at lines 2422--2427
 \OT1/cmr/m/n/12 una apli-ca-ci^^Son que pue-de mo-ni-to-ri-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2421--2426
+Underfull \hbox (badness 10000) in paragraph at lines 2422--2427
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2421--2426
+Underfull \hbox (badness 10000) in paragraph at lines 2422--2427
 \OT1/cmr/m/n/12 Una vez ins-tru-men-ta-da y re-por-
  []
 
 
-Underfull \hbox (badness 6236) in paragraph at lines 2421--2426
+Underfull \hbox (badness 6236) in paragraph at lines 2422--2427
 \OT1/cmr/m/n/12 una pla-ta-for-ma de agre-ga-ci^^Son de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2421--2426
+Underfull \hbox (badness 10000) in paragraph at lines 2422--2427
 \OT1/cmr/m/n/12 ti-po [][]$\OT1/pcr/m/n/12 https : / / grafana . com/$[][] \OT1
 /cmr/m/n/12 o
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2429--2433
+Underfull \hbox (badness 10000) in paragraph at lines 2430--2434
 
  []
 
 
-Overfull \hbox (19.54723pt too wide) in alignment at lines 2226--2442
+Overfull \hbox (19.54723pt too wide) in alignment at lines 2227--2443
  [] [] 
  []
 
-LaTeX Info: Redefining \. on input line 2442.
-LaTeX Info: Redefining \% on input line 2442.
-Package cleveref Info: loaded `spanish' language definitions on input line 2442
+LaTeX Info: Redefining \. on input line 2443.
+LaTeX Info: Redefining \% on input line 2443.
+Package cleveref Info: loaded `spanish' language definitions on input line 2443
 .
 [84]
-LaTeX Info: Redefining \. on input line 2442.
-LaTeX Info: Redefining \% on input line 2442.
-Package cleveref Info: loaded `spanish' language definitions on input line 2442
+LaTeX Info: Redefining \. on input line 2443.
+LaTeX Info: Redefining \% on input line 2443.
+Package cleveref Info: loaded `spanish' language definitions on input line 2443
 .
  [85]
-LaTeX Info: Redefining \. on input line 2442.
-LaTeX Info: Redefining \% on input line 2442.
-Package cleveref Info: loaded `spanish' language definitions on input line 2442
+LaTeX Info: Redefining \. on input line 2443.
+LaTeX Info: Redefining \% on input line 2443.
+Package cleveref Info: loaded `spanish' language definitions on input line 2443
 .
  [86]
-LaTeX Info: Redefining \. on input line 2442.
-LaTeX Info: Redefining \% on input line 2442.
-Package cleveref Info: loaded `spanish' language definitions on input line 2442
+LaTeX Info: Redefining \. on input line 2443.
+LaTeX Info: Redefining \% on input line 2443.
+Package cleveref Info: loaded `spanish' language definitions on input line 2443
 .
  [87]
-LaTeX Info: Redefining \. on input line 2442.
-LaTeX Info: Redefining \% on input line 2442.
-Package cleveref Info: loaded `spanish' language definitions on input line 2442
+LaTeX Info: Redefining \. on input line 2443.
+LaTeX Info: Redefining \% on input line 2443.
+Package cleveref Info: loaded `spanish' language definitions on input line 2443
 .
  [88]
-LaTeX Info: Redefining \. on input line 2450.
-LaTeX Info: Redefining \% on input line 2450.
-Package cleveref Info: loaded `spanish' language definitions on input line 2450
+LaTeX Info: Redefining \. on input line 2451.
+LaTeX Info: Redefining \% on input line 2451.
+Package cleveref Info: loaded `spanish' language definitions on input line 2451
 .
  [89]
 Cap\'{\i }tulo 16.
 
-Overfull \hbox (23.76233pt too wide) in paragraph at lines 2456--2460
+Overfull \hbox (23.76233pt too wide) in paragraph at lines 2457--2461
 \OT1/cmr/m/n/12 (o el JDK co-mer-cial de Ora-cle: [][]$\OT1/pcr/m/n/12 https : 
 / / www . oracle . com / java / technologies /
  []
@@ -2110,62 +2104,62 @@ Overfull \hbox (23.76233pt too wide) in paragraph at lines 2456--2460
 [90
 
 ]
-Overfull \hbox (45.6416pt too wide) in paragraph at lines 2477--2480
+Overfull \hbox (45.6416pt too wide) in paragraph at lines 2478--2481
 \OT1/cmr/m/n/12 ::: Ma-ven PMD Plu-gin: [][]$\OT1/pcr/m/n/12 https : / / maven 
 . apache . org / plugins / maven-[]pmd-[]plugin$[][] 
  []
 
 
-Overfull \hbox (55.64522pt too wide) in paragraph at lines 2485--2488
+Overfull \hbox (55.64522pt too wide) in paragraph at lines 2486--2489
 \OT1/cmr/m/n/12 JProfiler: [][]$\OT1/pcr/m/n/12 https : / / www . ej-[]technolo
 gies . com / products / jprofiler / overview .
  []
 
-LaTeX Info: Redefining \. on input line 2520.
-LaTeX Info: Redefining \% on input line 2520.
-Package cleveref Info: loaded `spanish' language definitions on input line 2520
+LaTeX Info: Redefining \. on input line 2521.
+LaTeX Info: Redefining \% on input line 2521.
+Package cleveref Info: loaded `spanish' language definitions on input line 2521
 .
 [91]
-Overfull \hbox (38.28004pt too wide) in paragraph at lines 2552--2553
+Overfull \hbox (38.28004pt too wide) in paragraph at lines 2553--2554
 []\OT1/cmr/m/n/12 Un ana-li-za-dor de ren-di-mien-to (pro-fi-ler) ::: PyVm-Mo-n
 i-tor: [][]$\OT1/pcr/m/n/12 https : / / www . pyvmmonitor .
  []
 
-LaTeX Info: Redefining \. on input line 2559.
-LaTeX Info: Redefining \% on input line 2559.
-Package cleveref Info: loaded `spanish' language definitions on input line 2559
+LaTeX Info: Redefining \. on input line 2560.
+LaTeX Info: Redefining \% on input line 2560.
+Package cleveref Info: loaded `spanish' language definitions on input line 2560
 .
 [92]
-Overfull \hbox (3.20647pt too wide) in paragraph at lines 2560--2560
+Overfull \hbox (3.20647pt too wide) in paragraph at lines 2561--2561
 []\OT1/cmr/bx/n/17.28 Para pro-gra-mar en HTML5/CSS/Javascript 
  []
 
-LaTeX Info: Redefining \. on input line 2599.
-LaTeX Info: Redefining \% on input line 2599.
-Package cleveref Info: loaded `spanish' language definitions on input line 2599
+LaTeX Info: Redefining \. on input line 2600.
+LaTeX Info: Redefining \% on input line 2600.
+Package cleveref Info: loaded `spanish' language definitions on input line 2600
 .
 [93]
-Overfull \hbox (7.38095pt too wide) in paragraph at lines 2601--2601
+Overfull \hbox (7.38095pt too wide) in paragraph at lines 2602--2602
 []\OT1/cmr/bx/n/17.28 Una he-rra-mien-ta trans-ver-sal: al-ma-ce-na-mien-
  []
 
-LaTeX Info: Redefining \. on input line 2615.
-LaTeX Info: Redefining \% on input line 2615.
-Package cleveref Info: loaded `spanish' language definitions on input line 2615
+LaTeX Info: Redefining \. on input line 2616.
+LaTeX Info: Redefining \% on input line 2616.
+Package cleveref Info: loaded `spanish' language definitions on input line 2616
 .
 [94]
 Cap\'{\i }tulo 17.
 LaTeX Font Info:    Font shape `OMS/cmr/bx/n' in size <14.4> not available
-(Font)              Font shape `OMS/cmsy/b/n' tried instead on input line 2623.
+(Font)              Font shape `OMS/cmsy/b/n' tried instead on input line 2624.
 
 File: ./imagenes//HelloBenzirpi - pantallazo - Java.png Graphic file (type png)
 
 <use ./imagenes//HelloBenzirpi - pantallazo - Java.png>
 Package pdftex.def Info: ./imagenes//HelloBenzirpi - pantallazo - Java.png  use
-d on input line 2626.
+d on input line 2627.
 (pdftex.def)             Requested size: 426.79134pt x 45.4346pt.
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 2627.
+nput line 2628.
 (soluciones_java/HelloBenzirpi/src/module-info.java)
 (soluciones_java/HelloBenzirpi/src/hello/InterfazGraficoDeUsuario.java [95
 
@@ -2181,7 +2175,7 @@ File: ./imagenes//HelloBenzirpi - pantallazo - JavaFx.png Graphic file (type pn
 g)
 <use ./imagenes//HelloBenzirpi - pantallazo - JavaFx.png>
 Package pdftex.def Info: ./imagenes//HelloBenzirpi - pantallazo - JavaFx.png  u
-sed on input line 2632.
+sed on input line 2633.
 (pdftex.def)             Requested size: 426.79134pt x 59.65144pt.
 
 (soluciones_java/HelloBenzirpi_javafx/App.java
@@ -2201,7 +2195,7 @@ File: ./imagenes//HelloBenzirpi - pantallazo - Python.png Graphic file (type pn
 g)
 <use ./imagenes//HelloBenzirpi - pantallazo - Python.png>
 Package pdftex.def Info: ./imagenes//HelloBenzirpi - pantallazo - Python.png  u
-sed on input line 2638.
+sed on input line 2639.
 (pdftex.def)             Requested size: 426.79134pt x 53.09703pt.
 
 (soluciones_python/GUI/hello_benzirpi.py) (soluciones_python/GUI/GUI.py
@@ -2221,7 +2215,7 @@ File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 File: ./imagenes//HelloBenzirpi - pantallazo - C++.png Graphic file (type png)
 <use ./imagenes//HelloBenzirpi - pantallazo - C++.png>
 Package pdftex.def Info: ./imagenes//HelloBenzirpi - pantallazo - C++.png  used
- on input line 2643.
+ on input line 2644.
 (pdftex.def)             Requested size: 426.79134pt x 76.00574pt.
 
 (soluciones_cpp/HelloBenzirpi/mainwindow.h)
@@ -2242,11 +2236,11 @@ File: ./imagenes//HelloBenzirpi_bis - pantallazo - C++.png Graphic file (type p
 ng)
 <use ./imagenes//HelloBenzirpi_bis - pantallazo - C++.png>
 Package pdftex.def Info: ./imagenes//HelloBenzirpi_bis - pantallazo - C++.png  
-used on input line 2650.
+used on input line 2651.
 (pdftex.def)             Requested size: 426.79134pt x 106.87502pt.
-LaTeX Info: Redefining \. on input line 2651.
-LaTeX Info: Redefining \% on input line 2651.
-Package cleveref Info: loaded `spanish' language definitions on input line 2651
+LaTeX Info: Redefining \. on input line 2652.
+LaTeX Info: Redefining \% on input line 2652.
+Package cleveref Info: loaded `spanish' language definitions on input line 2652
 .
  [102]
 (soluciones_cpp/HelloBenzirpi_bis/main.qml
@@ -2258,13 +2252,13 @@ HelloBenzirpi_bis/main.cpp)
 File: ./imagenes//Bocatas - pantallazo - Java.png Graphic file (type png)
 <use ./imagenes//Bocatas - pantallazo - Java.png>
 Package pdftex.def Info: ./imagenes//Bocatas - pantallazo - Java.png  used on i
-nput line 2658.
+nput line 2659.
 (pdftex.def)             Requested size: 426.79134pt x 124.50745pt.
 
 (soluciones_java/Bocatas/src/module-info.java)
-LaTeX Info: Redefining \. on input line 2660.
-LaTeX Info: Redefining \% on input line 2660.
-Package cleveref Info: loaded `spanish' language definitions on input line 2660
+LaTeX Info: Redefining \. on input line 2661.
+LaTeX Info: Redefining \% on input line 2661.
+Package cleveref Info: loaded `spanish' language definitions on input line 2661
 .
  [104]
 (soluciones_java/Bocatas/src/bocatas/InterfazGraficoDeUsuario.java
@@ -2287,24 +2281,24 @@ File: ./imagenes//Seleccion Plana - diagrama de clases.png Graphic file (type p
 ng)
 <use ./imagenes//Seleccion Plana - diagrama de clases.png>
 Package pdftex.def Info: ./imagenes//Seleccion Plana - diagrama de clases.png  
-used on input line 2667.
+used on input line 2668.
 (pdftex.def)             Requested size: 426.79134pt x 516.09157pt.
 File: ./imagenes//Seleccion Plana - pantallazo - Java.png Graphic file (type pn
 g)
 <use ./imagenes//Seleccion Plana - pantallazo - Java.png>
 Package pdftex.def Info: ./imagenes//Seleccion Plana - pantallazo - Java.png  u
-sed on input line 2668.
+sed on input line 2669.
 (pdftex.def)             Requested size: 426.79134pt x 167.64235pt.
-LaTeX Info: Redefining \. on input line 2669.
-LaTeX Info: Redefining \% on input line 2669.
-Package cleveref Info: loaded `spanish' language definitions on input line 2669
+LaTeX Info: Redefining \. on input line 2670.
+LaTeX Info: Redefining \% on input line 2670.
+Package cleveref Info: loaded `spanish' language definitions on input line 2670
 .
  [108]
 Overfull \vbox (73.17734pt too high) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 2669.
-LaTeX Info: Redefining \% on input line 2669.
-Package cleveref Info: loaded `spanish' language definitions on input line 2669
+LaTeX Info: Redefining \. on input line 2670.
+LaTeX Info: Redefining \% on input line 2670.
+Package cleveref Info: loaded `spanish' language definitions on input line 2670
 .
 
 [109 <./imagenes//Seleccion Plana - diagrama de clases.png>]
@@ -2328,9 +2322,9 @@ Package cleveref Info: loaded `spanish' language definitions on input line 34.
  [112])
 (soluciones_java/SeleccionPlana/src/seleccionPlana/Concursante.java)
 (soluciones_java/SeleccionPlana/src/seleccionPlana/Main.java)
-LaTeX Info: Redefining \. on input line 2677.
-LaTeX Info: Redefining \% on input line 2677.
-Package cleveref Info: loaded `spanish' language definitions on input line 2677
+LaTeX Info: Redefining \. on input line 2678.
+LaTeX Info: Redefining \% on input line 2678.
+Package cleveref Info: loaded `spanish' language definitions on input line 2678
 .
  [113]
 <./imagenes//Dialogos Estandares - pantallazo - Java.png, id=2582, 438.13687pt 
@@ -2339,7 +2333,7 @@ File: ./imagenes//Dialogos Estandares - pantallazo - Java.png Graphic file (typ
 e png)
 <use ./imagenes//Dialogos Estandares - pantallazo - Java.png>
 Package pdftex.def Info: ./imagenes//Dialogos Estandares - pantallazo - Java.pn
-g  used on input line 2680.
+g  used on input line 2681.
 (pdftex.def)             Requested size: 426.79134pt x 104.866pt.
 
 (soluciones_java/DialogosEstandares/src/module-info.java)
@@ -2363,7 +2357,7 @@ Package cleveref Info: loaded `spanish' language definitions on input line 11.
 File: ./imagenes//Scroll - pantallazo - Java.png Graphic file (type png)
 <use ./imagenes//Scroll - pantallazo - Java.png>
 Package pdftex.def Info: ./imagenes//Scroll - pantallazo - Java.png  used on in
-put line 2690.
+put line 2691.
 (pdftex.def)             Requested size: 341.43436pt x 259.9936pt.
 
 (soluciones_java/Scroll/src/module-info.java)
@@ -2378,15 +2372,15 @@ Package cleveref Info: loaded `spanish' language definitions on input line 53.
  [118])
 (soluciones_java/Scroll/src/scroll/ComponenteParaMostarUnaImagen.java)
 (soluciones_java/Scroll/src/scroll/Main.java)
-LaTeX Info: Redefining \. on input line 2697.
-LaTeX Info: Redefining \% on input line 2697.
-Package cleveref Info: loaded `spanish' language definitions on input line 2697
+LaTeX Info: Redefining \. on input line 2698.
+LaTeX Info: Redefining \% on input line 2698.
+Package cleveref Info: loaded `spanish' language definitions on input line 2698
 .
  [119]
 File: ./imagenes//Split - pantallazo - Java.png Graphic file (type png)
 <use ./imagenes//Split - pantallazo - Java.png>
 Package pdftex.def Info: ./imagenes//Split - pantallazo - Java.png  used on inp
-ut line 2700.
+ut line 2701.
 (pdftex.def)             Requested size: 341.43436pt x 260.43591pt.
 
 (soluciones_java/Split/src/module-info.java)
@@ -2406,24 +2400,24 @@ File: ./imagenes//Seleccion Arborea - diagrama de clases.png Graphic file (type
  png)
 <use ./imagenes//Seleccion Arborea - diagrama de clases.png>
 Package pdftex.def Info: ./imagenes//Seleccion Arborea - diagrama de clases.png
-  used on input line 2709.
+  used on input line 2710.
 (pdftex.def)             Requested size: 426.79134pt x 531.79659pt.
 File: ./imagenes//Seleccion Arborea - pantallazo - Java.png Graphic file (type 
 png)
 <use ./imagenes//Seleccion Arborea - pantallazo - Java.png>
 Package pdftex.def Info: ./imagenes//Seleccion Arborea - pantallazo - Java.png 
- used on input line 2710.
+ used on input line 2711.
 (pdftex.def)             Requested size: 426.79134pt x 246.51643pt.
-LaTeX Info: Redefining \. on input line 2711.
-LaTeX Info: Redefining \% on input line 2711.
-Package cleveref Info: loaded `spanish' language definitions on input line 2711
+LaTeX Info: Redefining \. on input line 2712.
+LaTeX Info: Redefining \% on input line 2712.
+Package cleveref Info: loaded `spanish' language definitions on input line 2712
 .
  [122]
 Overfull \vbox (167.75644pt too high) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 2711.
-LaTeX Info: Redefining \% on input line 2711.
-Package cleveref Info: loaded `spanish' language definitions on input line 2711
+LaTeX Info: Redefining \. on input line 2712.
+LaTeX Info: Redefining \% on input line 2712.
+Package cleveref Info: loaded `spanish' language definitions on input line 2712
 .
 
 [123 <./imagenes//Seleccion Arborea - diagrama de clases.png>]
@@ -2476,11 +2470,11 @@ File: ./imagenes//BarraDeProgreso - pantallazo - Java.png Graphic file (type pn
 g)
 <use ./imagenes//BarraDeProgreso - pantallazo - Java.png>
 Package pdftex.def Info: ./imagenes//BarraDeProgreso - pantallazo - Java.png  u
-sed on input line 2726.
+sed on input line 2727.
 (pdftex.def)             Requested size: 426.79134pt x 212.66994pt.
-LaTeX Info: Redefining \. on input line 2727.
-LaTeX Info: Redefining \% on input line 2727.
-Package cleveref Info: loaded `spanish' language definitions on input line 2727
+LaTeX Info: Redefining \. on input line 2728.
+LaTeX Info: Redefining \% on input line 2728.
+Package cleveref Info: loaded `spanish' language definitions on input line 2728
 .
  [132]
 (soluciones_java/BarraDeProgreso/src/module-info.java)
@@ -2515,11 +2509,11 @@ Package cleveref Info: loaded `spanish' language definitions on input line 16.
 File: ./imagenes//ascensores - diagrama de clases.png Graphic file (type png)
 <use ./imagenes//ascensores - diagrama de clases.png>
 Package pdftex.def Info: ./imagenes//ascensores - diagrama de clases.png  used 
-on input line 2740.
+on input line 2741.
 (pdftex.def)             Requested size: 426.79134pt x 425.48921pt.
-LaTeX Info: Redefining \. on input line 2742.
-LaTeX Info: Redefining \% on input line 2742.
-Package cleveref Info: loaded `spanish' language definitions on input line 2742
+LaTeX Info: Redefining \. on input line 2743.
+LaTeX Info: Redefining \% on input line 2743.
+Package cleveref Info: loaded `spanish' language definitions on input line 2743
 .
  [138 <./imagenes//ascensores - diagrama de clases.png>]
 (soluciones_java/Ascensores/src/module-info.java)
@@ -2555,16 +2549,16 @@ File: ./imagenes//ascensores - pantallazo - textual1.png Graphic file (type png
 )
 <use ./imagenes//ascensores - pantallazo - textual1.png>
 Package pdftex.def Info: ./imagenes//ascensores - pantallazo - textual1.png  us
-ed on input line 2748.
+ed on input line 2749.
 (pdftex.def)             Requested size: 213.39566pt x 193.30748pt.
 File: ./imagenes//ascensores - pantallazo - textual2.png Graphic file (type png
 )
 <use ./imagenes//ascensores - pantallazo - textual2.png>
 Package pdftex.def Info: ./imagenes//ascensores - pantallazo - textual2.png  us
-ed on input line 2749.
+ed on input line 2750.
 (pdftex.def)             Requested size: 213.39566pt x 174.00925pt.
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 2748--2750
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 2749--2751
 [] [] 
  []
 
@@ -2582,7 +2576,7 @@ File: ./imagenes//ascensores - pantallazo - grafico1.png Graphic file (type png
 )
 <use ./imagenes//ascensores - pantallazo - grafico1.png>
 Package pdftex.def Info: ./imagenes//ascensores - pantallazo - grafico1.png  us
-ed on input line 2751.
+ed on input line 2752.
 (pdftex.def)             Requested size: 426.79134pt x 156.00143pt.
 
 (soluciones_java/Ascensores/src/ascensores/InterfazGraficoDeUsuario.java
@@ -2600,9 +2594,9 @@ LaTeX Info: Redefining \% on input line 107.
 Package cleveref Info: loaded `spanish' language definitions on input line 107.
 
  [147]) (soluciones_java/ascensores/src/Ascensores/Main.java)
-LaTeX Info: Redefining \. on input line 2780.
-LaTeX Info: Redefining \% on input line 2780.
-Package cleveref Info: loaded `spanish' language definitions on input line 2780
+LaTeX Info: Redefining \. on input line 2781.
+LaTeX Info: Redefining \% on input line 2781.
+Package cleveref Info: loaded `spanish' language definitions on input line 2781
 .
 
 [148]
@@ -2610,22 +2604,22 @@ Package cleveref Info: loaded `spanish' language definitions on input line 2780
 File: ./imagenes//CalculoSimple_codigo.png Graphic file (type png)
 <use ./imagenes//CalculoSimple_codigo.png>
 Package pdftex.def Info: ./imagenes//CalculoSimple_codigo.png  used on input li
-ne 2787.
+ne 2788.
 (pdftex.def)             Requested size: 128.0387pt x 204.46593pt.
 <./imagenes//CalculoSimple_tests.png, id=4117, 456.95718pt x 174.6525pt>
 File: ./imagenes//CalculoSimple_tests.png Graphic file (type png)
 <use ./imagenes//CalculoSimple_tests.png>
 Package pdftex.def Info: ./imagenes//CalculoSimple_tests.png  used on input lin
-e 2788.
+e 2789.
 (pdftex.def)             Requested size: 213.39566pt x 81.56168pt.
 <./imagenes//CalculoSimple_magnitudes.png, id=4118, 146.04562pt x 71.51718pt>
 File: ./imagenes//CalculoSimple_magnitudes.png Graphic file (type png)
 <use ./imagenes//CalculoSimple_magnitudes.png>
 Package pdftex.def Info: ./imagenes//CalculoSimple_magnitudes.png  used on inpu
-t line 2789.
+t line 2790.
 (pdftex.def)             Requested size: 85.35696pt x 41.79973pt.
 
-Overfull \hbox (5.22215pt too wide) in paragraph at lines 2787--2790
+Overfull \hbox (5.22215pt too wide) in paragraph at lines 2788--2791
 [][] [] [] 
  []
 
@@ -2653,16 +2647,16 @@ Package cleveref Info: loaded `spanish' language definitions on input line 68.
 File: ./imagenes//WindowsForms_codigo.png Graphic file (type png)
 <use ./imagenes//WindowsForms_codigo.png>
 Package pdftex.def Info: ./imagenes//WindowsForms_codigo.png  used on input lin
-e 2794.
+e 2795.
 (pdftex.def)             Requested size: 128.0387pt x 52.68504pt.
 <./imagenes//WindowsForms_pantallazo.png, id=4300, 319.1925pt x 255.95625pt>
 File: ./imagenes//WindowsForms_pantallazo.png Graphic file (type png)
 <use ./imagenes//WindowsForms_pantallazo.png>
 Package pdftex.def Info: ./imagenes//WindowsForms_pantallazo.png  used on input
- line 2795.
+ line 2796.
 (pdftex.def)             Requested size: 298.75262pt x 239.56783pt.
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 2794--2796
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 2795--2797
 [][] [] 
  []
 
@@ -2676,22 +2670,22 @@ o.png>])
 File: ./imagenes//Consola_codigo.png Graphic file (type png)
 <use ./imagenes//Consola_codigo.png>
 Package pdftex.def Info: ./imagenes//Consola_codigo.png  used on input line 280
-0.
+1.
 (pdftex.def)             Requested size: 128.0387pt x 38.412pt.
 <./imagenes//Consola_pantallazo.png, id=4332, 833.36343pt x 338.01282pt>
 File: ./imagenes//Consola_pantallazo.png Graphic file (type png)
 <use ./imagenes//Consola_pantallazo.png>
 Package pdftex.def Info: ./imagenes//Consola_pantallazo.png  used on input line
- 2801.
+ 2802.
 (pdftex.def)             Requested size: 298.75262pt x 121.1739pt.
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 2800--2802
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 2801--2803
 [][] [] 
  []
 
-LaTeX Info: Redefining \. on input line 2802.
-LaTeX Info: Redefining \% on input line 2802.
-Package cleveref Info: loaded `spanish' language definitions on input line 2802
+LaTeX Info: Redefining \. on input line 2803.
+LaTeX Info: Redefining \% on input line 2803.
+Package cleveref Info: loaded `spanish' language definitions on input line 2803
 .
 [154] (soluciones_csharp/Multiinterface/Pruebas_CONSOLE-Core/Program.cs
 LaTeX Info: Redefining \. on input line 34.
@@ -2703,7 +2697,7 @@ Package cleveref Info: loaded `spanish' language definitions on input line 34.
 File: ./imagenes//ServiciosREST_codigo.png Graphic file (type png)
 <use ./imagenes//ServiciosREST_codigo.png>
 Package pdftex.def Info: ./imagenes//ServiciosREST_codigo.png  used on input li
-ne 2805.
+ne 2806.
 (pdftex.def)             Requested size: 128.0387pt x 139.03867pt.
 
 (soluciones_csharp/Multiinterface/Pruebas_WEB-Core/Controllers/CalculoSimpleCon
@@ -2720,13 +2714,13 @@ Package cleveref Info: loaded `spanish' language definitions on input line 63.
 File: ./imagenes//HttpGet_pantallazo.png Graphic file (type png)
 <use ./imagenes//HttpGet_pantallazo.png>
 Package pdftex.def Info: ./imagenes//HttpGet_pantallazo.png  used on input line
- 2809.
+ 2810.
 (pdftex.def)             Requested size: 426.79134pt x 46.79622pt.
 <./imagenes//HttpPut_pantallazo.png, id=4503, 638.385pt x 91.84312pt>
 File: ./imagenes//HttpPut_pantallazo.png Graphic file (type png)
 <use ./imagenes//HttpPut_pantallazo.png>
 Package pdftex.def Info: ./imagenes//HttpPut_pantallazo.png  used on input line
- 2812.
+ 2813.
 (pdftex.def)             Requested size: 426.79134pt x 61.40141pt.
 
 (soluciones_csharp/Multiinterface/zz-paraProbarServicioWebPost/Program.cs
@@ -2743,22 +2737,22 @@ Package cleveref Info: loaded `spanish' language definitions on input line 51.
 File: ./imagenes//HttpPut_web_codigo.png Graphic file (type png)
 <use ./imagenes//HttpPut_web_codigo.png>
 Package pdftex.def Info: ./imagenes//HttpPut_web_codigo.png  used on input line
- 2816.
+ 2817.
 (pdftex.def)             Requested size: 128.0387pt x 182.243pt.
 <./imagenes//HttpPut_web_pantallazo.png, id=4595, 432.86719pt x 281.55188pt>
 File: ./imagenes//HttpPut_web_pantallazo.png Graphic file (type png)
 <use ./imagenes//HttpPut_web_pantallazo.png>
 Package pdftex.def Info: ./imagenes//HttpPut_web_pantallazo.png  used on input 
-line 2817.
+line 2818.
 (pdftex.def)             Requested size: 298.75262pt x 194.32684pt.
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 2816--2818
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 2817--2819
 [][] [] 
  []
 
-LaTeX Info: Redefining \. on input line 2818.
-LaTeX Info: Redefining \% on input line 2818.
-Package cleveref Info: loaded `spanish' language definitions on input line 2818
+LaTeX Info: Redefining \. on input line 2819.
+LaTeX Info: Redefining \% on input line 2819.
+Package cleveref Info: loaded `spanish' language definitions on input line 2819
 .
 [160]
 (soluciones_csharp/Multiinterface/Pruebas_WEB-Core/wwwroot/Pruebas_HTML.html
@@ -2776,17 +2770,17 @@ Package cleveref Info: loaded `spanish' language definitions on input line 72.
 File: ./imagenes//HttpPut_web_Razor_codigo.png Graphic file (type png)
 <use ./imagenes//HttpPut_web_Razor_codigo.png>
 Package pdftex.def Info: ./imagenes//HttpPut_web_Razor_codigo.png  used on inpu
-t line 2821.
+t line 2822.
 (pdftex.def)             Requested size: 128.0387pt x 222.37932pt.
 <./imagenes//HttpPut_web_Razor_pantallazo.png, id=4714, 355.3275pt x 417.81094p
 t>
 File: ./imagenes//HttpPut_web_Razor_pantallazo.png Graphic file (type png)
 <use ./imagenes//HttpPut_web_Razor_pantallazo.png>
 Package pdftex.def Info: ./imagenes//HttpPut_web_Razor_pantallazo.png  used on 
-input line 2822.
+input line 2823.
 (pdftex.def)             Requested size: 298.75262pt x 351.29669pt.
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 2821--2823
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 2822--2824
 [][] [] 
  []
 
@@ -2811,23 +2805,23 @@ Package cleveref Info: loaded `spanish' language definitions on input line 73.
 File: ./imagenes//MVC_directa_App.png Graphic file (type png)
 <use ./imagenes//MVC_directa_App.png>
 Package pdftex.def Info: ./imagenes//MVC_directa_App.png  used on input line 28
-34.
+35.
 (pdftex.def)             Requested size: 426.79134pt x 134.83607pt.
 <./imagenes//MVC_directa_Controlador.png, id=4846, 586.44093pt x 340.27126pt>
 File: ./imagenes//MVC_directa_Controlador.png Graphic file (type png)
 <use ./imagenes//MVC_directa_Controlador.png>
 Package pdftex.def Info: ./imagenes//MVC_directa_Controlador.png  used on input
- line 2841.
+ line 2842.
 (pdftex.def)             Requested size: 426.79134pt x 247.6379pt.
 <./imagenes//MVC_directa_Vista.png, id=4847, 572.89032pt x 245.41687pt>
 File: ./imagenes//MVC_directa_Vista.png Graphic file (type png)
 <use ./imagenes//MVC_directa_Vista.png>
 Package pdftex.def Info: ./imagenes//MVC_directa_Vista.png  used on input line 
-2843.
+2844.
 (pdftex.def)             Requested size: 426.79134pt x 182.83391pt.
-LaTeX Info: Redefining \. on input line 2845.
-LaTeX Info: Redefining \% on input line 2845.
-Package cleveref Info: loaded `spanish' language definitions on input line 2845
+LaTeX Info: Redefining \. on input line 2846.
+LaTeX Info: Redefining \% on input line 2846.
+Package cleveref Info: loaded `spanish' language definitions on input line 2846
 .
  [166 <./imagenes//MVC_directa_App.png> <./imagenes//MVC_directa_Controlador.pn
 g>]
@@ -2835,7 +2829,7 @@ g>]
 File: ./imagenes//MVC_directa_Persistencia.png Graphic file (type png)
 <use ./imagenes//MVC_directa_Persistencia.png>
 Package pdftex.def Info: ./imagenes//MVC_directa_Persistencia.png  used on inpu
-t line 2845.
+t line 2846.
 (pdftex.def)             Requested size: 426.79134pt x 199.78961pt.
 
 (soluciones_java/MVC_directa/src/main/java/es/susosise/mvc_directa/App.java)
@@ -2885,32 +2879,32 @@ LaTeX Info: Redefining \. on input line 77.
 LaTeX Info: Redefining \% on input line 77.
 Package cleveref Info: loaded `spanish' language definitions on input line 77.
  [175])
-LaTeX Info: Redefining \. on input line 2860.
-LaTeX Info: Redefining \% on input line 2860.
-Package cleveref Info: loaded `spanish' language definitions on input line 2860
+LaTeX Info: Redefining \. on input line 2861.
+LaTeX Info: Redefining \% on input line 2861.
+Package cleveref Info: loaded `spanish' language definitions on input line 2861
 .
  [176]
 <./imagenes//MVC_inversa_App.png, id=5385, 697.8572pt x 459.21562pt>
 File: ./imagenes//MVC_inversa_App.png Graphic file (type png)
 <use ./imagenes//MVC_inversa_App.png>
 Package pdftex.def Info: ./imagenes//MVC_inversa_App.png  used on input line 28
-60.
+61.
 (pdftex.def)             Requested size: 426.79134pt x 280.84283pt.
 <./imagenes//MVC_inversa_Controlador.png, id=5386, 572.89032pt x 426.09187pt>
 File: ./imagenes//MVC_inversa_Controlador.png Graphic file (type png)
 <use ./imagenes//MVC_inversa_Controlador.png>
 Package pdftex.def Info: ./imagenes//MVC_inversa_Controlador.png  used on input
- line 2862.
+ line 2863.
 (pdftex.def)             Requested size: 426.79134pt x 317.43558pt.
 <./imagenes//MVC_inversa_Vista.png, id=5387, 572.89032pt x 245.41687pt>
 File: ./imagenes//MVC_inversa_Vista.png Graphic file (type png)
 <use ./imagenes//MVC_inversa_Vista.png>
 Package pdftex.def Info: ./imagenes//MVC_inversa_Vista.png  used on input line 
-2864.
+2865.
 (pdftex.def)             Requested size: 426.79134pt x 182.83391pt.
-LaTeX Info: Redefining \. on input line 2866.
-LaTeX Info: Redefining \% on input line 2866.
-Package cleveref Info: loaded `spanish' language definitions on input line 2866
+LaTeX Info: Redefining \. on input line 2867.
+LaTeX Info: Redefining \% on input line 2867.
+Package cleveref Info: loaded `spanish' language definitions on input line 2867
 .
  [177 <./imagenes//MVC_inversa_App.png> <./imagenes//MVC_inversa_Controlador.pn
 g>]
@@ -2918,7 +2912,7 @@ g>]
 File: ./imagenes//MVC_inversa_Persistencia.png Graphic file (type png)
 <use ./imagenes//MVC_inversa_Persistencia.png>
 Package pdftex.def Info: ./imagenes//MVC_inversa_Persistencia.png  used on inpu
-t line 2866.
+t line 2867.
 (pdftex.def)             Requested size: 426.79134pt x 249.90105pt.
 
 (soluciones_java/MVC_inversa/src/main/java/es/susosise/mvc_inversa/App.java
@@ -2977,9 +2971,9 @@ Package cleveref Info: loaded `spanish' language definitions on input line 99.
 Package caption Warning: Unused \captionsetup[verbatim] on input line 75.
 See the caption package documentation for explanation.
 
-LaTeX Info: Redefining \. on input line 2890.
-LaTeX Info: Redefining \% on input line 2890.
-Package cleveref Info: loaded `spanish' language definitions on input line 2890
+LaTeX Info: Redefining \. on input line 2891.
+LaTeX Info: Redefining \% on input line 2891.
+Package cleveref Info: loaded `spanish' language definitions on input line 2891
 .
 [188] (Mas_alla_del_IF_y_del_WHILE.aux
 LaTeX Info: Redefining \. on input line 22.
@@ -3014,7 +3008,7 @@ m Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKT
 eX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX/fonts/typ
 e1/urw/courier/ucrb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/courier/ucrr
 8a.pfb>
-Output written on Mas_alla_del_IF_y_del_WHILE.pdf (189 pages, 2669948 bytes).
+Output written on Mas_alla_del_IF_y_del_WHILE.pdf (189 pages, 2669871 bytes).
 PDF statistics:
  6949 PDF objects out of 7423 (max. 8388607)
  4574 named destinations out of 5155 (max. 500000)

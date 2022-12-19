@@ -2026,14 +2026,14 @@ Básicamente se trata de:
 
 \begin{itemize}
 
-\item Ser cliente-servidor: la parte cliente (\textbf{frontend}) se encarga de interactuar con el usuario y la parte servidor (\textbf{backend}) se encarga de manipular la información (los recursos).
-
-\item No necesitar tener en cuenta estados internos de la aplicación (ser ``\textbf{stateless}''). Cada llamada a un servicio o acción (a un ``\textbf{endpoint}'') es independiente. No depende de las llamadas previas a ese mismo o a otros servicios o acciones.
-
-{\footnotesize nota: Es conveniente que también sea idempotente, que una misma llamada  pueda llegar repetida varias veces al servidor o al cliente sin causar efectos extraños ni duplicidades no deseadas.}
+\item Ser cliente-servidor: la parte cliente (frontend) se encarga de interactuar con el usuario y la parte servidor (backend) se encarga de manipular la información (los recursos).
 
 \item Permitir poner intermediarios entre la parte cliente y la parte servidor. Siendo estos transparentes para la funcionalidad.
 \\{\footnotesize Por ejemplo: balanceadores de carga, cachés de información \footnote{Para poder ser cacheada, cada porción de información (cada recurso) ha de establecer con claridad si un cliente o un intermediario puede guardarla para reutilizarla cuantas veces la necesite sin volver a solicitarla al servidor; o si, por contra, es importante re-adquirirla cada vez que se necesite.}, sistemas de seguridad, etc.}
+
+\item Prescindir de la necesidad de tener en cuenta estados internos de la aplicación (ser ``stateless''). Cada llamada a un servicio o acción (a un ``endpoint'') es independiente. No depende de las llamadas previas a ese mismo o a otros servicios o acciones.
+
+{\footnotesize nota: Es conveniente que también sea idempotente, que una misma llamada  pueda llegar repetida varias veces al servidor o al cliente sin causar efectos extraños ni duplicidades no deseadas.}
 
 \item Permitir personalización bajo demanda. El cliente puede recibir actualizaciones desde el servidor para ampliar o modificar la funcionalidad del sistema.
 
@@ -2051,9 +2051,10 @@ Básicamente se trata de:
 \\{\footnotesize (Por ejemplo, utilizando identificadores MIME y formatos textuales fácilmente reconocibles, tales como HTML, XML, JSON,\ldots)}
 
 \item La navegación por las diversas etapas o estados de la aplicación se realiza a través de hipervínculos. Cada paso guía al cliente hacia los siguientes pasos disponibles a partir de ahí.
-\\{\footnotesize (HATEOAS, Hypermedia as the Engine of Application State)}
+\\(HATEOAS, Hypermedia as the Engine of Application State)
 \\En cierta manera, se podria decir que para utilizar bien una buena API\footnote{API: exponer la lógica de un software (servidor) para poder ser consumida o utilizada por otros softwares (clientes)} REST no se necesitaría consultar instrucciones prefijadas de antemano.
 Bastaría conocer el punto de inicio (la primera URL a la que llamar). Y, a partir de ahí, se continuará a base de ir leyendo e interpretando la información intercambiada en cada paso.
+\\{\footnotesize (Por ejemplo, usando documentos HAL: JSON Hypertext Application Language)}
 \end{itemize}
 
 \end{itemize}
