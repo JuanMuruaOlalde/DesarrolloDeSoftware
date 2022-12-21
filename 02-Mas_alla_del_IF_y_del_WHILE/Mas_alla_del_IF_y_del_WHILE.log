@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8) (preloaded format=pdflatex 2022.9.8)  19 DEC 2022 09:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8) (preloaded format=pdflatex 2022.9.8)  21 DEC 2022 11:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2982,7 +2982,7 @@ nged.
 Here is how much of TeX's memory you used:
  25267 strings out of 477843
  466735 string characters out of 2833369
- 1144272 words of memory out of 3000000
+ 1143272 words of memory out of 3000000
  39052 multiletter control sequences out of 15000+600000
  484345 words of font info for 85 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -3003,7 +3003,7 @@ m Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKT
 eX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX/fonts/typ
 e1/urw/courier/ucrb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/courier/ucrr
 8a.pfb>
-Output written on Mas_alla_del_IF_y_del_WHILE.pdf (189 pages, 2669604 bytes).
+Output written on Mas_alla_del_IF_y_del_WHILE.pdf (189 pages, 2669587 bytes).
 PDF statistics:
  6948 PDF objects out of 7423 (max. 8388607)
  4574 named destinations out of 5155 (max. 500000)
