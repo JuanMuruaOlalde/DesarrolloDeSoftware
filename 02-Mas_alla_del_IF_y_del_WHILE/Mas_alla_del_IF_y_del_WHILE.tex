@@ -619,9 +619,10 @@ Python Tkinter Grid Geometry Manager: \url{https://tkdocs.com/tutorial/grid.html
 
 \begin{footnotesize}((una disculpa del autor: este capítulo esta ``en construcción\ldots'' y sigo trabajando en él; queda bastante trabajo para completarlo.))\end{footnotesize}
 \\
-\\
 
-(nota: Ver posibles soluciones al final del libro, en el capítulo \ref{ejercicios_posibles_soluciones}.)\\
+(nota: Ver algunas posibles soluciones al final del libro, en el capítulo \ref{ejercicios_posibles_soluciones}.)
+\\{\scriptsize También puedes encontralas en \url{https://github.com/JuanMuruaOlalde/DesarrolloDeSoftware/tree/main/02-Mas_alla_del_IF_y_del_WHILE}}
+\\
 
 Los ejercicios de este capítulo son específicos para adquirir soltura con la biblioteca GUI que se vaya a utilizar. Para adquirir experiencia, conviene seguir practicando... dotando de interfaz gráfico a todos los demás trabajos que se hagan en los siguientes capítulos.
 
@@ -820,9 +821,11 @@ iria dentro del método `getGestorDeDatos(tipo)' de la clase `FactoriaDeGestores
 \chapter{Ejercicios}\label{ejercicios_oop}
 
 \begin{footnotesize}((una disculpa del autor: este capítulo esta ``en construcción\ldots'' y sigo trabajando en él; queda aún mucho trabajo para completarlo.))\end{footnotesize}
+\\
 
-
-(nota: Ver posibles soluciones al final del libro, en el capítulo \ref{ejercicios_posibles_soluciones}.)\\
+(nota: Ver algunas posibles soluciones al final del libro, en el capítulo \ref{ejercicios_posibles_soluciones}.)
+\\{\scriptsize También puedes encontralas en \url{https://github.com/JuanMuruaOlalde/DesarrolloDeSoftware/tree/main/02-Mas_alla_del_IF_y_del_WHILE}}
+\\
 
 \section{Áreas y perímetros de figuras geométricas}
 \subsection{Utilizando herencia}
@@ -1408,9 +1411,10 @@ Cuando la cantidad de datos es especialmente enorme o las relaciones entre los d
 
 \begin{footnotesize}((una disculpa del autor: este capítulo esta ``en construcción\ldots'' y sigo trabajando en él; queda aún mucho trabajo para completarlo.))\end{footnotesize}
 \\
-\\
 
-(nota: Ver posibles soluciones al final del libro, en el capítulo \ref{ejercicios_posibles_soluciones}.)
+(nota: Ver algunas posibles soluciones al final del libro, en el capítulo \ref{ejercicios_posibles_soluciones}.)
+\\{\scriptsize También puedes encontralas en \url{https://github.com/JuanMuruaOlalde/DesarrolloDeSoftware/tree/main/02-Mas_alla_del_IF_y_del_WHILE}}
+\\
 
 La idea es utilizar las colecciones pertinentes para la gestión de datos en memoria, según el ejercicio. Y utilizar persistencia para guardar/recuperar esos datos a/desde disco.
 
@@ -1658,8 +1662,9 @@ Algunos ejemplos ilustrativos:
 
 \begin{footnotesize}((una disculpa del autor: este capítulo no lo he abordado aún; el libro esta ``en construcción\ldots'' y sigo trabajando en él; queda mucho trabajo para completarlo.))\end{footnotesize}
 
+(nota: Ver algunas posibles soluciones al final del libro, en el capítulo \ref{ejercicios_posibles_soluciones}.)
+\\{\scriptsize También puedes encontralas en \url{https://github.com/JuanMuruaOlalde/DesarrolloDeSoftware/tree/main/02-Mas_alla_del_IF_y_del_WHILE}}
 
-(nota: Ver posibles soluciones al final del libro, en el capítulo \ref{ejercicios_posibles_soluciones}.)\\
 
 \chapter{Procesamiento paralelo}
 Una forma de realizar un trabajo más rápido, es poner más trabajadores trabajando en ello. Pero, ¡ojo!, es vital que los trabajadores no se estorben entre sí, ni se bloqueen o retrasen excesivamente por esperarse unos a otros.
@@ -1787,7 +1792,8 @@ Merece utilizar alguna de las bibliotecas y plataformas específicas que están 
 
 \begin{footnotesize}((una disculpa del autor: este capítulo no lo he abordado aún; el libro esta ``en construcción\ldots'' y sigo trabajando en él; queda mucho trabajo para completarlo.))\end{footnotesize}
 
-(nota: Ver posibles soluciones al final del libro, en el capítulo \ref{ejercicios_posibles_soluciones}.)\\
+(nota: Ver algunas posibles soluciones al final del libro, en el capítulo \ref{ejercicios_posibles_soluciones}.)
+\\{\scriptsize También puedes encontralas en \url{https://github.com/JuanMuruaOlalde/DesarrolloDeSoftware/tree/main/02-Mas_alla_del_IF_y_del_WHILE}}
 
 
 \chapter{Organización interna del código}
@@ -1899,8 +1905,12 @@ Además, la idea puede ser extendida y ser aplicada en un sentido más amplio:
 \end{itemize}
 \begin{center}\includegraphics[width=0.8\textwidth]{division en capas - MVC -ampliada-}\end{center}
 
+Siguiendo por ese camino, se puede llegar a la `arquitectura hexagonal' (también conocida como `ports and adapters').
+\begin{center}\includegraphics[width=0.8\textwidth]{Arquitectura Hexagonal}\end{center}
 
-\vspace{1.5cm}
+
+
+
 Pasando a otro tema. Una metodología muy práctica para guiar la organización del código en capas, sobre todo en softwares complejos, es la metodología \textbf{DDD} (Domain-Driven Design).
 
 Un dominio es el contexto, entorno o disciplina donde se sitúa un determinado trabajo que se desea realizar. 
@@ -1950,7 +1960,7 @@ Según el grado de dependencia entre dominios, podemos tener:
 
 \end{itemize}
 
-\newpage
+
 Las capas en un esquema DDD podrian encuadrarse en uno de estos tipos:
 \begin{itemize}
 \item MODELO De Dominio : (DOMAIN MODEL) : Recoge los ``entes'' propios del dominio. Recoge la ``lógica de negocio'' a nivel de cada uno de esos ``entes'' (cada uno contempla tanto la información que define su estado interno como las operaciones que admite para modificar dicho estado).
@@ -1964,11 +1974,15 @@ Las capas en un esquema DDD podrian encuadrarse en uno de estos tipos:
 
 \begin{footnotesize}
 Un ejemplo práctico de algunos de los conceptos citados puede verse en
-\\\url{https://bitbucket.org/susosise/hotel/src/main/}
+\\ \url{https://github.com/JuanMuruaOlalde/Hotel}
 \end{footnotesize}
 \begin{scriptsize}
-Aviso: está en construcción (y, por cierto, aún muy verde, solo empezando), así es que te animo a clonarlo y mirar de vez en cuando como va avanzando.
+\\Aviso: está en construcción (y, por cierto, aún muy verde, solo empezando), así es que te animo a clonarlo y mirar de vez en cuando como va avanzando.
 \end{scriptsize}
+
+\begin{footnotesize}
+Otro ejemplo práctico puede verse en \\ \url{https://github.com/JuanMuruaOlalde/DesarrolloDeSoftware/tree/main/02-Mas_alla_del_IF_y_del_WHILE/soluciones_java/MVC_springboot}
+\end{footnotesize}
 
 \begin{footnotesize}
 Para complementar esta sección, puede resultar interesante informarse acerca de los \textbf{principios SOLID}. Por ejemplo, leyendo la correspondiente sección en el documento \url{https://www.susosise.es/documentos/Proyecto_Software.pdf}.
@@ -2074,9 +2088,10 @@ nota:
 
 \begin{footnotesize}((una disculpa del autor: este capítulo no lo he abordado aún; el libro esta ``en construcción\ldots'' y sigo trabajando en él; queda mucho trabajo para completarlo.))\end{footnotesize}
 \\
-\\
 
-(nota: Ver posibles soluciones al final del libro, en el capítulo \ref{ejercicios_posibles_soluciones}.)\\
+(nota: Ver posibles soluciones al final del libro, en el capítulo \ref{ejercicios_posibles_soluciones}.)
+\\{\scriptsize También puedes encontralas en \url{https://github.com/JuanMuruaOlalde/DesarrolloDeSoftware/tree/main/02-Mas_alla_del_IF_y_del_WHILE}}
+\\
 
 comentario: Esta va a ser la parte más complicada de ejercitar. La idea es adquirir práctica real en proyectos de una cierta (gran) envergadura. Resolviendo cada uno de ellos con distintas arquitecturas, y viendo los pros/contras de cada una de esas arquitecturas.
 \\Pero como eso va a resultar complicado, empezaré por ejercicios sencillos para practicar el desacople entre capas.
