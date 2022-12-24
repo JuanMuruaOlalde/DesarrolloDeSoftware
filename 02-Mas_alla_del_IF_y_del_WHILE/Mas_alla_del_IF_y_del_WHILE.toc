@@ -1,4 +1,4 @@
-\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}
 \contentsline {chapter}{\numberline {1}Técnicas de trabajo}{6}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Control de versiones}{6}{section.1.1}%
 \contentsline {subsubsection}{Breve introducción a Git y Sourcetree}{6}{section*.3}%
@@ -89,34 +89,34 @@
 \contentsline {section}{\numberline {14.1}Orientación a eventos (event-driven)}{68}{section.14.1}%
 \contentsline {section}{\numberline {14.2}Orientación a objetos (object-oriented)}{69}{section.14.2}%
 \contentsline {section}{\numberline {14.3}Arquitecturas multi-capa (n-tier)}{70}{section.14.3}%
-\contentsline {section}{\numberline {14.4}Aplicaciones distribuidas}{76}{section.14.4}%
-\contentsline {section}{\numberline {14.5}Orientación a servicios \\ (SOA, SaaS, microservices,...) }{77}{section.14.5}%
-\contentsline {section}{\numberline {14.6}Orientación a servicios, arquitectura REST \\(REpresentational State Transfer)}{77}{section.14.6}%
-\contentsline {chapter}{\numberline {15}Ejercicios}{80}{chapter.15}%
-\contentsline {section}{\numberline {15.1}Multiinterface}{80}{section.15.1}%
-\contentsline {section}{\numberline {15.2}Arquitectura en tres capas, MVC}{81}{section.15.2}%
-\contentsline {section}{\numberline {15.3}Excursiones}{81}{section.15.3}%
-\contentsline {section}{\numberline {15.4}Hotel}{82}{section.15.4}%
-\contentsline {chapter}{\numberline {16}apéndice A: ejemplos de posibles herramientas de trabajo}{90}{chapter.16}%
-\contentsline {section}{\numberline {16.1}Para programar en Java}{90}{section.16.1}%
-\contentsline {section}{\numberline {16.2}Para programar en C++}{91}{section.16.2}%
-\contentsline {section}{\numberline {16.3}Para programar en C\#}{91}{section.16.3}%
-\contentsline {section}{\numberline {16.4}Para programar en Python}{92}{section.16.4}%
-\contentsline {section}{\numberline {16.5}Para programar en HTML5/CSS/Javascript}{93}{section.16.5}%
-\contentsline {section}{\numberline {16.6}Una herramienta transversal: almacenamiento de código con control de versiones}{94}{section.16.6}%
-\contentsline {section}{\numberline {16.7}Otra herramienta transversal: motor de base de datos}{94}{section.16.7}%
-\contentsline {chapter}{\numberline {17}apéndice B: ejemplos de posibles soluciones...}{95}{chapter.17}%
-\contentsline {section}{\numberline {17.1}...a los ejercicios del capítulo \ref {ejercicios_gui}}{95}{section.17.1}%
-\contentsline {section}{\numberline {17.2}...a los ejercicios del capítulo \ref {ejercicios_oop}}{138}{section.17.2}%
-\contentsline {section}{\numberline {17.3}...a los ejercicios del capítulo \ref {ejercicios_datos}}{148}{section.17.3}%
-\contentsline {section}{\numberline {17.4}...a los ejercicios del capítulo \ref {ejercicios_comunicaciones}}{148}{section.17.4}%
-\contentsline {section}{\numberline {17.5}...a los ejercicios del capítulo \ref {ejercicios_paralelismo}}{148}{section.17.5}%
-\contentsline {section}{\numberline {17.6}...a los ejercicios del capítulo \ref {ejercicios_organizacion}}{149}{section.17.6}%
-\contentsline {subsubsection}{El programa base, que se va a utilizar desde diversos interfaces de usuario…}{149}{section*.35}%
-\contentsline {subsubsection}{Utilizado desde un formulario Windows Forms}{153}{section*.36}%
-\contentsline {subsubsection}{Utilizado desde linea de comandos}{155}{section*.37}%
-\contentsline {subsubsection}{Utilizado para dar unos servicios web RESTfull}{156}{section*.38}%
-\contentsline {subsubsection}{Utilizando el servicio HttpGet a través de una url}{158}{section*.39}%
-\contentsline {subsubsection}{Utilizando el servicio HttpPut a través de un programilla de linea de comando}{158}{section*.40}%
-\contentsline {subsubsection}{Utilizando el servicio HttpPut desde una página web HTML/JavaScript}{161}{section*.41}%
-\contentsline {subsubsection}{Utilizando el servicio HttpPut desde una página web RAZOR/C\#}{163}{section*.42}%
+\contentsline {section}{\numberline {14.4}Aplicaciones distribuidas}{77}{section.14.4}%
+\contentsline {section}{\numberline {14.5}Orientación a servicios \\ (SOA, SaaS, microservices,...) }{78}{section.14.5}%
+\contentsline {section}{\numberline {14.6}Orientación a servicios, arquitectura REST \\(REpresentational State Transfer)}{78}{section.14.6}%
+\contentsline {chapter}{\numberline {15}Ejercicios}{81}{chapter.15}%
+\contentsline {section}{\numberline {15.1}Multiinterface}{81}{section.15.1}%
+\contentsline {section}{\numberline {15.2}Arquitectura en tres capas, MVC}{82}{section.15.2}%
+\contentsline {section}{\numberline {15.3}Excursiones}{82}{section.15.3}%
+\contentsline {section}{\numberline {15.4}Hotel}{83}{section.15.4}%
+\contentsline {chapter}{\numberline {16}apéndice A: ejemplos de posibles herramientas de trabajo}{91}{chapter.16}%
+\contentsline {section}{\numberline {16.1}Para programar en Java}{91}{section.16.1}%
+\contentsline {section}{\numberline {16.2}Para programar en C++}{92}{section.16.2}%
+\contentsline {section}{\numberline {16.3}Para programar en C\#}{92}{section.16.3}%
+\contentsline {section}{\numberline {16.4}Para programar en Python}{93}{section.16.4}%
+\contentsline {section}{\numberline {16.5}Para programar en HTML5/CSS/Javascript}{94}{section.16.5}%
+\contentsline {section}{\numberline {16.6}Una herramienta transversal: almacenamiento de código con control de versiones}{95}{section.16.6}%
+\contentsline {section}{\numberline {16.7}Otra herramienta transversal: motor de base de datos}{95}{section.16.7}%
+\contentsline {chapter}{\numberline {17}apéndice B: ejemplos de posibles soluciones...}{96}{chapter.17}%
+\contentsline {section}{\numberline {17.1}...a los ejercicios del capítulo \ref {ejercicios_gui}}{96}{section.17.1}%
+\contentsline {section}{\numberline {17.2}...a los ejercicios del capítulo \ref {ejercicios_oop}}{139}{section.17.2}%
+\contentsline {section}{\numberline {17.3}...a los ejercicios del capítulo \ref {ejercicios_datos}}{149}{section.17.3}%
+\contentsline {section}{\numberline {17.4}...a los ejercicios del capítulo \ref {ejercicios_comunicaciones}}{149}{section.17.4}%
+\contentsline {section}{\numberline {17.5}...a los ejercicios del capítulo \ref {ejercicios_paralelismo}}{149}{section.17.5}%
+\contentsline {section}{\numberline {17.6}...a los ejercicios del capítulo \ref {ejercicios_organizacion}}{150}{section.17.6}%
+\contentsline {subsubsection}{El programa base, que se va a utilizar desde diversos interfaces de usuario…}{150}{section*.35}%
+\contentsline {subsubsection}{Utilizado desde un formulario Windows Forms}{154}{section*.36}%
+\contentsline {subsubsection}{Utilizado desde linea de comandos}{156}{section*.37}%
+\contentsline {subsubsection}{Utilizado para dar unos servicios web RESTfull}{157}{section*.38}%
+\contentsline {subsubsection}{Utilizando el servicio HttpGet a través de una url}{159}{section*.39}%
+\contentsline {subsubsection}{Utilizando el servicio HttpPut a través de un programilla de linea de comando}{159}{section*.40}%
+\contentsline {subsubsection}{Utilizando el servicio HttpPut desde una página web HTML/JavaScript}{162}{section*.41}%
+\contentsline {subsubsection}{Utilizando el servicio HttpPut desde una página web RAZOR/C\#}{164}{section*.42}%

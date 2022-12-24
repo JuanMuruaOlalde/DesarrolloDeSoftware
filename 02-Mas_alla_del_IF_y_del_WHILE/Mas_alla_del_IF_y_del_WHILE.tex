@@ -1905,6 +1905,25 @@ Además, la idea puede ser extendida y ser aplicada en un sentido más amplio:
 \end{itemize}
 \begin{center}\includegraphics[width=0.8\textwidth]{division en capas - MVC -ampliada-}\end{center}
 
+Al extenderla, quizá fuera mejor cambiarle el nombre de MVC ({\footnotesize Modelo-Vista-Controlador}) a MIAs ({\footnotesize Modelos-Infraestructuras-Adaptadores}):
+\begin{itemize}
+
+\item MODELOs: las funcionalidades, la parte que ``hace el trabajo'' , lo que es intrínseco a la resolución de las tareas relativas al dominio de aplicación.
+
+\item INFRAESTRUCTURAs: las tecnologías usadas para que los modelos puedan realizar su trabajo. Por ejemplo: interfaz de usuario, persistencia en base de datos, interfaz con hardware específico, comunicaciones de red, servicios de terceros, etc.
+
+\item ADAPTADOREs: los ``puentes'' que permiten a los modelos utilizar las infraestructuras sin quedar acoplados a ellas.
+
+\end{itemize}
+
+El orden en que se aborda el diseño/construcción del programa es el mismo que en MVC: primero se aborda el modelo, luego se aborda la infraestructura para hacerlo posible y, finalmente, se aborda el adaptador correspondiente para ligar ambos. 
+\\De ahí que el orden de las letras sea similar: MIAs.
+\\{\footnotesize nota: `vista' se equipara a `infraestructura' y `controlador' a `adaptador'.}
+
+En el fondo, se persigue tener el mínimo de dependencias posibles entre los distintos elementos del programa. Y que estas dependencias queden lo más claras posibles.\footnote{Haciendo un símil con la confección de trajes, se suele hablar de tener claras las ``costuras'' entre las distintas partes.} Para permitir modificar/evolucionar cada parte concreta sin afectar a las demás.
+
+Normalmente, serán los adaptadores los que dependan tanto de las infraestructuras(tecnologias) como de los modelos. Pero los modelos serán independientes de las infraestructuras(tecnologias). 
+
 Siguiendo por ese camino, se puede llegar a la `arquitectura hexagonal' (también conocida como `ports and adapters').
 \begin{center}\includegraphics[width=0.8\textwidth]{Arquitectura Hexagonal}\end{center}
 
@@ -1927,7 +1946,7 @@ Así, el programa resultante puede evolucionar de forma flexible. Según lo dema
 Pero DDD va mucho más allá de la separación en capas o en dominios. Contempla múltiples aspectos acerca de cómo encarar el diseño de un sistema software. 
 \\(Eric Evans , \url{https://www.domainlanguage.com/ddd/})
 
-Comenzando por el concepto troncal de `ubiquitous language': todas las personas que participan en una determinada parte (`bounded context') del sistema han de hablar un lenguaje común; y ese lenguaje común consensuado se ha de ver reflejado también en el propio código, en las denominaciones de variables, funciones, clases,\ldots
+Comenzando por el concepto primordial de `\textbf{ubiquitous language}': Todas las personas que participan en una determinada parte del sistema(un `bounded context'), han de hablar un lenguaje común. \footnote{En la documentación, en las reuniones,\ldots} Y ese lenguaje común consensuado se ha de ver reflejado también en el propio código. \footnote{En las denominaciones de variables, de funciones, de clases,\ldots}
 
 
 \vspace{0.5cm}
@@ -2043,7 +2062,7 @@ Básicamente se trata de:
 \item Ser cliente-servidor: la parte cliente (frontend) se encarga de interactuar con el usuario y la parte servidor (backend) se encarga de manipular la información (los recursos).
 
 \item Permitir poner intermediarios entre la parte cliente y la parte servidor. Siendo estos transparentes para la funcionalidad.
-\\{\footnotesize Por ejemplo: balanceadores de carga, cachés de información \footnote{Para poder ser cacheada, cada porción de información (cada recurso) ha de establecer con claridad si un cliente o un intermediario puede guardarla para reutilizarla cuantas veces la necesite sin volver a solicitarla al servidor; o si, por contra, es importante re-adquirirla cada vez que se necesite.}, sistemas de seguridad, etc.}
+\\{\footnotesize Por ejemplo: balanceadores de carga, cachés de información \footnote{Para poder ser cacheada, cada porción de información (cada recurso) ha de establecer con claridad si un intermediario puede o no guardarsela para reutilizarla cuantas veces la necesite, sin volver a solicitarla al servidor.}, sistemas de seguridad, etc.}
 
 \item Prescindir de la necesidad de tener en cuenta estados internos de la aplicación (ser ``stateless''). Cada llamada a un servicio o acción (a un ``endpoint'') es independiente. No depende de las llamadas previas a ese mismo o a otros servicios o acciones.
 
@@ -2081,7 +2100,11 @@ Un enlace ilustrativo:
 \vspace{1cm}
 nota: 
 \\Habitualmente, las APIs REST se suelen implementar usando HTTP como protocolo de transporte/interacción y JSON como formato de estructuración de la información. 
-\\Pero podrían ser implementadas de otras formas. Utilizando información textual legible por personas humanas y cualquier otra combinación de estándares habituales en el campo de aplicación donde se esté trabajando.
+\\Pero también podrían ser implementadas de otras formas. Utilizando cualquier otro formato textual legible por personas humanas y cualquier otra combinación de protocolos estándares habituales en el campo de aplicación donde se esté trabajando.
+
+\vspace{1cm}
+nota: 
+\\La persona que acuñó el término REST, Roy Fielding, ha comentado en más de una ocasión que la caracteristica principal para ser `RESTful' es la organización de la navegación dentro de las aplicaciones utilizando hipervínculos (HATEOAS). Pero, en la práctica, casi ninguna de las implementaciones de REST hace uso de la misma. Ni en la parte servidora. Ni, mucho menos, en la parte cliente. Temas como los documentos HAL no han terminado de cuajar en la práctica\ldots
 
 
 \chapter{Ejercicios}\label{ejercicios_organizacion}
