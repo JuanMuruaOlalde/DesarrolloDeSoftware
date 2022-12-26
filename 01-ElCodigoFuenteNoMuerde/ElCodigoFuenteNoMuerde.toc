@@ -1,4 +1,4 @@
-\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}
 \contentsline {chapter}{\numberline {1}Un entorno sobre el que practicar}{6}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Las herramientas básicas: editor, compilador, enlazador, depurador,\ldots }{6}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Algunas sugerencias rápidas}{8}{section.1.2}%
@@ -40,11 +40,11 @@
 \contentsline {section}{\numberline {9.3}Unas breves pinceladas acerca de formas más avanzadas de estructuración}{65}{section.9.3}%
 \contentsline {subsection}{\numberline {9.3.1}Programación `orientada a objeto' (OO)}{65}{subsection.9.3.1}%
 \contentsline {subsection}{\numberline {9.3.2}Arquitecturas `limpias' (multi-capa)}{65}{subsection.9.3.2}%
-\contentsline {chapter}{\numberline {10}Breve introducción al interface de usuario más utilizado hoy en día: \\GUI (Graphical User Interface)}{66}{chapter.10}%
+\contentsline {chapter}{\numberline {10}Breve introducción al interface de usuario habitual: \\el GUI (Graphical User Interface)}{66}{chapter.10}%
 \contentsline {section}{\numberline {10.1}Cómo mostrar una ventana y unos controles en ella}{66}{section.10.1}%
 \contentsline {section}{\numberline {10.2}El concepto de `bucle de eventos'}{66}{section.10.2}%
 \contentsline {section}{\numberline {10.3}La interacción básica: usuario$\rightarrow $control$\rightarrow $codigo \\ y viceversa, código$\rightarrow $control$\rightarrow $usuario}{67}{section.10.3}%
-\contentsline {chapter}{\numberline {11}Breve introducción a los almacenamientos persistentes más utilizados hoy en día.}{68}{chapter.11}%
+\contentsline {chapter}{\numberline {11}Breve introducción a los almacenamientos persistentes habituales.}{68}{chapter.11}%
 \contentsline {section}{\numberline {11.1}Formatos para organizar información dentro de archivos de texto}{68}{section.11.1}%
 \contentsline {subsection}{\numberline {11.1.1}valores delimitados con separadores}{68}{subsection.11.1.1}%
 \contentsline {subsection}{\numberline {11.1.2}JSON}{69}{subsection.11.1.2}%

@@ -141,18 +141,16 @@ Algunos sitios por donde comenzar a buscar recursos:
 \\ \url{https://www.udacity.com/school-of-programming}
 \\ \url{https://www.coursera.org/browse/computer-science/software-development}
 \\ \url{https://www.edx.org/school/w3cx}
-\\ \url{https://www.tutorialspoint.com/index.htm}
+\url{https://www.tutorialspoint.com/computer_programming_tutorials.htm}
 
 \url{https://www.programiz.com/}
 
 \url{https://realpython.com/learning-paths/python3-introduction/}
 
-\url{https://www.tutorialspoint.com/computer_programming_tutorials.htm}
-
 \url{https://stackoverflow.com/questions}
 \\ \url{https://es.stackoverflow.com/}
 
-
+\url{https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps}
 
 
 
@@ -2581,11 +2579,11 @@ La idea es llegar a una estructura modular donde, siempre que se respeten las in
 Para más ejemplos de formas de organizar el código, consultar el capítulo 14 del documento \url{https://www.susosise.es/documentos/Mas_alla_del_IF_y_del_WHILE.pdf}.
 
 
-\chapter{Breve introducción al interface de usuario más utilizado hoy en día: \\GUI (Graphical User Interface)}
+\chapter{Breve introducción al interface de usuario habitual: \\el GUI (Graphical User Interface)}
 
-Es un tema muy extenso y, en algunos apartados, complejo.
+Es un tema muy extenso y que puede llegar a ser complejo en algunos de sus aspectos.
 
-Pero merece la pena dar algunas pinceladas básicas, ya que es el GUI es el tipo de interface de usuario más utilizado hoy en día.
+Pero merece la pena dar algunas pinceladas básicas, ya que el GUI (Interface Gráfico de Usuario) es con lo que las personas interactuan con los ordenadores hoy en día.
 
 \section{Cómo mostrar una ventana y unos controles en ella}
 
@@ -2616,10 +2614,10 @@ nota: se pueden encontrar más ejemplos en el capítulo  2 del documento \url{ht
 
 
 
-\chapter{Breve introducción a los almacenamientos persistentes más utilizados hoy en día.}
-Es un tema muy extenso y, en algunos apartados, complejo.
+\chapter{Breve introducción a los almacenamientos persistentes habituales.}
+Es un tema muy extenso y que puede llegar a ser complejo en algunos de sus aspectos.
 
-Pero merece la pena dar algunas pinceladas básicas, por lo menos para ver lo que se utiliza en la práctica para almacenar datos en cualquier programa real.
+Pero merece la pena dar algunas pinceladas básicas, por lo menos para conocer lo que hoy en día se utiliza en la práctica para almacenar datos en cualquier programa real.
 
 \section{Formatos para organizar información dentro de  archivos de texto}
 
@@ -2637,7 +2635,7 @@ Para trabajar con las líneas de este tipo de archivos, se suele utilizar el com
 
 Para tratamientos más sofisticados, se suelen emplear las `expresiones regulares', también soportadas por prácticamente todos los lenguajes de programación.
 \\Estas expresiones son muy potentes para tratar con cualquier tipo de información textual, pero tienen cierta tendencia a que se les ``atraganten'' a la gente.  ;-)
-\\ \url{https://www.tutorialspoint.com/python/python_reg_expressions.htm}
+\\ \url{https://regexr.com/}
 \\ \url{https://docs.python.org/3/howto/regex.html}
 
 --pendiente de poner algunos ejemplos de código--
@@ -2648,7 +2646,7 @@ Hoy en día, es uno de los formatos más populares para almacenar o transmitir i
 
 Es simple y directo:  \url{https://www.json.org/json-es.html}
 
-\url{https://www.tutorialspoint.com/json/json_overview.htm}
+\url{https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON#no_really_what_is_json}
 
 Prácticamente todos los lenguajes cuentan con alguna biblioteca de funciones para tratar con archivos JSON.
 
@@ -2663,29 +2661,48 @@ XML es un formato muy potente y práctico. Pero algo complejo.
 
 No sé si merece llegar a tanto como practicar con él. Pero sí que merece la pena tener al menos una idea de en qué consiste y ver un poco por encima cómo funciona.
 
-Para trabajar con él, se necesita disponer de una biblioteca de funciones (un ``parser'' XML) para el lenguaje de programación que estemos utilizando y conocer el lenguaje especializado de consulta XPath.
+Para trabajar con este formato, se necesita disponer de una biblioteca de funciones (un ``parser'' XML) para el lenguaje de programación que estemos utilizando y conocer su lenguaje especializado de consulta (XPath).
 
-\url{https://www.tutorialspoint.com/xml/xml_overview.htm}
-\\ \url{https://www.tutorialspoint.com/python/python_xml_processing.htm}
+\url{https://developer.mozilla.org/en-US/docs/Web/XML/XML_introduction}
+\\ \url{https://alistapart.com/article/usingxml/}
 
 
 \section{Bases de datos relacionales.}
-Es un tema muy extenso y, en algunos apartados, complejo.
+Es un tema muy extenso y que puede llegar a ser complejo en algunos de sus aspectos.
 
-Hoy en día las bases de datos relacionales son el soporte más utilizado para almacenar todo tipo de información estructurada (tabular); cuando esta tiene un cierto tamaño (por encima de unas cuantas decenas de miles de registros).
+Las bases de datos relacionales son el soporte más utilizado para almacenar todo tipo de información. Sobre todo cuando esta tiene un cierto tamaño (por encima de unas cuantas decenas de miles de registros).
 
-No sé si merece llegar a tanto como practicar con alguna de ellas. Pero sí que merece la pena tener al menos una idea de qué son las b.d. relacionales, cómo funcionan y cómo se pueden manejar usando el lenguaje SQL.
+La información se almacena en formato tabular. En tablas formadas por filas y columnas. Estando algunas de esas tablas relacionadas entre sí a través de alguna de sus columnas clave.
 
-\url{https://www.tutorialspoint.com/sql/sql-overview.htm}
-\url{https://www.tutorialspoint.com/python_network_programming/python_databases_and_sql.htm}
+Merece la pena tener al menos una idea de qué son las b.d. relacionales, cómo funcionan y cómo se pueden manejar usando el lenguaje SQL.
+
+\url{https://mariadb.com/kb/en/introduction-to-relational-databases/}
+\\ SQL: \url{https://mariadb.com/kb/en/data-manipulation/}
 
 
 \section{Otros tipos de bases de datos: no-SQL, semáticas,\ldots}
-Es un tema muy extenso y, en algunos apartados, complejo.
+Es un tema muy extenso y que puede llegar a ser complejo en algunos de sus aspectos.
 
-Pero es interesante tener al menos al menos una idea de que existen bases de datos con un funcionamiento interno distinto del de las b.d. relacionales.
+Pero es interesante tener al menos al menos la idea de que existen bases de datos con un funcionamiento interno distinto del de las ``clásicas'' b.d. relacionales.
 
-Estas bases de datos son muy útiles para trabajar con información desestructurada (como por ejemplo imágenes, audio, video,\ldots) o con cantidades enormes de datos (por encima de unos cuantos cientos de millones de registros)(BigData) o con datos que tienen complejas y variables relaciones entre ellos (semática) o con\ldots
+Estas bases de datos suelen almacenan los datos en otro tipo de estructuras. Por ejemplo:
+\begin{itemize}
+
+\item En forma de pares clave/valor, sirviendo la clave como identificador del recurso almacenado en el valor. Estos recursos pueden ir desde un simple número o texto, hasta videos, audios, fotos o documentos completos.
+\\La especialidad de las bases de datos de este tipo es la de almacenar/recuperar cada recurso con rapidez.
+\\ \url{https://www.mongodb.com/document-databases}
+
+\item En forma de grafos compuestos por nodos (la información) y aristas (expresando las relaciones entre los nodos).
+\\Las bases de datos de este tipo son especialmente adecuadas cuando las relaciones entre la información son casi más importantes que la propia información en sí.
+\\ \url{https://graphacademy.neo4j.com/courses/neo4j-fundamentals/} 
+
+\item En forma de tripletas sujeto-predicado-objeto. Que expresan la naturaleza de los sujetos y objetos. Además de las relaciones de estos entre sí. 
+\\Almacenando los datos en este formato el software los puede ``entender'', para poder ``razonar'' sobre la información existente e inferir nueva información a partir de ella.
+
+
+\end{itemize}
+
+Estas bases de datos `no-SQL' son muy útiles para trabajar con información desestructurada (como por ejemplo imágenes, audio, video,\ldots) o con cantidades enormes de datos (por encima de unos cuantos cientos de millones de registros)(BigData) o con datos que tienen complejas y variables relaciones entre ellos (semática) o con\ldots
 
 
 
