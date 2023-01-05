@@ -1,5 +1,5 @@
 Una sugerencia práctica de versionado semático
-20220506T1623
+20230105T2230
 Una sugerencia práctica de numeros de versión semánticos:   X.Y.p.c
 (nota: está basada en el estandar https://semver.org/lang/es/, solo que usando la parte de “PARCHE” para desarrollo/pruebas)
 
