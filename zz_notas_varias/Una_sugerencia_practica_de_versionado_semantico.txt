@@ -78,6 +78,10 @@ para probar la corrección
 
 v1.1.p2.c0
 
+
+
+etc
+
 emisión de una corrección para usuarios
 
 v1.2.p0.c0
@@ -141,7 +145,8 @@ Nota: (*) Incrementar .c más allá de .1 es opcional, ya que es algo solo para la
 IMPORTANTE:
  Una vez lanzada una versión X.Y (vX.Y.p0.c0) o  X.Y.p  (vX.Y.pN.c0), 
  JAMÁS de los jamases SACAR OTRA CON EL MISMO X.Y.p
-   => Al ponerse a trabajar en la siguiente: incrementar .c (poner al menos X.Y.p.1)
+   Para evitar repetir versión,...
+   => Nada más lanzar una, al ponerse a trabajar en la siguiente, incrementar .c (poner al menos X.Y.p.1)
    => En el siguiente lanzamiento: incrementar .p (si es de pruebas) o X.Y (si es de producción)
 
 nota: 	No pasa nada por lanzar una X.Y para después, en muy poco tiempo, lanzar otra X.Y+1 e inmediatamente después otra X.Y+2 (por ejemplo, si se detectan errores graves y se han de corregir con rapidez)…  
