@@ -1253,16 +1253,27 @@ De ahí la importancia de conocer los diversos paradigmas. Por lo menos a nivel 
 
 \chapter{Arquitecturas de software}
 
-\section{Según su modularidad, se puede distinguir entre:}
-\begin{itemize}
+\section{Según se reparte el código, se puede distinguir entre:}
 
-\item Monolítico: Una sola parte (estructurada o no en funciones) se encarga de todo. Suele ser típico en pequeños sistemas embebidos.
 
-\item Monolito: El programa se estructura en partes (más o menos) diferenciadas. Idealmente, partes relacionadas entre sí con interfaces cláramente diferenciados. Pero todas las partes están en un solo cuerpo de código. Un cuerpo que se compila y se distribuye como un todo. 
+\subsection{Monolítico}
+El programa se compone de un solo bloque (estructurado o no en funciones). Un solo bloque que se encarga de todo.
 
-\item Distribuido: El ``programa'' se estructura en partes diferenciadas. Cada una de ellas tiene su propio cuerpo de código, se compila y se distribuye separadamente. Las distintas partes ``colaboran'' entre sí según unos interfaces y protocolos preestablecidos.
+Suele ser típico en pequeños sistemas embebidos o en pequeños programas de prueba.
 
-\end{itemize}
+\subsection{Monolito}
+
+La aplicación, el programa, se estructura en secciones o capas (más o menos) diferenciadas. Idealmente, cada sección se relaciona con las demás a través de interfaces (más o menos) claros; como si fueran las costuras de un traje.
+
+Pero todas las secciones están en un solo cuerpo de código. Un cuerpo que se compila y se distribuye como un todo. 
+
+
+\subsection{Distribuido}
+
+La aplicación se estructura en partes independientes. Cada parte tiene su propio cuerpo de código. Cada parte se puede compilar y distribuir separadamente.
+
+Las distintas partes ``colaboran'' entre sí según unos interfaces y protocolos preestablecidos.
+
 
 \section{Según cómo se reparte la funcionalidad, se puede distinguir entre:}
 
