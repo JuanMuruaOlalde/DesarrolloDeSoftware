@@ -8,10 +8,13 @@
 \@nameuse{es@quoting}
 \providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
 \HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldcontentsline\contentsline
+\gdef\contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
 \global\let\oldnewlabel\newlabel
 \gdef\newlabel#1#2{\newlabelxx{#1}#2}
 \gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
 \AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\contentsline\oldcontentsline
 \let\newlabel\oldnewlabel
 \fi}
 \fi}
@@ -57,107 +60,106 @@
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{toc}{\contentsline {section}{\numberline {4.1}Según se reparte el código, se puede distinguir entre:}{45}{section.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.1}Monolítico}{45}{subsection.4.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.1}Pella de arcilla (``ball of mud'')}{45}{subsection.4.1.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.1.2}Monolito}{45}{subsection.4.1.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.3}Distribuido}{45}{subsection.4.1.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4.2}Según cómo se reparte la funcionalidad, se puede distinguir entre:}{46}{section.4.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}Desktop, ``de escritorio''}{46}{subsection.4.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}Cliente/Servidor}{46}{subsection.4.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.3}(micro)Servicios distribuidos}{46}{subsection.4.2.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Patrones de programación (patterns)}{48}{chapter.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.3}Distribuido}{46}{subsection.4.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Según cómo se reparte la funcionalidad, se puede distinguir entre:}{47}{section.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}Desktop, ``de escritorio''}{47}{subsection.4.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}Cliente/Servidor}{47}{subsection.4.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.3}(micro)Servicios distribuidos}{47}{subsection.4.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Patrones de programación (patterns)}{49}{chapter.5}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}Rationale, el por qué de los patrones}{48}{section.5.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5.2}Ejemplos de algunos patrones}{48}{section.5.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}observer}{48}{subsection.5.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.2}chain of responsibility}{49}{subsection.5.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.3}command}{49}{subsection.5.2.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.4}memento}{49}{subsection.5.2.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.5}adapter}{49}{subsection.5.2.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.6}decorator}{49}{subsection.5.2.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.7}facade}{49}{subsection.5.2.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.8}proxy}{49}{subsection.5.2.8}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}Algoritmos}{50}{chapter.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Rationale, el por qué de los patrones}{49}{section.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Ejemplos de algunos patrones}{49}{section.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}observer}{49}{subsection.5.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.2}chain of responsibility}{50}{subsection.5.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.3}command}{50}{subsection.5.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.4}memento}{50}{subsection.5.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.5}adapter}{50}{subsection.5.2.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.6}decorator}{50}{subsection.5.2.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.7}facade}{50}{subsection.5.2.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.8}proxy}{50}{subsection.5.2.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Algoritmos}{51}{chapter.6}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {6.1}Ordenación, clasificación y búsqueda}{50}{section.6.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.1}búsquedas directas}{50}{subsection.6.1.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.2}estructuración arbórea}{51}{subsection.6.1.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.3}estructuración indexada}{51}{subsection.6.1.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.4}estructuración semántica}{51}{subsection.6.1.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6.2}Cálculo numérico o simbólico}{51}{section.6.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.1}ecuaciones lineales}{51}{subsection.6.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.2}derivación e integración}{51}{subsection.6.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.3}series de Taylor}{51}{subsection.6.2.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.4}transformadas de Fourier}{52}{subsection.6.2.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6.3}Optimización, programación lineal}{52}{section.6.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6.4}Combinatorios}{52}{section.6.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.1}búsqueda por ``fuerza bruta''}{52}{subsection.6.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.2}búsquedas reducidas, en profundidad o en anchura}{53}{subsection.6.4.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.3}heurísticas}{53}{subsection.6.4.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.4}métodos de Montecarlo}{53}{subsection.6.4.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6.5}Algoritmos que aprenden}{53}{section.6.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6.6}Algoritmos que evolucionan}{54}{section.6.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {7}¿Gigantes\ldots  ? o ¿Molinos?\ldots  }{56}{chapter.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}Ordenación, clasificación y búsqueda}{51}{section.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.1}búsquedas directas}{51}{subsection.6.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.2}estructuración arbórea}{52}{subsection.6.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.3}estructuración indexada}{52}{subsection.6.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.4}estructuración semántica}{52}{subsection.6.1.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.2}Cálculo numérico o simbólico}{52}{section.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.1}ecuaciones lineales}{52}{subsection.6.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.2}derivación e integración}{52}{subsection.6.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.3}series de Taylor}{52}{subsection.6.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.4}transformadas de Fourier}{53}{subsection.6.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.3}Optimización, programación lineal}{53}{section.6.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.4}Combinatorios}{53}{section.6.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.1}búsqueda por ``fuerza bruta''}{53}{subsection.6.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.2}búsquedas reducidas, en profundidad o en anchura}{54}{subsection.6.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.3}heurísticas}{54}{subsection.6.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.4}métodos de Montecarlo}{54}{subsection.6.4.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.5}Algoritmos que aprenden}{54}{section.6.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.6}Algoritmos que evolucionan}{55}{section.6.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {7}¿Gigantes\ldots  ? o ¿Molinos?\ldots  }{57}{chapter.7}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {7.1}cómo nombrar las variables ?!?}{56}{section.7.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {7.2}cómo abrir-cerrar bloques ?!?}{56}{section.7.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {7.3}qué usar para la indentación: tabuladores ?!? o espacios ?!? }{56}{section.7.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {7.4}longitud de nombres para variables y funciones ?!?}{57}{section.7.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {7.5}usar documentación/comentarios externos o hacer que el propio código sea claro de leer ?!?}{57}{section.7.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {7.6}Un consejo:}{57}{section.7.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {8}Algunos conceptos importantes para obtener software de calidad}{59}{chapter.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7.1}cómo nombrar las variables ?!?}{57}{section.7.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7.2}cómo abrir-cerrar bloques ?!?}{57}{section.7.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7.3}qué usar para la indentación: tabuladores ?!? o espacios ?!? }{57}{section.7.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7.4}longitud de nombres para variables y funciones ?!?}{58}{section.7.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7.5}usar documentación/comentarios externos o hacer que el propio código sea claro de leer ?!?}{58}{section.7.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7.6}Un consejo:}{58}{section.7.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {8}Algunos conceptos importantes para obtener software de calidad}{60}{chapter.8}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {8.1}GIGO, la calidad en los datos es importante}{59}{section.8.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {8.2}KISS, cuanto más simple, menos problemas}{60}{section.8.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {8.3}YAGNI, flexibilidad para evolucionar}{61}{section.8.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {8.4}Divide y vencerás}{61}{section.8.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {8.5}Arquitecturas multi-capa}{62}{section.8.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {8.6}SOLID, responsabilidades claras, cada parte hace lo suyo, y lo hace bien}{62}{section.8.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.6.1}\textbf  {S}RP (Single Responsibility Principle)}{62}{subsection.8.6.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.6.2}\textbf  {O}CP (Open Close Principle)}{63}{subsection.8.6.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.6.3}\textbf  {L}SP (Liskov Substitution Principle)}{63}{subsection.8.6.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.6.4}\textbf  {I}SP (Interface Segregation Principle)}{63}{subsection.8.6.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.6.5}\textbf  {D}IP (Dependency Inversion Principle)}{63}{subsection.8.6.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {8.7}IDEALS, responsabilidades claras, cada parte hace lo suyo, y lo hace bien}{65}{section.8.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.7.1}\textbf  {I}nterface segregation}{66}{subsection.8.7.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.7.2}\textbf  {D}eployability}{66}{subsection.8.7.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.7.3}\textbf  {E}vent-driven}{66}{subsection.8.7.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.7.4}\textbf  {A}vailability over consistency}{66}{subsection.8.7.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.7.5}\textbf  {L}oose-coupling}{66}{subsection.8.7.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.7.6}\textbf  {S}ingle responsibility}{66}{subsection.8.7.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {9}Sugerencias desde la cocina, algunas ideas prácticas}{68}{chapter.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8.1}GIGO, la calidad en los datos es importante}{60}{section.8.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8.2}KISS, cuanto más simple, menos problemas}{61}{section.8.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8.3}YAGNI, flexibilidad para evolucionar}{62}{section.8.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8.4}Divide y vencerás}{62}{section.8.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8.5}Arquitecturas multi-capa}{63}{section.8.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8.6}SOLID, responsabilidades claras, cada parte hace lo suyo, y lo hace bien}{63}{section.8.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.6.1}\textbf  {S}RP (Single Responsibility Principle)}{63}{subsection.8.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.6.2}\textbf  {O}CP (Open Close Principle)}{64}{subsection.8.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.6.3}\textbf  {L}SP (Liskov Substitution Principle)}{64}{subsection.8.6.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.6.4}\textbf  {I}SP (Interface Segregation Principle)}{64}{subsection.8.6.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.6.5}\textbf  {D}IP (Dependency Inversion Principle)}{64}{subsection.8.6.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8.7}IDEALS, responsabilidades claras, cada parte hace lo suyo, y lo hace bien}{66}{section.8.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.7.1}\textbf  {I}nterface segregation}{67}{subsection.8.7.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.7.2}\textbf  {D}eployability}{67}{subsection.8.7.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.7.3}\textbf  {E}vent-driven}{67}{subsection.8.7.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.7.4}\textbf  {A}vailability over consistency}{67}{subsection.8.7.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.7.5}\textbf  {L}oose-coupling}{67}{subsection.8.7.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.7.6}\textbf  {S}ingle responsibility}{67}{subsection.8.7.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {9}Sugerencias desde la cocina, algunas ideas prácticas}{69}{chapter.9}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {9.1}La importancia de refactorizar}{68}{section.9.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {9.1.1}rationale tras la refactorización}{68}{subsection.9.1.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {9.1.2}disponer de una red de seguridad, facilita la refactorización}{69}{subsection.9.1.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {9.2}La importancia de los tests internos}{69}{section.9.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {9.3}La forma natural de construir software es construirlo de forma iterativa}{70}{section.9.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {9.4}Cuando utilices un estandar o paradigma conocido\ldots  }{70}{section.9.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {9.5}Realizar ``Hello, world''s para aprender}{70}{section.9.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {9.6}Números, Fechas y otras hierbas similares: cada cual las escribe diferente}{74}{section.9.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {9.7}Magnitudes: números con unidad de medida}{74}{section.9.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {9.8}Códigos: identificar elementos}{75}{section.9.8}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {9.8.1}Una nota histórica:}{75}{subsection.9.8.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {9.8.2}Algunos consejos:}{75}{subsection.9.8.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {9.8.3}A tener en cuenta cuando haya varias partes que asignan codigos de forma distribuida}{75}{subsection.9.8.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {9.8.4}Algunas reflexiones acerca de la cantidad de códigos posibles:}{76}{subsection.9.8.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {9.8.5}El uso de UUIDs como identificadores internos de elementos}{76}{subsection.9.8.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {9.9}Un truco muy útil: identificadores internos solo para uso interno e identificadores externos solo para uso externo}{77}{section.9.9}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {9.10}Un truco muy útil: inactivar elementos en vez de borrarlos}{77}{section.9.10}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {9.1}La importancia de refactorizar}{69}{section.9.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.1.1}rationale tras la refactorización}{69}{subsection.9.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.1.2}disponer de una red de seguridad, facilita la refactorización}{70}{subsection.9.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {9.2}La importancia de los tests internos}{70}{section.9.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {9.3}La forma natural de construir software es construirlo de forma iterativa}{71}{section.9.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {9.4}Cuando utilices un estandar o paradigma conocido\ldots  }{71}{section.9.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {9.5}Realizar ``Hello, world''s para aprender}{71}{section.9.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {9.6}Números, Fechas y otras hierbas similares: cada cual las escribe diferente}{75}{section.9.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {9.7}Magnitudes: números con unidad de medida}{75}{section.9.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {9.8}Códigos: identificar elementos}{76}{section.9.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.8.1}Una nota histórica:}{76}{subsection.9.8.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.8.2}Algunos consejos:}{76}{subsection.9.8.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.8.3}A tener en cuenta cuando haya varias partes que asignan codigos de forma distribuida}{76}{subsection.9.8.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.8.4}Algunas reflexiones acerca de la cantidad de códigos posibles:}{77}{subsection.9.8.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.8.5}El uso de UUIDs como identificadores internos de elementos}{77}{subsection.9.8.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {9.9}Un truco muy útil: identificadores internos solo para uso interno e identificadores externos solo para uso externo}{78}{section.9.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {9.10}Un truco muy útil: inactivar elementos en vez de borrarlos}{78}{section.9.10}\protected@file@percent }
 \gdef \LT@i {\LT@entry 
     {1}{223.16928pt}\LT@entry 
     {1}{223.16928pt}}
-\@writefile{toc}{\contentsline {section}{\numberline {9.11}Una forma de recoger especificaciones: BDD (Behavior Driven Development)}{78}{section.9.11}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {9.12}Una reflexión acerca de las ventajas de manejar datos inmutables}{80}{section.9.12}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {9.13}Una reflexión personal acerca de poner controles en el programa para evitar ``errores de usuario''}{82}{section.9.13}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {10}apéndice: algo de bibliografia}{84}{chapter.10}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {9.11}Una forma de recoger especificaciones: BDD (Behavior Driven Development)}{79}{section.9.11}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {9.12}Una reflexión acerca de las ventajas de manejar datos inmutables}{81}{section.9.12}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {9.13}Una reflexión personal acerca de poner controles en el programa para evitar ``errores de usuario''}{83}{section.9.13}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {10}apéndice: algo de bibliografia}{85}{chapter.10}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {10.1}notas históricas: para situarnos en los distintos marcos temporales}{84}{section.10.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {10.2}Mis libros favoritos}{85}{section.10.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {10.3}Otros libros, documentos, referencias,\ldots  }{87}{section.10.3}\protected@file@percent }
-\gdef \@abspage@last{91}
+\@writefile{toc}{\contentsline {section}{\numberline {10.1}notas históricas: para situarnos en los distintos marcos temporales}{85}{section.10.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {10.2}Mis libros favoritos}{86}{section.10.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {10.3}Otros libros, documentos, referencias,\ldots  }{88}{section.10.3}\protected@file@percent }
