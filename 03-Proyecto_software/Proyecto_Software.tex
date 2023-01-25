@@ -1256,10 +1256,14 @@ De ahí la importancia de conocer los diversos paradigmas. Por lo menos a nivel 
 \section{Según se reparte el código, se puede distinguir entre:}
 
 
-\subsection{Monolítico}
+\subsection{Pella de arcilla (``ball of mud'')}
 El programa se compone de un solo bloque (estructurado o no en funciones). Un solo bloque que se encarga de todo.
 
 Suele ser típico en pequeños sistemas embebidos o en pequeños programas de prueba.
+
+\begin{center}
+\includegraphics[width=0.5\textwidth]{arquitectura - ball of mud}
+\end{center}
 
 \subsection{Monolito}
 
@@ -1267,12 +1271,18 @@ La aplicación, el programa, se estructura en secciones o capas (más o menos) d
 
 Pero todas las secciones están en un solo cuerpo de código. Un cuerpo que se compila y se distribuye como un todo. 
 
+\begin{center}
+\includegraphics[width=0.5\textwidth]{arquitectura - monolito}
+\end{center}
 
 \subsection{Distribuido}
 
 La aplicación se estructura en partes independientes. Cada parte tiene su propio cuerpo de código. Cada parte se puede compilar y distribuir separadamente.
 
 Las distintas partes ``colaboran'' entre sí según unos interfaces y protocolos preestablecidos.
+
+\includegraphics[width=\textwidth]{arquitectura - distribuido}
+
 
 
 \section{Según cómo se reparte la funcionalidad, se puede distinguir entre:}
