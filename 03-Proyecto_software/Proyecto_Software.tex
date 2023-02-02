@@ -137,316 +137,19 @@ Nota: Una copia .pdf de este manual se puede descargar desde \url{www.susosise.e
 \tableofcontents
 
 
-\chapter{Herramientas}
-\section{Editor, compilador (``compiler'') y enlazador (``linker'')}
-Herramientas para escribir código fuente y traducirlo al código máquina correspondiente.
+\chapter*{Prefacio}
 
-En un editor, se suele apreciar el grado y calidad de la asistencia prestada a hora de escribir código en el lenguaje de programación que se vaya a emplear. Ayudas tales como: el coloreado sintáctico, autocompletar sentencias, dar información contextual de las diversas funciones y opciones disponibles en las bibliotecas, facilitar refactorizaciones (por ejemplo: renombrar variables o funciones, extraer trozos de código a su propia función, modificar la signatura de una función,...), etc.
 
-En un compilador, se suele apreciar su velocidad de compilación y el grado de optimización que sea capaz de alcanzar. El grado de optimización, suele ser posible ajustarlo, como mínimo en dos niveles:
-\begin{itemize}
-\item Durante la programación (``debug''), se suele compilar sin optimización, generando directamente el código máquina tal cual (para que sea sencillo correlacionarlo con el código fuente). 
-\item En el compilado final para su uso en producción (``release''), se tiende a reorganizar y optimizar lo máximo posible el código máquina generado (para obtener el máximo rendimiento en ejecución).
-\end{itemize}
+Por un lado: 
 
-En un enlazador (``linker''), antaño se solia apreciar la flexibilidad que permitiera al combinar entre sí porciones de código máquina generado manualmente desde distintas fuentes. Pero hoy en día el proceso de componer el programa ejecutable final es totalmente automático en la mayoria de ocasiones; por lo que el papel desempeñado por el enlazador tiende a pasar totalmente desapercibido.
+Este es un libro-resumen de conceptos. No contiene explicaciones detalladas de ninguno de ellos. La idea es recurrir a otras fuentes para profundizar en aquellas ideas o conceptos que te resulten interesantes.
 
 \vspace{1cm}
-nota:
+Por otro lado:
 
-Lo habitual es que estas tres herramientas, junto al depurador, vengan integradas en un IDE (Integrated Development Environment). Dentro del IDE actuan las cuatro como si fueran una única herramienta; siendo mucho más sencillo su uso.
+He intentado recoger consejos, comentarios e ideas que a mí me han funcionado. En ese sentido, este es un libro ``opinionated''. 
 
-Pero, aun trabajando dentro de un IDE integrado, es conveniente tener en cuenta que son cuatro herramientas separadas que forman una cadena (toolchain). Así se comprenden mejor algunas de las  opciones/configuraciones/avisos/… que pueden ir apareciendo.
-
-
-
-\section{Automatización del proceso de compilación}
-En los primeros tiempos, cuando se trabajaba directamente desde la línea de comandos, repitiendo manualmente cada ciclo de compilar los distintos módulos y de linkarlos todos para componer el programa. Pronto se llegó a la conclusión de que se requería algún sistema para llevar la cuenta de qué módulo depende de cual y para automatizar el ciclo de compilación-linkado. Uno de los sistemas pioneros fue Make (\url{https://es.wikipedia.org/wiki/Make}). 
-
-Más tarde, con el auge de los IDE, cada fabricante de estas herramientas fue introduciendo más o menos su propio sistema; funcionando de forma automática ``bajo el capó''. Y los programadores fuimos olvidando que estaban detrás de ``ese botón que compila y deja listo el programa para su debugeo o ejecución''.
-
-Últimamente, con el auge del desarrollo multiplataforma, han vuelto a cobrar fuerza sistemas de automatización portables y más o menos independientes del IDE. Algunos de los más difundidos hoy en día son:
-\\ \url{https://docs.microsoft.com/es-es/visualstudio/msbuild/msbuild}
-\\ \url{https://maven.apache.org/}
-\\ \url{https://cmake.org/}
-
-
-
-\section{El compilador es tu mejor aliado,... si le permites supervisar el código.} 
-Cuando más específica sea la definición de tipos de variables y de los parámetros que acepta una función, más información tendrá el compilador para detectar operaciones ilogicas. Y cuantos más avisos pueda dar al respecto, más problemas futuros se podrán evitar. Cualquier error es más fácil de arreglar si se detecta en tiempo de compilación, que si se detecta en tiempo de ejecución.
-
-En general, es mala idea relajar el nivel de avisos del compilador simplemente ``para que no nos moleste'' y nos permita utilizar variables de tipo genérico, pasar parámetros de cualquier tipo, utilizar las conversiones por defecto,... 
-
-Mejor perseguir justo lo contrario: \textbf{fijar el nivel más restrictivo y atender cuidadosamente a cada uno de los errores (error) o avisos (warning)} que el compilador presente. Atender a los errores porque, obviamente, mientras haya errores no se podrá terminar el proceso de compilación y no se tendrá ningún ejecutable. Atender a los warning porque, aunque no impidan completar el proceso de compilación, pueden ser una advertencia de posibles problemas futuros (igual que el humo suele ser indicador de un posible fuego).
-
-Esta forma de proceder puede parecer una pérdida de tiempo. Sobre todo sabiendo que, en muchas ocasiones, simplemente relajando la sensibilidad del compilador, es posible conseguir que pase por alto errores y termine creando el ejecutable. La tentación es grande, sobre todo cuando somos principiantes y muchos de los errores/warnings nos resultan extraños.
-
-Un consejo importante: Todo el tiempo invertido en investigar acerca de un error o warning es tiempo bien invertido. Nos ayudará a conocer mejor el lenguaje y el sistema sobre el que estamos trabajando. Este conocimiento, progresivamente, nos irá permitiendo escribir mejor código, más robusto y con menos errores/warnings.
-
-\section{El tratamiento de excepciones también es tu aliado,... si no lo usas para enterrar la cabeza bajo el suelo e ignorar las excepciones.}
-La construcción try...catch...finally es muy útil; si se utiliza para lo que fué concebida: tratar posibles situaciones excepcionales que se puedan dar durante la ejecución. 
-
-Utilizada indiscriminadamente para lo contrario: para enmascarar cualquier tipo de situaciones excepcionales, simplemente para no ``asustar'' al usuario o para que los errores ``no molesten''. Es totalmente contraproducente. 
-
-Una de las reglas básicas al programar es que si algo ha de cascar, que casque lo antes posible y lo más ruidosamente posible,... para poderlo arreglar (o al menos mitigar). 
-
-No hay nada más peligroso que casques silenciosos que no se manifiestan,... nadie sabe que han ocurrido,... hasta que los errores se van acumulando y acaban explotando por el lado más imprevisible.
-
-
-Es importante tener presente los tipos de situaciones excepcionales (fuera de nuestro control) que pueden suceder en cada parte del programa. Esto no significa que se deba programar todo el tiempo de forma defensiva. Casi todo lo que sucede dentro del programa está bajo el control del programa. Pero lo que sucede fuera del programa no está bajo su control y requiere supervisión para no introducir problemas. Puntos  tales como las interfaces con periféricos externos o la interacción con el usuario, son posibles puntos problemáticos que merecen ir protegidos dentro de un try...catch. 
-
-El mejor indicativo de si es necesario o no poner algo dentro de un try..catch es lo que se vaya a programar en la parte catch:
-\begin{itemize}
-\item Es una mala idea poner algo dentro de un try...catch simplemente ``por si acaso'', disponiendo un único catch para capturar ``cualquier excepción'' y con la única acción de guardar el error en un log ``para luego revisarlo, si fuera necesario''. 
-\item En cambio, un try…catch se justifica plenamente cuando captura situaciones excepcionales concretas; disponiendo de catch específicos para tratar cada una de ellas.
-\end{itemize}
-
-
-\vspace{1cm}
-\fbox{
-\parbox{\textwidth}{
-Como regla general: 
-\\las excepciones "\textbf{lanzarlas cuanto antes, interceptarlas lo más tarde posible}".
-
-\vspace{0.3cm}
-Es contraproducente interceptar excepciones allá donde no se puede hacer casi nada con ellas\ldots
-
-\ldots mejor dejarlas subir por la pila (stack) de llamadas en la aplicación  (throws\ldots)
-
-\ldots hasta el sitio donde se pueda hacer algo realmente útil.
-
-\vspace{0.3cm}
-Por ejemplo, una excepción (situación anómala)  que se produzca al guardar algo en disco:
-\begin{itemize}
-\item El módulo gestor de disco no tiene información suficiente, no podria hacer nada más allá de reintentar y reintentar la escritura. 
-\item Sin embargo entre el gestor de lógica de negocio y el gestor de interface si que podrian hacer algo como por ejemplo: avisar al usuario de que necesita liberar espacio en disco y proponerle un botón para que reintente el guardado una vez haya liberado espacio.
-\end{itemize}
-}
-}
-
-
-\section{Depurador (``debugger'')}
-Herramienta para realizar un seguimiento detallado del funcionamiento interno del programa. Facilitando así la localización de errores.
-
-Es importante dominar con fluidez:
-\begin{itemize}
-\item la colocación de puntos de parada (fijos, condicionales,...), 
-\item el avance selectivo en la ejecución (instrucción a instrucción, función a función, hasta la siguiente parada,...) 
-\item y la inspección del contenido de variables.
-\end{itemize}
-
-El depurador permite visualizar lo que realmente está haciendo la máquina. 
-
-Seguir detalladamente la ejecución del programa puede resultar tedioso. Ya que la forma mecanico-secuencial de trabajar de la máquina es muy diferente de la forma empirico-paralela de pensar de los seres humanos. Pero muchas veces es necesario ``ponerse en el lugar'' de la máquina, para saber dónde está ese fallo que se nos escapa.
-
-En ese sentido, yo diria que es hasta provechoso todo el tiempo empleado con el depurador. Nos permite comprender mejor la forma de trabajo de la máquina. (Y, ¿que es programar?... más que decirle a la máquina lo que ha de hacer y cómo queremos que lo haga.) Cuanto más familiaridad tengamos con su forma de trabajar, mejores programas podremos escribir para ella.
-
-
-
-\section{Marco de ejecución de pruebas\\(``test framework'')}
-Herramienta para ejercitar aisladamente partes del programa y verificar que funcionan según lo esperado.
-
-Suelen permitir la creación de baterias automatizadas de pruebas.  Incluyen un interface para lanzar partes de estas baterias y comprobar rápidamente los resultados. Los marcos de pruebas más completos suelen permitir la creación de componentes virtuales (mockups) para reemplazar aquellos componentes costosos de crear e inicializar para cada prueba (por ejemplo, acceso a ciertos servicios en la nube o consultas complejas contra una base de datos).
-
-Estas baterias de pruebas son muy útiles como ``red de seguridad'' durante los cambios que, inevitablemente, todo software va a tener durante su vida útil. Permiten intervenir dentro del código fuente con una cierta seguridad. Modificar/corregir un código fuente dotado de pruebas es mucho más sencillo que intervenir a ciegas en un código sin pruebas, rezando para no introducir involuntariamente errores durante la intervención.
-
-Durante su escritura, parece que escribir pruebas es perder el tiempo. Que escribir pruebas supone un doble trabajo (escribir la función que hace el trabajo y escribir la prueba que verifica que la función hace lo que se supone que hace). Además, al modificar el código, suele ser necesario revisar también pruebas correspondientes. 
-
-Todo ello supone una cantidad de trabajo que se antoja innecesario en ese momento; pero que bien se amortiza en el futuro.
-
-El trabajo extra de escribir pruebas se ve compensado con creces, ya que permite una evolución más segura del software. Modificaciones y refactorizaciones que suelen dar miedo (y tienden a evitarse) sobre códigos sin pruebas; son factibles y seguras en códigos dotados de ellas.
-
-\newpage
-\section{Gestor de versiones (``version control'')}
-Herramienta para:
-\begin{itemize}
-\item Almacenar el código fuente y otros recursos que componen el programa.
-\item Documentar los cambios que se van realizando sobre cualquiera de esos recursos.
-\item Evitar/resolver conflictos cuando varias personas están trabajando conjuntamente.
-\item Saber en todo momento cual es la versión oficial de cada recurso almacenado.
-\end{itemize}
-
-El funcionamiento de estos sistemas gestores suele basarse en el concepto de ‘commit’: acto de almacenar unos cambios en el sistema , junto a la correspondiente explicación que los documenta. 
-
-(nota: No todos los cambios tienen la misma importancia, de ahí la necesidad de guardar algún tipo de anotación -metadato- junto a cada cambio; aunque solo sea la fecha/hora y el usuario, que se guarda de forma automática.)
-
-La forma de trabajar suele ser sencilla\ldots:
-\begin{enumerate}
-\item Antes de empezar a trabajar, asegurarse de hacerlo sobre la última versión. (Este paso se suele denominar ‘check-out’ o ‘pull’ o ‘desproteger para mi’.)
-\item Se trabaja y se hacen cambios. 
-\item Si procede, se guardan esos cambios. (Este paso se suele denominar ‘check-in’ o ‘push’ o ‘proteger’.)
-\ldots pero requiere algo de disciplina.
-\end{enumerate}
-
-El aspecto más importante a tener en cuenta es la obligatoriedad de trabajar en pequeños pasos. El peor error que se puede cometer trabajando con un sistema de control de versiones es intentar no guardar nada hasta que ``esté totalmente terminado, comprobado y bien comprobado''. 
-
-Trabajar durante días o semanas sobre algo y luego pretender guardarlo en el sistema, es camino seguro al desastre.
-
-En sistemas de tipo centralizado estricto, esta situación se detecta rápidamente. Ya que cuando se hace el ‘check-out’ de un recurso para modificarlo, se suele imponer un bloqueo sobre el mismo (el resto de usuarios pueden leerlo, pero no modificarlo). Hasta que se realice el ‘check-in’ correspondiente para liberarlo (bien guardando cambios, o bien sin guardar cambios). 
-
-Pero incluso en ese tipo de sistemas, suele haber mecanismos para hacer una copia no controlada del recurso (‘check-out’ sin bloqueo), trabajar sobre ella y, si procede, terminar guardando los cambios en el sistema. (Son las personas las que son dueñas del trabajo que realizan, no el sistema de gestión de versiones.)
-
-Lo que nos vuelve a llevar al punto principal antes citado, un sistema de control de versiones requiere, sí o sí, un cambio en la forma de trabajar: se ha de trabajar en pasos incrementales, almacenando cada paso que se da. 
-
-Hemos de tener presente que cada recurso va evolucionando y que sus distintos (pequeños) cambios se han de ir coordinando entre las personas que los están haciendo. Esa es la función del sistema de control de versiones: facilitar la coordinación entre las personas.
-
-En ese sentido, un consejo: al igual que se almacenan cambios que modifican, también se pueden almacenar cambios que deshacen modificaciones anteriormente almacenadas. Todos los cambios se van acumulando y el contenido del sistema en un determinado punto es el resultado de todo el trabajo realizado hasta ese punto.
-\\
-\includegraphics[width=\textwidth]{diversas ramas en un gestor de versiones}
- 
-Para distinguir versiones ``de trabajo'' de versiones ``definitivas'', está la correspondiente explicación de cada ‘commit’/’check-in’. Prácticamente todos los sistemas gestores de versiones tienen algún mecanismo para dar una importancia especial a algunos de esos  ‘commit’/’check-in’, dejando claro que ``lo que hay en este momento es una versión oficial del proyecto''.
-
-\subsection*{notas importantes:} 
-Un  típico error de principiante suele ser pretender eliminar todo rastro de algo ya guardado ``para que no quede constancia de la equivocaciòn''. Esos intentos son camino seguro al desastre, ya que el sistema de gestión de versiones está diseñado precisamente para evitar eso. Es decir, para evitar que alquien cambie algo sin dejar rastro de lo que ha cambiado. 
-
-En caso de almacenar algo con errores, lo mejor es reconocerlo, indicandolo expresa y claramente en los ‘commit’/’check-in’ posteriores que almacenen las correcciones.
-
-Con más razón aún, si tras oficializar algo nos damos cuenta de que es necesario corregir algo en esa versión oficial…: realizamos una nueva oficialización, dejando bien claro que la anterior era un error y que la nueva versión oficial es la buena. 
-
-\section{La documentación del sistema}
-Lo único cierto en cualquier software es que algún día tendremos que volver a él para modificarlo. De ahí la necesidad de poder ``leerlo'' con fluidez para saber lo que hace.
-
-Como comentaba Donald Knuth en su artículo\footnote{Tener en cuenta de que el artículo está escrito en la década de los 80, de ahí las tecnologías que se citan en él.}
-\footnote{Al leer los documentos y ejemplos de código, tener en cuenta que están escritos en el característico ``estilo Knuth'' (muy preciso, detallado y cercano al lenguaje-máquina).}
- \url{http://www.literateprogramming.com}: 
-\\``Let us change our traditional attitude to the construction of programs. Instead of imagining that our main task is to instruct a computer what to do, let us concentrate rather on explaining to human beings what we want a computer to do.''
-\\traducción: ‘Cambiemos la forma tradicional de encarar la construcción de programas. En lugar de pensar que consiste en indicar a un ordenador lo que tiene que hacer. Mejor considerar que consiste en explicar a otras personas lo que queremos que haga un ordenador.’
-
-Mucho se ha escrito acerca de cual puede ser la mejor manera de documentar un programa. Lo cierto es que es necesario algún tipo de documentación. Incluso para nosotros mismos. Ya que, al cabo de algunos meses o años de trabajar en otros proyectos, se hace difícil acordarse de todos los detalles involucrados en un determinado software. Pero es tarea harto difícil ser disciplinados y documentar adecuadamente todos esos detalles mientras estamos programando.
-
-A lo largo del tiempo, se han intentando diversos métodos de documentar software:
-\begin{itemize}
-
-\item Escribir documentos externos complementarios tales como diagramas de flujo, esquemas UML,\ldots Tienen la ventaja de ser comprensibles para quien no conoce el lenguaje en que se ha escrito el código fuente. Pero tiene la pega de que código y documentos tienden muy facilmente a perder sincronia.
-
-\item Escribir documentación en forma de comentarios en el propio código fuente. Preferiblemente con una sintaxis tal que permita extraerlos con herramientas automáticas tales como javadoc, Doxygen, XML comments,\ldots para confeccionar documentos externos con ellos. Tienen la ventaja de facilitar la puesta al día de la documentación cuando se modifica el código. Pero tiene la pega de que, al seguir siendo un trabajo manual, requiere disciplina para que código y comentarios no acaben desincronizados.
-
-\item Código autodescriptivo. No hay mejor manera de evitar documentación desactualizada que leer directemente el propio código fuente tal cual. Esta lectura se facilita en gran medida si al programar se presta atención a aspectos tales como: orquestar una coherente modularización del código, escribir nombres de módulos, funciones y variables que describan con claridad el papel desempeñado por cada una de ellas, escribir algún que otro comentario puntual allá donde el código contenga algún truco o apaño poco evidente,\ldots 
-\\De todas formas, conviene tener en cuenta que hay lenguajes con una dificultad inherente de lectura, como por ejemplo ensamblador. Mientras que otros lenguajes, como por ejemplo los funcionales, son mucho mas legibles.
-\\ Apollo 12 code listing: \url{https://youtu.be/-y37tXoBDx0?t=640} 
-\\ \url{https://cacm.acm.org/magazines/2011/11/138203-ocaml-for-the-masses/fulltext}
-
-\item Programación con contratos (contract-driven programming). Escribiendo contratos como parte del código fuente. Contratos donde quedan plasmadas las precondiciones y postcondiciones de cada función. Se permite así que el compilador u otras herramientas verifiquen formalmente que cada función cumple con las condiciones de su contrato. A la par que se documenta el comportamiento esperado de cada función.
-\\ \url{https://en.wikipedia.org/wiki/Design_by_contract}
-\\ \url{https://www.electronicdesign.com/technologies/embedded-revolution/article/21795884/contractdriven-programming-takes-specification-beyond-the-stone-age}
-
-\item Programación con chequeos (test-driven development, TDD). Escribiendo test unitarios. Test que, por un lado, sirven para comprobar en cualquier momento que cada función hace lo que se supone que ha de hacer y, por otro lado, sirven como documentación (al ejercitar los principales casos de uso de cada función, plasman por escrito cuales son esos casos).
-\\ \url{https://en.wikipedia.org/wiki/Test-driven_development}
-
-\end{itemize} 
-
-
-\section{Comprobador estático de código (``linter'')}
-
-Un comprobador de código  suele ser muy útil para verificar la consistencia de este y avisar (``warning'') de posibles futuras fuentes de problemas.
-
-Consiste en una serie de reglas que se van comprobando sobre el código. Reglas que revisan condiciones que, aunque no impiden al código funcionar, pueden ser fuente de problemas. O, como mínimo, indican que algo no esta del todo correcto.
-
-La herramienta suele traer predefinidas algunas reglas, como por ejemplo las que se encargan de avisar sobre construcciones sospechosas en el código: tener declaradas variables que luego no se usan, hacer uso de funciones ``deprecated'', repeticiones de partes de código que podrian refactorizarse, típicos posibles fallos que se suelen dar al copiar/pegar/modificar partes de código, \ldots.
-
-Nosotros podemos definir nuestras propias reglas, como por ejemplo las que se encargan de avisar sobre violaciones de las políticas y normas de estilo de la compañia.
-
-
-\section{Analizador de rendimiento (``profiler'')}
-Herramienta para medir el rendimiento de las distintas partes del programa. Facilitando así la localización de cuellos de botella.
-
-Estos analizadores suelen ``instrumentar'' el programa, colocándole pequeñas rutinas adicionales para medir los tiempos de ejecución de sus distintas partes. El informe final del analizador de rendimiento suele ser una lista de tiempo consumido en cada función y bucle de ejecución.
-
-En el complejo mundo del software actual. Es conveniente no limitar el análisis al propio programa en sí. Se ha de tener en cuenta  también su alrededor: comunicaciones a través de la red local, acceso a servidores, consultas a bases de datos externas, etc.
-
-Esto puede obligar a utilizar más de una herramienta de análisis de rendimiento. O a repetir los análisis en diversos momentos en el tiempo, para hacerse una idea de cómo afectan los (cambiantes) factores externos al funcionamiento del programa.
-
-El cuello de botella puede estar en cualquier parte del camino seguido por la información a través de todo el sistema. Por eso se hace imprescindible considerar siempre el sistema de forma integral, analizándolo como un todo y no solo estudiando aisladamente aspectos parciales del mismo.
-
-
-\section{Automatización de todo el proceso:\\estratégias ``CI/CD'' y enfoque ``DevOps''}
-
-Con la cada vez mayor demanda de servicios digitales. Es cada vez más grande la presión para implementar nuevas funcionalidades en el software. Y más corto el periodo entre lanzamientos (``deployment'') de nuevas versiones.
-
-Esto ha llevado al concepto de ``Continuous Deployment''. Con su acompañante habilitante ``Continuous Integration''. Dando lugar a lo que se conoce como la estrategia de trabajo `CI/CD'.
-
-Esta estrategia de trabajo se apoya en la automatización de todo el proceso:
-
-\begin{itemize}
-
-\item Una vez escrito, probado y depurado un trozo de código nuevo. Se envia a la rama principal del código fuente. Donde el sistema de integración se encarga de realizar de forma automatizada:
-
-\begin{itemize}
-\item Las comprobaciones estáticas pertinentes, para revisar su adecuación a los estándares de programación adoptados.
-\item Las baterias de test que se hayan programado, para revisar que no se haya roto inadvertidamente el funcionamiento del código ya existente.
-\item Cualquier otra operación que se estime oportuna antes de integrar el nuevo código con el ya existente.
-\end{itemize}
-
-De esta forma se asegura que la rama principal de código es siempre compilable y que el programa resultante se puede utilizar. (Integración Continua, CI)
-
-
-\item Cuando se decide lanzar una nueva versión del programa para su uso en producción. El sistema de despliegue se encarga de realizar de forma automatizada:
-
-\begin{itemize}
-\item Las baterias de test que se hayan programado, para revisar que el software se comporta como se espera que lo haga.
-\item El empaquetado adecuado para transferirlo al sistema de producción.
-\item La instalación en el sistema de producción, actualizando el software que estaba corriendo allí.
-\item Cualquier otra operación que se estime oportuna antes de integrar el nuevo código en el sistema de producción que utilizan los usuarios. \end{itemize}
-
-De esta forma se asegura que el despliegue se realiza de forma correcta, sin olvidar ningún paso. Además de permitir realizarlo en cualquier momento. (Despliegue Continuo, CD)
-
-\end{itemize}
-
-Obviamente, si en cualquier operación de las descritas se detectara un problema, el sistema no sigue adelante, deja todo como estaba antes de iniciarse el proceso y avisa a quien corresponda.
-
-La automatización suele contemplarse también en sentido inverso. Para dar la posibilidad de ``dar marcha atrás'' y revertir todo el proceso si se viera necesario.
-
-En esa línea, suele resultar útil disponer también de algún sistema de monitorización continua de lo que está sucediendo en el uso del sistema de producción. Si un cambio en el software hace que algo deje de funcionar como lo venia haciendo hasta ese momento; la anomalía se puede detectar a tiempo; resolviendo el problema antes de que afecte demasiado a los usuarios.
-
-Todo ello lleva a la fusión/coordinación estrecha entre los que se venían considerando dos departamentos separados en las empresas: Desarrollo y Operaciones. Dando lugar a lo que se conoce como `DevOps'
-
-\vspace{0.5cm}
-
-La parte más importante para llegar a esta forma de plantear el proceso, es la adopción previa de ciertos hábitos de trabajo:
-
-\begin{itemize}
-
-\item Se trabaja de forma incremental, en pequeños pasos (trabajo de un día o dos). Dejando bien terminado (testeado, integrado y funcionando) cada paso antes de comenzar con el siguiente.
-
-\item La escritura y ejecución de test son parte integral del proceso de desarrollo.
-
-\item Se almacenan en un sistema de gestión de versiones:
-\begin{itemize}
-\item El código fuente.
-\item Las configuraciones de la aplicación.
-\item Las configuraciones del sistema.
-\item Los scripts de compilación, configuración y despliegue.
-\end{itemize}
-
-\item Se cuida de mantener una arquitectura con el adecuado reparto de tareas, alto encapsulamiento y bajo acoplamiento entre las distintas partes del software y del sistema.
- 
-\item Todo el equipo está involucrado en todo el proceso de desarrollo y despliegue.
-
-\end{itemize}
-
-La parte tecnológica, las herramientas de automatización, son meramente instrumentales. Algunos ejemplos ilustrativos de estas herramientas:
-\\ \url{https://bitbucket.org/product/es/features/pipelines}
-\\ \url{https://docs.gitlab.com/ee/ci/}
-\\ \url{https://github.com/features/actions}
-\\ \url{https://www.jenkins.io/}
-\\ \url{https://prometheus.io/docs/introduction/overview/}
-
-
-\section*{Resumen del capítulo}
-El \textbf{editor} (escribir código fuente), el \textbf{compilador} (generar programa ejecutable) y el \textbf{depurador} (seguir la ejecución del programa paso a paso) suelen ser herramientas conocidas por toda persona que se dedica a la programación. Ya que sin esas tres, difícilmente se puede programar nada.
-
-Pero hay otras herramientas que también es preciso conocer para ser productivo:
-\begin{itemize}
-\item El \textbf{gestor de versiones} (almacenar el código fuente en un repositorio controlado).
-\item El marco de \textbf{ejecución de pruebas} (comprobar que las distintas funciones del programa hacen lo que se supone que deben hacer).
-\item El \textbf{comprobador de código} (avisar del incumplimiento de ciertas reglas o convenciones).
-\item El \textbf{analizador de rendimiento} (visualizar tiempos de ejecución de cada función del programa).
-\item Formas de \textbf{automatizar} las tareas más repetitivas.
-\item Formas de monitorizar el correcto funcionamiento de todo el sistema.
-\end{itemize}
-
-Y, aunque sea obvio, nunca está de más recalcar que cuanto más a fondo se conozcan las herramientas, más productivo se es con ellas.
-
+Lo que no quiere decir que a tí también te sean de utilidad. Cada cual tiene su forma de trabajar. Y lo que funciona para una persona en unas determinadas circustancias, puede no funcionar para otra persona en otras circunstancias.
 
 
 
@@ -668,884 +371,6 @@ nota: Hablando de diferencias, también hay algunas otras que no afectan directa
 \item El coste de la formación necesaria para manejar un programa es siempre mucho mayor que el coste de adquirir ese programa. Por ejemplo, es necesario dedicar unos cuantos meses para aprender a utilizar un software de CAD que cuesta miles de euros; varias semanas para aprender a utilizar un procesador de textos que cuesta unos cien euros.
 \end{itemize}
 
-\chapter{Paradigmas y lenguajes de programación}
-Es importante destacar que el paradigma seguido al programar puede ser independiente del lenguaje de programación utilizado. Un paradigma de programación es simplemente ``una forma de hacer las cosas''. Y en (casi) todos los lenguajes se puede hacer (casi) de todo.
-
-Desde los inicios de la informática, en los años 40, hasta finales de la década de los 90; cada lenguaje tendia a especializarse en un paradigma concreto y solo soportaba específicamente ese. Pero hoy en día los lenguajes y entornos de trabajo más populares están tendiendo a implementar mecanismos propios de más de un paradigma. Dejando en manos de la persona programadora la decisión de seguir uno u otro.
-
-Los dos paradigmas principales son:
-
-\begin{itemize}
-
-\item IMPERATIVO (procedural): vas diciendo qué hacer, las operaciones a realizar, qué pasos ir dando, pasito a pasito. (por ejemplo, C)
-
-\item DECLARATIVO: vas diciendo qué se desea obtener, y ``el entorno'' busca la mejor manera de darte eso. (por ejemplo, SQL)
-
-\end{itemize}
-
-En la práctica se han ido concretando en:
-
-\begin{itemize}
-
-\item (procedural) ESTRUCTURADO: vas agrupando y organizando las operaciones en funciones y módulos, llamándolas según corresponda...
-
-\item Orientado a OBJETO: vas dividiendo la funcionalidad entre diversos objetos (clases) ``autocontenidos'' (encapsulación), 
-\\ y vas diciendo a cada objeto (instancia) que haga esto o aquello...
-                        
-\item FUNCIONAL: vas creando funciones de transformación de información, \\cada función depende solo de los `parametros' que recibe y de lo que tenga dentro de sí, cada función devuelve `resultados' (sin causar ningún ``efecto secundario'' fuera de esos resultados), 
-\\y vas encadenando funciones, una detrás de otra...
-
-\end{itemize}
-
-
-Podriamos decir que cada paradigma, siendo como es ``una forma de hacer las cosas'', requiere una determinada forma de pensar al trabajar. 
-
-\begin{itemize}
-
-\item En la programación imperativa/procedural: en cada paso se indica exactamente qué hacer; se comprueba el estado concreto en ese momento de tal y tal y tal; para, en función de ello, realizar alguna acción; acción que modificará cual o cual o cual.
-
-\item En la programación orientada a objeto: en cada paso se utiliza el objeto pertinente, para pedirle que haga algo.
-
-\item En la programación funcional: en cada paso se utiliza la función pertinente, para transformar de esto que se le pasa como parámetros a eso que devuelve como resultado.
-
-\end{itemize}
-
-Según cual sea la problemática a resolver, su resolución puede ser más fácil o más complicada siguiendo uno u otro paradigma. De ahí la importancia de conocer al menos los fundamentos de los principales paradigmas. Y de ahí también la tendencia de los lenguajes de programación a soportar el trabajo en más de un paradigma.
-
-\section{Imperativo/procedural : máquina}
-En este paradigma, se trabaja directamente con las instrucciones básicas de la plataforma hardware sobre el que va a funcionar el programa.
-
-Habitualmente, estas instrucciones suelen ser bastante limitadas y programar con ellas resulta complicado. Este tipo de programación se utiliza principalmente para escribir compiladores/intérpretes de otros lenguajes de programación de más alto nivel.
-
-El formalismo teórico tras este tipo de programación imperativa es la máquina de Turing.
-
-\subsection*{Conceptos básicos y ejemplos de código}
-Tres son las estructuras principales sobre las que se construyen todos programas informáticos:
-\begin{enumerate}
-\item MOVIMIENTO DE DATOS entre distintas ubicaciones de memoria (registros, pila, ram,...) y OPERACIONES con esos datos; ejecutadas en SECUENCIA.
-
-código en ensamblador:
-\begin{lstlisting}[frame=single]
-	movl	$5, -4(%rbp)
-	movl	$7, -8(%rbp)
-	movl	-4(%rbp), %edx
-	movl	-8(%rbp), %eax
-	addl	%edx, %eax
-	movl	%eax, -12(%rbp)
-\end{lstlisting}
-
-código en c:
-\begin{lstlisting}[frame=single]
-	int un_numero, otro_numero, resultado;
-	un_numero = 5;
-	otro_numero = 7;
-	resultado = un_numero + otro_numero;
-\end{lstlisting}
-
-otra variante del código en ensamblador:
-\begin{lstlisting}[frame=single]
-movl    $5, -4(%rbp)
-movl    $7, -8(%rbp)
-movl    -4(%rbp), %ecx
-addl    -8(%rbp), %ecx
-movl    %ecx, -12(%rbp)
-\end{lstlisting}
-
-\item SELECCIÓN CONDICIONAL de distintos caminos de ejecución, (IF, SWITCH,...)
-
-código en ensamblador:
-\begin{lstlisting}[frame=single]
-	movl	$3, -4(%rbp)
-	cmpl	$0, -4(%rbp)
-	jle	.L2
-	addl	$1, -4(%rbp)
-	jmp	.L3
-   .L2:
-	addl	$2, -4(%rbp)
-   .L3:
-	movl	$0, %eax
-\end{lstlisting}
-	
-código en c:
-\begin{lstlisting}[frame=single]
-	int numero;
-	numero = 3;
-	if(numero > 0)
-	{
-numero = numero + 1;
-	}
-	else
-	{
-		numero = numero + 2;
-	}
-\end{lstlisting}
-
-\item BUCLES de ejecución, (FOR, WHILE, DO...WHILE)
-
-código en ensamblador:
-\begin{lstlisting}[frame=single]
-    movl    $0, -4(%rbp)
-    movl    $0, -8(%rbp)
-    movl    $1, -12(%rbp)
-  LBB0_1:
-    cmpl    $6, -12(%rbp)
-    jge    LBB0_2
-    movl    -8(%rbp), %eax
-    shll    $1, %eax
-    movl    %eax, -8(%rbp)
-    movl    -12(%rbp), %eax
-    addl    $1, %eax
-    movl    %eax, -12(%rbp)
-    jmp    LBB0_1
-  LBB0_2:
-    movl    -4(%rbp), %eax
-\end{lstlisting}
-
-código en c:
-\begin{lstlisting}[frame=single]
-    int numero = 0;
-    int indice;
-    for(indice = 1; indice < 6; indice++)
-    {
-        numero = numero * 2;
-    }
-\end{lstlisting}
-
-otra variante del código en c:
-\begin{lstlisting}[frame=single]
-	int numero = 0;
-	int indice = 1;
-	while(indice < 6)
-	{
-     	 numero = numero * 2;
-   	 indice++;
-	}
-\end{lstlisting}
-
-\end{enumerate}
-
-\section{Imperativo/procedural : estructurado}
-En este paradigma se hace hincapié en la separación de los distintos procesos que componen el programa. Usualmente, estos procesos se estructuran en bloques de código, funciones y módulos. 
-
-El funcionamiento del programa se centra en ir llamando a esos bloques y funciones según se requieran para realizar el trabajo.
-
-\subsection*{Conceptos básicos}
-\begin{description}
-\item[función]: una tarea concreta; recibe unos datos (parámetros recibidos), realiza un trabajo y devuelve unos datos (parámetro devuelto).
-\item[módulo]: un grupo de funciones relacionadas.
-\end{description}
-
-\subsection*{Resumen gráfico rápido}
-\includegraphics[width=\textwidth]{Paradigma de programacion - PROCEDURAL}
-
-\subsection*{Ejemplos de código}
-RaizCuadradaPorElMetodoDeNewton.java
-\begin{lstlisting}[frame=single]
-package ejerciciosMatematicos;
-
-double EPSILON = 0.001;
-double aproximacion = 1.0;
-
-public class RaizCuadradaPorElMetodoDeNewton
-{
-    
-    public static double CalcularRaizDe(double numero)
-    {
-        while((Math.abs(aproximacion * aproximacion - numero) / numero) > EPSILON)
-        {
-            aproximacion = (aproximacion + (numero / aproximacion)) / 2;
-        }
-        
-        return aproximacion;
-    }
-
-    
-    public static void main(String[] args)
-    {
-        System.out.println(RaizCuadradaPorElMetodoDeNewton.CalcularRaizDe(2));
-        System.out.println(RaizCuadradaPorElMetodoDeNewton.CalcularRaizDe(385.23));
-    }
-    
-}
-\end{lstlisting}
-
-figuras\_procedural.py
-\begin{lstlisting}[frame=single]
-import math
-import turtle
-
-
-def area_de_un_rectangulo(ladoA, ladoB):
-    return ladoA * ladoB
-
-def dibujar_un_rectangulo(ladoA, ladoB):
-    turtle.showturtle()
-    turtle.forward(ladoA)
-    turtle.left(90)
-    turtle.forward(ladoB)
-    turtle.left(90)
-    turtle.forward(ladoA)
-    turtle.left(90)
-    turtle.forward(ladoB)
-    turtle.hideturtle()
-    
-
-def area_de_un_circulo(radio):
-    return math.pi * radio ** 2
-
-def dibujar_un_circulo(radio):
-    turtle.showturtle()
-    turtle.circle(radio, 360)
-    turtle.hideturtle()
-\end{lstlisting}
-
-main.py
-\begin{lstlisting}[frame=single]
-from figuras_procedural import *
-
-
-if __name__ == "__main__":
-    
-    print(``El area de un rectangulo de 40x30 es ``
-          + str(area_de_un_rectangulo(ladoA = 40, ladoB = 30)))
-    print(``El area de un circulo de radio 25 es ``
-          + str(area_de_un_circulo(radio = 25)))
-    dibujar_un_rectangulo(ladoA = 40, ladoB = 30)
-    dibujar_un_circulo(radio = 25)
-\end{lstlisting}
-
-\section{Orientado a objeto}
-En este paradigma se hace hincapié en repartir responsabilidades a diferentes actores (objetos). Idealmente cada funcionalidad será responsabilidad de un solo actor.
-
-Estos actores llevan encapsulados en su definición interna tanto los datos (propiedades) como las funciones (métodos) necesarios para llevar a cabo su tarea. Y nada puede acceder a esos datos ni a esas funciones si no es a través de un actor (instancia) del tipo (clase) correspondiente. 
-
-El funcionamiento del programa se centra en la colaboración entre esos actores (objetos) para realizar el trabajo.
-
-Podriamos decir que, en un lenguaje OO:
-\begin{itemize}
-\item todos los valores son objetos de algún tipo.
-\item todas las operaciones son llamadas a métodos de algún objeto.
-\end{itemize}
-
-\subsection*{Conceptos básicos}
-\begin{description}
-\item[clase/instancia]: la clase es la definición de un tipo de objeto y la instancia es un objeto concreto de ese tipo.
-\item[encapsulación]: los entresijos interiores de un objeto son internos a él, privados; desde fuera, otros objetos solo pueden acceder a ellos a través de las partes que se hayan definido como públicas.
-\item[herencia]: si las definiciones de varios objetos tienen partes comunes a todos ellos, se puede definir un tipo de objeto base con esa parte común y luego definir cada tipo de objeto derivado a partir del objeto base.
-\item[polimorfismo]:
-\begin{itemize}
-\item Un mismo método (mismo nombre para llamarlo), puede tener varias versiones (recibiendo o devolviendo distintos parámetros). 
-\item Diferentes clases (con distintos nombres), pueden tener una parte similar (implementan un interface: tienen una serie de funciones con exactamente la mismas signaturas).  Objetos (instancias) de cualquiera de esas clases pueden ser utilizados indistintamente en ciertos usos que requieran utilizar solo esa funcionalidad común.
-\end{itemize}
-\end{description}
-
-
-\subsection*{Resumen gráfico rápido}
-\includegraphics[width=\textwidth]{Paradigma de programacion - ORIENTADO A OBJETO}
-
-
-
-\subsection*{Ejemplos de código}
-
-figuras\_oop.py
-\begin{lstlisting}[frame=single]
-import math
-import turtle
-
-
-class Rectangulo:
-
-    def __init__(self, ladoA, ladoB):
-    	self.ladoA = ladoA
-    	self.ladoB = ladoB
-    	self.color = ""
-
-    def get_area(self):
-    	return self.ladoA * self.ladoB
-    
-    def dibujar(self):
-    	turtle.showturtle()
-    	turtle.forward(self.ladoA)
-    	turtle.left(90)
-    	turtle.forward(self.ladoB)
-    	turtle.left(90)
-    	turtle.forward(self.ladoA)
-    	turtle.left(90)
-    	turtle.forward(self.ladoB)
-    	turtle.hideturtle()
-
-    def set_color(self, color):
-    	if color == "rojo" or color == "verde" or color == "azul":
-        	self.color = color
-    	else:
-        	print("El color ha de ser 'rojo', 'verde' o 'azul'.")
-
-
-
-class Cuadrado(Rectangulo):
-
-    def __init__(self, lado):
-    	self.ladoA = lado
-    	self.ladoB = lado
-
-
-
-
-class Circulo:
-
-    def __init__(self, radio):
-    	self.radio = radio
-
-    def get_area(self):
-    	return math.pi * self.radio ** 2
-
-    def dibujar(self):
-    	turtle.showturtle()
-    	turtle.circle(self.radio, 360)
-    	turtle.hideturtle()
- 
-    def set_radio(self, radio):
-    	self.radio = radio
-\end{lstlisting}
-main.py
-\begin{lstlisting}[frame=single]
-from figuras_oop import *
-
-
-if __name__ == "__main__":
-
-    unCuadrado = Rectangulo(ladoA = 25, ladoB = 25)
-    otroCuadrado = Cuadrado(lado = 25)
-    unRectangulo = Rectangulo(ladoA = 77, ladoB = 33)
-    otroRectangulo = Rectangulo(ladoA = 22, ladoB = 44)
-    print("El area de unCuadrado es " + str(unCuadrado.get_area()))
-    print("y la de unRectangulo " + str(unRectangulo.get_area())
-          + " y del otro " + str(otroRectangulo.get_area()))
-    print()
-    unCuadrado.dibujar()
-    otroRectangulo.dibujar()
-    
-    unCirculo = Circulo(radio = 5)
-    print("El area de unCirculo es " + str(unCirculo.get_area()))
-
-    unCirculo.set_radio(10)
-    print("y tras modificar su radio es " + str(unCirculo.get_area()))
-    print()
-    unCirculo.dibujar()
-\end{lstlisting}    
-
-Rectangulo.java
-\begin{lstlisting}[frame=single]
-public class Rectangulo {
-
-    private float ladoA;
-    private float ladoB;
-    private String color;
-    
-    
-    public Rectangulo(float ladoA, float ladoB)
-    {
-   	 this.ladoA = ladoA;
-   	 this.ladoB = ladoB;
-   	 this.color = "";
-    }
-    
-    public float get_area()
-    {
-   	 return ladoA * ladoB;
-    }
-    
-    public void set_color(String color)
-    {
-   	 if (color.equals("rojo") || color.equals("verde") || color.equals("azul"))
-   	 {
-   		 this.color = color;
-   	 }
-   	 else
-   	 {
-   		 System.out.println ("El color ha de ser 'rojo', 'verde' o 'azul'.");
-   	 }
-    }
-
-}
-\end{lstlisting}
-Cuadrado.java
-\begin{lstlisting}[frame=single]
-public class Cuadrado extends Rectangulo
-{
-
-    public Cuadrado(float lado)
-    {
-   	 this.ladoA = lado;
-        this.ladoB = lado;
-    }
-
-}
-\end{lstlisting}
-
-Circulo.java
-\begin{lstlisting}[frame=single]
-public class Circulo
-{
-    private double radio;
-    
-    public Circulo(double radio)
-    {
-   	 this.radio = radio;
-    }
-    
-    public double get_area()
-    {
-   	 return (Math.PI * Math.pow(radio, 2));
-    }
-    
-    public void set_radio(double radio)
-    {
-   	 this.radio = radio;
-    }
-
-}
-\end{lstlisting}
-
-Main.java
-\begin{lstlisting}[frame=single]
-public class Main
-{
-
-    public static void main(String[] args)
-    {
-   	 Rectangulo unCuadrado = new Rectangulo(25, 25);
-   	 Cuadrado otroCuadrado = new Cuadrado(25);
-   	 Rectangulo unRectangulo = new Rectangulo(77, 33);
-   	 Rectangulo otroRectangulo = new Rectangulo(22, 44);
-   	 System.out.println("El area de unCuadrado es " + unCuadrado.get_area());
-   	 System.out.println("y la de unRectangulo " + unRectangulo.get_area()
-   	                	+ " y del otro " + otroRectangulo.get_area());
-   	 System.out.println();              	 
-   	 
-   	 Circulo unCirculo = new Circulo(5.0);
-   	 System.out.println("El area de unCirculo es " + unCirculo.get_area());
-   	 
-   	 unCirculo.set_radio(10.0);
-   	 System.out.println("y tras modificar su radio es " + unCirculo.get_area());
-   	 System.out.println();
-    }
-
-}
-\end{lstlisting}
-
-\section{Funcional}
-En este paradigma se hace hincapié en el tratamiento abstracto de datos. Se utilizan una serie de funciones que actúan sobre unos ciertos datos de entrada para devolver unos nuevos datos de salida. Las  propias funciones también pueden ser datos de entrada o de salida de otras funciones, que se encargan de combinarlas.
-
-El formalismo teórico tras este tipo de programación funcional es $\lambda$ (lambda) calculus.
-
-El funcionamiento del programa se centra en el flujo de datos a través de las funciones, para conseguir obtener el resultado deseado.
-
-\subsection*{Conceptos básicos}
-
-\begin{description}
-
-\item[inmutabilidad]\footnote{Inmutabilidad implica que, cuando es necesario modificar, el componente entero se reemplaza por una nueva versión del mismo.}: Al contrario que en el paradigma imperativo, en el paradigma funcional (casi) todas las estructuras de datos son inmutables. Es decir, en lugar de que el programa cambie valores en unas estructuras de datos, en el paradigma funcional el programa procesa unos datos de entrada y devuelven otros datos en su salida.
-
-\item[closure]: conjunto de una función y su entorno.
-
-\item[funciones de primera clase] (first-class functions): una función puede ser ``dato'' de otra función; es decir, una función puede tener otras funciones entre sus argumentos o una función puede devolver otra función como resultado. 
-
-\item[funciones lambda]: funciones anónimas, sin nombre, que se definen directamente allá donde se van a pasar como argumento a otra función.
-
-\item[composición de funciones] f g (x): aplicar primero una función a los argumentos g(x) y luego la otra función al resultado de la primera aplicación f(g(x)) .
-
-\item[reducción] (reduction semantics): cualquier ``programa'' puede irse reduciendo sucesivamente a otro más sencillo, hasta llegar a una `forma normal' que es su resultado. 
-
-\end{description}
-
-\subsection*{Algunas operaciones básicas:}
-
-\begin{description}
-
-\item[filter(lista, función)], aplicar una función (con resultado booleano) a todos y cada uno de los elementos de una lista, devolviendo otra lista con aquellos elementos donde la función devuelve 'verdadero'.
-
-\item[map(lista, función)], aplicar una función a todos y cada uno de los elementos de una lista, devolviendo otra lista con el mismo número de elementos (cada uno transformado por la función).
-
-\item[reduce(lista, función)], similar a map, solo que la función se aplica sobre los elementos secuencialmente, devolviendo un resultado único (acumulado a partir de los resultados parciales de la función en los distintos elementos).
-
-\item[pattern matching], comparar una expresión contra unos determinados patrones, para sustituirla por otra expresión dada según el patrón con el que coincida.
-
-\end{description}
-
-
-\subsection*{Resumen gráfico rápido}
-\includegraphics[width=\textwidth]{Paradigma de programacion - FUNCIONAL}
-
-
-\subsection*{Ejemplos de código}
-RaizCuadradaPorElMetodoDeNewton.sc
-\begin{lstlisting}[frame=single]
-
-  def ValorAbsolutoDe(numero: Double) = {
-      if (numero < 0) -numero else numero  
-  }
-  
-//> ValorAbsolutoDe: (numero:Double)Double
-
-    
-  def RaizCuadradaDe(numero: Double) = {
-      def BucleDeTrabajo(aproximacion: Double): Double = {
-        if (esSuficientementeBuenaLa(aproximacion: Double)) 
-            aproximacion
-        else 
-            BucleDeTrabajo(Mejorar(aproximacion))
-      }
-      
-      def esSuficientementeBuenaLa(aproximacion: Double) = {
-          (ValorAbsolutoDe(aproximacion * aproximacion - numero) / numero) < 0.001
-      }
-      
-      def Mejorar(aproximacion: Double) = {
-          (aproximacion + (numero / aproximacion)) / 2
-      }
-    
-      val aproximacionInicial = 1.0
-      BucleDeTrabajo(aproximacionInicial)
-  }
-
-//> RaizCuadradaDe: (numero: Double)Double
-
-    
-  RaizCuadradaDe(4)
-
-//> res0: Double = 2.000609756097561
-
-  RaizCuadradaDe(385.23)
-
-//> res1: Double = 19.62736097049756
-
-}
-\end{lstlisting}
-
-\subsection*{notas provisionales}
-``Can programming Be Liberated from the von Neumman Style? A Functional Style and Its Algebra of Programs'' . John Backus . ACM Touring Award Lecture, 1977
-\\ \url{https://www.google.es/url?sa=t&rct=j&q=&esrc=s&source=web&cd=3&cad=rja&uact=8&ved=2ahUKEwjTm4jd_ZziAhWEz4UKHQvKBs0QFjACegQIAhAC&url=https%3A%2F%2Fwww.thocp.net%2Fbiographies%2Fpapers%2Fbackus_turingaward_lecture.pdf&usg=AOvVaw0-24JgqQJMYv4JVznvQTZw}
-
-``Working Hard to Keep it Simple'' . Martin Odersky
-\\ \url{https://youtu.be/3jg1AheF4n0}
-
-``OCaml for the Masses: why the next language you learn should be functional''. Yaron Minsky . Communications of the ACM, 2011
-\\ \url{http://lpsil.u-bourgogne.fr/master1/mi1-tc5/MATH/michelucci/MIGS_2015_16/TEXTES/Why_ML_is_good_minsky.pdf}
-
-
-\section*{Resumen del capítulo}
-El nivel más básico de programación de un ordenador es hablándole directamente en su propio lenguaje: lenguaje ensamblador o algún lenguaje que permita llegar a ese nivel, tal como C o Ada. Este nivel de trabajo se suele utilizar allá donde se necesite aprovechar al máximo las capacidades de una máquina (sistemas embebidos) o allá donde se necesite saber con exactitud lo que está haciendo la máquina (sistemas de misión-crítica)
-
-Pero los humanos necesitamos hablar un lenguaje que nos resulte comprensible a nosotros. Así es que, para un uso general, es preferible usar un lenguaje de más alto nivel. Uno que permita estructurar adecuadamente el código fuente, de tal forma que las personas podamos entender la estructura del programa. Ahí es donde surgen varios paradigmas.
-
-Cada lenguaje suele estar mejor preparado para programar según alguno de esos paradigmas:
-\begin{itemize}
-\item programación estructurada: C, Pascal,...
-\item programación orientada a objeto: C++, C\#, Java, Phyton, JavaScript, PHP, Objetive-C, Ruby, Perl,...
-\item programación funcional: Haskell, Common Lisp, Scala, Scheme, ML, OCaml, F\#, Clojure, ... 
-\end{itemize}
-
-Pero prácticamente ningún lenguaje es puro en ese sentido. Sobre todo los lenguajes más populares, tienden a mezclar construcciones de diversos paradigmas. Permitiendo al programador trabajar en uno u otro estilo, según sus preferencias y según el problema a resolver.
-
-De ahí la importancia de conocer los diversos paradigmas. Por lo menos a nivel de reconocer las construcciones típicas de cada paradigma.
-
-
-\chapter{Arquitecturas de software}
-
-\section{Según se reparte el código, se puede distinguir entre:}
-
-
-\subsection{Pella de arcilla (``ball of mud'')}
-El programa se compone de un solo bloque (estructurado o no en funciones). Un solo bloque que se encarga de todo.
-
-Suele ser típico en pequeños sistemas embebidos o en pequeños programas de prueba.
-
-\begin{center}
-\includegraphics[width=0.5\textwidth]{arquitectura - ball of mud}
-\end{center}
-
-\subsection{Monolito}
-
-La aplicación, el programa, se estructura en secciones o capas (más o menos) diferenciadas. Idealmente, cada sección se relaciona con las demás a través de interfaces (más o menos) claros; como si fueran las costuras de un traje.
-
-Pero todas las secciones están en un solo cuerpo de código. Un cuerpo que se compila y se distribuye como un todo. 
-
-\begin{center}
-\includegraphics[width=0.5\textwidth]{arquitectura - monolito}
-\end{center}
-
-\subsection{Distribuido}
-
-La aplicación se estructura en partes independientes. Cada parte tiene su propio cuerpo de código. Cada parte se puede compilar y distribuir separadamente.
-
-Las distintas partes ``colaboran'' entre sí según unos interfaces y protocolos preestablecidos.
-
-\includegraphics[width=\textwidth]{arquitectura - distribuido}
-
-
-
-\section{Según cómo se reparte la funcionalidad, se puede distinguir entre:}
-
-\subsection{Desktop, ``de escritorio''}
-Existe una división de tareas entre una parte que podemos denominar `sistema operativo' y otra parte que es el programa en sí.
-
-El sistema operativo se encarga de interactuar con el hardware y de ofrecer unos servicios básicos de uso común. Servicios tales como el acceso a la CPU (multitarea), a la memoria (paginación), al sistema de almacenamiento de datos, a los periféricos (pantalla, teclado, ratón, impresora,...), a sistemas externos (comunicaciones), a mecanismos de seguridad (autentificación/permisos), etc.
-
-El programa realiza el trabajo concreto para el que ha sido desarrollado. Aprovechando, allá donde le sean útiles, los servicios del sistema operativo.
-
-\subsection{Cliente/Servidor}
-La división de tareas es más avanzada y ya no está restringida al interior de una sola máquina. Una parte del programa se ubica en otra máquina externa.
-
-Habitualmente, 
-\begin{itemize}
-\item La parte en la máquina del usuario (cliente) se encarga de interactuar con este. 
-\item Y la parte exterior (servidor) se encarga de manejar/almacenar la información.
-\end{itemize}
-
-En cierto modo, se podrian englobar también en esta categoria las `aplicaciones web'. En ellas el cliente es un navegador web estándar y el servidor es quien lleva la mayor parte del peso del trabajo a realizar. De esta forma, se ahorran problemas derivados de la instalación/mantenimiento de un programa cliente ad-hoc.
-
-\subsection{(micro)Servicios distribuidos}
-La división de tareas es total. El sistema lo componen multitud de pequeños programas, en una sola o en multitud de máquinas. Cada programa se encarga de una tarea concreta y es autosuficiente para realizarla; ofreciendo sus servicios al resto del sistema.
-
-Obviamente, son necesarios una serie de mecanismos estandarizados para:
-\begin{itemize}
-\item buscar el servicio requerido (no se puede llamar a algo que no se sabe que existe o no se sabe dónde está) 
-\item hacer uso de él (llamarlo, pasarle los datos/comandos de entrada correspondientes y recoger de él los datos/avisos de salida respectivos)
-\end{itemize}
-
-Los programas de aplicación, hacen uso de ese ``universo'' de servicios para completar el trabajo que vayan a realizar.
-
-\section*{Resumen del capítulo}
-El Santo Grial del software consiste en llegar a algo parecido a los componentes estandares de otras ramas de la ingenieria (tornillos, perfiles, resistencias, condensadores, interruptores diferenciales, reles, aditivos, válvulas, motores, etc.). 
-
-Es decir, llegar a tener módulos de software o servicios que podamos obtener directamente ``off-the-shelf'' (``comprandolos en el mostrador de una tienda''); y utilizarlos tal cual en la construcción de nuestros programas.
-
-nota: \footnotesize{Ver detalles prácticos sobre arquitecturas en el capítulo 14 ``Organización interna del código'' del documento \url{https://www.susosise.es/documentos/Mas_alla_del_IF_y_del_WHILE.pdf}}
-
-
-
-
-\chapter{Patrones de programación (patterns)}
-\section{Rationale, el por qué de los patrones}
-Un patrón de programación es la descripción detallada de un elemento software que resuelve un problema de  aparición frecuente en la construcción de programas. 
-
-Hay bastantes ya identificados, resueltos y documentados. Pero la técnica es también útil si nos encontramos repetidamente con un determinado problema: una vez resuelto, conviene escribir un patrón documentándolo.
-
-Tal y como se describe en el libro de ``la banda de los cuatro (GoF, Gang of Four)'' (Erich Gamma - Richard Helm - Ralph Johnson - John Vlissides), un patrón se compone de:
-\begin{itemize}
-\item Un nombre, algo fácil de recordar y de citar cuando deseamos referirnos al patrón.
-\item Una descripción del problema y del contexto en que suele surgir.
-\item Una descripción de la solución.
-\item Una descripción de las consecuencias derivadas de aplicar la solución en diferentes contextos.
-\end{itemize}
-
-Conocer algunos patrones puede ahorrar mucho tiempo y trabajo cuando surge el problema correspondiente. Pero lo más importante: la solución implementada apoyándonos en el patrón será mucho más robusta que cualesquiera otra que podamos desarrollar por nuestra cuenta.
-
-nota: Un patrón no es algo estático e inmutable. Es simplemente una manera de evitar reinventar la rueda cada vez. Si en alguna de las veces en que se use, se descubre algo que mejore el patrón; es conveniente actualizar el patrón para añadirle esa mejora.
-
-\section{Ejemplos de algunos patrones}
-\subsection{observer}
-Sirve para actualizar automaticamente varios objetos (los observadores)  cuando cambia uno (el observado)
-\subsection{chain of responsibility}
-Es útil cuando varios objetos pueden responder a una determinada tarea y no se desea encargar la tarea solo a uno concreto cada vez. La aplicación comunica la tarea a la cadena de objetos, cada uno de ellos la procesa (o no) y la retransmite (o no) al siguiente de la cadena.
-\subsection{command}
-Sirve para separar el comando (dar la orden de hacer algo) de la ejecución del mismo (hacerlo). Es útil cuando se ha de implementar una cola|tablón de comandos, un registro de los comandos ejecutados, un mecanismo para deshacer comandos (undo),...
-\subsection{memento}
-Sirve para almacenar el estado interno de un objeto o sistema en un determinado instante. De tal manera que más tarde se pueda retornar a él si fuera necesario.
-\subsection{adapter}
-Sirve para convertir un interface en otro, facilitando así el trabajo entre objetos que de otra manera serian incompatibles. 
-\subsection{decorator}
-Sirve para añadir funcionalidad a un objeto sin alterar la definición estática de este.
-\subsection{facade}
-Sirve para unificar varios interfaces en uno, facilitando así el uso del subsistema que implementa los interfaces.
-\subsection{proxy}
-Sirve para para controlar el acceso a un determinado objeto, obligando a que todo acceso a él se haga a traves de otro objeto interpuesto (el intermediario -proxy-)
-
-\section*{Resumen del capítulo}
-Cuando uno se encuenta repetidamente con un tipo de tarea concreta. Conviene anotar y documentar la solución implementada; para evitar tener que reinventarla la próxima vez que surja.
-
-Si esa anotación es compartida y refinada por muchas personas a lo largo del tiempo. Llega a convertirse en un patrón que refleja la mejor manera de solucionar esa tarea concreta.
-
-
-
-
-\chapter{Algoritmos}
-El mundo de los algoritmos es muy vasto. Existen multitud de estudios sobre la mejor forma de realizar prácticamente cualquiera de las tareas que ha de realizar un ordenador.
-
-Hace unas décadas, conocer detalladamente estos algoritmos era muy importante para cualquier programador. Solia ser necesario escribirlos uno mismo allá donde fueran necesarios. 
-
-Hoy en día, prácticamente todos los sistemas y lenguajes más populares disponen de bibliotecas que implementan (casi)todos ellos. Si no vienen incluidos de serie, en la propia herramienta; casi seguro que se pueden obtener incorporando bibliotecas de terceros.
-
-Pero tanto antes como ahora, es necesario conocer la gama de algoritmos existentes y los principales usos de cada tipo. De tal forma que, ante una tarea concreta, se sepa encontrar la forma más adecuada de abordarla. 
-
-nota: A la hora de hablar sobre algoritmos es importante conocer la notación `big O'. Se usa para indicar los límites máximo \textbf{O}( ), mínimo \textbf{$\Omega$}( ) y medio \textbf{$\Theta$}( ) de consumo de recursos (memoria, tiempo,...) por parte de un algoritmo. Esto permite comparar el rendimiento de distintos algoritmos con respecto al número de casos a tratar.
-
-Por ejemplo, algoritmos con evoluciones lineales del orden de \textbf{O}(n) son manejables: 1, 2, 3, 4, 5, 6, 7, 8,\ldots, 14, 15,\ldots, 19, 20,\ldots 
-\\pero algoritmos con evoluciones exponenciales del orden de \textbf{O}($2^n$) pronto se vuelven  imposibles: 2, 4, 8, 16, 32, 64, 128, 256, 512,\ldots, 16.384, 32768,\ldots, 524.288, 1.048.576,\ldots 
-\\y mucho más con evoluciones combinatorias del orden de \textbf{O}(n!)  1, 2, 6, 24, 120, 720, 5.040, 40.320,\ldots, 87.178.291.200, 1.307.674.368.000,\ldots, 6.758.061.133.824.000, 1,35·E+17,\ldots
-
-\section{Ordenación, clasificación y búsqueda}
-Situaciones donde se han de almacenar y organizar datos.  Usando criterios de ordenación o de cercania entre ellos. Para luego facilitar la búsqueda de información dentro de esos datos.
-
-\subsection{búsquedas directas}
-Los clásicos mergesort, boublesort,...
-
-\subsection{estructuración arbórea}
-Repartir los datos a lo largo y ancho de distintas ramas. De tal forma que luego sea más sencillo encontrarlos siguiendo la rama adecuada en cada caso.
-
-\subsection{estructuración indexada}
-Utilizar unas tablas auxiliares de índices, para disponer de varios ordenamientos dentro de un mismo conjunto de datos. De tal forma que se pueda utilizar el ordenamiento más adecuado en cada caso. Una vez localizados los resultados de la búsqueda, los índices permiten recuperar los datos propiamente dichos.
-
-\subsection{estructuración semántica}
-Almacenar, junto con los propios datos, información acerca de las relaciones entre los ellos (por ejemplo, en forma de triples `sujeto-predicado-objeto'). Así es posible procesar de forma automática esa metainformación, utilizando motores de inferencia, para ``descubrir'' información que no está registrada de forma explícita en el sistema.
-
-\section{Cálculo numérico o simbólico}
-Situaciones donde se ha de resolver cierta formulación matemática. Para obtener unos resultados concretos (solución numérica) o para obtener una fórmula concreta (solución simbólica).
-
-\subsection{ecuaciones lineales}
-Cálculo matricial.
-
-\subsection{derivación e integración}
-Tener en cuenta que la derivación es: sencilla de realizar en forma simbólica, pero compleja de realizar de forma numérica. Mientras que la integración es al contrario: sencilla de realizar de forma numérica, pero compleja de realizar de forma simbólica.
-
-\subsection{series de Taylor}
-Muy útiles para aproximar funciones tales como exponenciales, logarítmicas, trigonométricas,... usando funciones polinomiales (sumas y multiplicaciones).
-
-Pueden ser de utilidad si no disponemos de una biblioteca de funciones matemáticas en el sistema donde estemos programando. O si necesitamos optimizar al máximo el uso de ciclos de procesador en sistemas muy limitados (por ejemplo, en pequeños sistemas embebidos).
-
-\subsection{transformadas de Fourier}
-Muy útiles para analizar la variación/evolución periódica de una serie de datos, tanto desde el punto de vista ``temporal'' (dato vs. marco temporal de referencia donde evoluciona), como desde el punto de vista ``espectral'' (frecuencias fundamentales y armónicas con las que se repiten los datos).
-
-Son muy utilizadas en procesamiento de señales, en filtrado de datos, etc.
-
-\section{Optimización, programación lineal}
-El típico problema de optimización suele ser: 
-\begin{itemize}
-\item establecidas unas ciertas relaciones (fórmulas de cálculo de valores) entre las variables intervinientes, 
-\item y establecidas una serie de restricciones (mayor que..., menor que…, igual que...) en el rango de valores para algunas de ellas; 
-\item obtener el mínimo (o el máximo) valor posible para alguna de ellas.
-\end{itemize}
-
-\section{Combinatorios}
-Cuando no hay forma de obtener directamente la solución de forma analítica o numérica. Se ha de recurrir a técnicas estadísticas para:
-\begin{itemize}
-\item Por un lado, saber cuantas posibilidades (combinaciones) de solución podria haber (espacio de estados).
-\item Por otro lado, generar|explorar todas esas posibilidades para encontrar la o las que realmente son soluciones.
-\end{itemize}
-
-\subsection{búsqueda por ``fuerza bruta''}
-Explorar todas las combinaciones posibles, una a una, hasta dar con aquellas que puedan considerarse una solución. Y, de entre ellas, aquella que se considera la mejor solución.
-Esto suele ser factible en problemas de complejidad ``p''. Aquellos en que la cantidad de combinaciones posibles es polinómica respecto a la cantidad de elementos a tratar (n):
-\begin{itemize}
-\item logaritmica (del orden de \textbf{O}(log n)), 
-\item lineal (del orden de \textbf{O}(n)), 
-\item cuadratica (del orden de $\textbf{O}(n^2)$),... . 
-\end{itemize}
-
-Por ejemplo, con una evolución \textbf{O}(n*3) la cantidad de combinaciones posibles es: f(0)=0, c(1)=3, c(2)=6, c(3)=9, c(4)=12, c(5)=15, c(6)=18, c(7)=21, ... , c(15)=45, ... , c(50)=150, ...
-
-Pero se vuelve rápidamente imposible en problemas de complejidad ``np-completo'' (``np-hard''). Aquellos en que la cantidad de combinaciones posibles no es polinomica con respecto a la cantidad de elementos a tratar. 
-
-Por ejemplo, con una evolución exponencial (del orden de $\textbf{O}(2^n)$) la cantidad de combinaciones posibles es: c(0)=0, c(1)=2, c(2)=4, c(3)=8, c(4)=16, c(5)=32, c(6)=64, c(7)=128, ... , c(15)=32.768, ... , c(50)=1.125.899.906.842.624, ...
-
-Para este último tipo de problemas se hace imprescindible recurrir a técnicas que permitan llegar a una solución aceptable (aunque puede que no óptima) sin necesidad de explorar todas y cada una de las opciones posibles.
-
-\subsection{búsquedas reducidas, en profundidad o en anchura}
-Un espacio de estados que puede representarse de forma arbórea, se puede ir recorriendo pasando por todas las ramas hasta un cierto nivel en cada una en cada paso (anchura) o por ramas completas en cada paso (profundidad).
-
-Existen métodos para limitar esa búsqueda, saltándose estados o pasos en ella según unas ciertas reglas. Normalmente estos métodos reducidos no suelen llegar a la solución más óptima, pero sí que permiten obtener soluciones ``suficientemente buenas'' para la situación concreta que se está tratando.
-
-Algunos ejemplos de métodos de reducción:
-\begin{itemize}
-\item Max-Min, minimax
-\item Alpha-beta prunning
-\item Hill climbing
-\item etc
-\end{itemize}
-
-\subsection{heurísticas}
-Reducir el número de estados a explorar|calcular, basándose en conocimientos ya existentes sobre otros problemas parecidos. La solución empírica así obtenida puede ser solo parcial o algo burda; pero lo importante es que sea útil en la situación concreta que se está tratando.
-
-\subsection{métodos de Montecarlo}
-Reducir el número de estados a explorar|calcular, haciendo uso de exploraciones|cálculos parciales estocásticos (probabilísticos). En no pocos casos, se obtienen resultados exactos o muy cercanos a los exactos.
-
-\section{Algoritmos que aprenden}
-Tienen mecanismos de realimentación que les permiten ir comparando las soluciones que calculan|encuentran con las soluciones correctas que se buscan. En base a esta realimentación, el algoritmo se va autoajustando; guardando los ajustes que mejoran la tasa de aciertos y descartando los que la empeoran.
-
-El periodo inicial de aprendizaje se suele realizar sobre una muestra seleccionada de casos. Siendo muy importante la adecuada selección de los mismos, para evitar la introducción de sesgos no deseados en el sistema.
-
-\section{Algoritmos que evolucionan}
-Tienen mecanismos que les permiten irse modificando a sí mismos de forma aleatória (mutación) o combinacional (reproducción sexual). Contando también con mecanismos para comparar distintas versiones de sí mismos (generaciones) tras las modificaciones; potenciando aquellas que mejoran el algoritmo (lo acercan a los objetivos perseguidos) y relegando aquellas que lo empeoran.
-
-\newpage
-\section*{Resumen del capítulo}
-El mundo de los algoritmos (formas de resolver tareas|problemas) es muy vasto. Y se va enriqueciendo día a día.
-
-Es muy posible que la tarea que tengamos en un cierto momento entre manos, haya sido también la tarea a resolver por otras personas en otros momentos.
-
-Y es muy posible que alguna de esas personas haya explorado a fondo las distintas formas de abordarla, dejando escrito cúal es la más eficiente o la más eficaz.
-
-
-\vspace{2cm}
-Una referencia para profundizar en algunas de las estructuras de datos y algoritmos más habituales: \url{https://www.programiz.com/dsa}
-
-
-\chapter{¿Gigantes\ldots? o ¿Molinos?\ldots}
-Temas con los que es muy sencillo iniciar una encendida discusión quasi-religiosa entre programadores. 
-
-\section{cómo nombrar las variables ?!?}
-camelCaseParaLosNombres ?
-\\snake\_case\_para\_los\_nombres ?
-\\PascalCaseParaLosNombres ?
-
-\vspace{0.5cm}
-Hungarian notation (intCantidad, fltPrecio, txtNombre,\ldots),
-\\o nombres normales (cantidad, precio, nombre,\ldots)?
-
-\section{cómo abrir-cerrar bloques ?!?}
-\begin{lstlisting}[frame=single]
-Función {
-    instrucciones;
-}  ?
-
-Función
-{
-    instrucciones;
-} ?
-
-Función { instrucciones; }  ?
-\end{lstlisting}
-
-\section{qué usar para la indentación: tabuladores ?!? o espacios ?!? }
-tabuladores, para que cada cual elija la distancia de indentado con la que desea ver el código ?
-
-espacios, para que se preserve en todo momento la intención de indentado de quien ha escrito el código ? 
-
-\section{longitud de nombres para variables y funciones ?!?}
-teclear lo menos posible ?
-
-que quede lo más claro posible ?
-
-\section{usar documentación/comentarios externos o hacer que el propio código sea claro de leer ?!?}
-Documentar el programa fuera del código, para que lo puedan comprender hasta las personas que no sean capaces de leer el código. ?
-
-Hacer el propio código lo suficientemente legible, claro y bien estructurado. ?
-
-O usar ambas cosas (Literate Programming), cada cual para lo que es más válida: los comentarios para explicaciones largas/detalladas (la teoria en que se ha basado el enfoque dado al programa) y el propio código para el funcionamiento del programa (lo que este hace realmente). ?
-
-\section{Un consejo:}
-La mayoria de todas estas discusiones se suelen sobrecalentar en exceso. Porque lo que realmente se está discutiendo en muchos casos no son aspectos técnicos, sino más bien gustos personales, costumbres adquiridas, formas de trabajar derivadas de limitaciones propias de las herramientas utilizadas (¡a veces incluso de herramientas usadas en el pasado, cuyas limitaciones ya no están presentes en las herramientas actuales!), etc.
-
-Si surge algo similar en nuestro entorno, hay que intentar reducir el problema a sus aspectos formalmente técnicos:
-\begin{itemize}
-\item ¿qué es lo que buscamos obtener, cual es la meta?, 
-\item ¿cómo afecta realmente a esa meta el uso de una u otra manera de trabajar?
-\end{itemize}
-
-Si aún enfocandolo así, la discusión sigue encendida; y es necesario seguir discutiendo. Suele ser conveniente ponerse a analizar (\begin{footnotesize}en nuestro fuero interno, no abiertamente; so pena de abrir otra discusión igual o más encendida que la que tenemos entre manos\end{footnotesize}) aspectos tales como cuánto trabajo extra le podria suponer a cada cual los cambios de forma de trabajar que se están proponiendo; o si todos conocen cómo aprovechar correctamente las herramientas. En el caso de algunas personas participantes en la discusión, es muy posible que ahí resida el motivo de la cerril defensa de su postura. Mitigando la cantidad de trabajo que le supone o explicándole por qué se ve innecesario algo extra cuando ya lo da la herramienta, es posible que se logre sacar a esa persona de su encastillamiento.
-
-(nota: Al valorar la cantidad de trabajo que algo supone para alguien, no perder de vista la subjetividad de la medida. A todos nos cuesta menos hacer aquello que nos gusta y nos cuesta mucho más aquello que nos disgusta. Y no todos tenemos los mismos gustos.)
 
 \chapter{Algunos conceptos importantes para obtener software de calidad}
 
@@ -1758,6 +583,61 @@ Cada servicio ha de tener una sola responsabilidad, ha de hacer una sola cosa y 
 Cada servicio no ha de ser demasiado ``grande'', pero tampoco demasiado ``pequeño''. Ha de contener la cantidad justa de funcionalidad,  representando una operación coherente, pero sin que sea necesario llamar a multitud de servicios para realizar el trabajo que se desee hacer en un momento dado.
 
 
+\chapter{¿Gigantes\ldots? o ¿Molinos?\ldots}
+Temas con los que es muy sencillo iniciar una encendida discusión quasi-religiosa entre programadores. 
+
+\section{cómo nombrar las variables ?!?}
+camelCaseParaLosNombres ?
+\\snake\_case\_para\_los\_nombres ?
+\\PascalCaseParaLosNombres ?
+
+\vspace{0.5cm}
+Hungarian notation (intCantidad, fltPrecio, txtNombre,\ldots),
+\\o nombres normales (cantidad, precio, nombre,\ldots)?
+
+\section{cómo abrir-cerrar bloques ?!?}
+\begin{lstlisting}[frame=single]
+Función {
+    instrucciones;
+}  ?
+
+Función
+{
+    instrucciones;
+} ?
+
+Función { instrucciones; }  ?
+\end{lstlisting}
+
+\section{qué usar para la indentación: tabuladores ?!? o espacios ?!? }
+tabuladores, para que cada cual elija la distancia de indentado con la que desea ver el código ?
+
+espacios, para que se preserve en todo momento la intención de indentado de quien ha escrito el código ? 
+
+\section{longitud de nombres para variables y funciones ?!?}
+teclear lo menos posible ?
+
+que quede lo más claro posible ?
+
+\section{usar documentación/comentarios externos o hacer que el propio código sea claro de leer ?!?}
+Documentar el programa fuera del código, para que lo puedan comprender hasta las personas que no sean capaces de leer el código. ?
+
+Hacer el propio código lo suficientemente legible, claro y bien estructurado. ?
+
+O usar ambas cosas (Literate Programming), cada cual para lo que es más válida: los comentarios para explicaciones largas/detalladas (la teoria en que se ha basado el enfoque dado al programa) y el propio código para el funcionamiento del programa (lo que este hace realmente). ?
+
+\section{Un consejo:}
+La mayoria de todas estas discusiones se suelen sobrecalentar en exceso. Porque lo que realmente se está discutiendo en muchos casos no son aspectos técnicos, sino más bien gustos personales, costumbres adquiridas, formas de trabajar derivadas de limitaciones propias de las herramientas utilizadas (¡a veces incluso de herramientas usadas en el pasado, cuyas limitaciones ya no están presentes en las herramientas actuales!), etc.
+
+Si surge algo similar en nuestro entorno, hay que intentar reducir el problema a sus aspectos formalmente técnicos:
+\begin{itemize}
+\item ¿qué es lo que buscamos obtener, cual es la meta?, 
+\item ¿cómo afecta realmente a esa meta el uso de una u otra manera de trabajar?
+\end{itemize}
+
+Si aún enfocandolo así, la discusión sigue encendida; y es necesario seguir discutiendo. Suele ser conveniente ponerse a analizar (\begin{footnotesize}en nuestro fuero interno, no abiertamente; so pena de abrir otra discusión igual o más encendida que la que tenemos entre manos\end{footnotesize}) aspectos tales como cuánto trabajo extra le podria suponer a cada cual los cambios de forma de trabajar que se están proponiendo; o si todos conocen cómo aprovechar correctamente las herramientas. En el caso de algunas personas participantes en la discusión, es muy posible que ahí resida el motivo de la cerril defensa de su postura. Mitigando la cantidad de trabajo que le supone o explicándole por qué se ve innecesario algo extra cuando ya lo da la herramienta, es posible que se logre sacar a esa persona de su encastillamiento.
+
+(nota: Al valorar la cantidad de trabajo que algo supone para alguien, no perder de vista la subjetividad de la medida. A todos nos cuesta menos hacer aquello que nos gusta y nos cuesta mucho más aquello que nos disgusta. Y no todos tenemos los mismos gustos.)
 
 
 \chapter{Sugerencias desde la cocina, algunas ideas prácticas}
@@ -2315,7 +1195,9 @@ Este tipo de problemas se pueden solventar si, como programadores, aunque todos 
 
 Nota: Esta última recomendación es broma. Realmente lo que se pretende con esta disertación sobre tipos de control y tipos de usuario, es tenerlo presente a la hora de elaborar requisitos. Para evitar caer en (*).
 
-\chapter{apéndice: algo de bibliografia}
+
+
+\chapter{Algo de bibliografia}
 
 \section{notas históricas: para situarnos en los distintos marcos temporales}
 En la (corta) historia de la informática, se pueden distinguir cinco épocas:
@@ -2445,6 +1327,1128 @@ Niklaus Wirth: \url{https://inf.ethz.ch/personal/wirth/index.html}
 
 ``Structure and Interpretation of Computer Programs'' . Harold Abelson . Gerald Jay Sussman . Julie Sussman . MIT Press, 1996.
 \url{https://mitpress.mit.edu/sites/default/files/sicp/index.html}
+
+\chapter{apéndice: Un repaso rápido de elementos importantes.}
+\section{Herramientas}
+
+El \textbf{editor} (escribir código fuente), el \textbf{compilador} (generar programa ejecutable) y el \textbf{depurador} (seguir la ejecución del programa paso a paso) suelen ser herramientas conocidas por toda persona que se dedica a la programación. Ya que sin esas tres, difícilmente se puede programar nada.
+
+Pero hay otras herramientas que también es preciso conocer para ser productivo:
+\begin{itemize}
+\item El \textbf{gestor de versiones} (almacenar el código fuente en un repositorio controlado).
+\item El marco de \textbf{ejecución de pruebas} (comprobar que las distintas funciones del programa hacen lo que se supone que deben hacer).
+\item El \textbf{comprobador de código} (avisar del incumplimiento de ciertas reglas o convenciones).
+\item El \textbf{analizador de rendimiento} (visualizar tiempos de ejecución de cada función del programa).
+\item Formas de \textbf{automatizar} las tareas más repetitivas.
+\item Formas de monitorizar el correcto funcionamiento de todo el sistema.
+\end{itemize}
+
+Y, aunque sea obvio, nunca está de más recalcar que cuanto más a fondo se conozcan las herramientas, más productivo se es con ellas.
+
+
+\subsection{Editor, compilador (``compiler'') y enlazador (``linker'')}
+Herramientas para escribir código fuente y traducirlo al código máquina correspondiente.
+
+En un editor, se suele apreciar el grado y calidad de la asistencia prestada a hora de escribir código en el lenguaje de programación que se vaya a emplear. Ayudas tales como: el coloreado sintáctico, autocompletar sentencias, dar información contextual de las diversas funciones y opciones disponibles en las bibliotecas, facilitar refactorizaciones (por ejemplo: renombrar variables o funciones, extraer trozos de código a su propia función, modificar la signatura de una función,...), etc.
+
+En un compilador, se suele apreciar su velocidad de compilación y el grado de optimización que sea capaz de alcanzar. El grado de optimización, suele ser posible ajustarlo, como mínimo en dos niveles:
+\begin{itemize}
+\item Durante la programación (``debug''), se suele compilar sin optimización, generando directamente el código máquina tal cual (para que sea sencillo correlacionarlo con el código fuente). 
+\item En el compilado final para su uso en producción (``release''), se tiende a reorganizar y optimizar lo máximo posible el código máquina generado (para obtener el máximo rendimiento en ejecución).
+\end{itemize}
+
+En un enlazador (``linker''), antaño se solia apreciar la flexibilidad que permitiera al combinar entre sí porciones de código máquina generado manualmente desde distintas fuentes. Pero hoy en día el proceso de componer el programa ejecutable final es totalmente automático en la mayoria de ocasiones; por lo que el papel desempeñado por el enlazador tiende a pasar totalmente desapercibido.
+
+\vspace{1cm}
+nota:
+
+Lo habitual es que estas tres herramientas, junto al depurador, vengan integradas en un IDE (Integrated Development Environment). Dentro del IDE actuan las cuatro como si fueran una única herramienta; siendo mucho más sencillo su uso.
+
+Pero, aun trabajando dentro de un IDE integrado, es conveniente tener en cuenta que son cuatro herramientas separadas que forman una cadena (toolchain). Así se comprenden mejor algunas de las  opciones/configuraciones/avisos/… que pueden ir apareciendo.
+
+
+
+\subsection{Automatización del proceso de compilación}
+En los primeros tiempos, cuando se trabajaba directamente desde la línea de comandos, repitiendo manualmente cada ciclo de compilar los distintos módulos y de linkarlos todos para componer el programa. Pronto se llegó a la conclusión de que se requería algún sistema para llevar la cuenta de qué módulo depende de cual y para automatizar el ciclo de compilación-linkado. Uno de los sistemas pioneros fue Make (\url{https://es.wikipedia.org/wiki/Make}). 
+
+Más tarde, con el auge de los IDE, cada fabricante de estas herramientas fue introduciendo más o menos su propio sistema; funcionando de forma automática ``bajo el capó''. Y los programadores fuimos olvidando que estaban detrás de ``ese botón que compila y deja listo el programa para su debugeo o ejecución''.
+
+Últimamente, con el auge del desarrollo multiplataforma, han vuelto a cobrar fuerza sistemas de automatización portables y más o menos independientes del IDE. Algunos de los más difundidos hoy en día son:
+\\ \url{https://docs.microsoft.com/es-es/visualstudio/msbuild/msbuild}
+\\ \url{https://maven.apache.org/}
+\\ \url{https://cmake.org/}
+
+
+
+\subsection{El compilador es tu mejor aliado,... si le permites supervisar el código.} 
+Cuando más específica sea la definición de tipos de variables y de los parámetros que acepta una función, más información tendrá el compilador para detectar operaciones ilogicas. Y cuantos más avisos pueda dar al respecto, más problemas futuros se podrán evitar. Cualquier error es más fácil de arreglar si se detecta en tiempo de compilación, que si se detecta en tiempo de ejecución.
+
+En general, es mala idea relajar el nivel de avisos del compilador simplemente ``para que no nos moleste'' y nos permita utilizar variables de tipo genérico, pasar parámetros de cualquier tipo, utilizar las conversiones por defecto,... 
+
+Mejor perseguir justo lo contrario: \textbf{fijar el nivel más restrictivo y atender cuidadosamente a cada uno de los errores (error) o avisos (warning)} que el compilador presente. Atender a los errores porque, obviamente, mientras haya errores no se podrá terminar el proceso de compilación y no se tendrá ningún ejecutable. Atender a los warning porque, aunque no impidan completar el proceso de compilación, pueden ser una advertencia de posibles problemas futuros (igual que el humo suele ser indicador de un posible fuego).
+
+Esta forma de proceder puede parecer una pérdida de tiempo. Sobre todo sabiendo que, en muchas ocasiones, simplemente relajando la sensibilidad del compilador, es posible conseguir que pase por alto errores y termine creando el ejecutable. La tentación es grande, sobre todo cuando somos principiantes y muchos de los errores/warnings nos resultan extraños.
+
+Un consejo importante: Todo el tiempo invertido en investigar acerca de un error o warning es tiempo bien invertido. Nos ayudará a conocer mejor el lenguaje y el sistema sobre el que estamos trabajando. Este conocimiento, progresivamente, nos irá permitiendo escribir mejor código, más robusto y con menos errores/warnings.
+
+\subsection{El tratamiento de excepciones también es tu aliado,... si no lo usas para enterrar la cabeza bajo el suelo e ignorar las excepciones.}
+La construcción try...catch...finally es muy útil; si se utiliza para lo que fué concebida: tratar posibles situaciones excepcionales que se puedan dar durante la ejecución. 
+
+Utilizada indiscriminadamente para lo contrario: para enmascarar cualquier tipo de situaciones excepcionales, simplemente para no ``asustar'' al usuario o para que los errores ``no molesten''. Es totalmente contraproducente. 
+
+Una de las reglas básicas al programar es que si algo ha de cascar, que casque lo antes posible y lo más ruidosamente posible,... para poderlo arreglar (o al menos mitigar). 
+
+No hay nada más peligroso que casques silenciosos que no se manifiestan,... nadie sabe que han ocurrido,... hasta que los errores se van acumulando y acaban explotando por el lado más imprevisible.
+
+
+Es importante tener presente los tipos de situaciones excepcionales (fuera de nuestro control) que pueden suceder en cada parte del programa. Esto no significa que se deba programar todo el tiempo de forma defensiva. Casi todo lo que sucede dentro del programa está bajo el control del programa. Pero lo que sucede fuera del programa no está bajo su control y requiere supervisión para no introducir problemas. Puntos  tales como las interfaces con periféricos externos o la interacción con el usuario, son posibles puntos problemáticos que merecen ir protegidos dentro de un try...catch. 
+
+El mejor indicativo de si es necesario o no poner algo dentro de un try..catch es lo que se vaya a programar en la parte catch:
+\begin{itemize}
+\item Es una mala idea poner algo dentro de un try...catch simplemente ``por si acaso'', disponiendo un único catch para capturar ``cualquier excepción'' y con la única acción de guardar el error en un log ``para luego revisarlo, si fuera necesario''. 
+\item En cambio, un try…catch se justifica plenamente cuando captura situaciones excepcionales concretas; disponiendo de catch específicos para tratar cada una de ellas.
+\end{itemize}
+
+
+\vspace{1cm}
+\fbox{
+\parbox{\textwidth}{
+Como regla general: 
+\\las excepciones "\textbf{lanzarlas cuanto antes, interceptarlas lo más tarde posible}".
+
+\vspace{0.3cm}
+Es contraproducente interceptar excepciones allá donde no se puede hacer casi nada con ellas\ldots
+
+\ldots mejor dejarlas subir por la pila (stack) de llamadas en la aplicación  (throws\ldots)
+
+\ldots hasta el sitio donde se pueda hacer algo realmente útil.
+
+\vspace{0.3cm}
+Por ejemplo, una excepción (situación anómala)  que se produzca al guardar algo en disco:
+\begin{itemize}
+\item El módulo gestor de disco no tiene información suficiente, no podria hacer nada más allá de reintentar y reintentar la escritura. 
+\item Sin embargo entre el gestor de lógica de negocio y el gestor de interface si que podrian hacer algo como por ejemplo: avisar al usuario de que necesita liberar espacio en disco y proponerle un botón para que reintente el guardado una vez haya liberado espacio.
+\end{itemize}
+}
+}
+
+
+\subsection{Depurador (``debugger'')}
+Herramienta para realizar un seguimiento detallado del funcionamiento interno del programa. Facilitando así la localización de errores.
+
+Es importante dominar con fluidez:
+\begin{itemize}
+\item la colocación de puntos de parada (fijos, condicionales,...), 
+\item el avance selectivo en la ejecución (instrucción a instrucción, función a función, hasta la siguiente parada,...) 
+\item y la inspección del contenido de variables.
+\end{itemize}
+
+El depurador permite visualizar lo que realmente está haciendo la máquina. 
+
+Seguir detalladamente la ejecución del programa puede resultar tedioso. Ya que la forma mecanico-secuencial de trabajar de la máquina es muy diferente de la forma empirico-paralela de pensar de los seres humanos. Pero muchas veces es necesario ``ponerse en el lugar'' de la máquina, para saber dónde está ese fallo que se nos escapa.
+
+En ese sentido, yo diria que es hasta provechoso todo el tiempo empleado con el depurador. Nos permite comprender mejor la forma de trabajo de la máquina. (Y, ¿que es programar?... más que decirle a la máquina lo que ha de hacer y cómo queremos que lo haga.) Cuanto más familiaridad tengamos con su forma de trabajar, mejores programas podremos escribir para ella.
+
+
+
+\subsection{Marco de ejecución de pruebas\\(``test framework'')}
+Herramienta para ejercitar aisladamente partes del programa y verificar que funcionan según lo esperado.
+
+Suelen permitir la creación de baterias automatizadas de pruebas.  Incluyen un interface para lanzar partes de estas baterias y comprobar rápidamente los resultados. Los marcos de pruebas más completos suelen permitir la creación de componentes virtuales (mockups) para reemplazar aquellos componentes costosos de crear e inicializar para cada prueba (por ejemplo, acceso a ciertos servicios en la nube o consultas complejas contra una base de datos).
+
+Estas baterias de pruebas son muy útiles como ``red de seguridad'' durante los cambios que, inevitablemente, todo software va a tener durante su vida útil. Permiten intervenir dentro del código fuente con una cierta seguridad. Modificar/corregir un código fuente dotado de pruebas es mucho más sencillo que intervenir a ciegas en un código sin pruebas, rezando para no introducir involuntariamente errores durante la intervención.
+
+Durante su escritura, parece que escribir pruebas es perder el tiempo. Que escribir pruebas supone un doble trabajo (escribir la función que hace el trabajo y escribir la prueba que verifica que la función hace lo que se supone que hace). Además, al modificar el código, suele ser necesario revisar también pruebas correspondientes. 
+
+Todo ello supone una cantidad de trabajo que se antoja innecesario en ese momento; pero que bien se amortiza en el futuro.
+
+El trabajo extra de escribir pruebas se ve compensado con creces, ya que permite una evolución más segura del software. Modificaciones y refactorizaciones que suelen dar miedo (y tienden a evitarse) sobre códigos sin pruebas; son factibles y seguras en códigos dotados de ellas.
+
+\subsection{Gestor de versiones (``version control'')}
+Herramienta para:
+\begin{itemize}
+\item Almacenar el código fuente y otros recursos que componen el programa.
+\item Documentar los cambios que se van realizando sobre cualquiera de esos recursos.
+\item Evitar/resolver conflictos cuando varias personas están trabajando conjuntamente.
+\item Saber en todo momento cual es la versión oficial de cada recurso almacenado.
+\end{itemize}
+
+El funcionamiento de estos sistemas gestores suele basarse en el concepto de ‘commit’: acto de almacenar unos cambios en el sistema , junto a la correspondiente explicación que los documenta. 
+
+(nota: No todos los cambios tienen la misma importancia, de ahí la necesidad de guardar algún tipo de anotación -metadato- junto a cada cambio; aunque solo sea la fecha/hora y el usuario, que se guarda de forma automática.)
+
+La forma de trabajar suele ser sencilla\ldots:
+\begin{enumerate}
+\item Antes de empezar a trabajar, asegurarse de hacerlo sobre la última versión. (Este paso se suele denominar ‘check-out’ o ‘pull’ o ‘desproteger para mi’.)
+\item Se trabaja y se hacen cambios. 
+\item Si procede, se guardan esos cambios. (Este paso se suele denominar ‘check-in’ o ‘push’ o ‘proteger’.)
+\ldots pero requiere algo de disciplina.
+\end{enumerate}
+
+El aspecto más importante a tener en cuenta es la obligatoriedad de trabajar en pequeños pasos. El peor error que se puede cometer trabajando con un sistema de control de versiones es intentar no guardar nada hasta que ``esté totalmente terminado, comprobado y bien comprobado''. 
+
+Trabajar durante días o semanas sobre algo y luego pretender guardarlo en el sistema, es camino seguro al desastre.
+
+En sistemas de tipo centralizado estricto, esta situación se detecta rápidamente. Ya que cuando se hace el ‘check-out’ de un recurso para modificarlo, se suele imponer un bloqueo sobre el mismo (el resto de usuarios pueden leerlo, pero no modificarlo). Hasta que se realice el ‘check-in’ correspondiente para liberarlo (bien guardando cambios, o bien sin guardar cambios). 
+
+Pero incluso en ese tipo de sistemas, suele haber mecanismos para hacer una copia no controlada del recurso (‘check-out’ sin bloqueo), trabajar sobre ella y, si procede, terminar guardando los cambios en el sistema. (Son las personas las que son dueñas del trabajo que realizan, no el sistema de gestión de versiones.)
+
+Lo que nos vuelve a llevar al punto principal antes citado, un sistema de control de versiones requiere, sí o sí, un cambio en la forma de trabajar: se ha de trabajar en pasos incrementales, almacenando cada paso que se da. 
+
+Hemos de tener presente que cada recurso va evolucionando y que sus distintos (pequeños) cambios se han de ir coordinando entre las personas que los están haciendo. Esa es la función del sistema de control de versiones: facilitar la coordinación entre las personas.
+
+En ese sentido, un consejo: al igual que se almacenan cambios que modifican, también se pueden almacenar cambios que deshacen modificaciones anteriormente almacenadas. Todos los cambios se van acumulando y el contenido del sistema en un determinado punto es el resultado de todo el trabajo realizado hasta ese punto.
+ 
+
+\subsubsection*{notas importantes:} 
+Un  típico error de principiante suele ser pretender eliminar todo rastro de algo ya guardado ``para que no quede constancia de la equivocaciòn''. Esos intentos son camino seguro al desastre, ya que el sistema de gestión de versiones está diseñado precisamente para evitar eso. Es decir, para evitar que alquien cambie algo sin dejar rastro de lo que ha cambiado. 
+
+En caso de almacenar algo con errores, lo mejor es reconocerlo, indicandolo expresa y claramente en los ‘commit’/’check-in’ posteriores que almacenen las correcciones.
+
+Con más razón aún, si tras oficializar algo nos damos cuenta de que es necesario corregir algo en esa versión oficial…: realizamos una nueva oficialización, dejando bien claro que la anterior era un error y que la nueva versión oficial es la buena. 
+
+\subsection{La documentación del sistema}
+Lo único cierto en cualquier software es que algún día tendremos que volver a él para modificarlo. De ahí la necesidad de poder ``leerlo'' con fluidez para saber lo que hace.
+
+Como comentaba Donald Knuth en su artículo\footnote{Tener en cuenta de que el artículo está escrito en la década de los 80, de ahí las tecnologías que se citan en él.}
+\footnote{Al leer los documentos y ejemplos de código, tener en cuenta que están escritos en el característico ``estilo Knuth'' (muy preciso, detallado y cercano al lenguaje-máquina).}
+ \url{http://www.literateprogramming.com}: 
+\\``Let us change our traditional attitude to the construction of programs. Instead of imagining that our main task is to instruct a computer what to do, let us concentrate rather on explaining to human beings what we want a computer to do.''
+\\traducción: ‘Cambiemos la forma tradicional de encarar la construcción de programas. En lugar de pensar que consiste en indicar a un ordenador lo que tiene que hacer. Mejor considerar que consiste en explicar a otras personas lo que queremos que haga un ordenador.’
+
+Mucho se ha escrito acerca de cual puede ser la mejor manera de documentar un programa. Lo cierto es que es necesario algún tipo de documentación. Incluso para nosotros mismos. Ya que, al cabo de algunos meses o años de trabajar en otros proyectos, se hace difícil acordarse de todos los detalles involucrados en un determinado software. Pero es tarea harto difícil ser disciplinados y documentar adecuadamente todos esos detalles mientras estamos programando.
+
+A lo largo del tiempo, se han intentando diversos métodos de documentar software:
+\begin{itemize}
+
+\item Escribir documentos externos complementarios tales como diagramas de flujo, esquemas UML,\ldots Tienen la ventaja de ser comprensibles para quien no conoce el lenguaje en que se ha escrito el código fuente. Pero tiene la pega de que código y documentos tienden muy facilmente a perder sincronia.
+
+\item Escribir documentación en forma de comentarios en el propio código fuente. Preferiblemente con una sintaxis tal que permita extraerlos con herramientas automáticas tales como javadoc, Doxygen, XML comments,\ldots para confeccionar documentos externos con ellos. Tienen la ventaja de facilitar la puesta al día de la documentación cuando se modifica el código. Pero tiene la pega de que, al seguir siendo un trabajo manual, requiere disciplina para que código y comentarios no acaben desincronizados.
+
+\item Código autodescriptivo. No hay mejor manera de evitar documentación desactualizada que leer directemente el propio código fuente tal cual. Esta lectura se facilita en gran medida si al programar se presta atención a aspectos tales como: orquestar una coherente modularización del código, escribir nombres de módulos, funciones y variables que describan con claridad el papel desempeñado por cada una de ellas, escribir algún que otro comentario puntual allá donde el código contenga algún truco o apaño poco evidente,\ldots 
+\\De todas formas, conviene tener en cuenta que hay lenguajes con una dificultad inherente de lectura, como por ejemplo ensamblador. Mientras que otros lenguajes, como por ejemplo los funcionales, son mucho mas legibles.
+\\ Apollo 12 code listing: \url{https://youtu.be/-y37tXoBDx0?t=640} 
+\\ \url{https://cacm.acm.org/magazines/2011/11/138203-ocaml-for-the-masses/fulltext}
+
+\item Programación con contratos (contract-driven programming). Escribiendo contratos como parte del código fuente. Contratos donde quedan plasmadas las precondiciones y postcondiciones de cada función. Se permite así que el compilador u otras herramientas verifiquen formalmente que cada función cumple con las condiciones de su contrato. A la par que se documenta el comportamiento esperado de cada función.
+\\ \url{https://en.wikipedia.org/wiki/Design_by_contract}
+\\ \url{https://www.electronicdesign.com/technologies/embedded-revolution/article/21795884/contractdriven-programming-takes-specification-beyond-the-stone-age}
+
+\item Programación con chequeos (test-driven development, TDD). Escribiendo test unitarios. Test que, por un lado, sirven para comprobar en cualquier momento que cada función hace lo que se supone que ha de hacer y, por otro lado, sirven como documentación (al ejercitar los principales casos de uso de cada función, plasman por escrito cuales son esos casos).
+\\ \url{https://en.wikipedia.org/wiki/Test-driven_development}
+
+\end{itemize} 
+
+
+\subsection{Comprobador estático de código (``linter'')}
+
+Un comprobador de código  suele ser muy útil para verificar la consistencia de este y avisar (``warning'') de posibles futuras fuentes de problemas.
+
+Consiste en una serie de reglas que se van comprobando sobre el código. Reglas que revisan condiciones que, aunque no impiden al código funcionar, pueden ser fuente de problemas. O, como mínimo, indican que algo no esta del todo correcto.
+
+La herramienta suele traer predefinidas algunas reglas, como por ejemplo las que se encargan de avisar sobre construcciones sospechosas en el código: tener declaradas variables que luego no se usan, hacer uso de funciones ``deprecated'', repeticiones de partes de código que podrian refactorizarse, típicos posibles fallos que se suelen dar al copiar/pegar/modificar partes de código, \ldots.
+
+Nosotros podemos definir nuestras propias reglas, como por ejemplo las que se encargan de avisar sobre violaciones de las políticas y normas de estilo de la compañia.
+
+
+\subsection{Analizador de rendimiento (``profiler'')}
+Herramienta para medir el rendimiento de las distintas partes del programa. Facilitando así la localización de cuellos de botella.
+
+Estos analizadores suelen ``instrumentar'' el programa, colocándole pequeñas rutinas adicionales para medir los tiempos de ejecución de sus distintas partes. El informe final del analizador de rendimiento suele ser una lista de tiempo consumido en cada función y bucle de ejecución.
+
+En el complejo mundo del software actual. Es conveniente no limitar el análisis al propio programa en sí. Se ha de tener en cuenta  también su alrededor: comunicaciones a través de la red local, acceso a servidores, consultas a bases de datos externas, etc.
+
+Esto puede obligar a utilizar más de una herramienta de análisis de rendimiento. O a repetir los análisis en diversos momentos en el tiempo, para hacerse una idea de cómo afectan los (cambiantes) factores externos al funcionamiento del programa.
+
+El cuello de botella puede estar en cualquier parte del camino seguido por la información a través de todo el sistema. Por eso se hace imprescindible considerar siempre el sistema de forma integral, analizándolo como un todo y no solo estudiando aisladamente aspectos parciales del mismo.
+
+
+\subsection{Automatización de todo el proceso:\\estratégias ``CI/CD'' y enfoque ``DevOps''}
+
+Con la cada vez mayor demanda de servicios digitales. Es cada vez más grande la presión para implementar nuevas funcionalidades en el software. Y más corto el periodo entre lanzamientos (``deployment'') de nuevas versiones.
+
+Esto ha llevado al concepto de ``Continuous Deployment''. Con su acompañante habilitante ``Continuous Integration''. Dando lugar a lo que se conoce como la estrategia de trabajo `CI/CD'.
+
+Esta estrategia de trabajo se apoya en la automatización de todo el proceso:
+
+\begin{itemize}
+
+\item Una vez escrito, probado y depurado un trozo de código nuevo. Se envia a la rama principal del código fuente. Donde el sistema de integración se encarga de realizar de forma automatizada:
+
+\begin{itemize}
+\item Las comprobaciones estáticas pertinentes, para revisar su adecuación a los estándares de programación adoptados.
+\item Las baterias de test que se hayan programado, para revisar que no se haya roto inadvertidamente el funcionamiento del código ya existente.
+\item Cualquier otra operación que se estime oportuna antes de integrar el nuevo código con el ya existente.
+\end{itemize}
+
+De esta forma se asegura que la rama principal de código es siempre compilable y que el programa resultante se puede utilizar. (Integración Continua, CI)
+
+
+\item Cuando se decide lanzar una nueva versión del programa para su uso en producción. El sistema de despliegue se encarga de realizar de forma automatizada:
+
+\begin{itemize}
+\item Las baterias de test que se hayan programado, para revisar que el software se comporta como se espera que lo haga.
+\item El empaquetado adecuado para transferirlo al sistema de producción.
+\item La instalación en el sistema de producción, actualizando el software que estaba corriendo allí.
+\item Cualquier otra operación que se estime oportuna antes de integrar el nuevo código en el sistema de producción que utilizan los usuarios. \end{itemize}
+
+De esta forma se asegura que el despliegue se realiza de forma correcta, sin olvidar ningún paso. Además de permitir realizarlo en cualquier momento. (Despliegue Continuo, CD)
+
+\end{itemize}
+
+Obviamente, si en cualquier operación de las descritas se detectara un problema, el sistema no sigue adelante, deja todo como estaba antes de iniciarse el proceso y avisa a quien corresponda.
+
+La automatización suele contemplarse también en sentido inverso. Para dar la posibilidad de ``dar marcha atrás'' y revertir todo el proceso si se viera necesario.
+
+En esa línea, suele resultar útil disponer también de algún sistema de monitorización continua de lo que está sucediendo en el uso del sistema de producción. Si un cambio en el software hace que algo deje de funcionar como lo venia haciendo hasta ese momento; la anomalía se puede detectar a tiempo; resolviendo el problema antes de que afecte demasiado a los usuarios.
+
+Todo ello lleva a la fusión/coordinación estrecha entre los que se venían considerando dos departamentos separados en las empresas: Desarrollo y Operaciones. Dando lugar a lo que se conoce como `DevOps'
+
+\vspace{0.5cm}
+
+La parte más importante para llegar a esta forma de plantear el proceso, es la adopción previa de ciertos hábitos de trabajo:
+
+\begin{itemize}
+
+\item Se trabaja de forma incremental, en pequeños pasos (trabajo de un día o dos). Dejando bien terminado (testeado, integrado y funcionando) cada paso antes de comenzar con el siguiente.
+
+\item La escritura y ejecución de test son parte integral del proceso de desarrollo.
+
+\item Se almacenan en un sistema de gestión de versiones:
+\begin{itemize}
+\item El código fuente.
+\item Las configuraciones de la aplicación.
+\item Las configuraciones del sistema.
+\item Los scripts de compilación, configuración y despliegue.
+\end{itemize}
+
+\item Se cuida de mantener una arquitectura con el adecuado reparto de tareas, alto encapsulamiento y bajo acoplamiento entre las distintas partes del software y del sistema.
+ 
+\item Todo el equipo está involucrado en todo el proceso de desarrollo y despliegue.
+
+\end{itemize}
+
+La parte tecnológica, las herramientas de automatización, son meramente instrumentales. Algunos ejemplos ilustrativos de estas herramientas:
+\\ \url{https://bitbucket.org/product/es/features/pipelines}
+\\ \url{https://docs.gitlab.com/ee/ci/}
+\\ \url{https://github.com/features/actions}
+\\ \url{https://www.jenkins.io/}
+\\ \url{https://prometheus.io/docs/introduction/overview/}
+
+
+
+
+
+
+\section{Paradigmas y lenguajes de programación}
+Es importante destacar que el paradigma seguido al programar puede ser independiente del lenguaje de programación utilizado. Un paradigma de programación es simplemente ``una forma de hacer las cosas''. Y en (casi) todos los lenguajes se puede hacer (casi) de todo.
+
+Desde los inicios de la informática, en los años 40, hasta finales de la década de los 90; cada lenguaje tendia a especializarse en un paradigma concreto y solo soportaba específicamente ese. Pero hoy en día los lenguajes y entornos de trabajo más populares están tendiendo a implementar mecanismos propios de más de un paradigma. Dejando en manos de la persona programadora la decisión de seguir uno u otro.
+
+Los dos paradigmas principales son:
+
+\begin{itemize}
+
+\item IMPERATIVO (procedural): vas diciendo qué hacer, las operaciones a realizar, qué pasos ir dando, pasito a pasito. (por ejemplo, C)
+
+\item DECLARATIVO: vas diciendo qué se desea obtener, y ``el entorno'' busca la mejor manera de darte eso. (por ejemplo, SQL)
+
+\end{itemize}
+
+En la práctica se han ido concretando en:
+
+\begin{itemize}
+
+\item (procedural) ESTRUCTURADO: vas agrupando y organizando las operaciones en funciones y módulos, llamándolas según corresponda...
+
+\item Orientado a OBJETO: vas dividiendo la funcionalidad entre diversos objetos (clases) ``autocontenidos'' (encapsulación), 
+\\ y vas diciendo a cada objeto (instancia) que haga esto o aquello...
+                        
+\item FUNCIONAL: vas creando funciones de transformación de información, \\cada función depende solo de los `parametros' que recibe y de lo que tenga dentro de sí, cada función devuelve `resultados' (sin causar ningún ``efecto secundario'' fuera de esos resultados), 
+\\y vas encadenando funciones, una detrás de otra...
+
+\end{itemize}
+
+
+Podriamos decir que cada paradigma, siendo como es ``una forma de hacer las cosas'', requiere una determinada forma de pensar al trabajar. 
+
+\begin{itemize}
+
+\item En la programación imperativa/procedural: en cada paso se indica exactamente qué hacer; se comprueba el estado concreto en ese momento de tal y tal y tal; para, en función de ello, realizar alguna acción; acción que modificará cual o cual o cual.
+
+\item En la programación orientada a objeto: en cada paso se utiliza el objeto pertinente, para pedirle que haga algo.
+
+\item En la programación funcional: en cada paso se utiliza la función pertinente, para transformar de esto que se le pasa como parámetros a eso que devuelve como resultado.
+
+\end{itemize}
+
+Según cual sea la problemática a resolver, su resolución puede ser más fácil o más complicada siguiendo uno u otro paradigma. De ahí la importancia de conocer al menos los fundamentos de los principales paradigmas. Y de ahí también la tendencia de los lenguajes de programación a soportar el trabajo en más de un paradigma.
+
+\subsection{Imperativo/procedural : máquina}
+En este paradigma, se trabaja directamente con las instrucciones básicas de la plataforma hardware sobre el que va a funcionar el programa.
+
+Habitualmente, estas instrucciones suelen ser bastante limitadas y programar con ellas resulta complicado. Este tipo de programación se utiliza principalmente para escribir compiladores/intérpretes de otros lenguajes de programación de más alto nivel.
+
+El formalismo teórico tras este tipo de programación imperativa es la máquina de Turing.
+
+\subsubsection*{Conceptos básicos y ejemplos de código}
+Tres son las estructuras principales sobre las que se construyen todos programas informáticos:
+\begin{enumerate}
+\item MOVIMIENTO DE DATOS entre distintas ubicaciones de memoria (registros, pila, ram,...) y OPERACIONES con esos datos; ejecutadas en SECUENCIA.
+
+código en ensamblador:
+\begin{lstlisting}[frame=single]
+	movl	$5, -4(%rbp)
+	movl	$7, -8(%rbp)
+	movl	-4(%rbp), %edx
+	movl	-8(%rbp), %eax
+	addl	%edx, %eax
+	movl	%eax, -12(%rbp)
+\end{lstlisting}
+
+código en c:
+\begin{lstlisting}[frame=single]
+	int un_numero, otro_numero, resultado;
+	un_numero = 5;
+	otro_numero = 7;
+	resultado = un_numero + otro_numero;
+\end{lstlisting}
+
+otra variante del código en ensamblador:
+\begin{lstlisting}[frame=single]
+movl    $5, -4(%rbp)
+movl    $7, -8(%rbp)
+movl    -4(%rbp), %ecx
+addl    -8(%rbp), %ecx
+movl    %ecx, -12(%rbp)
+\end{lstlisting}
+
+\item SELECCIÓN CONDICIONAL de distintos caminos de ejecución, (IF, SWITCH,...)
+
+código en ensamblador:
+\begin{lstlisting}[frame=single]
+	movl	$3, -4(%rbp)
+	cmpl	$0, -4(%rbp)
+	jle	.L2
+	addl	$1, -4(%rbp)
+	jmp	.L3
+   .L2:
+	addl	$2, -4(%rbp)
+   .L3:
+	movl	$0, %eax
+\end{lstlisting}
+	
+código en c:
+\begin{lstlisting}[frame=single]
+	int numero;
+	numero = 3;
+	if(numero > 0)
+	{
+numero = numero + 1;
+	}
+	else
+	{
+		numero = numero + 2;
+	}
+\end{lstlisting}
+
+\item BUCLES de ejecución, (FOR, WHILE, DO...WHILE)
+
+código en ensamblador:
+\begin{lstlisting}[frame=single]
+    movl    $0, -4(%rbp)
+    movl    $0, -8(%rbp)
+    movl    $1, -12(%rbp)
+  LBB0_1:
+    cmpl    $6, -12(%rbp)
+    jge    LBB0_2
+    movl    -8(%rbp), %eax
+    shll    $1, %eax
+    movl    %eax, -8(%rbp)
+    movl    -12(%rbp), %eax
+    addl    $1, %eax
+    movl    %eax, -12(%rbp)
+    jmp    LBB0_1
+  LBB0_2:
+    movl    -4(%rbp), %eax
+\end{lstlisting}
+
+código en c:
+\begin{lstlisting}[frame=single]
+    int numero = 0;
+    int indice;
+    for(indice = 1; indice < 6; indice++)
+    {
+        numero = numero * 2;
+    }
+\end{lstlisting}
+
+otra variante del código en c:
+\begin{lstlisting}[frame=single]
+	int numero = 0;
+	int indice = 1;
+	while(indice < 6)
+	{
+     	 numero = numero * 2;
+   	 indice++;
+	}
+\end{lstlisting}
+
+\end{enumerate}
+
+\subsection{Imperativo/procedural : estructurado}
+En este paradigma se hace hincapié en la separación de los distintos procesos que componen el programa. Usualmente, estos procesos se estructuran en bloques de código, funciones y módulos. 
+
+El funcionamiento del programa se centra en ir llamando a esos bloques y funciones según se requieran para realizar el trabajo.
+
+\subsubsection*{Conceptos básicos}
+\begin{description}
+\item[función]: una tarea concreta; recibe unos datos (parámetros recibidos), realiza un trabajo y devuelve unos datos (parámetro devuelto).
+\item[módulo]: un grupo de funciones relacionadas.
+\end{description}
+
+\subsubsection*{Resumen gráfico rápido}
+\includegraphics[width=\textwidth]{Paradigma de programacion - PROCEDURAL}
+
+\subsubsection*{Ejemplos de código}
+RaizCuadradaPorElMetodoDeNewton.java
+\begin{lstlisting}[frame=single]
+package ejerciciosMatematicos;
+
+double EPSILON = 0.001;
+double aproximacion = 1.0;
+
+public class RaizCuadradaPorElMetodoDeNewton
+{
+    
+    public static double CalcularRaizDe(double numero)
+    {
+        while((Math.abs(aproximacion * aproximacion - numero) / numero) > EPSILON)
+        {
+            aproximacion = (aproximacion + (numero / aproximacion)) / 2;
+        }
+        
+        return aproximacion;
+    }
+
+    
+    public static void main(String[] args)
+    {
+        System.out.println(RaizCuadradaPorElMetodoDeNewton.CalcularRaizDe(2));
+        System.out.println(RaizCuadradaPorElMetodoDeNewton.CalcularRaizDe(385.23));
+    }
+    
+}
+\end{lstlisting}
+
+figuras\_procedural.py
+\begin{lstlisting}[frame=single]
+import math
+import turtle
+
+
+def area_de_un_rectangulo(ladoA, ladoB):
+    return ladoA * ladoB
+
+def dibujar_un_rectangulo(ladoA, ladoB):
+    turtle.showturtle()
+    turtle.forward(ladoA)
+    turtle.left(90)
+    turtle.forward(ladoB)
+    turtle.left(90)
+    turtle.forward(ladoA)
+    turtle.left(90)
+    turtle.forward(ladoB)
+    turtle.hideturtle()
+    
+
+def area_de_un_circulo(radio):
+    return math.pi * radio ** 2
+
+def dibujar_un_circulo(radio):
+    turtle.showturtle()
+    turtle.circle(radio, 360)
+    turtle.hideturtle()
+\end{lstlisting}
+
+main.py
+\begin{lstlisting}[frame=single]
+from figuras_procedural import *
+
+
+if __name__ == "__main__":
+    
+    print(``El area de un rectangulo de 40x30 es ``
+          + str(area_de_un_rectangulo(ladoA = 40, ladoB = 30)))
+    print(``El area de un circulo de radio 25 es ``
+          + str(area_de_un_circulo(radio = 25)))
+    dibujar_un_rectangulo(ladoA = 40, ladoB = 30)
+    dibujar_un_circulo(radio = 25)
+\end{lstlisting}
+
+\subsection{Orientado a objeto}
+En este paradigma se hace hincapié en repartir responsabilidades a diferentes actores (objetos). Idealmente cada funcionalidad será responsabilidad de un solo actor.
+
+Estos actores llevan encapsulados en su definición interna tanto los datos (propiedades) como las funciones (métodos) necesarios para llevar a cabo su tarea. Y nada puede acceder a esos datos ni a esas funciones si no es a través de un actor (instancia) del tipo (clase) correspondiente. 
+
+El funcionamiento del programa se centra en la colaboración entre esos actores (objetos) para realizar el trabajo.
+
+Podriamos decir que, en un lenguaje OO:
+\begin{itemize}
+\item todos los valores son objetos de algún tipo.
+\item todas las operaciones son llamadas a métodos de algún objeto.
+\end{itemize}
+
+\subsubsection*{Conceptos básicos}
+\begin{description}
+\item[clase/instancia]: la clase es la definición de un tipo de objeto y la instancia es un objeto concreto de ese tipo.
+\item[encapsulación]: los entresijos interiores de un objeto son internos a él, privados; desde fuera, otros objetos solo pueden acceder a ellos a través de las partes que se hayan definido como públicas.
+\item[herencia]: si las definiciones de varios objetos tienen partes comunes a todos ellos, se puede definir un tipo de objeto base con esa parte común y luego definir cada tipo de objeto derivado a partir del objeto base.
+\item[polimorfismo]:
+\begin{itemize}
+\item Un mismo método (mismo nombre para llamarlo), puede tener varias versiones (recibiendo o devolviendo distintos parámetros). 
+\item Diferentes clases (con distintos nombres), pueden tener una parte similar (implementan un interface: tienen una serie de funciones con exactamente la mismas signaturas).  Objetos (instancias) de cualquiera de esas clases pueden ser utilizados indistintamente en ciertos usos que requieran utilizar solo esa funcionalidad común.
+\end{itemize}
+\end{description}
+
+
+\subsubsection*{Resumen gráfico rápido}
+\includegraphics[width=\textwidth]{Paradigma de programacion - ORIENTADO A OBJETO}
+
+
+
+\subsubsection*{Ejemplos de código}
+
+figuras\_oop.py
+\begin{lstlisting}[frame=single]
+import math
+import turtle
+
+
+class Rectangulo:
+
+    def __init__(self, ladoA, ladoB):
+    	self.ladoA = ladoA
+    	self.ladoB = ladoB
+    	self.color = ""
+
+    def get_area(self):
+    	return self.ladoA * self.ladoB
+    
+    def dibujar(self):
+    	turtle.showturtle()
+    	turtle.forward(self.ladoA)
+    	turtle.left(90)
+    	turtle.forward(self.ladoB)
+    	turtle.left(90)
+    	turtle.forward(self.ladoA)
+    	turtle.left(90)
+    	turtle.forward(self.ladoB)
+    	turtle.hideturtle()
+
+    def set_color(self, color):
+    	if color == "rojo" or color == "verde" or color == "azul":
+        	self.color = color
+    	else:
+        	print("El color ha de ser 'rojo', 'verde' o 'azul'.")
+
+
+
+class Cuadrado(Rectangulo):
+
+    def __init__(self, lado):
+    	self.ladoA = lado
+    	self.ladoB = lado
+
+
+
+
+class Circulo:
+
+    def __init__(self, radio):
+    	self.radio = radio
+
+    def get_area(self):
+    	return math.pi * self.radio ** 2
+
+    def dibujar(self):
+    	turtle.showturtle()
+    	turtle.circle(self.radio, 360)
+    	turtle.hideturtle()
+ 
+    def set_radio(self, radio):
+    	self.radio = radio
+\end{lstlisting}
+main.py
+\begin{lstlisting}[frame=single]
+from figuras_oop import *
+
+
+if __name__ == "__main__":
+
+    unCuadrado = Rectangulo(ladoA = 25, ladoB = 25)
+    otroCuadrado = Cuadrado(lado = 25)
+    unRectangulo = Rectangulo(ladoA = 77, ladoB = 33)
+    otroRectangulo = Rectangulo(ladoA = 22, ladoB = 44)
+    print("El area de unCuadrado es " + str(unCuadrado.get_area()))
+    print("y la de unRectangulo " + str(unRectangulo.get_area())
+          + " y del otro " + str(otroRectangulo.get_area()))
+    print()
+    unCuadrado.dibujar()
+    otroRectangulo.dibujar()
+    
+    unCirculo = Circulo(radio = 5)
+    print("El area de unCirculo es " + str(unCirculo.get_area()))
+
+    unCirculo.set_radio(10)
+    print("y tras modificar su radio es " + str(unCirculo.get_area()))
+    print()
+    unCirculo.dibujar()
+\end{lstlisting}    
+
+Rectangulo.java
+\begin{lstlisting}[frame=single]
+public class Rectangulo {
+
+    private float ladoA;
+    private float ladoB;
+    private String color;
+    
+    
+    public Rectangulo(float ladoA, float ladoB)
+    {
+   	 this.ladoA = ladoA;
+   	 this.ladoB = ladoB;
+   	 this.color = "";
+    }
+    
+    public float get_area()
+    {
+   	 return ladoA * ladoB;
+    }
+    
+    public void set_color(String color)
+    {
+   	 if (color.equals("rojo") || color.equals("verde") || color.equals("azul"))
+   	 {
+   		 this.color = color;
+   	 }
+   	 else
+   	 {
+   		 System.out.println ("El color ha de ser 'rojo', 'verde' o 'azul'.");
+   	 }
+    }
+
+}
+\end{lstlisting}
+Cuadrado.java
+\begin{lstlisting}[frame=single]
+public class Cuadrado extends Rectangulo
+{
+
+    public Cuadrado(float lado)
+    {
+   	 this.ladoA = lado;
+        this.ladoB = lado;
+    }
+
+}
+\end{lstlisting}
+
+Circulo.java
+\begin{lstlisting}[frame=single]
+public class Circulo
+{
+    private double radio;
+    
+    public Circulo(double radio)
+    {
+   	 this.radio = radio;
+    }
+    
+    public double get_area()
+    {
+   	 return (Math.PI * Math.pow(radio, 2));
+    }
+    
+    public void set_radio(double radio)
+    {
+   	 this.radio = radio;
+    }
+
+}
+\end{lstlisting}
+
+Main.java
+\begin{lstlisting}[frame=single]
+public class Main
+{
+
+    public static void main(String[] args)
+    {
+   	 Rectangulo unCuadrado = new Rectangulo(25, 25);
+   	 Cuadrado otroCuadrado = new Cuadrado(25);
+   	 Rectangulo unRectangulo = new Rectangulo(77, 33);
+   	 Rectangulo otroRectangulo = new Rectangulo(22, 44);
+   	 System.out.println("El area de unCuadrado es " + unCuadrado.get_area());
+   	 System.out.println("y la de unRectangulo " + unRectangulo.get_area()
+   	                	+ " y del otro " + otroRectangulo.get_area());
+   	 System.out.println();              	 
+   	 
+   	 Circulo unCirculo = new Circulo(5.0);
+   	 System.out.println("El area de unCirculo es " + unCirculo.get_area());
+   	 
+   	 unCirculo.set_radio(10.0);
+   	 System.out.println("y tras modificar su radio es " + unCirculo.get_area());
+   	 System.out.println();
+    }
+
+}
+\end{lstlisting}
+
+\subsection{Funcional}
+En este paradigma se hace hincapié en el tratamiento abstracto de datos. Se utilizan una serie de funciones que actúan sobre unos ciertos datos de entrada para devolver unos nuevos datos de salida. Las  propias funciones también pueden ser datos de entrada o de salida de otras funciones, que se encargan de combinarlas.
+
+El formalismo teórico tras este tipo de programación funcional es $\lambda$ (lambda) calculus.
+
+El funcionamiento del programa se centra en el flujo de datos a través de las funciones, para conseguir obtener el resultado deseado.
+
+\subsubsection*{Conceptos básicos}
+
+\begin{description}
+
+\item[inmutabilidad]\footnote{Inmutabilidad implica que, cuando es necesario modificar, el componente entero se reemplaza por una nueva versión del mismo.}: Al contrario que en el paradigma imperativo, en el paradigma funcional (casi) todas las estructuras de datos son inmutables. Es decir, en lugar de que el programa cambie valores en unas estructuras de datos, en el paradigma funcional el programa procesa unos datos de entrada y devuelven otros datos en su salida.
+
+\item[closure]: conjunto de una función y su entorno.
+
+\item[funciones de primera clase] (first-class functions): una función puede ser ``dato'' de otra función; es decir, una función puede tener otras funciones entre sus argumentos o una función puede devolver otra función como resultado. 
+
+\item[funciones lambda]: funciones anónimas, sin nombre, que se definen directamente allá donde se van a pasar como argumento a otra función.
+
+\item[composición de funciones] f g (x): aplicar primero una función a los argumentos g(x) y luego la otra función al resultado de la primera aplicación f(g(x)) .
+
+\item[reducción] (reduction semantics): cualquier ``programa'' puede irse reduciendo sucesivamente a otro más sencillo, hasta llegar a una `forma normal' que es su resultado. 
+
+\end{description}
+
+\subsubsection*{Algunas operaciones básicas:}
+
+\begin{description}
+
+\item[filter(lista, función)], aplicar una función (con resultado booleano) a todos y cada uno de los elementos de una lista, devolviendo otra lista con aquellos elementos donde la función devuelve 'verdadero'.
+
+\item[map(lista, función)], aplicar una función a todos y cada uno de los elementos de una lista, devolviendo otra lista con el mismo número de elementos (cada uno transformado por la función).
+
+\item[reduce(lista, función)], similar a map, solo que la función se aplica sobre los elementos secuencialmente, devolviendo un resultado único (acumulado a partir de los resultados parciales de la función en los distintos elementos).
+
+\item[pattern matching], comparar una expresión contra unos determinados patrones, para sustituirla por otra expresión dada según el patrón con el que coincida.
+
+\end{description}
+
+
+\subsubsection*{Resumen gráfico rápido}
+\includegraphics[width=\textwidth]{Paradigma de programacion - FUNCIONAL}
+
+
+\subsubsection*{Ejemplos de código}
+RaizCuadradaPorElMetodoDeNewton.sc
+\begin{lstlisting}[frame=single]
+
+  def ValorAbsolutoDe(numero: Double) = {
+      if (numero < 0) -numero else numero  
+  }
+  
+//> ValorAbsolutoDe: (numero:Double)Double
+
+    
+  def RaizCuadradaDe(numero: Double) = {
+      def BucleDeTrabajo(aproximacion: Double): Double = {
+        if (esSuficientementeBuenaLa(aproximacion: Double)) 
+            aproximacion
+        else 
+            BucleDeTrabajo(Mejorar(aproximacion))
+      }
+      
+      def esSuficientementeBuenaLa(aproximacion: Double) = {
+          (ValorAbsolutoDe(aproximacion * aproximacion - numero) / numero) < 0.001
+      }
+      
+      def Mejorar(aproximacion: Double) = {
+          (aproximacion + (numero / aproximacion)) / 2
+      }
+    
+      val aproximacionInicial = 1.0
+      BucleDeTrabajo(aproximacionInicial)
+  }
+
+//> RaizCuadradaDe: (numero: Double)Double
+
+    
+  RaizCuadradaDe(4)
+
+//> res0: Double = 2.000609756097561
+
+  RaizCuadradaDe(385.23)
+
+//> res1: Double = 19.62736097049756
+
+}
+\end{lstlisting}
+
+\subsubsection*{notas provisionales}
+``Can programming Be Liberated from the von Neumman Style? A Functional Style and Its Algebra of Programs'' . John Backus . ACM Touring Award Lecture, 1977
+\begin{tiny}
+\\ \url{https://medium.com/luteceo-software-chemistry/can-programming-be-liberated-from-the-von-neumann-style-932ba107402b}
+\end{tiny}
+
+
+``Working Hard to Keep it Simple'' . Martin Odersky
+\begin{tiny}
+\\ \url{https://youtu.be/3jg1AheF4n0}
+\end{tiny}
+
+
+``OCaml for the Masses: why the next language you learn should be functional''. Yaron Minsky . Communications of the ACM, 2011
+\begin{tiny}
+\\ \url{http://lpsil.u-bourgogne.fr/master1/mi1-tc5/MATH/michelucci/MIGS_2015_16/TEXTES/Why_ML_is_good_minsky.pdf}
+\end{tiny}
+
+
+
+
+\section{Arquitecturas de software}
+
+El Santo Grial del software consiste en llegar a algo parecido a los componentes estandares de otras ramas de la ingenieria (tornillos, perfiles, resistencias, condensadores, interruptores diferenciales, reles, aditivos, válvulas, motores, etc.). 
+
+Es decir, llegar a tener módulos de software o servicios que podamos obtener directamente ``off-the-shelf'' (``comprandolos en el mostrador de una tienda''); y utilizarlos tal cual en la construcción de nuestros programas.
+
+nota: \footnotesize{Ver detalles prácticos sobre arquitecturas en el capítulo 14 ``Organización interna del código'' del documento \url{https://www.susosise.es/documentos/Mas_alla_del_IF_y_del_WHILE.pdf}}
+
+
+\subsection{Según se reparte el código, se puede distinguir entre:}
+
+
+\subsubsection{Pella de arcilla (``ball of mud'')}
+El programa se compone de un solo bloque (estructurado o no en funciones). Un solo bloque que se encarga de todo.
+
+Suele ser típico en pequeños sistemas embebidos o en pequeños programas de prueba.
+
+\begin{center}
+\includegraphics[width=0.5\textwidth]{arquitectura - ball of mud}
+\end{center}
+
+\subsubsection{Monolito}
+
+La aplicación, el programa, se estructura en secciones o capas (más o menos) diferenciadas. Idealmente, cada sección se relaciona con las demás a través de interfaces (más o menos) claros; como si fueran las costuras de un traje.
+
+Pero todas las secciones están en un solo cuerpo de código. Un cuerpo que se compila y se distribuye como un todo. 
+
+\begin{center}
+\includegraphics[width=0.5\textwidth]{arquitectura - monolito}
+\end{center}
+
+\subsubsection{Distribuido}
+
+La aplicación se estructura en partes independientes. Cada parte tiene su propio cuerpo de código. Cada parte se puede compilar y distribuir separadamente.
+
+Las distintas partes ``colaboran'' entre sí según unos interfaces y protocolos preestablecidos.
+
+\includegraphics[width=\textwidth]{arquitectura - distribuido}
+
+
+
+\subsection{Según cómo se reparte la funcionalidad, se puede distinguir entre:}
+
+\subsubsection{Desktop, ``de escritorio''}
+Existe una división de tareas entre una parte que podemos denominar `sistema operativo' y otra parte que es el programa en sí.
+
+El sistema operativo se encarga de interactuar con el hardware y de ofrecer unos servicios básicos de uso común. Servicios tales como el acceso a la CPU (multitarea), a la memoria (paginación), al sistema de almacenamiento de datos, a los periféricos (pantalla, teclado, ratón, impresora,...), a sistemas externos (comunicaciones), a mecanismos de seguridad (autentificación/permisos), etc.
+
+El programa realiza el trabajo concreto para el que ha sido desarrollado. Aprovechando, allá donde le sean útiles, los servicios del sistema operativo.
+
+\subsubsection{Cliente/Servidor}
+La división de tareas es más avanzada y ya no está restringida al interior de una sola máquina. Una parte del programa se ubica en otra máquina externa.
+
+Habitualmente, 
+\begin{itemize}
+\item La parte en la máquina del usuario (cliente) se encarga de interactuar con este. 
+\item Y la parte exterior (servidor) se encarga de manejar/almacenar la información.
+\end{itemize}
+
+En cierto modo, se podrian englobar también en esta categoria las `aplicaciones web'. En ellas el cliente es un navegador web estándar y el servidor es quien lleva la mayor parte del peso del trabajo a realizar. De esta forma, se ahorran problemas derivados de la instalación/mantenimiento de un programa cliente ad-hoc.
+
+\subsubsection{(micro)Servicios distribuidos}
+La división de tareas es total. El sistema lo componen multitud de pequeños programas, en una sola o en multitud de máquinas. Cada programa se encarga de una tarea concreta y es autosuficiente para realizarla; ofreciendo sus servicios al resto del sistema.
+
+Obviamente, son necesarios una serie de mecanismos estandarizados para:
+\begin{itemize}
+\item buscar el servicio requerido (no se puede llamar a algo que no se sabe que existe o no se sabe dónde está) 
+\item hacer uso de él (llamarlo, pasarle los datos/comandos de entrada correspondientes y recoger de él los datos/avisos de salida respectivos)
+\end{itemize}
+
+Los programas de aplicación, hacen uso de ese ``universo'' de servicios para completar el trabajo que vayan a realizar.
+
+
+
+
+\section{Patrones de programación (patterns)}
+
+Cuando uno se encuenta repetidamente con un tipo de tarea concreta. Conviene anotar y documentar la solución implementada; para evitar tener que reinventarla la próxima vez que surja.
+
+Si esa anotación es compartida y refinada por muchas personas a lo largo del tiempo. Llega a convertirse en un patrón que refleja la mejor manera de solucionar esa tarea concreta.
+
+
+\subsection{Rationale, el por qué de los patrones}
+Un patrón de programación es la descripción detallada de un elemento software que resuelve un problema de  aparición frecuente en la construcción de programas. 
+
+Hay bastantes ya identificados, resueltos y documentados. Pero la técnica es también útil si nos encontramos repetidamente con un determinado problema: una vez resuelto, conviene escribir un patrón documentándolo.
+
+Tal y como se describe en el libro de ``la banda de los cuatro (GoF, Gang of Four)'' (Erich Gamma - Richard Helm - Ralph Johnson - John Vlissides), un patrón se compone de:
+\begin{itemize}
+\item Un nombre, algo fácil de recordar y de citar cuando deseamos referirnos al patrón.
+\item Una descripción del problema y del contexto en que suele surgir.
+\item Una descripción de la solución.
+\item Una descripción de las consecuencias derivadas de aplicar la solución en diferentes contextos.
+\end{itemize}
+
+Conocer algunos patrones puede ahorrar mucho tiempo y trabajo cuando surge el problema correspondiente. Pero lo más importante: la solución implementada apoyándonos en el patrón será mucho más robusta que cualesquiera otra que podamos desarrollar por nuestra cuenta.
+
+nota: Un patrón no es algo estático e inmutable. Es simplemente una manera de evitar reinventar la rueda cada vez. Si en alguna de las veces en que se use, se descubre algo que mejore el patrón; es conveniente actualizar el patrón para añadirle esa mejora.
+
+\subsection{Ejemplos de algunos patrones}
+\subsubsection{observer}
+Sirve para actualizar automaticamente varios objetos (los observadores)  cuando cambia uno (el observado)
+\subsubsection{chain of responsibility}
+Es útil cuando varios objetos pueden responder a una determinada tarea y no se desea encargar la tarea solo a uno concreto cada vez. La aplicación comunica la tarea a la cadena de objetos, cada uno de ellos la procesa (o no) y la retransmite (o no) al siguiente de la cadena.
+\subsubsection{command}
+Sirve para separar el comando (dar la orden de hacer algo) de la ejecución del mismo (hacerlo). Es útil cuando se ha de implementar una cola|tablón de comandos, un registro de los comandos ejecutados, un mecanismo para deshacer comandos (undo),...
+\subsubsection{memento}
+Sirve para almacenar el estado interno de un objeto o sistema en un determinado instante. De tal manera que más tarde se pueda retornar a él si fuera necesario.
+\subsubsection{adapter}
+Sirve para convertir un interface en otro, facilitando así el trabajo entre objetos que de otra manera serian incompatibles. 
+\subsubsection{decorator}
+Sirve para añadir funcionalidad a un objeto sin alterar la definición estática de este.
+\subsubsection{facade}
+Sirve para unificar varios interfaces en uno, facilitando así el uso del subsistema que implementa los interfaces.
+\subsubsection{proxy}
+Sirve para para controlar el acceso a un determinado objeto, obligando a que todo acceso a él se haga a traves de otro objeto interpuesto (el intermediario -proxy-)
+
+
+
+
+\section{Algoritmos}
+
+El mundo de los algoritmos (formas de resolver tareas|problemas) es muy vasto. Y se va enriqueciendo día a día.
+
+Es muy posible que la tarea que tengamos en un cierto momento entre manos, haya sido también la tarea a resolver por otras personas en otros momentos.
+
+Y es muy posible que alguna de esas personas haya explorado a fondo las distintas formas de abordarla, dejando escrito cúal es la más eficiente o la más eficaz.
+
+\vspace{0.5cm}
+nota: Una referencia para profundizar en algunas de las estructuras de datos y algoritmos más habituales: \url{https://www.programiz.com/dsa}
+
+\vspace{0.5cm}
+nota: A la hora de hablar sobre algoritmos es importante conocer la notación `big O'. Se usa para indicar los límites máximo \textbf{O}( ), mínimo \textbf{$\Omega$}( ) y medio \textbf{$\Theta$}( ) de consumo de recursos (memoria, tiempo,...) por parte de un algoritmo. Esto permite comparar el rendimiento de distintos algoritmos con respecto al número de casos a tratar.
+
+Por ejemplo, algoritmos con evoluciones lineales del orden de \textbf{O}(n) son manejables: 1, 2, 3, 4, 5, 6, 7, 8,\ldots, 14, 15,\ldots, 19, 20,\ldots 
+\\pero algoritmos con evoluciones exponenciales del orden de \textbf{O}($2^n$) pronto se vuelven  imposibles: 2, 4, 8, 16, 32, 64, 128, 256, 512,\ldots, 16.384, 32768,\ldots, 524.288, 1.048.576,\ldots 
+\\y mucho más con evoluciones combinatorias del orden de \textbf{O}(n!)  1, 2, 6, 24, 120, 720, 5.040, 40.320,\ldots, 87.178.291.200, 1.307.674.368.000,\ldots, 6.758.061.133.824.000, 1,35·E+17,\ldots
+
+\subsection{Ordenación, clasificación y búsqueda}
+Situaciones donde se han de almacenar y organizar datos.  Usando criterios de ordenación o de cercania entre ellos. Para luego facilitar la búsqueda de información dentro de esos datos.
+
+\subsubsection{búsquedas directas}
+Los clásicos mergesort, boublesort,...
+
+\subsubsection{estructuración arbórea}
+Repartir los datos a lo largo y ancho de distintas ramas. De tal forma que luego sea más sencillo encontrarlos siguiendo la rama adecuada en cada caso.
+
+\subsubsection{estructuración indexada}
+Utilizar unas tablas auxiliares de índices, para disponer de varios ordenamientos dentro de un mismo conjunto de datos. De tal forma que se pueda utilizar el ordenamiento más adecuado en cada caso. Una vez localizados los resultados de la búsqueda, los índices permiten recuperar los datos propiamente dichos.
+
+\subsubsection{estructuración semántica}
+Almacenar, junto con los propios datos, información acerca de las relaciones entre los ellos (por ejemplo, en forma de triples `sujeto-predicado-objeto'). Así es posible procesar de forma automática esa metainformación, utilizando motores de inferencia, para ``descubrir'' información que no está registrada de forma explícita en el sistema.
+
+\subsection{Cálculo numérico o simbólico}
+Situaciones donde se ha de resolver cierta formulación matemática. Para obtener unos resultados concretos (solución numérica) o para obtener una fórmula concreta (solución simbólica).
+
+\subsubsection{ecuaciones lineales}
+Cálculo matricial.
+
+\subsubsection{derivación e integración}
+Tener en cuenta que la derivación es: sencilla de realizar en forma simbólica, pero compleja de realizar de forma numérica. Mientras que la integración es al contrario: sencilla de realizar de forma numérica, pero compleja de realizar de forma simbólica.
+
+\subsubsection{series de Taylor}
+Muy útiles para aproximar funciones tales como exponenciales, logarítmicas, trigonométricas,... usando funciones polinomiales (sumas y multiplicaciones).
+
+Pueden ser de utilidad si no disponemos de una biblioteca de funciones matemáticas en el sistema donde estemos programando. O si necesitamos optimizar al máximo el uso de ciclos de procesador en sistemas muy limitados (por ejemplo, en pequeños sistemas embebidos).
+
+\subsubsection{transformadas de Fourier}
+Muy útiles para analizar la variación/evolución periódica de una serie de datos, tanto desde el punto de vista ``temporal'' (dato vs. marco temporal de referencia donde evoluciona), como desde el punto de vista ``espectral'' (frecuencias fundamentales y armónicas con las que se repiten los datos).
+
+Son muy utilizadas en procesamiento de señales, en filtrado de datos, etc.
+
+\subsection{Optimización, programación lineal}
+El típico problema de optimización suele ser: 
+\begin{itemize}
+\item establecidas unas ciertas relaciones (fórmulas de cálculo de valores) entre las variables intervinientes, 
+\item y establecidas una serie de restricciones (mayor que..., menor que…, igual que...) en el rango de valores para algunas de ellas; 
+\item obtener el mínimo (o el máximo) valor posible para alguna de ellas.
+\end{itemize}
+
+\subsection{Combinatorios}
+Cuando no hay forma de obtener directamente la solución de forma analítica o numérica. Se ha de recurrir a técnicas estadísticas para:
+\begin{itemize}
+\item Por un lado, saber cuantas posibilidades (combinaciones) de solución podria haber (espacio de estados).
+\item Por otro lado, generar|explorar todas esas posibilidades para encontrar la o las que realmente son soluciones.
+\end{itemize}
+
+\subsubsection{búsqueda por ``fuerza bruta''}
+Explorar todas las combinaciones posibles, una a una, hasta dar con aquellas que puedan considerarse una solución. Y, de entre ellas, aquella que se considera la mejor solución.
+Esto suele ser factible en problemas de complejidad ``p''. Aquellos en que la cantidad de combinaciones posibles es polinómica respecto a la cantidad de elementos a tratar (n):
+\begin{itemize}
+\item logaritmica (del orden de \textbf{O}(log n)), 
+\item lineal (del orden de \textbf{O}(n)), 
+\item cuadratica (del orden de $\textbf{O}(n^2)$),... . 
+\end{itemize}
+
+Por ejemplo, con una evolución \textbf{O}(n*3) la cantidad de combinaciones posibles es: f(0)=0, c(1)=3, c(2)=6, c(3)=9, c(4)=12, c(5)=15, c(6)=18, c(7)=21, ... , c(15)=45, ... , c(50)=150, ...
+
+Pero se vuelve rápidamente imposible en problemas de complejidad ``np-completo'' (``np-hard''). Aquellos en que la cantidad de combinaciones posibles no es polinomica con respecto a la cantidad de elementos a tratar. 
+
+Por ejemplo, con una evolución exponencial (del orden de $\textbf{O}(2^n)$) la cantidad de combinaciones posibles es: c(0)=0, c(1)=2, c(2)=4, c(3)=8, c(4)=16, c(5)=32, c(6)=64, c(7)=128, ... , c(15)=32.768, ... , c(50)=1.125.899.906.842.624, ...
+
+Para este último tipo de problemas se hace imprescindible recurrir a técnicas que permitan llegar a una solución aceptable (aunque puede que no óptima) sin necesidad de explorar todas y cada una de las opciones posibles.
+
+\subsubsection{búsquedas reducidas, en profundidad o en anchura}
+Un espacio de estados que puede representarse de forma arbórea, se puede ir recorriendo pasando por todas las ramas hasta un cierto nivel en cada una en cada paso (anchura) o por ramas completas en cada paso (profundidad).
+
+Existen métodos para limitar esa búsqueda, saltándose estados o pasos en ella según unas ciertas reglas. Normalmente estos métodos reducidos no suelen llegar a la solución más óptima, pero sí que permiten obtener soluciones ``suficientemente buenas'' para la situación concreta que se está tratando.
+
+Algunos ejemplos de métodos de reducción:
+\begin{itemize}
+\item Max-Min, minimax
+\item Alpha-beta prunning
+\item Hill climbing
+\item etc
+\end{itemize}
+
+\subsubsection{heurísticas}
+Reducir el número de estados a explorar|calcular, basándose en conocimientos ya existentes sobre otros problemas parecidos. La solución empírica así obtenida puede ser solo parcial o algo burda; pero lo importante es que sea útil en la situación concreta que se está tratando.
+
+\subsubsection{métodos de Montecarlo}
+Reducir el número de estados a explorar|calcular, haciendo uso de exploraciones|cálculos parciales estocásticos (probabilísticos). En no pocos casos, se obtienen resultados exactos o muy cercanos a los exactos.
+
+\subsection{Algoritmos que aprenden}
+Tienen mecanismos de realimentación que les permiten ir comparando las soluciones que calculan|encuentran con las soluciones correctas que se buscan. En base a esta realimentación, el algoritmo se va autoajustando; guardando los ajustes que mejoran la tasa de aciertos y descartando los que la empeoran.
+
+El periodo inicial de aprendizaje se suele realizar sobre una muestra seleccionada de casos. Siendo muy importante la adecuada selección de los mismos, para evitar la introducción de sesgos no deseados en el sistema.
+
+\subsection{Algoritmos que evolucionan}
+Tienen mecanismos que les permiten irse modificando a sí mismos de forma aleatória (mutación) o combinacional (reproducción sexual). Contando también con mecanismos para comparar distintas versiones de sí mismos (generaciones) tras las modificaciones; potenciando aquellas que mejoran el algoritmo (lo acercan a los objetivos perseguidos) y relegando aquellas que lo empeoran.
+
+
+
 
 \chapter*{apéndice: temas varios}
 
