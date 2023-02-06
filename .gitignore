@@ -1,5 +1,8 @@
 .project/
+.classpath
 .vscode/
+.settings/
+bin/
 .$*
 *.bkp
 
