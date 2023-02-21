@@ -615,55 +615,46 @@ QT Layout Management: \url{https://doc.qt.io/qt-5/layout.html}
 Python Tkinter Grid Geometry Manager: \url{https://tkdocs.com/tutorial/grid.html}
 
 
-\chapter{Ejercicios}\label{ejercicios_gui}
-
-\begin{footnotesize}((una disculpa del autor: este capítulo esta ``en construcción\ldots'' y sigo trabajando en él; queda bastante trabajo para completarlo.))\end{footnotesize}
-\\
-
-(nota: Ver algunas posibles soluciones al final del libro, en el capítulo \ref{ejercicios_posibles_soluciones}.)
-\\{\scriptsize También puedes encontralas en \url{https://github.com/JuanMuruaOlalde/DesarrolloDeSoftware/tree/main/02-Mas_alla_del_IF_y_del_WHILE}}
-\\
-
-Los ejercicios de este capítulo son específicos para adquirir soltura con la biblioteca GUI que se vaya a utilizar. Para adquirir experiencia, conviene seguir practicando... dotando de interfaz gráfico a todos los demás trabajos que se hagan en los siguientes capítulos.
+\section{Ejercicios}\label{ejercicios_gui}
 
 
-\section{Hello, Benzirpi.}\label{ejercicio_hellobenzirpi}
+\subsection{Hello, Benzirpi.}\label{ejercicio_hellobenzirpi}
 Algo sencillo para empezar: un texbox donde teclear un nombre y un botón que rellena otro textbox (de solo lectura) con un saludo a ese nombre.
 \\ \includegraphics[width=\textwidth]{HelloBenzirpi - pantallazo - Java}
 
-\section{Bocatas}\label{ejercicio_bocatas}
+\subsection{Bocatas}\label{ejercicio_bocatas}
 Algo sencillo para elegir opciones: unos cuantos radiobuttons y checkboxes.
 \\ \includegraphics[width=\textwidth]{Bocatas - pantallazo - Java}
 
-\section{Selección plana}\label{ejercicio_selecionplana}
+\subsection{Selección plana}\label{ejercicio_selecionplana}
 Algo sencillo para elegir un elemento de una lista desplegable o de una lista abierta.
 \\\includegraphics[width=\textwidth]{Seleccion Plana - pantallazo - Java}
 
-\section{Diálogos estándares}\label{ejercicio_dialogos}
+\subsection{Diálogos estándares}\label{ejercicio_dialogos}
 Manejo de los diálogos del sistema operativo para: seleccionar carpetas, seleccionar archivos, seleccionar colores,...
 \\\includegraphics[width=\textwidth]{Dialogos Estandares - JFileChooser - Java}
 \\\\
 \includegraphics[width=0.5\textwidth]{Dialogos Estandares - JColorChooser - Swatches - Java}
 \includegraphics[width=0.5\textwidth]{Dialogos Estandares - JColorChooser - RGB - Java}
 
-\section{Scroll}\label{ejercicio_scroll}
+\subsection{Scroll}\label{ejercicio_scroll}
 Cuando se ha de mostrar un contenido que no cabe en el espacio disponible, se puede recurrir a unos deslizadores (scrollbars) horizontales o verticales para permitir desplazar dicho contenido dentro del espacio disponible.
 \\ \includegraphics[width=0.8\textwidth]{Scroll - pantallazo - Java}
 
-\section{Split}\label{ejercicio_split}
+\subsection{Split}\label{ejercicio_split}
 Cuando se desea permitir al usuario modificar sobre la marcha el espacio dedicado dentro de la ventana a los componentes dentro de ella, se puede recurrir a un separador ajustable entre zonas (spliter).
 \\ \includegraphics[width=0.8\textwidth]{Split - pantallazo - Java}
 
-\section{Calendario}\label{ejercicio_calendario}
+\subsection{Calendario}\label{ejercicio_calendario}
 Pedir una fecha mostrando un calendario.
 
-\section{Selección arbórea}\label{ejercicio_selecionarborea}
+\subsection{Selección arbórea}\label{ejercicio_selecionarborea}
 Presentar elementos con estructura jerárquica en árbol, navegar a través de ella mostrando u ocultando ramas, seleccionar algún elemento, y hacer algo con él (por ejemplo, mostrar información detallada de ese elemento concreto).
 
 \includegraphics[width=\textwidth]{Seleccion Arborea - pantallazo - Java}
 
 
-\section{Barra de progreso}\label{ejercicio_barradeprogreso}
+\subsection{Barra de progreso}\label{ejercicio_barradeprogreso}
 Cuando se desencadena una tarea larga, es conveniente mantener al usuario informado de cómo va progresando dicha tarea. Así se evita dar la impresión que el sistema se ha colgado.
 
 nota: No suele ser sencillo. Se ha de recurrir a la multitarea para conseguir que el interfaz de usuario (main thread) se vaya refrescando periódicamente mientras se está ejecutando la tarea (worker thread). Pero es algo tan necesario que casi todos los entornos de programación cuentan con algún mecanismo específico para implementar esa comunicación periódica.
@@ -674,7 +665,7 @@ Una sugerencia de ejercicio para practicar:
 Una lectura interesante: \url{https://www.oracle.com/technical-resources/articles/javase/swingworker.html}
 
 
-\section{Internacionalización (i18n) y localización (L10n)}\label{ejercicio_localizacion}
+\subsection{Internacionalización (i18n) y localización (L10n)}\label{ejercicio_localizacion}
 \begin{itemize}
 \item Internacionalización (i18n) son los mecanismos para adaptar el software a distintos idiomas y países.
 \item Localización (L10n) son los mecanismos para adaptar el software a los distintos usos y costumbres de cada país: moneda, pesos y medidas, formatos numéricos, unidades de medida, formatos de fecha/hora, convenciones culturales, sentido de escritura,\ldots
@@ -687,12 +678,12 @@ Tanto la internacionalización como la localización son prácticamente imposibl
 Si conocemos y nos sentimos cómodos usando los mecanismos que tenga nuestra plataforma de desarrollo para facilitar esos aspectos. No nos costará mucho más utilizarlos en todos nuestros trabajos; aunque en ese momento estemos pensando en un solo idioma y un solo país. Así, si mas tarde se han de incorporar más idiomas o más países, el camino estará preparado.
 
 
-\section{Ayudas y documentación}\label{ejercicio_ayudas}
+\subsection{Ayudas y documentación}\label{ejercicio_ayudas}
 Es importante conocer los mecanismos que tenga nuestra plataforma de desarrollo para mostrar documentación de forma dinámica: indicaciones al poner el ratón un tiempo quieto sobre un determinado elemento(tooltips), acceso al manual de uso (ayuda, tecla F1), advertencias directas para algunos aspectos especialmente delicados (pop-ups), etc.
 
 Son aspectos importantes si se van a desarrollar programas de una cierta envergadura. Programas que vayan a ser usados por muchas personas distintas, a lo largo de mucho tiempo.
 
-\subsection*{Algunas recomendaciones}
+\subsubsection*{Algunas recomendaciones}
 Creo que es mejor no incordiar mucho a los usuarios en su día a día. Suele ser suficiente con disponer de:
 \begin{itemize}
 \item Unos tooltips cortos y precisos acerca de lo que hace cada parte del interface. Tooltips que solo aparezcan si el usuario deja manifiestamente el ratón quieto durante unos 2 segundos sobre algo. 
@@ -707,6 +698,11 @@ Escribir una mera recopilación de cómo hacer qué, menú a menú y botón a bo
 
 De ponerse a producirlo, suele ser más rentable enfocar el manual de usuario como un curso de autoestudio.
 \\Si además se le dota de un buen índice de temas, podrá ser utilizado también, en cierta medida, como referencia puntual para resolver dudas.
+
+
+
+
+
 
 \chapter{Objetos: clases e instancias}
 
@@ -818,33 +814,12 @@ iria dentro del método `getGestorDeDatos(tipo)' de la clase `FactoriaDeGestores
 
 
 
-\chapter{Ejercicios}\label{ejercicios_oop}
+\section{Ejercicios}
 
-\begin{footnotesize}((una disculpa del autor: este capítulo esta ``en construcción\ldots'' y sigo trabajando en él; queda aún mucho trabajo para completarlo.))\end{footnotesize}
-\\
+\url{https://github.com/JuanMuruaOlalde/sugerencias-para-practicar-programacion/tree/main/Areas_y_Perimetros}
 
-(nota: Ver algunas posibles soluciones al final del libro, en el capítulo \ref{ejercicios_posibles_soluciones}.)
-\\{\scriptsize También puedes encontralas en \url{https://github.com/JuanMuruaOlalde/DesarrolloDeSoftware/tree/main/02-Mas_alla_del_IF_y_del_WHILE}}
-\\
+\url{https://github.com/JuanMuruaOlalde/sugerencias-para-practicar-programacion/tree/main/Ascensores}
 
-\section{Áreas y perímetros de figuras geométricas}
-\subsection{Utilizando herencia}
-El cálculo de área y el de perímetro se calcula en el constructor de cada clase hija y (si lo hay) en el metodo setter de las dimensiones de la figura. Los métodos getter, getArea() y getPerimetro(), son iguales para todas las hijas y se limitan a devolver el valor precalculado.
-\subsection{Utilizando interface}
-El cálculo de area y el de perímetro se implementa en cada clase, en los métodos getArea() y getPerimetro() obligados por el Interface.
-
-
-\section{Ascensores}\label{ejercicio_ascensores}
-
-Caso de uso:
-\\ \includegraphics[width=0.8\textwidth]{ascensores - caso de uso} 
-
-Sugerencia de interfaz de usuario textual:
-\\ \includegraphics[width=0.5\textwidth]{ascensores - pantallazo - textual1} 
-\includegraphics[width=0.5\textwidth]{ascensores - pantallazo - textual2} 
-
-Sugerencia de interfaz de usuario grafico:
-\\ \includegraphics[width=0.7\textwidth]{ascensores - pantallazo - grafico1} 
 
 
 
@@ -1406,113 +1381,11 @@ Para tratar con otros tipos de bases de datos (nosql databases), se utilizan otr
 
 Cuando la cantidad de datos es especialmente enorme o las relaciones entre los datos son especialmente complejas, suelen ser de gran ayuda las técnicas especializadas de mineria de datos (data-wharehouse, data-mining, data-analytics,...).
 
+\section{Ejercicios}
 
-\chapter{Ejercicios}\label{ejercicios_datos}
+\url{https://github.com/JuanMuruaOlalde/sugerencias-para-practicar-programacion/tree/main/CuentasBancarias}
 
-\begin{footnotesize}((una disculpa del autor: este capítulo esta ``en construcción\ldots'' y sigo trabajando en él; queda aún mucho trabajo para completarlo.))\end{footnotesize}
-\\
-
-(nota: Ver algunas posibles soluciones al final del libro, en el capítulo \ref{ejercicios_posibles_soluciones}.)
-\\{\scriptsize También puedes encontralas en \url{https://github.com/JuanMuruaOlalde/DesarrolloDeSoftware/tree/main/02-Mas_alla_del_IF_y_del_WHILE}}
-\\
-
-La idea es utilizar las colecciones pertinentes para la gestión de datos en memoria, según el ejercicio. Y utilizar persistencia para guardar/recuperar esos datos a/desde disco.
-
-Es conveniente aplicar diversos tipos de persistencia (txt, XML, JSON, BD) en cada ejercicio. Así se puede trabajar el desacople entre lógica y almacenamiento; si está bien planteado, se debe poder cambiar el formato de persistencia sin afectar en nada al resto del programa (ni a la lógica ni, mucho menos, al interfaz de usuario). nota: ver más adelante, la sección \ref{multicapa} en la página \pageref{multicapa}.
-
-\section{Cuentas bancarias}\label{ejercicio_cuentasbancarias}
-
-Caso de uso:\\
-\includegraphics[width=\textwidth]{cuentas bancarias - caso de uso} 
-
-Nota: Para simplificar el ejercicio, cada cuenta tendrá un solo cliente titular. Aunque un mismo cliente podrá ser titular de varias cuentas.
-
-\vspace{1cm}
-Tarjetas de requisitos/funcionalidades:
-
-\def\arraystretch{2}
-\begin{longtable}{|p{7cm}|p{7cm}|}
-
-\hline
-
-Como cliente, necesito ingresar dinero.
-\newline \newline
-La forma de validar sera:
-\begin{itemize}
-\item consulto saldo.                                
-\item ingreso dinero.
-\item vuelvo a consultar saldo y compruebo que el ingreso se ha realizado correctamente.
-\end{itemize}
-
-&
-
-Como cliente, necesito consultar saldo. 
-\newline \newline                     
-La forma de validar sera:
-\begin{itemize}
-\item pido consulta de saldo.
-\item obtengo los últimos 8 movimientos de la cuenta y el saldo actual en ella.
-\end{itemize}
-
-\\ \hline
-
-Como cliente, necesito sacar dinero. 
-\newline \newline
-La forma de validar sera:
-\begin{itemize}
-\item consulto saldo.
-\item saco dinero.
-\item vuelvo a consultar saldo y compruebo que el reintegro se ha registrado correctamente.
-\end{itemize}                        
-
-&                        
-                
-Como cajero, necesito identificar al cliente y verificar el numero de cuenta. 
-\newline \newline
-La forma de validar sera:
-\begin{itemize}
-\item introduzco el número de cuenta y consulto los datos del cliente titular de la misma.
-\item compruebo esos datos con respecto al DNI del cliente.
-\end{itemize}
-Puede darse el caso de que el cliente no me de el número de cuenta. En ese caso:
-\begin{itemize}
-\item introduzco el DNI del cliente y consulto las cuentas de las que es titular (numero y saldo).
-\item el cliente me indica en cual de las cuentas desea operar.
-\end{itemize}
-
-\\ \hline
-                        
-Como cajero, necesito atender a las operaciones que el cliente solicite.
-\newline \newline
-La forma de validar sera:
-\begin{itemize}
-\item puedo realizar un ingreso de dinero en una cuenta.
-\item puedo realizar una retirada de dinero en una cuenta.
-\item puedo consultar los últimos movimientos y el saldo.
-\end{itemize}
-
-&                        
-                
-Como dueño del banco, necesito tener un registro seguro de todas las transacciones realizadas.
-\newline \newline
- La forma de validar sera:                
-\begin{itemize}
-\item realizar cada una de las operaciones posibles en el sistema: consultar, crear, modificar, etc.
-\item consultar el registro para ver que todas y cada una de las operaciones se han registrado correctamente: fecha, hora, tipo de operación, datos afectados por la operación (nota: en las modificaciones, incluir tanto los datos ``antes'' como los datos ``después'').
-\end{itemize}
-                        
-\\ \hline
-                
-
-\end{longtable}
-
-
-\section{Gestión de accesos}
-Un mapa para gestionar usuarios autorizados a entrar. Y una lista para almacenar los accesos (o intentos de acceso) que se han producido.
-
-\section{Gestión de pedidos}
-Manejar datos del tipo “cabecera-líneas”. Cabecera con los datos generales del pedido: fecha, cliente, dirección de envio, persona que recibirá el envio,... Y lineas con los datos de los artículos solicitados: código, descripción, cantidad,...
-
+\url{https://github.com/JuanMuruaOlalde/sugerencias-para-practicar-programacion/tree/main/Albaranes}
 
 \chapter{Tratamiento de incidencias y errores}
 
@@ -1658,13 +1531,6 @@ Algunos ejemplos ilustrativos:
 \\ \url{https://www.amqp.org/}
 
 
-\chapter{Ejercicios}\label{ejercicios_comunicaciones}
-
-\begin{footnotesize}((una disculpa del autor: este capítulo no lo he abordado aún; el libro esta ``en construcción\ldots'' y sigo trabajando en él; queda mucho trabajo para completarlo.))\end{footnotesize}
-
-(nota: Ver algunas posibles soluciones al final del libro, en el capítulo \ref{ejercicios_posibles_soluciones}.)
-\\{\scriptsize También puedes encontralas en \url{https://github.com/JuanMuruaOlalde/DesarrolloDeSoftware/tree/main/02-Mas_alla_del_IF_y_del_WHILE}}
-
 
 \chapter{Procesamiento paralelo}
 Una forma de realizar un trabajo más rápido, es poner más trabajadores trabajando en ello. Pero, ¡ojo!, es vital que los trabajadores no se estorben entre sí, ni se bloqueen o retrasen excesivamente por esperarse unos a otros.
@@ -1788,22 +1654,13 @@ Merece utilizar alguna de las bibliotecas y plataformas específicas que están 
 \\ \url{https://software.intel.com/content/www/us/en/develop/tools/parallel-studio-xe.html}
 
 
-\chapter{Ejercicios}\label{ejercicios_paralelismo}
-
-\begin{footnotesize}((una disculpa del autor: este capítulo no lo he abordado aún; el libro esta ``en construcción\ldots'' y sigo trabajando en él; queda mucho trabajo para completarlo.))\end{footnotesize}
-
-(nota: Ver algunas posibles soluciones al final del libro, en el capítulo \ref{ejercicios_posibles_soluciones}.)
-\\{\scriptsize También puedes encontralas en \url{https://github.com/JuanMuruaOlalde/DesarrolloDeSoftware/tree/main/02-Mas_alla_del_IF_y_del_WHILE}}
-
-
 \chapter{Organización interna del código}
 
-La adecuada organización interna del código, es uno de los aspectos de la programación más complicados de aprender. 
+La adecuada organización interna del código, es uno de los aspectos de la programación más complicados de aprender.
 
 Solo se puede llegar a dominar a base de participar en muchos proyectos (grandes) de diferentes ámbitos. Participando en ellos de forma activa, prestando atención a lo que suele tender a facilitar las cosas o a complicarlas. En el largo plazo, pensando en toda la vida útil del software.
 
-Obviamente, también ayuda ir recogiendo ideas y aprendiendo de la experiencia de otras personas (libros, conferencias,\ldots). Probandolas en la medida de nuestras posibilidades.
-
+Obviamente, también ayuda ir recogiendo ideas y aprendiendo de la experiencia de otras personas (libros, conferencias,. . . ). Probandolas en la medida de nuestras posibilidades.
 
 \section{Orientación a eventos (event-driven)}\label{eventos}
 Es una arquitectura muy típica en cualquier aplicación que tenga un interfaz gráfico de usuario (basado en ventanas, botones, controles,...) o un interface hardware específico (basado en teclas, pulsadores, luces de aviso, pantallas informativas,...)
@@ -2107,381 +1964,15 @@ nota:
 \\La persona que acuñó el término REST, Roy Fielding, ha comentado en más de una ocasión que la caracteristica principal para ser `RESTful' es la organización de la navegación dentro de las aplicaciones utilizando hipervínculos (HATEOAS). Pero, en la práctica, casi ninguna de las implementaciones de REST hace uso de la misma. Ni en la parte servidora. Ni, mucho menos, en la parte cliente. Temas como los documentos HAL no han terminado de cuajar en la práctica\ldots
 
 
-\chapter{Ejercicios}\label{ejercicios_organizacion}
+\section{Ejercicios}
 
-\begin{footnotesize}((una disculpa del autor: este capítulo no lo he abordado aún; el libro esta ``en construcción\ldots'' y sigo trabajando en él; queda mucho trabajo para completarlo.))\end{footnotesize}
-\\
+\url{https://github.com/JuanMuruaOlalde/sugerencias-para-practicar-programacion/tree/main/Multiinterface}
 
-(nota: Ver posibles soluciones al final del libro, en el capítulo \ref{ejercicios_posibles_soluciones}.)
-\\{\scriptsize También puedes encontralas en \url{https://github.com/JuanMuruaOlalde/DesarrolloDeSoftware/tree/main/02-Mas_alla_del_IF_y_del_WHILE}}
-\\
+\url{https://github.com/JuanMuruaOlalde/sugerencias-para-practicar-programacion/tree/main/MVC}
 
-comentario: Esta va a ser la parte más complicada de ejercitar. La idea es adquirir práctica real en proyectos de una cierta (gran) envergadura. Resolviendo cada uno de ellos con distintas arquitecturas, y viendo los pros/contras de cada una de esas arquitecturas.
-\\Pero como eso va a resultar complicado, empezaré por ejercicios sencillos para practicar el desacople entre capas.
+\url{https://github.com/JuanMuruaOlalde/sugerencias-para-practicar-programacion/tree/main/Excursiones}
 
-
-\section{Multiinterface}\label{ejercicio_multiinterface}
-
-Preparar un pequeño programilla sencillo. Por ejemplo:
-\begin{itemize}
-\item Uno que, dados un lado y otro lado de un paralelogramo, calcule y devuelva su perímetro y su área.
-\item Uno que permita pedir una bebida de una lista (café, leche o chocolate) e introducir un código {\footnotesize ID} de usuario (3 letras). El usuario ha de poder consultar la lista de bebidas disponibles. El programilla ha de avisar en caso de pedir una bebida agotada (usar un contador de existencias en los depósitos; con la correspondiente función de cargar un depósito). Y ha de avisar también en caso de recibir un código incorrecto (usar una lista de usuarios; con la correspondiente función de dar alta/baja de códigos {\footnotesize ID} de usuario). Los contadores y la lista han de persistir en un archivo de texto. 
-\end{itemize}
-
-Utilizar el programilla (tal cual, sin modificar su núcleo para nada) desde diversos interfaces de usuario. Por ejemplo mediante:
-\begin{itemize}
-\item Unos comandos tecleados desde la línea de comandos.
-\item Un formulario gráfico (aplicación ``desktop'').
-\item Unos servicios web ``RESTfull'', (una API web).
-\item Una página web que hace uso de esos servicios.
-\end{itemize}
-
-Persistir los datos en diversos formatos. Por ejemplo: texto plano, JSON, XML,\ldots (Sin modificar el núcleo del programa para nada.)
-
-
-
-\section{Arquitectura en tres capas, MVC}\label{ejercicio_mvc}
-Preparar un pequeño programilla aplicando una estructura multicapa MVC con:
-\begin{itemize}
-
-\item Un modelo: una lista de personas, con unos pocos datos (nombre, apellidos,\ldots) en cada entidad persona y un sistema de persistencia (  archivo de texto o base de datos) donde guardar la lista.
-
-\item Una vista: un interfaz gráfico (GUI) a través del cual interactuar con la lista de personas. Por ejemplo, consultarlas, dar de alta una nueva, borrar una,\ldots
-
-\item Un controlador: código que se encargará de recoger las instrucciones dadas a través del interfaz para trasladarselas al modelo; así como de leer datos del modelo, elaborarlos y mostrarlos en el interfaz según corresponda.
-
-\end{itemize}
-
-Hacerlo de dos formas distintas,
-\\aplicando las dependencias entre sus distintas partes (objetos):
-\begin{itemize}
-
-\item (1) de forma directa: Cada objeto se instancia él mismo los objetos que necesite.
-
-\item (2) de forma inversa: Cada objeto recibe desde fuera los objetos que necesite \footnotesize{(o bien inyectados a través de su constructor o bien inyectados a través un metodo setter ad-hoc)}.
-
-\end{itemize}
-
-ampliación: Siguiendo otra de las interpretaciones bastante aceptadas de MVC (de hecho, la interpretación original). Elaborar otra versión del programa donde la vista ``observa'' o ``escucha'' de forma directa el modelo para conseguir los datos que ha de mostrar. nota: Esta forma de proceder es muy útil en los casos en que el flujo de datos modelo$\rightarrow$controlador$\rightarrow$vista es grande, en aquellos en los que el controlador no haga mas que de mero repetidor en ese flujo de datos y/o en aquellos donde múltiples vistas han de refrescarse simultáneamente para reflejar modificaciones en los datos realizadas desde una cualquiera de ellas.
-
-
-\section{Excursiones}\label{ejercicio_excursiones}
-
-Se trata de realizar un programa que permita a alguien (a una persona encargada dentro del club o asociación):
-\begin{itemize}
-
-\item Registrar excursiones. Con cuatro datos básicos: fecha, hora, destino, coste, poblacionOrigen, poblacionDestino, tipoDeExcursion.
-\\nota: los tipos de excursión se clasificarán según la actividad principal que se vaya a hacer: VisitaHistorica, ConciertoMusical, ActuacionTeatral, RutaNatural,\ldots 
-
-\item Registrar personas interesadas en participar en alguna excursión. Con cuatro datos básicos: nombre, apellidos, poblacion, email, telefono, preferenciasDeTipoDeExcursion.
-
-\item Saber qué excursiones están activas (aún sin realizar).
-
-\item Apuntar participantes a una excursión. Y llevar el control de quien ya la ha pagado quien todavia no.
-
-\item Cuando se planifica una nueva excursión, enviar avisos (por email) a todas las personas de la poblacionOrigen que pudieran estar interesadas en ese tipo de excursión.
-
-\end{itemize}
-
-ampliación: Hacer el programa con interface web.
-
-ampliación: Y, ya que estamos en web, permitir a las posibles personas participantes consultar las excursiones activas y registrarse/apuntarse ellas mismas a las excursiones que deseen.
-
-
-
-\section{Hotel}\label{ejercicio_hotel}
-
-nota: Este ejercicio intenta ser un proyecto de una cierta (gran) envergadura. Se puede complementar con todo aquello que se nos ocurra. Lo que se cita aquí son algunas ideas de por dónde comenzar a trabajar.
-
-\vspace{0.5cm}
-
-Siguiendo la recomendación de DDD (Domain Driven Development) acerca del ``ubiquitous language'': todas las personas que participan en una determinada parte del sistema (``bounded context'') han de hablar un lenguaje común.
-\\Estas son las principales entidades que vamos a manejar:
-
-\begin{description}
-
-
-\item[Habitaciones:] Se identifican por un `número de habitación' (un `nombre de habitación' que puede ser alfanumérico).
-\\Su tipo de habitación puede ser, por ejemplo: SENCILLA, DOBLE, SUITE,\ldots
-\\Su baño puede ser, por ejemplo:  COMPARTIDO, DUCHA, BAÑERA,\ldots
-\\Pueden tener diferentes tamaños de cama, por ejemplo: 90, 135, 180,\ldots
-\\Pueden tener diferentes orientaciones de vista desde su ventana, por ejemplo: FRONTAL, POSTERIOR, DERECHA o IZQUIERDA (considerando el hotel como un ``cuadrado rectangular'', mirando desde dentro hacia la entrada principal, el frontal es la fachada donde está la entrada y el posterior queda a nuestra espalda)
-
-\item[Huespedes:] las personas que se alojan en el hotel.
-\\Habrá que recoger al menos los datos básicos:
-\begin{itemize}
-\item id legal (por ejemplo, número de dni, de pasaporte, de cédula,\ldots)
-\item nombre y apellidos
-\item forma de pago (por ejemplo, contado, tarjeta, facturación,\ldots) y los datos necesarios para realizarla (por ejemplo, para la tarjeta seria su número, nombre titular, fecha caducidad y número clave).  (nota: Si un huésped no es el principal de una estancia de un grupo de personas, podemos saltarnos la forma de pago en su registro).
-\end{itemize}
-
-Para simplificar, en un principio no se contemplarán los requisitos derivados de las leyes de protección de datos de información de carácter personal.  En una segunda etapa del ejercicio, se podría implementar este tema; para seguir profundizando en los aspectos de evolucionabilidad del software.
-(Obviamente, si esto fuera una aplicación real, el tema de la protección de datos seria una de las primeras cosas a tener en cuenta.)
-
-Otro posible aspecto para una segunda etapa, podría ser el de la "fidelización" de huéspedes: tarjeta de cliente, tarjeta VIP, puntos, promociones, etc.
-
-\item[Estancias:] Una estancia no es más que una asignación de un cierto huesped a una habitación (si es una persona individual) o de 
-unos ciertos huespedes a una/s habitacion/es (si son un grupo de personas)
-
-Tiene una fecha de entrada y una fecha de salida. Ambas válidas desde/hasta el mediodía. (Es decir, la estancia está activa desde las 12:00 de la fecha de entrada hasta las 12:00 de la fecha de salida.)
-Estancia activa ==> habitaciones ocupadas.
-
-A una estancia se le pueden ir cargando los servicios que vayan consumiendo sus huéspedes. Normalmente estos cargos se harán contra un número de habitación.
-
-Al terminar la estancia, hay que liquidar y crear una factura.
-
-
-\item[Servicios:] Todo aquello que se cobra al cliente.
- 
-
-\item[Reservas:] Son como estancias, pero en el futuro. La diferencia es que no tienen un número de habitación exacto asignado aún (pero si un tipo de habitación concreto y unas posibles condiciones especiales).
-
-Se han de tener en cuenta al consultar disponibilidades en unas determinadas fechas. A efectos prácticos cuentan como habitaciones ocupadas, igual que las estancias que estén activas en esas fechas.
-
-\item[Empleados:] Las personas que trabajan en el hotel
-
-\item[Roles:] de los empleados.
-Por ejemplo:
-\begin{itemize}
-\item Limpieza y servicio de habitacionesAssign/Schedule…
-\item RecepciónAssign/Schedule…
-\item Cafetería y restauraciónAssign/Schedule…
-\item Mantenimiento y reparacionesAssign/Schedule…
-\item Administración
-\end{itemize}
-
-\item[Avisos:] Cualquier información que se deba hacer llegar a alguien
-y que se le pueda hacer llegar de forma asíncrona.
-
-\end{description}
-
-
-\vspace{2cm}
-
-Aquí van algunas fichas con casos de uso a implementar y tareas a realizar. Las podemos recortar y poner en el tablón de gestión del proyecto si es que llevamos alguno. (nota: No están en orden, cada cual tendrá que reorganizarlas según las prioridades que estime oportuno.)
-\\nota: Es importante es abordar una ficha cada vez; y no pasar a otra ficha hasta la ficha en curso esté totalmente terminada del todo, todo.
-
-\def\arraystretch{2}
-\begin{longtable}{|p{7cm}|p{7cm}|}
-
-\hline
-
-Altas/bajas/modificaciones de habitaciones. 
-\newline
-\begin{itemize}
-\item modelar la entidad Habitación
-\item crear una nueva y guardarla
-\item evitar duplicados 
-\item buscar y recuperar una, o varias, o todas
-\item editar datos de una existente
-\item dar una de baja (inactivarla)
-\end{itemize}
-
-&
-
-Infraestructura de configuración.
-\newline \newline
-Toda aplicación tiene algunos parámetros que conviene poder modificar "desde fuera", para aplicarlos cuando la aplicación arranca.
-\newline \newline
-nota: lo más típico es algún archivo INI, JSON o YAML,
-o algunas variables de entorno,
-o algunos parámetros en el ejecutable/comando que arranca la aplicación.
-
-\\ \hline
-
-Liquidar una estancia.
-\newline \newline
-Generando factura detallada de todo lo consumido.
-
-&
-
-Cargar un servicio a una estancia.
-\newline \newline
-Normalmente, se identificará la estancia a través de un número de habitación.
-
-\\ \hline
-
-Infraestructura de persistencia.
-\newline \newline
-El mecanismo de persistencia principal que se va a utilizar para almacenar los datos manejados.
-\newline
-Pensar y preparar cómo se va a utilizar a lo largo y ancho de toda la aplicación.
-\newline \newline
-notas: 
-Una vez decidida como implementar la persistencia, normalmente esta no se suele cambiar.
-Pero en este ejercicio conviene pensar en implementar más de un mecanismo de persistencia para unos mismos objetos. Por lo menos en alguna de las partes de la aplicación. Para así hacer experimentos acerca del grado de dependencia que tiene el código respecto de la persistencia utilizada.
-\newline
-Por ejemplo, se podria preparar una persistencia basada en base de datos (en MariaDB, o en PostgreSQL, o en SQLite, o en\ldots), y otra persistencia basada en archivos (en JSON, o en XML, o en CSV, o en\ldots). Para probar cuán sencilla (o complicada) es la tarea de cambiar de utilizar una a utilizar la otra según la arquitectura interna de nuestro programa.
-
-&
-
-Infraestructura de interface.
-\newline \newline
-preparar la pantalla inicial y los "menús" de acceso a las distintas partes de la aplicación.
-\newline \newline
-notas: 
-En este ejercicio conviene pensar en implementar más de un interface. Por lo menos en alguna de las partes de la aplicación. Para así hacer experimentos acerca del grado de dependencia existente entre la lógica de aplicación y el interface.
-\newline
-Por ejemplo, se podria preparar un clásico interface gráfico (GUI) y otro interface vía servicios (por ejemplo, una API HTTP/REST). En teoria, se deberian poder usar ambos indistintamente.
-
-\\ \hline
-
-Una persona consulta sus avisos.
-\newline \newline
-Tanto los dirigidos a ella personalmente, como los dirigidos a los roles que desempeña.
-
-&
-
-Registrar un aviso para un empleado o para un rol.
-
-\\ \hline
-
-Registrar la estancia de un/os huesped/es en un/as habitación/es. 
-\newline \newline
-En caso de que varios huéspedes vengan como grupo y se les vaya a facturar como tal grupo,
-\begin{itemize}
-\item Los datos generales (los de facturación) serán los de una de las personas integrantes, o del propio grupo (si este tiene entidad jurídica).
-\item Pero se han de recoger también las identidades de cada una de las personas del grupo.
-\end{itemize}
-\vspace{0.3cm}
-No se puede registrar una estancia sin las fechas de entrada y salida correctas. Entrada hoy o anterior. Salida posterior a la entrada.
-\newline \newline
-No se puede registrar una nueva estancia para una habitación que ya esté ocupada por una estancia activa.
-
-&
-Revisar/modificar los precios de las habitaciones.
-\newline \newline
-Obviamente, si el nuevo precio de alguna habitación se incrementa, no se puede aplicar a la estancia que estuviera ya registrada en esa habitación. Pero si que se debe aplicar si el nuevo precio se ha reducido.
-
-
-\\ \hline
-
-Altas/bajas/modificaciones de servicios.
-\newline \newline
-Es necesario tener una lista de los servicios disponibles, junto con el precio de cada.
-\newline \newline
-Como va a haber muchos, será necesario prever un sistema de clasificación para ayudar a buscar un servicio concreto. Usando dos niveles: grupo y servicio; o tres niveles: grupo, subgrupo y servicio.
-\newline
-Los grupos podrian ser, por ejemplo: lavanderia, minibar, bar/restaurante, transporte,\ldots 
-
-&
-
-Revisar (modificar) los precios de los servicios.
-\newline \newline
-Lo ideal seria poder presentarlos en un interface tipo "hoja de cálculo" para facilitar la revisión.
-\newline \newline
-Seria interesante también algún mecanismo para incrementar o decrementar un porcentaje concreto a todo un subgrupo o a todo un grupo de servicios.
-
-\\ \hline
-
-
-&
-
-Infraestructura de log.
-\newline \newline
-Para registrar lo que va pasando dentro de la aplicación.
-\newline
-\url{https://en.wikipedia.org/wiki/Logging_(software)}
-
-\\ \hline
-
-Altas/bajas/modificaciones de huéspedes.
-\newline \newline
-Tener en cuenta que algunos huéspedes (aquellos registrados como `huésped principal' de una estancia) han de tener datos de facturación y cobro. Dichos huéspedes  pueden ser personas físicas o jurídicas. 
-\newline \newline
-En un principio, no se contemplarán temas sobre el tratamiento de datos de carácter personal. Pero si esto fuera una aplicación real, habria que tener en cuenta la normativa.
-
-& 
-
-Altas/bajas/modificaciones de reservas.
-\newline \newline
-A todos los efectos, una reserva es una habitación ocupada.  Es como una estancia, solo que no ocupa una habitación concreta, sino que ocupa una de un tipo determinado.
-\newline
-Se ha de tener en cuenta a la hora de consultar qué habitaciones hay libres cara a una nueva estancia o una nueva reserva.
-
-\\ \hline
-
-Gestión de tarjetas-llave.
-\newline \newline
-Se ha de llevar un registro de qué llaves están autorizadas para qué habitación.
-\newline \newline
-Se ha de poder autorizar una llave para que abra una determinada habitación. Y también poder revocar esa autorización.
-
-&
-
-Altas/bajas/modificaciones de roles.
-\newline \newline
-Ha de ir junto con un mecanismo de asignación de roles a empleados.
-\newline \newline
-nota: Una misma persona puede tener más de un rol.
-
-\\ \hline
-
-Altas/bajas/modificaciones de empleados.
-
-& 
-
-Asignar roles a empleados.
-\newline \newline
-Tener en cuenta que se podrán asignar, o bien roles a un empleado concreto, o bien empleados a un rol concreto.
-
-\\ \hline
-
-Infraestructura de autorizaciones y permisos.
-\newline \newline
-Una vez tengamos usuarios y tengamos roles. Podemos usarlos también para seguridad interna en la aplicación:
-\begin{itemize}
-\item Hay que preparar un mecanismo de inicio de sesión (login) seguro.
-\item Hay que asegurar que cada cual solo puede acceder a aquello que deba acceder.
-\end{itemize}
-Obviamente, esto pasa por tener también alguna manera de editar y mantener esa información de "qué" puede hacer "quién". Ese "quién" se definirá asignando a roles y no a usuarios individuales.
-\newline
-(Tener en cuenta que un mismo usuario puede tener asignados varios roles si es necesario.)
-
-&
-
-Tarjetas-llave maestras . Auditoria de accesos.
-\newline \newline
-Los empleados necesitan tarjetas capaces de abrir cualquier habitación.
-\newline
-El uso de estas tarjetas maestras ha de quedar auditado. Y, ya que estamos, se puede también auditar el uso de cualquier tarjeta en cualquier habitación.
-
-\\ \hline
-
-
-Inicio de sesión de un empleado.
-\newline \newline
-Cada empleado puede gestionarse la contraseña que desee.
-\newline
-nota: Un hotel no es "Fort Knox", será suficiente con guardar y manejar hash-es de las contraseñas.
-
-&
-
-Infraestructura de observabilidad.
-\newline \newline
-Una aplicación instrumentada y que reporta estadísticas (telemetría) sobre su funcionamiento interno, es una aplicación que puede monitorizarse continuamente para ver si está funcionando bien (como siempre) o si tiene problemas (hace "cosas raras").
-\newline \newline
-Una vez instrumentada y reportando en algún formato estándar. La observación se puede hacer mediante una plataforma de agregación de estadísticas que incluya un cuadro de mando y un sistema de alertas. (algo tipo \url{https://grafana.com/} o \url{https://www.nagios.org/} o algo similar)
-
-\\ \hline
-
-Marcar una habitación como no utilizable.
-\newline \newline
-Se ha de recoger:
-\begin{itemize}
-\item por qué está fuera de servicio
-\item tiempo estimado (horas, días, meses,...) que va a permanecer así
-\end{itemize}
-
-&
-
-
-\\ \hline
-
-\end{longtable}
-
-
-
+\url{https://github.com/JuanMuruaOlalde/sugerencias-para-practicar-programacion/tree/main/Hotel}
 
 
 
@@ -2651,278 +2142,6 @@ PostgreSQL: \url{https://www.postgresql.org}
 MariaDB: \url{https://mariadb.org/}
 
 
-\chapter{apéndice B: ejemplos de posibles soluciones...}\label{ejercicios_posibles_soluciones}
-
-
-\section{...a los ejercicios del capítulo \ref{ejercicios_gui}}
-
-\begin{footnotesize}((una disculpa del autor: este capítulo esta ``en construcción\ldots'' y sigo trabajando en él; queda mucho trabajo para completarlo.))\end{footnotesize}
-
-\vspace{2cm}
-\subsection*{\ref{ejercicio_hellobenzirpi} \{\nameref{ejercicio_hellobenzirpi}\}}
-\vspace{0.5cm}
-\subsubsection*{En lenguaje Java (usando Swing)} \lstset{language=Java} 
-\includegraphics[width=\textwidth]{HelloBenzirpi - pantallazo - Java}
-\lstinputlisting[caption='module-info.java']{soluciones_java/HelloBenzirpi/src/module-info.java}
-\lstinputlisting[caption='InterfazGraficoDeUsuario.java']{soluciones_java/HelloBenzirpi/src/hello/InterfazGraficoDeUsuario.java}
-\lstinputlisting[caption='Main.java']{soluciones_java/HelloBenzirpi/src/hello/Main.java}
-\vspace{1cm}
-\subsubsection*{En lenguaje Java (usando JavaFx)} \lstset{language=Java} 
-\includegraphics[width=\textwidth]{HelloBenzirpi - pantallazo - JavaFx}
-\lstinputlisting[caption='App.java']{soluciones_java/HelloBenzirpi_javafx/App.java}
-\lstinputlisting[caption='HelloBenzirpi.fxml']{soluciones_java/HelloBenzirpi_javafx/HelloBenzirpi.fxml}
-\lstinputlisting[caption='HelloBenzirpi.java']{soluciones_java/HelloBenzirpi_javafx/HelloBenzirpi.java}
-\vspace{1cm}
-\subsubsection*{En lenguaje Pyton} \lstset{language=Python} 
-\includegraphics[width=\textwidth]{HelloBenzirpi - pantallazo - Python}
-\lstinputlisting[caption='hello\_benzirpi.py']{soluciones_python/GUI/hello_benzirpi.py}
-\lstinputlisting[caption='GUI.py']{soluciones_python/GUI/GUI.py}
-\vspace{1cm}
-\subsubsection*{En lenguaje C++, (definición 'fija' del interfaz)} \lstset{language=C++} 
-\includegraphics[width=\textwidth]{HelloBenzirpi - pantallazo - C++}
-\lstinputlisting[caption='mainwindow.h']{soluciones_cpp/HelloBenzirpi/mainwindow.h}
-\lstinputlisting[caption='mainwindow.cpp']{soluciones_cpp/HelloBenzirpi/mainwindow.cpp}
-\lstinputlisting[caption='main.cpp']{soluciones_cpp/HelloBenzirpi/main.cpp}
-\lstinputlisting[caption='mainwindow.ui']{soluciones_cpp/HelloBenzirpi/mainwindow.ui}
-\vspace{1cm}
-\subsubsection*{En lenguaje C++, (definición 'flexible' del interfaz)} \lstset{language=C++} 
-\includegraphics[width=\textwidth]{HelloBenzirpi_bis - pantallazo - C++}
-\lstinputlisting[caption='main.qml']{soluciones_cpp/HelloBenzirpi_bis/main.qml}
-\lstinputlisting[caption='main.cpp']{soluciones_cpp/HelloBenzirpi_bis/main.cpp}
-
-\vspace{2cm}
-\subsection*{\ref{ejercicio_bocatas} \{\nameref{ejercicio_bocatas}\}}
-\vspace{0.5cm}
-\subsubsection*{En lenguaje Java} \lstset{language=Java} 
-\includegraphics[width=\textwidth]{Bocatas - pantallazo - Java}
-\lstinputlisting[caption='module-info.java']{soluciones_java/Bocatas/src/module-info.java}
-\lstinputlisting[caption='InterfazGraficoDeUsuario.java']{soluciones_java/Bocatas/src/bocatas/InterfazGraficoDeUsuario.java}
-\lstinputlisting[caption='Main.java']{soluciones_java/Bocatas/src/bocatas/Main.java}
-
-\vspace{2cm}
-\subsection*{\ref{ejercicio_selecionplana} \{\nameref{ejercicio_selecionplana}\}}
-\vspace{0.5cm}
-\subsubsection*{En lenguaje Java} \lstset{language=Java} 
-\includegraphics[width=\textwidth]{Seleccion Plana - diagrama de clases}
-\includegraphics[width=\textwidth]{Seleccion Plana - pantallazo - Java}
-\lstinputlisting[caption='module-info.java']{soluciones_java/SeleccionPlana/src/module-info.java}
-\lstinputlisting[caption='InterfazGraficoDeUsuario.java']{soluciones_java/SeleccionPlana/src/seleccionPlana/InterfazGraficoDeUsuario.java}
-\lstinputlisting[caption='ControladorParaLaListaDeConcursantes.java']{soluciones_java/SeleccionPlana/src/seleccionPlana/ControladorParaLaListaDeConcursantes.java}
-\lstinputlisting[caption='FuenteDeDatos.java']{soluciones_java/SeleccionPlana/src/seleccionPlana/FuenteDeDatos.java}
-\lstinputlisting[caption='Concursante.java']{soluciones_java/SeleccionPlana/src/seleccionPlana/Concursante.java}
-\lstinputlisting[caption='Main.java']{soluciones_java/SeleccionPlana/src/seleccionPlana/Main.java}
-
-\vspace{2cm}
-\subsection*{\ref{ejercicio_dialogos} \{\nameref{ejercicio_dialogos}\}}
-\vspace{0.5cm}
-\subsubsection*{En lenguaje Java} \lstset{language=Java} 
-\includegraphics[width=\textwidth]{Dialogos Estandares - pantallazo - Java}
-\lstinputlisting[caption='module-info.java']{soluciones_java/DialogosEstandares/src/module-info.java}
-\lstinputlisting[caption='EjercitandoJFileChooser.java']{soluciones_java/DialogosEstandares/src/dialogosEstandares/EjercitandoJFileChooser.java}
-\lstinputlisting[caption='EjercitandoJColorChooser.java']{soluciones_java/DialogosEstandares/src/dialogosEstandares/EjercitandoJColorChooser.java}
-\lstinputlisting[caption='Main.java']{soluciones_java/DialogosEstandares/src/dialogosEstandares/Main.java}
-
-\vspace{2cm}
-\subsection*{\ref{ejercicio_scroll}\{\nameref{ejercicio_scroll}\}}
-\vspace{0.5cm}
-\subsubsection*{En lenguaje Java} \lstset{language=Java} 
-\includegraphics[width=0.8\textwidth]{Scroll - pantallazo - Java}
-\lstinputlisting[caption='module-info.java']{soluciones_java/Scroll/src/module-info.java}
-\lstinputlisting[caption='InterfazGraficoDeUsuario.java']{soluciones_java/Scroll/src/scroll/InterfazGraficoDeUsuario.java}
-\lstinputlisting[caption='ComponenteParaMostarUnaImagen.java']{soluciones_java/Scroll/src/scroll/ComponenteParaMostarUnaImagen.java}
-\lstinputlisting[caption='Main.java']{soluciones_java/Scroll/src/scroll/Main.java}
-
-\vspace{2cm}
-\subsection*{\ref{ejercicio_split} \{\nameref{ejercicio_split}\}}
-\vspace{0.5cm}
-\subsubsection*{En lenguaje Java} \lstset{language=Java} 
-\includegraphics[width=0.8\textwidth]{Split - pantallazo - Java}
-\lstinputlisting[caption='module-info.java']{soluciones_java/Split/src/module-info.java}
-\lstinputlisting[caption='InterfazGraficoDeUsuario.java']{soluciones_java/Split/src/split/InterfazGraficoDeUsuario.java}
-split\lstinputlisting[caption='Main.java']{soluciones_java/Split/src/split/Main.java}
-
-\vspace{2cm}
-\subsection*{\ref{ejercicio_selecionarborea}\{\nameref{ejercicio_selecionarborea}\}}
-\vspace{0.5cm}
-\subsubsection*{En lenguaje Java} \lstset{language=Java} 
-\includegraphics[width=\textwidth]{Seleccion Arborea - diagrama de clases}
-\includegraphics[width=\textwidth]{Seleccion Arborea - pantallazo - Java}
-\lstinputlisting[caption='module-info.java']{soluciones_java/SeleccionArborea/src/module-info.java}
-\lstinputlisting[caption='InterfazGraficoDeUsuario.java']{soluciones_java/SeleccionArborea/src/seleccionArborea/InterfazGraficoDeUsuario.java}
-\lstinputlisting[caption='ControladorDeDatos.java']{soluciones_java/SeleccionArborea/src/seleccionArborea/ControladorDeDatos.java}
-\lstinputlisting[caption='FuenteDeDatos.java']{soluciones_java/SeleccionArborea/src/seleccionArborea/FuenteDeDatos.java}
-\lstinputlisting[caption='Elemento.java']{soluciones_java/SeleccionArborea/src/seleccionArborea/Elemento.java}
-\lstinputlisting[caption='Libro.java']{soluciones_java/SeleccionArborea/src/seleccionArborea/Libro.java}
-\lstinputlisting[caption='Revista.java']{soluciones_java/SeleccionArborea/src/seleccionArborea/Revista.java}
-\lstinputlisting[caption='Video.java']{soluciones_java/SeleccionArborea/src/seleccionArborea/Video.java}
-\lstinputlisting[caption='Youtuber.java']{soluciones_java/SeleccionArborea/src/seleccionArborea/Youtuber.java}
-\lstinputlisting[caption='Main.java']{soluciones_java/SeleccionArborea/src/SeleccionArborea/Main.java}
-
-\vspace{2cm}
-\subsection*{\ref{ejercicio_barradeprogreso}\{\nameref{ejercicio_barradeprogreso}\}}
-\vspace{0.5cm}
-\subsubsection*{En lenguaje Java} \lstset{language=Java} 
-\includegraphics[width=\textwidth]{BarraDeProgreso - pantallazo - Java}
-\lstinputlisting[caption='module-info.java']{soluciones_java/BarraDeProgreso/src/module-info.java}
-\lstinputlisting[caption='SimulacionDeTareaLarga.java']{soluciones_java/BarraDeProgreso/src/barraDeProgreso/SimulacionDeTareaLarga.java}
-\lstinputlisting[caption='InterfazGraficoDeUsuario.java']{soluciones_java/BarraDeProgreso/src/barraDeProgreso/InterfazGraficoDeUsuario.java}
-\lstinputlisting[caption='Main.java']{soluciones_java/BarraDeProgreso/src/barraDeProgreso/Main.java}
-
-
- 
-\section{...a los ejercicios del capítulo \ref{ejercicios_oop}}
-
-\begin{footnotesize}((una disculpa del autor: este capítulo esta ``en construcción\ldots'' y sigo trabajando en él; queda mucho trabajo para completarlo.))\end{footnotesize}
-
-\vspace{1cm}
-\subsection*{\ref{ejercicio_ascensores} \{\nameref{ejercicio_ascensores}\}}
-\includegraphics[width=\textwidth]{ascensores - diagrama de clases} 
-\vspace{0.5cm}
-\subsubsection*{En lenguaje Java} \lstset{language=Java} 
-\lstinputlisting[caption='module-info.java']{soluciones_java/Ascensores/src/module-info.java}
-\lstinputlisting[caption='Ascensor.java']{soluciones_java/Ascensores/src/ascensores/Ascensor.java}
-\lstinputlisting[caption='AscensorTests.java']{soluciones_java/Ascensores/src/ascensores/AscensorTests.java}
-\lstinputlisting[caption='Edificio.java']{soluciones_java/Ascensores/src/ascensores/Edificio.java}
-\lstinputlisting[caption='EdificioTests.java']{soluciones_java/Ascensores/src/ascensores/EdificioTests.java}
-\includegraphics[width=0.5\textwidth]{ascensores - pantallazo - textual1} 
-\includegraphics[width=0.5\textwidth]{ascensores - pantallazo - textual2} 
-\lstinputlisting[caption='InterfazTextualDeUsuario.java']{soluciones_java/Ascensores/src/ascensores/InterfazTextualDeUsuario.java}
-\includegraphics[width=\textwidth]{ascensores - pantallazo - grafico1} 
-\lstinputlisting[caption='InterfazGraficoDeUsuario.java']{soluciones_java/Ascensores/src/ascensores/InterfazGraficoDeUsuario.java}
-\lstinputlisting[caption='Main.java']{soluciones_java/ascensores/src/Ascensores/Main.java}
-
-
-	
-\section{...a los ejercicios del capítulo \ref{ejercicios_datos}}
-
-\begin{footnotesize}((una disculpa del autor: este capítulo no lo he abordado aún; el libro esta ``en construcción\ldots'' y sigo trabajando en él; queda mucho trabajo para completarlo.))\end{footnotesize}
-
-
-
-
-\section{...a los ejercicios del capítulo \ref{ejercicios_comunicaciones}}
-
-\begin{footnotesize}((una disculpa del autor: este capítulo no lo he abordado aún; el libro esta ``en construcción\ldots'' y sigo trabajando en él; queda mucho trabajo para completarlo.))\end{footnotesize}
-
-
-
-
-\section{...a los ejercicios del capítulo \ref{ejercicios_paralelismo}}
-
-\begin{footnotesize}((una disculpa del autor: este capítulo no lo he abordado aún; el libro esta ``en construcción\ldots'' y sigo trabajando en él; queda mucho trabajo para completarlo.))\end{footnotesize}
-
-
-
-\section{...a los ejercicios del capítulo \ref{ejercicios_organizacion}}
-
-\begin{footnotesize}((una disculpa del autor: este capítulo no lo he abordado aún; el libro esta ``en construcción\ldots'' y sigo trabajando en él; queda mucho trabajo para completarlo.))\end{footnotesize}
-
-\vspace{1cm}
-\subsection*{\ref{ejercicio_multiinterface} \{\nameref{ejercicio_multiinterface}\}}
-
-
-\subsubsection{El programa base, que se va a utilizar desde diversos interfaces de usuario…}
-
-\includegraphics[width=0.3\textwidth]{CalculoSimple_codigo.png} 
-\includegraphics[width=0.5\textwidth]{CalculoSimple_tests.png} 
-\includegraphics[width=0.2\textwidth]{CalculoSimple_magnitudes.png} 
-\lstinputlisting[caption='CalculoSimple.cs']{soluciones_csharp/Multiinterface/CalculoSimple/CalculoSimple.cs}
-\lstinputlisting[caption='UnitTest1.cs']{soluciones_csharp/Multiinterface/CalculoSimple-Tests/UnitTest1.cs}
-
-\subsubsection{Utilizado desde un formulario Windows Forms}
-\includegraphics[width=0.3\textwidth]{WindowsForms_codigo.png} 
-\includegraphics[width=0.7\textwidth]{WindowsForms_pantallazo.png} 
-\lstinputlisting[caption='Form1.cs']{soluciones_csharp/Multiinterface/Pruebas_FORMS-Core/Form1.cs}
-
-
-\subsubsection{Utilizado desde linea de comandos}
-\includegraphics[width=0.3\textwidth]{Consola_codigo.png} 
-\includegraphics[width=0.7\textwidth]{Consola_pantallazo.png} 
-\lstinputlisting[caption='Program.cs']{soluciones_csharp/Multiinterface/Pruebas_CONSOLE-Core/Program.cs}
-
-\subsubsection{Utilizado para dar unos servicios web RESTfull}
-\includegraphics[width=0.3\textwidth]{ServiciosREST_codigo.png} 
-\lstinputlisting[caption='CalculoSimpleController.cs']{soluciones_csharp/Multiinterface/Pruebas_WEB-Core/Controllers/CalculoSimpleController.cs}
-
-\subsubsection{Utilizando el servicio HttpGet a través de una url}
-\includegraphics[width=\textwidth]{HttpGet_pantallazo.png} 
-
-\subsubsection{Utilizando el servicio HttpPut a través de un programilla de linea de comando}
-\includegraphics[width=\textwidth]{HttpPut_pantallazo.png} 
-\lstinputlisting[caption='Program.cs']{soluciones_csharp/Multiinterface/zz-paraProbarServicioWebPost/Program.cs}
-
-\subsubsection{Utilizando el servicio HttpPut desde una página web HTML/JavaScript}
-\includegraphics[width=0.3\textwidth]{HttpPut_web_codigo.png} 
-\includegraphics[width=0.7\textwidth]{HttpPut_web_pantallazo.png} 
-\lstinputlisting[caption='Pruebas\_HTML.html']{soluciones_csharp/Multiinterface/Pruebas_WEB-Core/wwwroot/Pruebas_HTML.html}
-
-\subsubsection{Utilizando el servicio HttpPut desde una página web RAZOR/C\#}
-\includegraphics[width=0.3\textwidth]{HttpPut_web_Razor_codigo.png} 
-\includegraphics[width=0.7\textwidth]{HttpPut_web_Razor_pantallazo.png} 
-\lstinputlisting[caption='Index.cshtml']{soluciones_csharp/Multiinterface/Pruebas_PAGES-Core/Pages/Index.cshtml}
-\lstinputlisting[caption='Index.cshtml.cs']{soluciones_csharp/Multiinterface/Pruebas_PAGES-Core/Pages/Index.cshtml.cs}
-
-
-
-\vspace{1cm}
-\subsection*{\ref{ejercicio_mvc} \{\nameref{ejercicio_mvc}\}}
-
-\subsubsection*{Dependencias directas:}
-Cada objeto se instancia él mismo los otros objetos que necesita.
-
-\includegraphics[width=\textwidth]{MVC_directa_App} 
-
-\begin{footnotesize}
-nota: Como la vista y el controlador tienen dependencias mutuamente cíclicas, al final siempre uno ha de crear al otro e inyectarle su dependencia…
-En este caso, el controlador crea la vista y se pasa a sí mismo en el constructor de esta.
-\end{footnotesize}
-
-\includegraphics[width=\textwidth]{MVC_directa_Controlador} 
-
-\includegraphics[width=\textwidth]{MVC_directa_Vista} 
-
-\includegraphics[width=\textwidth]{MVC_directa_Persistencia} 
-
-\lstinputlisting[caption='App.java']{soluciones_java/MVC_directa/src/main/java/es/susosise/mvc_directa/App.java}
-
-\lstinputlisting[caption='Controlador.java']{soluciones_java/MVC_directa/src/main/java/es/susosise/mvc_directa/Controlador.java}
-
-\lstinputlisting[caption='Vista.java']{soluciones_java/MVC_directa/src/main/java/es/susosise/mvc_directa/Vista.java}
-
-\lstinputlisting[caption='Modelo\_persistencia\_Personas.java']{soluciones_java/MVC_directa/src/main/java/es/susosise/mvc_directa/Modelo_persistencia_Personas.java}
-
-\lstinputlisting[caption='Modelo\_pojo\_Persona.java']{soluciones_java/MVC_directa/src/main/java/es/susosise/mvc_directa/Modelo_pojo_Persona.java}
-
-\subsubsection*{Dependencias inversas (inversión de dependencias):}
-Cada objeto recibe desde fuera los otros objetos que necesita (o bien inyectados a través de su constructor o bien inyectados a través un metodo setter ad-hoc).
-
-\includegraphics[width=\textwidth]{MVC_inversa_App} 
-
-\includegraphics[width=\textwidth]{MVC_inversa_Controlador} 
-
-\includegraphics[width=\textwidth]{MVC_inversa_Vista} 
-
-\includegraphics[width=\textwidth]{MVC_inversa_Persistencia} 
-
-\lstinputlisting[caption='App.java']{soluciones_java/MVC_inversa/src/main/java/es/susosise/mvc_inversa/App.java}
-
-\lstinputlisting[caption='Controlador.java']{soluciones_java/MVC_inversa/src/main/java/es/susosise/mvc_inversa/Controlador.java}
-
-\lstinputlisting[caption='Vista.java']{soluciones_java/MVC_inversa/src/main/java/es/susosise/mvc_inversa/Vista.java}
-
-\lstinputlisting[caption='Modelo\_persistencia\_Personas.java']{soluciones_java/MVC_inversa/src/main/java/es/susosise/mvc_inversa/Modelo_persistencia_Personas.java}
-
-\lstinputlisting[caption='Modelo\_pojo\_Persona.java']{soluciones_java/MVC_inversa/src/main/java/es/susosise/mvc_inversa/Modelo_pojo_Persona.java}
-
-
-
-\vspace{1cm}
-\subsection*{\ref{ejercicio_hotel} \{\nameref{ejercicio_hotel}\}}
-
-Un ejemplo de posible solución puede verse en
-\\\url{https://bitbucket.org/susosise/hotel/src/main/}
-
-Aviso: está en construcción (y, por cierto, aún muy verde, solo empezando), así es que te animo a clonarlo y revisar de vez en cuando como va avanzando.
 
 
 
