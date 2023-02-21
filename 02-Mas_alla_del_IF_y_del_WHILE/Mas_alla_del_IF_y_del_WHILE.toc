@@ -1,4 +1,4 @@
-\babel@toc {spanish}{}
+\babel@toc {spanish}{}\relax 
 \contentsline {chapter}{\numberline {1}Técnicas de trabajo}{6}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Control de versiones}{6}{section.1.1}%
 \contentsline {subsubsection}{Breve introducción a Git y Sourcetree}{6}{section*.3}%
@@ -19,104 +19,77 @@
 \contentsline {section}{\numberline {2.4}Elementos habituales en los GUIs}{22}{section.2.4}%
 \contentsline {subsection}{\numberline {2.4.1}Controles con los que el usuario puede interactuar}{22}{subsection.2.4.1}%
 \contentsline {subsection}{\numberline {2.4.2}Distribuciones generales con las que organizar la pantalla}{23}{subsection.2.4.2}%
-\contentsline {chapter}{\numberline {3}Ejercicios}{25}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Hello, Benzirpi.}{25}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Bocatas}{26}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Selección plana}{26}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Diálogos estándares}{26}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Scroll}{27}{section.3.5}%
-\contentsline {section}{\numberline {3.6}Split}{28}{section.3.6}%
-\contentsline {section}{\numberline {3.7}Calendario}{29}{section.3.7}%
-\contentsline {section}{\numberline {3.8}Selección arbórea}{29}{section.3.8}%
-\contentsline {section}{\numberline {3.9}Barra de progreso}{29}{section.3.9}%
-\contentsline {section}{\numberline {3.10}Internacionalización (i18n) y localización (L10n)}{30}{section.3.10}%
-\contentsline {section}{\numberline {3.11}Ayudas y documentación}{30}{section.3.11}%
-\contentsline {chapter}{\numberline {4}Objetos: clases e instancias}{32}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Encapsulación}{32}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Polimorfismo}{32}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Herencia}{32}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Sobrecarga de funciones (overwrite)}{32}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Interface (clase abstracta)}{33}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Cuándo usar herencia y cuándo interface}{33}{section.4.6}%
-\contentsline {section}{\numberline {4.7}Factorias para ``fabricar'' objetos (inyección de dependencias)}{34}{section.4.7}%
-\contentsline {chapter}{\numberline {5}Ejercicios}{36}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Áreas y perímetros de figuras geométricas}{36}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Utilizando herencia}{36}{subsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.1.2}Utilizando interface}{36}{subsection.5.1.2}%
-\contentsline {section}{\numberline {5.2}Ascensores}{37}{section.5.2}%
-\contentsline {chapter}{\numberline {6}Datos en memoria de trabajo}{38}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Estructuras lineales (arrays, colas,\ldots )}{38}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Listas (list, vector,...)}{40}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Diccionarios (dictionary, map,...)}{43}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Estructuras arbóreas (trees) y grafos (graphs)}{44}{section.6.4}%
-\contentsline {section}{\numberline {6.5}Bases de datos}{44}{section.6.5}%
-\contentsline {section}{\numberline {6.6}La importancia de especificar el tipo de los datos: “generics”}{45}{section.6.6}%
-\contentsline {section}{\numberline {6.7}Las propias funciones como un tipo de dato más: “expresiones Lambda”}{46}{section.6.7}%
-\contentsline {chapter}{\numberline {7}Datos almacenados (persistencia)}{47}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Archivos de texto ``plano''}{47}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Expresiones regulares}{48}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Archivos XML}{49}{section.7.3}%
-\contentsline {section}{\numberline {7.4}Archivos JSON}{50}{section.7.4}%
-\contentsline {section}{\numberline {7.5}Archivos CBOR u otras representaciones binarias}{50}{section.7.5}%
-\contentsline {section}{\numberline {7.6}Bases de datos}{51}{section.7.6}%
-\contentsline {chapter}{\numberline {8}Ejercicios}{52}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Cuentas bancarias}{53}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Gestión de accesos}{54}{section.8.2}%
-\contentsline {section}{\numberline {8.3}Gestión de pedidos}{55}{section.8.3}%
-\contentsline {chapter}{\numberline {9}Tratamiento de incidencias y errores}{56}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Excepciones}{56}{section.9.1}%
-\contentsline {section}{\numberline {9.2}Registro (log)}{57}{section.9.2}%
-\contentsline {section}{\numberline {9.3}Ejercicios}{58}{section.9.3}%
-\contentsline {chapter}{\numberline {10}Comunicaciones}{59}{chapter.10}%
-\contentsline {section}{\numberline {10.1}Usando protocolo HTTP}{59}{section.10.1}%
-\contentsline {section}{\numberline {10.2}Usando protocolos tcp/ip}{60}{section.10.2}%
-\contentsline {section}{\numberline {10.3}Usando protocolos especializados para un tipo de tarea concreta}{60}{section.10.3}%
-\contentsline {chapter}{\numberline {11}Ejercicios}{61}{chapter.11}%
-\contentsline {chapter}{\numberline {12}Procesamiento paralelo}{62}{chapter.12}%
-\contentsline {section}{\numberline {12.1}Estrategias para repartir tareas}{63}{section.12.1}%
-\contentsline {section}{\numberline {12.2}Salvaguardas para evitar problemas}{63}{section.12.2}%
-\contentsline {subsection}{\numberline {12.2.1}operaciones atómicas}{63}{subsection.12.2.1}%
-\contentsline {subsection}{\numberline {12.2.2}transacciones}{63}{subsection.12.2.2}%
-\contentsline {subsection}{\numberline {12.2.3}semáforos}{64}{subsection.12.2.3}%
-\contentsline {subsection}{\numberline {12.2.4}bloqueos}{64}{subsection.12.2.4}%
-\contentsline {subsection}{\numberline {12.2.5}Programación funcional}{65}{subsection.12.2.5}%
-\contentsline {section}{\numberline {12.3}Algunos usos del procesamiento paralelo}{65}{section.12.3}%
-\contentsline {subsection}{\numberline {12.3.1}Multitarea}{65}{subsection.12.3.1}%
-\contentsline {subsection}{\numberline {12.3.2}Gráficos}{66}{subsection.12.3.2}%
-\contentsline {subsection}{\numberline {12.3.3}Cálculos}{66}{subsection.12.3.3}%
-\contentsline {chapter}{\numberline {13}Ejercicios}{67}{chapter.13}%
-\contentsline {chapter}{\numberline {14}Organización interna del código}{68}{chapter.14}%
-\contentsline {section}{\numberline {14.1}Orientación a eventos (event-driven)}{68}{section.14.1}%
-\contentsline {section}{\numberline {14.2}Orientación a objetos (object-oriented)}{69}{section.14.2}%
-\contentsline {section}{\numberline {14.3}Arquitecturas multi-capa (n-tier)}{70}{section.14.3}%
-\contentsline {section}{\numberline {14.4}Aplicaciones distribuidas}{77}{section.14.4}%
-\contentsline {section}{\numberline {14.5}Orientación a servicios \\ (SOA, SaaS, microservices,...) }{78}{section.14.5}%
-\contentsline {section}{\numberline {14.6}Orientación a servicios, arquitectura REST \\(REpresentational State Transfer)}{78}{section.14.6}%
-\contentsline {chapter}{\numberline {15}Ejercicios}{81}{chapter.15}%
-\contentsline {section}{\numberline {15.1}Multiinterface}{81}{section.15.1}%
-\contentsline {section}{\numberline {15.2}Arquitectura en tres capas, MVC}{82}{section.15.2}%
-\contentsline {section}{\numberline {15.3}Excursiones}{82}{section.15.3}%
-\contentsline {section}{\numberline {15.4}Hotel}{83}{section.15.4}%
-\contentsline {chapter}{\numberline {16}apéndice A: ejemplos de posibles herramientas de trabajo}{91}{chapter.16}%
-\contentsline {section}{\numberline {16.1}Para programar en Java}{91}{section.16.1}%
-\contentsline {section}{\numberline {16.2}Para programar en C++}{92}{section.16.2}%
-\contentsline {section}{\numberline {16.3}Para programar en C\#}{92}{section.16.3}%
-\contentsline {section}{\numberline {16.4}Para programar en Python}{93}{section.16.4}%
-\contentsline {section}{\numberline {16.5}Para programar en HTML5/CSS/Javascript}{94}{section.16.5}%
-\contentsline {section}{\numberline {16.6}Una herramienta transversal: almacenamiento de código con control de versiones}{95}{section.16.6}%
-\contentsline {section}{\numberline {16.7}Otra herramienta transversal: motor de base de datos}{95}{section.16.7}%
-\contentsline {chapter}{\numberline {17}apéndice B: ejemplos de posibles soluciones...}{96}{chapter.17}%
-\contentsline {section}{\numberline {17.1}...a los ejercicios del capítulo \ref {ejercicios_gui}}{96}{section.17.1}%
-\contentsline {section}{\numberline {17.2}...a los ejercicios del capítulo \ref {ejercicios_oop}}{139}{section.17.2}%
-\contentsline {section}{\numberline {17.3}...a los ejercicios del capítulo \ref {ejercicios_datos}}{149}{section.17.3}%
-\contentsline {section}{\numberline {17.4}...a los ejercicios del capítulo \ref {ejercicios_comunicaciones}}{149}{section.17.4}%
-\contentsline {section}{\numberline {17.5}...a los ejercicios del capítulo \ref {ejercicios_paralelismo}}{149}{section.17.5}%
-\contentsline {section}{\numberline {17.6}...a los ejercicios del capítulo \ref {ejercicios_organizacion}}{150}{section.17.6}%
-\contentsline {subsubsection}{El programa base, que se va a utilizar desde diversos interfaces de usuario…}{150}{section*.35}%
-\contentsline {subsubsection}{Utilizado desde un formulario Windows Forms}{154}{section*.36}%
-\contentsline {subsubsection}{Utilizado desde linea de comandos}{156}{section*.37}%
-\contentsline {subsubsection}{Utilizado para dar unos servicios web RESTfull}{157}{section*.38}%
-\contentsline {subsubsection}{Utilizando el servicio HttpGet a través de una url}{159}{section*.39}%
-\contentsline {subsubsection}{Utilizando el servicio HttpPut a través de un programilla de linea de comando}{159}{section*.40}%
-\contentsline {subsubsection}{Utilizando el servicio HttpPut desde una página web HTML/JavaScript}{162}{section*.41}%
-\contentsline {subsubsection}{Utilizando el servicio HttpPut desde una página web RAZOR/C\#}{164}{section*.42}%
+\contentsline {section}{\numberline {2.5}Ejercicios}{24}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Hello, Benzirpi.}{24}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Bocatas}{24}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.3}Selección plana}{25}{subsection.2.5.3}%
+\contentsline {subsection}{\numberline {2.5.4}Diálogos estándares}{25}{subsection.2.5.4}%
+\contentsline {subsection}{\numberline {2.5.5}Scroll}{26}{subsection.2.5.5}%
+\contentsline {subsection}{\numberline {2.5.6}Split}{26}{subsection.2.5.6}%
+\contentsline {subsection}{\numberline {2.5.7}Calendario}{27}{subsection.2.5.7}%
+\contentsline {subsection}{\numberline {2.5.8}Selección arbórea}{27}{subsection.2.5.8}%
+\contentsline {subsection}{\numberline {2.5.9}Barra de progreso}{28}{subsection.2.5.9}%
+\contentsline {subsection}{\numberline {2.5.10}Internacionalización (i18n) y localización (L10n)}{28}{subsection.2.5.10}%
+\contentsline {subsection}{\numberline {2.5.11}Ayudas y documentación}{29}{subsection.2.5.11}%
+\contentsline {chapter}{\numberline {3}Objetos: clases e instancias}{30}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Encapsulación}{30}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Polimorfismo}{30}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Herencia}{30}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Sobrecarga de funciones (overwrite)}{30}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Interface (clase abstracta)}{31}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Cuándo usar herencia y cuándo interface}{31}{section.3.6}%
+\contentsline {section}{\numberline {3.7}Factorias para ``fabricar'' objetos (inyección de dependencias)}{32}{section.3.7}%
+\contentsline {section}{\numberline {3.8}Ejercicios}{33}{section.3.8}%
+\contentsline {chapter}{\numberline {4}Datos en memoria de trabajo}{34}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Estructuras lineales (arrays, colas,\ldots )}{34}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Listas (list, vector,...)}{36}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Diccionarios (dictionary, map,...)}{39}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Estructuras arbóreas (trees) y grafos (graphs)}{40}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Bases de datos}{40}{section.4.5}%
+\contentsline {section}{\numberline {4.6}La importancia de especificar el tipo de los datos: “generics”}{41}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Las propias funciones como un tipo de dato más: “expresiones Lambda”}{42}{section.4.7}%
+\contentsline {section}{\numberline {4.8}Ejercicios}{43}{section.4.8}%
+\contentsline {chapter}{\numberline {5}Datos almacenados (persistencia)}{44}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Archivos de texto ``plano''}{44}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Expresiones regulares}{45}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Archivos XML}{46}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Archivos JSON}{47}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Archivos CBOR u otras representaciones binarias}{47}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Bases de datos}{48}{section.5.6}%
+\contentsline {section}{\numberline {5.7}Ejercicios}{48}{section.5.7}%
+\contentsline {chapter}{\numberline {6}Tratamiento de incidencias y errores}{49}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Excepciones}{49}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Registro (log)}{50}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Ejercicios}{51}{section.6.3}%
+\contentsline {chapter}{\numberline {7}Comunicaciones}{52}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Usando protocolo HTTP}{52}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Usando protocolos tcp/ip}{53}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Usando protocolos especializados para un tipo de tarea concreta}{53}{section.7.3}%
+\contentsline {chapter}{\numberline {8}Procesamiento paralelo}{54}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Estrategias para repartir tareas}{55}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Salvaguardas para evitar problemas}{55}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}operaciones atómicas}{55}{subsection.8.2.1}%
+\contentsline {subsection}{\numberline {8.2.2}transacciones}{55}{subsection.8.2.2}%
+\contentsline {subsection}{\numberline {8.2.3}semáforos}{56}{subsection.8.2.3}%
+\contentsline {subsection}{\numberline {8.2.4}bloqueos}{56}{subsection.8.2.4}%
+\contentsline {subsection}{\numberline {8.2.5}Programación funcional}{57}{subsection.8.2.5}%
+\contentsline {section}{\numberline {8.3}Algunos usos del procesamiento paralelo}{57}{section.8.3}%
+\contentsline {subsection}{\numberline {8.3.1}Multitarea}{57}{subsection.8.3.1}%
+\contentsline {subsection}{\numberline {8.3.2}Gráficos}{58}{subsection.8.3.2}%
+\contentsline {subsection}{\numberline {8.3.3}Cálculos}{58}{subsection.8.3.3}%
+\contentsline {chapter}{\numberline {9}Organización interna del código}{59}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Orientación a eventos (event-driven)}{59}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Orientación a objetos (object-oriented)}{60}{section.9.2}%
+\contentsline {section}{\numberline {9.3}Arquitecturas multi-capa (n-tier)}{61}{section.9.3}%
+\contentsline {section}{\numberline {9.4}Aplicaciones distribuidas}{68}{section.9.4}%
+\contentsline {section}{\numberline {9.5}Orientación a servicios \\ (SOA, SaaS, microservices,...) }{69}{section.9.5}%
+\contentsline {section}{\numberline {9.6}Orientación a servicios, arquitectura REST \\(REpresentational State Transfer)}{69}{section.9.6}%
+\contentsline {section}{\numberline {9.7}Ejercicios}{71}{section.9.7}%
+\contentsline {chapter}{\numberline {10}apéndice A: ejemplos de posibles herramientas de trabajo}{72}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Para programar en Java}{72}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Para programar en C++}{73}{section.10.2}%
+\contentsline {section}{\numberline {10.3}Para programar en C\#}{73}{section.10.3}%
+\contentsline {section}{\numberline {10.4}Para programar en Python}{74}{section.10.4}%
+\contentsline {section}{\numberline {10.5}Para programar en HTML5/CSS/Javascript}{75}{section.10.5}%
+\contentsline {section}{\numberline {10.6}Una herramienta transversal: almacenamiento de código con control de versiones}{76}{section.10.6}%
+\contentsline {section}{\numberline {10.7}Otra herramienta transversal: motor de base de datos}{76}{section.10.7}%
