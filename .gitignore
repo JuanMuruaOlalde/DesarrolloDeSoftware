@@ -6,7 +6,7 @@ bin/
 .$*
 *.bkp
 
-## Core latex/pdflatex auxiliary files:
+# Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
 *.log
@@ -21,12 +21,12 @@ bin/
 .*.lb
 *.synctex.gz
 
-## Intermediate documents:
+# Intermediate documents:
 *.dvi
 *.xdv
 *-converted-to.*
 
-## Bibliography auxiliary files (bibtex/biblatex/biber):
+# Bibliography auxiliary files (bibtex/biblatex/biber):
 *.bbl
 *.bcf
 *.blg

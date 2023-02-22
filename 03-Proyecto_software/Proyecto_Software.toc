@@ -29,7 +29,7 @@
 \contentsline {subsection}{\numberline {2.7.5}\textbf {L}oose-coupling}{25}{subsection.2.7.5}%
 \contentsline {subsection}{\numberline {2.7.6}\textbf {S}ingle responsibility}{25}{subsection.2.7.6}%
 \contentsline {chapter}{\numberline {3}¿Gigantes\ldots ? o ¿Molinos?\ldots }{26}{chapter.3}%
-\contentsline {section}{\numberline {3.1}cómo nombrar las variables ?!?}{26}{section.3.1}%
+\contentsline {section}{\numberline {3.1}cómo nombrar los distintos elementos ?!?}{26}{section.3.1}%
 \contentsline {section}{\numberline {3.2}cómo abrir-cerrar bloques ?!?}{26}{section.3.2}%
 \contentsline {section}{\numberline {3.3}qué usar para la indentación: tabuladores ?!? o espacios ?!? }{27}{section.3.3}%
 \contentsline {section}{\numberline {3.4}longitud de nombres para variables y funciones ?!?}{27}{section.3.4}%
