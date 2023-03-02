@@ -1637,23 +1637,23 @@ Mirándolo desde el punto de vista de los procesos. Estos pueden interactuar ent
 A la hora de diseñar la arquitectura de la aplicación y los algoritmos a utilizar, es importante tener en cuenta que lo más difícil de garantizar es la integridad ACID:
 
 \begin{itemize}
-\item Atomicity $\rightarrow$ transacciones todo/nada
-\item Consistence $\rightarrow$ preservar los invariantes del sistema
-\item Isolation $\rightarrow$ determinismo en las operaciones realizadas
-\item Durability $\rightarrow$ si algo está hecho, no puede "perderse"
+\item Atomicity $\rightarrow$ transacciones todo/nada; no se dejan tareas ``a medias''.
+\item Consistence $\rightarrow$ preservación de los invariantes del sistema; no se dejan estados ``inconsistentes''.
+\item Isolation $\rightarrow$ determinismo en las operaciones realizadas; mismas operaciones implican siempre mismo resultado final.
+\item Durability $\rightarrow$ preservación de los resultados; si algo esta hecho no puede ``alterarse'' o ``perderse'' más tarde.
 \end{itemize}
 
-La concurrencia, el paralelismo o la distributividad son mucho más sencillos si se puede evitar garantizar ACID en todo momento y si se puede evitar la competencia por recursos exclusivos.
+La concurrencia, el paralelismo o la distributividad son mucho más sencillos si se puede evitar la necesidad de garantizar ACID en todo momento y si se puede evitar la competencia por recursos exclusivos.
 
 De ahí la importancia de diseñar las arquitecturas y los algoritmos de tal forma que, en la medida de lo posible, cada funcionalidad o servicio sea:
 
 \begin{itemize}
 
-\item Independiente (no necesita recursos compartidos con otras, ni depende de que otras se hayan ejecutado o se vayan a ejecutar) 
+\item Independiente (no necesita recursos compartidos con otras, ni depende de que otras se hayan ejecutado o se vayan a ejecutar). 
 
 \item Idempotente (no tiene efectos nocivos si se reintenta por algún problema y acaba procesando lo mismo más de una vez).
 
-\item Lo suficientemente rápida (no hace esperar durante mucho tiempo a otra funcionalidad o servicio que necesita algo que esta realiza)
+\item Lo suficientemente rápida (no hace esperar durante demasiado tiempo a otras que necesitan algo de esta).
 
 
 \end{itemize}
@@ -1733,14 +1733,15 @@ En este escenario ideal las distintas funcionalidades o servicios compiten solo 
 
 Pero en la realidad, aunque se prioricen las caracteristicas del escenario ideal, siempre acabará habiendo un cierto grado de dependencia entre funcionalidades o servicios. De ahí que sea necesaria alguna manera de coordinar las operaciones realizadas.
 
-Algunas de las formas más típicas son:
+Algunas de las formas más típicas de coordinación son:
+
 \begin{itemize}
  
-\item Un programa maestro va organizando y lanzando las distintas operaciones. Si en algún punto una operación concreta depende de la información generada por otra, pueden emplearse llamadas asíncronas. La operación dependiente de otra pide a esta lo que necesita y se queda a esperar a que esa otra operación le indique que ha terminado de preparaselo. Pero el sistema entero no queda bloqueado, el programa maestro continua haciendo otras operaciones. 
+\item Un programa maestro va organizando y lanzando las distintas operaciones. Si en algún punto una operación concreta depende de  otra, pueden emplearse llamadas asíncronas. La operación dependiente de otra pide a esta lo que necesita y se queda a esperar a que esa otra operación le indique que ha terminado de preparaselo. Pero el sistema entero no queda bloqueado, el programa maestro continua haciendo otras operaciones. 
 
-\item Diferenes programas van trabajando de forma independiente. Se utilizan mecanismos asíncronos de coordinación tales como las colas de mensajes. Colas donde las distintas funcionalidades o servicios:
+\item Diferentes programas van trabajando de forma independiente. Se utilizan mecanismos asíncronos de coordinación tales como las colas de mensajes. Colas donde las distintas funcionalidades o servicios:
 \begin{itemize}
-\item Van leyendo las peticiones dirigidas a ellas.
+\item Van leyendo (y realizando) las peticiones dirigidas a ellas.
 \item Van depositando peticiones para otras funcionalidades o servicios.
 \end{itemize}
 
