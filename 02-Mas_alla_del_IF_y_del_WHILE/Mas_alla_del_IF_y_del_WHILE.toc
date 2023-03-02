@@ -1,4 +1,4 @@
-\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}
 \contentsline {chapter}{\numberline {1}Técnicas de trabajo}{6}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Control de versiones}{6}{section.1.1}%
 \contentsline {subsubsection}{Breve introducción a Git y Sourcetree}{6}{section*.3}%
@@ -76,7 +76,7 @@
 \contentsline {subsection}{\numberline {8.3.1}operaciones atómicas}{58}{subsection.8.3.1}%
 \contentsline {subsection}{\numberline {8.3.2}transacciones}{58}{subsection.8.3.2}%
 \contentsline {subsection}{\numberline {8.3.3}semáforos}{59}{subsection.8.3.3}%
-\contentsline {subsection}{\numberline {8.3.4}bloqueos}{59}{subsection.8.3.4}%
+\contentsline {subsection}{\numberline {8.3.4}evitar bloqueos permanentes}{59}{subsection.8.3.4}%
 \contentsline {section}{\numberline {8.4}Procesos cooperativos, orientación a servicios}{59}{section.8.4}%
 \contentsline {chapter}{\numberline {9}Organización interna del código}{61}{chapter.9}%
 \contentsline {section}{\numberline {9.1}Orientación a eventos (event-driven)}{61}{section.9.1}%

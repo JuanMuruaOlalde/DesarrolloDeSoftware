@@ -1597,61 +1597,59 @@ Merece utilizar alguna de las bibliotecas y plataformas específicas que están 
 
 \subsection{Sistemas ``a escala Internet''}
 
-Cuando se ha de atender a millones de usuarios. Sobre todo si la cantidad de usuarios a lo largo de tiempo no es uniforme sino que fluctua fuertemente de unos momentos a otros. 
+Cuando se ha de atender a millones de usuarios. Sobre todo si la cantidad de usuarios a lo largo de tiempo no es uniforme sino que fluctúa fuertemente de unos momentos a otros. 
 
 No hay sistema dedicado capaz de hacer frente a ese tipo de demanda. Ya que si se dimensiona para soportar los mayores picos de demanda, estará muy infrautilizado en los valles. Si se dimensiona para una demanda media ``típica'', se verá desbordado en los picos fuertes.
 
-Se necesita un sistema flexible donde se puedan poner a trabajar más o menos recursos según sea la demanda en cada momento. Recursos que cuando no se utilizan en este sistema se puedan emplean para dar servicio a otros sistemas cuyas demandas tengan la gracia de no coincidir con los picos de este.
+Se necesita un sistema flexible donde se puedan poner a trabajar más o menos recursos según sea la demanda en cada momento. Recursos que cuando no se utilizan en este sistema se puedan emplear para dar servicio a otros sistemas cuyos picos de demanda tengan la gracia de no coincidir con los picos de este.
 
 
 \section{Estrategias para repartir tareas}
 
-Este es el ``caballo de batalla'' del procesamiento paralelo: cómo dividir cada trabajo a realizar en múltiples tareas que puedan ser ejecutadas de forma independiente y cómo ir recombinando resultados parciales de todas ellas para obtener el resultado final perseguido.
-
-Todo ello sin que las múltiples tareas se ``estorben'' entre sí.
+Este es el ``caballo de batalla'' del procesamiento paralelo: cómo dividir cada trabajo en múltiples tareas que puedan ser ejecutadas de forma independiente y cómo ir recombinando resultados parciales de todas ellas para obtener el resultado final perseguido. Todo ello sin que las múltiples tareas se ``estorben'' entre sí.
 
 
 En un sentido informático, podemos distinguir distintos tipos de procesamiento:
 
-\begin{description}
+\begin{itemize}
 
-\item[Concurrente] -> acciones realizadas "simultáneamente" en una sola unidad de proceso.
+\item Concurrente: acciones realizadas ``simultáneamente'' en una sola unidad de proceso.
 
-\item[Paralelo] -> acciones realizadas simultáneamente en varias unidades de proceso.
+\item Paralelo: acciones realizadas simultáneamente en varias unidades de proceso que comparten una memoria principal.
 
-\item[Distribuido] -> acciones que se van realizando en una red de procesos autónomos que no comparten una memoria principal.
+\item Distribuido: acciones que se van realizando en una red de procesos autónomos que no comparten una memoria principal.
 
-\end{description}
+\end{itemize}
 
 Mirándolo desde el punto de vista de los procesos. Estos pueden interactuar entre sí:
 
 \begin{itemize}
 
-\item De forma independiente -> compitiendo solo por recursos de procesamiento, los procesos se van repartiendo los recursos disponibles -> COORDINADOR (SCHEDULER)
+\item De forma independiente $\rightarrow$ compitiendo solo por recursos de procesamiento, los procesos se van repartiendo los recursos disponibles $\rightarrow$ COORDINADOR (SCHEDULER)
 
 
-\item De forma cooperativa -> unos procesos generan información o dan servicios que otros procesos necesitan, se van coordinando entre sí para llegar al resultado final -> ejecución ASINCrona, COLAS de mensajes, TABLONES compartidos,...
+\item De forma colaborativa $\rightarrow$ unos procesos generan información o dan servicios que otros procesos necesitan, los procesos se van coordinando entre sí para llegar al resultado final $\rightarrow$ ejecución ASINCrona, COLAS de mensajes,\ldots
 
-\item De forma competitiva -> los procesos requieren usar (por turnos) unos ciertos recursos comunes en régimen de exclusividad (si un proceso lo está usando, otro no puede usarlo) -> CANDADOS (MUTEX), SEMÁFOROS, MONITORES,...
+\item De forma competitiva $\rightarrow$  compitiendo por usar unos ciertos recursos comunes, los procesos se van turnando para usarlos en régimen de exclusividad (si un proceso lo está usando, otro no puede usarlo) $\rightarrow$ CANDADOS (MUTEX), SEMÁFOROS,\ldots
 
 \end{itemize}
 
-A la hora de diseñar la arquitectura de la aplicación y los algoritmos a utilizar, es importante tener en cuenta de que lo más difícil de garantizar es la integridad ACID:
+A la hora de diseñar la arquitectura de la aplicación y los algoritmos a utilizar, es importante tener en cuenta que lo más difícil de garantizar es la integridad ACID:
 
 \begin{itemize}
-\item Atomicity -> transacciones todo/nada
-\item Consistence -> preservar los invariantes del sistema
-\item Isolation -> determinismo en las operaciones realizadas
-\item Durability -> si algo está hecho, no puede "perderse"
+\item Atomicity $\rightarrow$ transacciones todo/nada
+\item Consistence $\rightarrow$ preservar los invariantes del sistema
+\item Isolation $\rightarrow$ determinismo en las operaciones realizadas
+\item Durability $\rightarrow$ si algo está hecho, no puede "perderse"
 \end{itemize}
 
-La concurrencia, el paralelismo o la distributividad son mucho más sencillos si no es necesario garantizar ACID en todo momento y si no hay necesidad de competir por recursos exclusivos.
+La concurrencia, el paralelismo o la distributividad son mucho más sencillos si se puede evitar garantizar ACID en todo momento y si se puede evitar la competencia por recursos exclusivos.
 
 De ahí la importancia de diseñar las arquitecturas y los algoritmos de tal forma que, en la medida de lo posible, cada funcionalidad o servicio sea:
 
 \begin{itemize}
 
-\item Independiente (no necesita recursos compartidos con otras, ni depende de que otras se hayan ejecutado previamente) 
+\item Independiente (no necesita recursos compartidos con otras, ni depende de que otras se hayan ejecutado o se vayan a ejecutar) 
 
 \item Idempotente (no tiene efectos nocivos si se reintenta por algún problema y acaba procesando lo mismo más de una vez).
 
@@ -1664,9 +1662,7 @@ De ahí la importancia de diseñar las arquitecturas y los algoritmos de tal for
 
 \section{Salvaguardas para evitar problemas al usar recursos exclusivos}
 
-Un aspecto básico en cualquier sistema concurrente, paralelo o distribuido es el que por lo menos unas tareas no interfieran ni estropeen el trabajo de otras. 
-
-Sobre todo cuando varias tareas necesitan compartir un mismo recurso del sistema.
+Como se ha comentado, es mejor evitar utilizar recursos compartidos. Pero prácticamente casi siempre no suele ser posible. Y, cuando se utilizan, es básico garantizar que unas tareas no interfieran ni estropeen el trabajo de otras. 
 
 \subsection{operaciones atómicas}
 Atención al modificar cualquier dato, la secuencia leer-modificar-escribir ha de hacerse siempre de forma monolítica (atómica) (en un solo paso).
@@ -1696,7 +1692,7 @@ nota: Suele ser habitual que el mecanismo transaccional, en lugar de las accione
 Es decir: siempre se garantiza que se ejecutan todas las operaciones de la secuencia o que no se ejecuta ninguna de ellas.
 
 \subsection{semáforos}
-Atención al utilizar un recurso. En sistemas paralelos, los recursos que admitan solo un único usuario cada vez, han de tener siempre un mecanismo que impida intentos de uso concurrente.
+En sistemas concurrentes o paralelos, los recursos que admitan solo un único usuario cada vez, han de tener siempre un mecanismo que impida intentos de uso simultáneo.
 
 La solución más habitual suele ser un semáforo  que indique si el recurso está en uso o no. La tarea que vaya a utilizar el recurso ha de:
 \begin{itemize}
@@ -1711,7 +1707,7 @@ nota: Según ciertos detalles de cómo manejar estos semáforos, podemos tener d
 
 nota: En los sistemas más sofisticados, suele haber una cola para acceder al recurso. Cada tarea que vaya a usar el recurso ``se apunta'' en la cola. El mecanismo de gestión de la cola va asignando el uso del recurso según un cierto algoritmo de prioridades. Obviamente, nadie puede utilizar el recurso sin pasar por la cola.
 
-\subsection{bloqueos}
+\subsection{evitar bloqueos permanentes}
 Un problema grave que se puede derivar del uso de semáforos o similares es ``el bloqueo mortal'' (dead lock). Se da cuando una tarea tiene bloqueado un recurso y está esperando a que se libere otro para completar su trabajo y liberar el recurso. Pero, mientras tanto, otra tarea ha bloqueado ese segundo recurso y está esperando al primero para completar su trabajo y liberar el suyo.
 
 Es decir, tarea1 tiene bloqueado recurso1 y está esperando a recurso2. Mientras que tarea2 tiene bloqueado recurso2 y está esperando a recurso1.
@@ -1720,7 +1716,7 @@ Es decir, tarea1 tiene bloqueado recurso1 y está esperando a recurso2. Mientras
 
 \section{Procesos cooperativos, orientación a servicios}
 
-como ya se ha comentado, el escenario ideal para el paralelismo y la distributividad es aquel donde cada funcionalidad o servicio:
+Como ya se ha comentado, el escenario ideal para el paralelismo y la distributividad es aquel donde cada funcionalidad o servicio:
 
 \begin{itemize}
 
@@ -1735,7 +1731,7 @@ como ya se ha comentado, el escenario ideal para el paralelismo y la distributiv
 
 En este escenario ideal las distintas funcionalidades o servicios compiten solo por recursos de procesamiento. Y pueden lanzarse más o menos instancias en paralelo según se tengan más o menos recursos libres para soportarlas.
 
-Pero en la realidad, aunque se prioricen las caracteristicas del escenario ideal, siempre acabará habiendo un cierto grado de dependencia entre funcionalidades o servicios. De ahí que sea necesaria alguna manera de coordinar las operaciones realizadas según estas dependan unas de otras.
+Pero en la realidad, aunque se prioricen las caracteristicas del escenario ideal, siempre acabará habiendo un cierto grado de dependencia entre funcionalidades o servicios. De ahí que sea necesaria alguna manera de coordinar las operaciones realizadas.
 
 Algunas de las formas más típicas son:
 \begin{itemize}
