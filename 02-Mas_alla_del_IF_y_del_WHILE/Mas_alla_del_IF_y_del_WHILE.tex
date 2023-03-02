@@ -1541,7 +1541,8 @@ Algunos ejemplos ilustrativos:
 
 
 
-\chapter{Procesamiento paralelo}
+\chapter{Procesamiento paralelo y/o distribuido}
+
 Una forma de realizar un trabajo más rápido, es poner más trabajadores trabajando en ello. Pero, ¡ojo!, es vital que los trabajadores no se estorben entre sí, ni se bloqueen o retrasen excesivamente por esperarse unos a otros.
 
 Es más, hay situaciones en que el procesamiento paralelo puede ser imposible. Por ejemplo:
@@ -1558,19 +1559,114 @@ Pero hoy en día, el paralelismo es real. El hardware de computación está lleg
 
 Es decir, la programación de software paralelo está cobrando cada vez más importancia. Hoy en día es imprescindible para aprovechar toda la capacidad de los sistemas hardware.
 
+\section{Algunos usos del procesamiento paralelo}
+
+
+\subsection{Multitarea}
+Por ejemplo, para evitar que una tarea muy larga acapare el sistema y parezca que este ha quedado congelado por no visualizar lo que está haciendo. O, por ejemplo, para aprovechar los espacios de tiempo entre los lentos procesos humanos; de tal forma que se pueda realizar otros trabajos mientras se atiende el interfaz de usuario. O, por ejemplo, para atender a varios eventos o a varios usuarios a la vez.
+
+Cuando cohabitan varias tareas, el control de las mismas puede ser:
+\begin{itemize}
+\item Colaborativo (non-preemtive): Cada tarea se preocupa de comportase ``con decoro'' y ceder tiempo de ejecución a las demás tareas que pudiera haber activas en cada momento. Es decir, una vez una tarea está en ejecución no puede ser interrumpida por ninguna otra.
+\item Organizado (preemtive): Una tarea maestra se encarga de ir gestionando el tiempo y los recursos para las demás tareas, asignando a cada una lo que sea posible teniendo en cuenta ciertas prioridades preestablecidas. Es decir, algunas tareas tienen más prioridad que otras y pueden interrumpirlas cuando sea necesario.
+\end{itemize}
+
+Cuando múltiples tareas comparten un mismo recurso, pueden surgir situaciones problemáticas. De ahí que sea necesario contar con los adecuados mecanismos de control de acceso para asegurar que el comportamiento de esos recursos compartidos no depende del orden en que las tareas accedan a ellos. (thead-safe)
+
+La coordinación de procesos, hebras y recursos es un tema con problemáticas complejas y sutiles. Es importante conocer y utilizar las bibliotecas específicas que traiga el compilador para tratar de forma segura con estos elementos.
+
+\subsection{Gráficos}
+El procesamiento de gráficos ha sido uno de los primeros usos donde se han venido utilizando múltiples (co)procesadores. Hoy en día prácticamente todos los sistemas tienen algún tipo de GPU (Graphics Processing Unit) complementando la CPU (Central Processing Unit) y liberándola de la tarea de manejar la pantalla. 
+
+Cuando se vaya a trabajar con gráficos en pantalla, procurar utilizar bibliotecas y funciones que aprovechan dicha GPU. Estas bibliotecas (OpenGL, DirectX, Metal,\ldots) suelen ser algo más complejas de usar que las ``tradicionales'' (gtk, GDI, QuickDraw,\ldots), pero merece la pena utilizarlas.
+
+
+\subsection{Cálculos}
+Cuando se realizan grandes cálculos de ingenieria o científicos. O cuando se procesan enormes cantidades de datos para destilar información. Es importante aprovechar plenamente las memorias caché, las unidades vectoriales y los múltiples núcleos que tienen los procesadores actuales. 
+
+Más aún si se están utilizando clusters con cientos o miles de esos procesadores, dedicados expresamente a tareas HPC (High Performance Computing). 
+
+Merece utilizar alguna de las bibliotecas y plataformas específicas que están siendo desarrolladas para este trabajo. Estas plataformas suelen cubrir aspectos tales como: alinear datos, compartir datos de partida, encadenar procesamientos parciales, sincronizar tareas, consolidar resultados parciales, etc.
+
+\begin{scriptsize}
+\url{https://www.openmp.org/}
+\\ \url{https://developer.nvidia.com/cuda-zone}
+\\ \url{https://docs.microsoft.com/es-es/dotnet/standard/parallel-programming/}
+\\ \url{https://software.intel.com/content/www/us/en/develop/tools/parallel-studio-xe.html}
+\end{scriptsize}
+
+\subsection{Sistemas ``a escala Internet''}
+
+Cuando se ha de atender a millones de usuarios. Sobre todo si la cantidad de usuarios a lo largo de tiempo no es uniforme sino que fluctua fuertemente de unos momentos a otros. 
+
+No hay sistema dedicado capaz de hacer frente a ese tipo de demanda. Ya que si se dimensiona para soportar los mayores picos de demanda, estará muy infrautilizado en los valles. Si se dimensiona para una demanda media ``típica'', se verá desbordado en los picos fuertes.
+
+Se necesita un sistema flexible donde se puedan poner a trabajar más o menos recursos según sea la demanda en cada momento. Recursos que cuando no se utilizan en este sistema se puedan emplean para dar servicio a otros sistemas cuyas demandas tengan la gracia de no coincidir con los picos de este.
 
 
 \section{Estrategias para repartir tareas}
+
 Este es el ``caballo de batalla'' del procesamiento paralelo: cómo dividir cada trabajo a realizar en múltiples tareas que puedan ser ejecutadas de forma independiente y cómo ir recombinando resultados parciales de todas ellas para obtener el resultado final perseguido.
 
 Todo ello sin que las múltiples tareas se ``estorben'' entre sí.
 
-\_pendiente\_ investigar y escribir acerca de las principales estrategias para hacer esto.
+
+En un sentido informático, podemos distinguir distintos tipos de procesamiento:
+
+\begin{description}
+
+\item[Concurrente] -> acciones realizadas "simultáneamente" en una sola unidad de proceso.
+
+\item[Paralelo] -> acciones realizadas simultáneamente en varias unidades de proceso.
+
+\item[Distribuido] -> acciones que se van realizando en una red de procesos autónomos que no comparten una memoria principal.
+
+\end{description}
+
+Mirándolo desde el punto de vista de los procesos. Estos pueden interactuar entre sí:
+
+\begin{itemize}
+
+\item De forma independiente -> compitiendo solo por recursos de procesamiento, los procesos se van repartiendo los recursos disponibles -> COORDINADOR (SCHEDULER)
 
 
-\section{Salvaguardas para evitar problemas}
+\item De forma cooperativa -> unos procesos generan información o dan servicios que otros procesos necesitan, se van coordinando entre sí para llegar al resultado final -> ejecución ASINCrona, COLAS de mensajes, TABLONES compartidos,...
 
-Un aspecto básico es el que por lo menos unas tareas no estropeen el trabajo de otras. Sobre todo cuando varias de ellas han de turnarse para compartir un mismo recurso del sistema.
+\item De forma competitiva -> los procesos requieren usar (por turnos) unos ciertos recursos comunes en régimen de exclusividad (si un proceso lo está usando, otro no puede usarlo) -> CANDADOS (MUTEX), SEMÁFOROS, MONITORES,...
+
+\end{itemize}
+
+A la hora de diseñar la arquitectura de la aplicación y los algoritmos a utilizar, es importante tener en cuenta de que lo más difícil de garantizar es la integridad ACID:
+
+\begin{itemize}
+\item Atomicity -> transacciones todo/nada
+\item Consistence -> preservar los invariantes del sistema
+\item Isolation -> determinismo en las operaciones realizadas
+\item Durability -> si algo está hecho, no puede "perderse"
+\end{itemize}
+
+La concurrencia, el paralelismo o la distributividad son mucho más sencillos si no es necesario garantizar ACID en todo momento y si no hay necesidad de competir por recursos exclusivos.
+
+De ahí la importancia de diseñar las arquitecturas y los algoritmos de tal forma que, en la medida de lo posible, cada funcionalidad o servicio sea:
+
+\begin{itemize}
+
+\item Independiente (no necesita recursos compartidos con otras, ni depende de que otras se hayan ejecutado previamente) 
+
+\item Idempotente (no tiene efectos nocivos si se reintenta por algún problema y acaba procesando lo mismo más de una vez).
+
+\item Lo suficientemente rápida (no hace esperar durante mucho tiempo a otra funcionalidad o servicio que necesita algo que esta realiza)
+
+
+\end{itemize}
+
+
+
+\section{Salvaguardas para evitar problemas al usar recursos exclusivos}
+
+Un aspecto básico en cualquier sistema concurrente, paralelo o distribuido es el que por lo menos unas tareas no interfieran ni estropeen el trabajo de otras. 
+
+Sobre todo cuando varias tareas necesitan compartir un mismo recurso del sistema.
 
 \subsection{operaciones atómicas}
 Atención al modificar cualquier dato, la secuencia leer-modificar-escribir ha de hacerse siempre de forma monolítica (atómica) (en un solo paso).
@@ -1621,46 +1717,38 @@ Un problema grave que se puede derivar del uso de semáforos o similares es ``el
 Es decir, tarea1 tiene bloqueado recurso1 y está esperando a recurso2. Mientras que tarea2 tiene bloqueado recurso2 y está esperando a recurso1.
 
 
-\subsection{Programación funcional}
-Como el paradigma funcional no tiene variables mutables, es mucho más difícil que se puedan dar interacciones no deseadas entre distintos caminos de ejecución.
 
-A priori, parece el paradigma ideal para aprovechar plenamente las capacidades del procesamiento paralelo.
+\section{Procesos cooperativos, orientación a servicios}
 
+como ya se ha comentado, el escenario ideal para el paralelismo y la distributividad es aquel donde cada funcionalidad o servicio:
 
-
-\section{Algunos usos del procesamiento paralelo}
-
-
-\subsection{Multitarea}
-Por ejemplo, para evitar que una tarea muy larga acapare el sistema y parezca que este ha quedado congelado por no visualizar lo que está haciendo. O, por ejemplo, para aprovechar los espacios de tiempo entre los lentos procesos humanos; de tal forma que se pueda realizar otros trabajos mientras se atiende el interfaz de usuario. O, por ejemplo, para atender a varios eventos o a varios usuarios a la vez.
-
-Cuando cohabitan varias tareas, el control de las mismas puede ser:
 \begin{itemize}
-\item Colaborativo (non-preemtive): Cada tarea se preocupa de comportase ``con decoro'' y ceder tiempo de ejecución a las demás tareas que pudiera haber activas en cada momento. Es decir, una vez una tarea está en ejecución no puede ser interrumpida por ninguna otra.
-\item Organizado (preemtive): Una tarea maestra se encarga de ir gestionando el tiempo y los recursos para las demás tareas, asignando a cada una lo que sea posible teniendo en cuenta ciertas prioridades preestablecidas. Es decir, algunas tareas tienen más prioridad que otras y pueden interrumpirlas cuando sea necesario.
+
+\item Es independiente (no necesita recursos compartidos con otras, ni depende de que otras se hayan ejecutado previamente) 
+
+\item Es idempotente (no tiene efectos nocivos si se reintenta por algún problema y acaba procesando lo mismo más de una vez).
+
+\item Es lo suficientemente rápida (no hace esperar durante mucho tiempo a otra funcionalidad o servicio que necesita algo que esta realiza)
+
+
 \end{itemize}
 
-Cuando múltiples tareas comparten un mismo recurso, pueden surgir situaciones problemáticas. De ahí que sea necesario contar con los adecuados mecanismos de control de acceso para asegurar que el comportamiento de esos recursos compartidos no depende del orden en que las tareas accedan a ellos. (thead-safe)
+En este escenario ideal las distintas funcionalidades o servicios compiten solo por recursos de procesamiento. Y pueden lanzarse más o menos instancias en paralelo según se tengan más o menos recursos libres para soportarlas.
 
-La coordinación de procesos, hebras y recursos es un tema con problemáticas complejas y sutiles. Es importante conocer y utilizar las bibliotecas específicas que traiga el compilador para tratar de forma segura con estos elementos.
+Pero en la realidad, aunque se prioricen las caracteristicas del escenario ideal, siempre acabará habiendo un cierto grado de dependencia entre funcionalidades o servicios. De ahí que sea necesaria alguna manera de coordinar las operaciones realizadas según estas dependan unas de otras.
 
-\subsection{Gráficos}
-El procesamiento de gráficos ha sido uno de los primeros usos donde se han venido utilizando múltiples (co)procesadores. Hoy en día prácticamente todos los sistemas tienen algún tipo de GPU (Graphics Processing Unit) complementando la CPU (Central Processing Unit) y liberándola de la tarea de manejar la pantalla. 
+Algunas de las formas más típicas son:
+\begin{itemize}
+ 
+\item Un programa maestro va organizando y lanzando las distintas operaciones. Si en algún punto una operación concreta depende de la información generada por otra, pueden emplearse llamadas asíncronas. La operación dependiente de otra pide a esta lo que necesita y se queda a esperar a que esa otra operación le indique que ha terminado de preparaselo. Pero el sistema entero no queda bloqueado, el programa maestro continua haciendo otras operaciones. 
 
-Cuando se vaya a trabajar con gráficos en pantalla, procurar utilizar bibliotecas y funciones que aprovechan dicha GPU. Estas bibliotecas (OpenGL, DirectX, Metal,\ldots) suelen ser algo más complejas de usar que las ``tradicionales'' (gtk, GDI, QuickDraw,\ldots), pero merece la pena utilizarlas.
+\item Diferenes programas van trabajando de forma independiente. Se utilizan mecanismos asíncronos de coordinación tales como las colas de mensajes. Colas donde las distintas funcionalidades o servicios:
+\begin{itemize}
+\item Van leyendo las peticiones dirigidas a ellas.
+\item Van depositando peticiones para otras funcionalidades o servicios.
+\end{itemize}
 
-
-\subsection{Cálculos}
-Cuando se realizan grandes cálculos de ingenieria o científicos. O cuando se procesan enormes cantidades de datos para destilar información. Es importante aprovechar plenamente las memorias caché, las unidades vectoriales y los múltiples núcleos que tienen los procesadores actuales. 
-
-Más aún si se están utilizando clusters con cientos o miles de esos procesadores, dedicados expresamente a tareas HPC (High Performance Computing). 
-
-Merece utilizar alguna de las bibliotecas y plataformas específicas que están siendo desarrolladas para este trabajo. Estas plataformas suelen cubrir aspectos tales como: alinear datos, compartir datos de partida, encadenar procesamientos parciales, sincronizar tareas, consolidar resultados parciales, etc.
-
-\url{https://www.openmp.org/}
-\\ \url{https://developer.nvidia.com/cuda-zone}
-\\ \url{https://docs.microsoft.com/es-es/dotnet/standard/parallel-programming/}
-\\ \url{https://software.intel.com/content/www/us/en/develop/tools/parallel-studio-xe.html}
+\end{itemize}
 
 
 \chapter{Organización interna del código}
