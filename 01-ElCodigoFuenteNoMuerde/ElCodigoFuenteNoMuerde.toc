@@ -8,8 +8,8 @@
 \contentsline {section}{\numberline {3.1}El concepto de `variable' \\ y el concepto de `tipo'}{12}{section.3.1}%
 \contentsline {section}{\numberline {3.2}El concepto de `alcance' (scope)}{15}{section.3.2}%
 \contentsline {section}{\numberline {3.3}Una variable puede contener un valor simple o un valor compuesto}{16}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Algunos consejos prácticos}{20}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}La importancia de poner nombres claros y descriptivos a las variables.}{20}{subsection.3.4.1}%
+\contentsline {section}{\numberline {3.4}Algunos consejos prácticos}{21}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}La importancia de poner nombres claros y descriptivos a las variables.}{21}{subsection.3.4.1}%
 \contentsline {subsection}{\numberline {3.4.2}La importancia de los tipos de datos.}{21}{subsection.3.4.2}%
 \contentsline {chapter}{\numberline {4}La consola de comandos: el interfaz de usuario más simple.}{22}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Mostrar texto en la pantalla}{22}{section.4.1}%
@@ -17,7 +17,7 @@
 \contentsline {chapter}{\numberline {5}El flujo de ejecución: cómo gobernar lo que se va ejecutando.}{30}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Ramas condicionales: IF/ELSE}{30}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Múltiples ramas condicionales: SWITCH}{33}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Bucles condicionales: WHILE}{34}{section.5.3}%
+\contentsline {section}{\numberline {5.3}Bucles condicionales: WHILE}{35}{section.5.3}%
 \contentsline {section}{\numberline {5.4}Bucles repetitivos: FOR, FOREACH}{37}{section.5.4}%
 \contentsline {chapter}{\numberline {6}Las estructuras de datos: cómo organizar la información a manejar.}{39}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Colecciones simples de valores: ARRAY}{39}{section.6.1}%
@@ -69,9 +69,9 @@
 \contentsline {subsection}{\numberline {14.3.2}El gestor de paquetes de Python}{81}{subsection.14.3.2}%
 \contentsline {subsection}{\numberline {14.3.3}Uso del IDE Geany}{82}{subsection.14.3.3}%
 \contentsline {subsection}{\numberline {14.3.4}Uso del IDE Visual Studio Code}{83}{subsection.14.3.4}%
-\contentsline {section}{\numberline {14.4}Enlaces a referencias sobre la sintaxis de los lenguajes y sus bibliotecas base}{84}{section.14.4}%
-\contentsline {subsection}{\numberline {14.4.1}referencias Python}{84}{subsection.14.4.1}%
+\contentsline {section}{\numberline {14.4}Enlaces a referencias sobre la sintaxis de los lenguajes y sus bibliotecas base}{85}{section.14.4}%
+\contentsline {subsection}{\numberline {14.4.1}referencias Python}{85}{subsection.14.4.1}%
 \contentsline {subsection}{\numberline {14.4.2}referencias Java}{85}{subsection.14.4.2}%
 \contentsline {subsection}{\numberline {14.4.3}referencias C\#}{85}{subsection.14.4.3}%
-\contentsline {subsection}{\numberline {14.4.4}referencias C o C++}{85}{subsection.14.4.4}%
+\contentsline {subsection}{\numberline {14.4.4}referencias C o C++}{86}{subsection.14.4.4}%
 \contentsline {section}{\numberline {14.5}Enlaces a referencias sobre bibliotecas de funciones}{86}{section.14.5}%
