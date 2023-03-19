@@ -8,8 +8,8 @@
 \contentsline {section}{\numberline {3.1}El concepto de `variable' \\ y el concepto de `tipo'}{12}{section.3.1}%
 \contentsline {section}{\numberline {3.2}El concepto de `alcance' (scope)}{15}{section.3.2}%
 \contentsline {section}{\numberline {3.3}Una variable puede contener un valor simple o un valor compuesto}{16}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Algunos consejos prácticos}{21}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}La importancia de poner nombres claros y descriptivos a las variables.}{21}{subsection.3.4.1}%
+\contentsline {section}{\numberline {3.4}Algunos consejos prácticos}{20}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}La importancia de poner nombres claros y descriptivos a las variables.}{20}{subsection.3.4.1}%
 \contentsline {subsection}{\numberline {3.4.2}La importancia de los tipos de datos.}{21}{subsection.3.4.2}%
 \contentsline {chapter}{\numberline {4}La consola de comandos: el interfaz de usuario más simple.}{22}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Mostrar texto en la pantalla}{22}{section.4.1}%

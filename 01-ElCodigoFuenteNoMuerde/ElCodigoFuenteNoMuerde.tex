@@ -392,10 +392,9 @@ def main(args):
     otroLado = 3
     area = unLado * otroLado
     
-    print("Un ", nombreDeLaFigura, 
-          " de ", unLado, 
-          " x ", otroLado, 
-          " tiene un area de ", area) 
+    print(f"Un {nombreDeLaFigura}",
+          f"de {unLado} x {otroLado}",
+          f"tiene un area de {area}")
     return 0
 
 if __name__ == '__main__':
@@ -555,39 +554,34 @@ O, por ejemplo, un registro de un sensor con: identificación del sensor, moment
 \begin{lstlisting}[frame=single, caption=lenguaje Python]
 from collections import namedtuple
 
-def main(args):
-    DireccionPostal = namedtuple("DireccionPostal", "calle, portal, piso, codigo_postal, poblacion, provincia, pais")
-    
-    mi_casa = DireccionPostal("c/ Pruebas", "2B", "5to izda"
-                              , "20999", "PuebloPruebas"
-                              , "ProvinciaPruebas", "PaisPruebas")
-                              
-    tu_casa = DireccionPostal("c/ Experimentos", "3", "2do dcha"
-                              , "20789", "PuebloExp"
-                              , "ProvinciaExp", "PaisExp")
-                              
-    print("Yo vivo en: ", mi_casa)
-    print() 
-    print("Y tu vives en: ", tu_casa)   
-    print()
-    print("Mi piso es ", mi_casa.piso
-          , " y el tuyo es ", tu_casa.piso)  
-    
-    return 0
 
+def main(args):
+    DireccionPostal = namedtuple(
+        "DireccionPostal",
+        "calle, portal, piso, codigo_postal, poblacion, provincia, pais")
+
+    mi_casa = DireccionPostal("c/ Pruebas", "2B", "5to izda",
+                              "20999", "PuebloPruebas", "ProvinciaPruebas", "PaisPruebas")
+
+    tu_casa = DireccionPostal("c/ Experimentos", "3", "2do dcha",
+                              "20789", "PuebloExp", "ProvinciaExp", "PaisExp")
+
+    print(f"Yo vivo en: {mi_casa}")
+    print(f"Y tu vives en: {tu_casa}")
+    print(f"Mi piso es {mi_casa.piso} y el tuyo es {tu_casa.piso}")
+
+    return 0
 
 
 if __name__ == '__main__':
     import sys
     sys.exit(main(sys.argv))
 \end{lstlisting}
+
 \begin{lstlisting}[frame=single]
-Yo vivo en:  DireccionPostal(calle='c/ Pruebas', portal='2B', piso='5to izda', codigo_postal='20999', poblacion='PuebloPruebas', provincia='ProvinciaPruebas', pais='PaisPruebas')
-
-Y tu vives en:  DireccionPostal(calle='c/ Experimentos', portal='3', piso='2do dcha', codigo_postal='20789', poblacion='PuebloExp', provincia='ProvinciaExp', pais='PaisExp')
-
-
-Mi piso es  5to izda  y el tuyo es  2do dcha
+Yo vivo en: DireccionPostal(calle='c/ Pruebas', portal='2B', piso='5to izda', codigo_postal='20999', poblacion='PuebloPruebas', provincia='ProvinciaPruebas', pais='PaisPruebas')
+Y tu vives en: DireccionPostal(calle='c/ Experimentos', portal='3', piso='2do dcha', codigo_postal='20789', poblacion='PuebloExp', provincia='ProvinciaExp', pais='PaisExp')
+Mi piso es 5to izda y el tuyo es 2do dcha
 \end{lstlisting}
 
 \begin{lstlisting}[frame=single, caption=lenguaje C]
