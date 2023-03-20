@@ -1,4 +1,4 @@
-\babel@toc {spanish}{}
+\babel@toc {spanish}{}\relax 
 \contentsline {chapter}{\numberline {1}Técnicas de trabajo}{6}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Control de versiones}{6}{section.1.1}%
 \contentsline {subsubsection}{Breve introducción a Git y Sourcetree}{6}{section*.3}%
