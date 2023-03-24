@@ -1,4 +1,4 @@
-\babel@toc {spanish}{}
+\babel@toc {spanish}{}\relax 
 \contentsline {chapter}{\numberline {1}Un entorno sobre el que practicar}{6}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Las herramientas básicas: editor, compilador, enlazador, depurador,\ldots }{6}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Algunas sugerencias rápidas}{8}{section.1.2}%
