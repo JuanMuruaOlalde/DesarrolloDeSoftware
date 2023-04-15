@@ -2218,6 +2218,29 @@ RaizCuadradaPorElMetodoDeNewton.sc
 \end{tiny}
 
 
+\section{Encapsulación}
+
+Es importante dividir adecuadamente las responsabilidades (la funcionalidad) entre los diversos elementos que definamos en el programa.
+
+Y es importante que cada elemento tenga control sobre su funcionamiento interno. Es decir, que otros elementos puedan utilizarlo solo de la forma en que está previsto que se utilice. Con el mínimo de dependencias posibles entre elementos. Y siendo estas dependencias lo más claras posible.
+
+En este sentido, son importantes los mecanismos de encapsulación: que un elemento pueda definir cuales de sus partes son internas (privadas) y cuales son públicas.
+
+De esta forma se facilita la evolución del programa. Al permitir modificar libremente las partes internas. Siempre y cuando se mantengan las partes públicas (los interfaces entre elementos).
+
+Prácticamente todos los lenguajes de programación disponen, en mayor o menor medida, de  este tipo de mecanismos de encapsulación:
+
+\begin{itemize}
+
+\item Los que son orientados a objeto lo definen explícitamente.
+\includegraphics[width=\textwidth]{encapsulacion en paradigma de objetos}
+
+\item Los que son funcionales lo definen a través de ``closures'' en funciones factoria.
+\includegraphics[width=\textwidth]{encapsulacion en paradigma funcional}
+
+\item Los que son distribuidos lo consiguen a través de mensajes que unos elementos emiten y otros elementos leen.
+
+\end{itemize}
 
 
 \section{Arquitecturas de software}
