@@ -2226,19 +2226,27 @@ Y es importante que cada elemento tenga control sobre su funcionamiento interno.
 
 En este sentido, son importantes los mecanismos de encapsulación: que un elemento pueda definir cuales de sus partes son internas (privadas) y cuales son públicas.
 
+\includegraphics[scale=0.8]{encapsulacion}
+
 De esta forma se facilita la evolución del programa. Al permitir modificar libremente las partes internas. Siempre y cuando se mantengan las partes públicas (los interfaces entre elementos).
 
+\newpage
 Prácticamente todos los lenguajes de programación disponen, en mayor o menor medida, de  este tipo de mecanismos de encapsulación:
 
 \begin{itemize}
 
 \item Los que son orientados a objeto lo definen explícitamente.
-\includegraphics[width=\textwidth]{encapsulacion en paradigma de objetos}
 
+\includegraphics[scale=1]{encapsulacion en paradigma orientado a objeto}
+
+\newpage
 \item Los que son funcionales lo definen a través de ``closures'' en funciones factoria.
-\includegraphics[width=\textwidth]{encapsulacion en paradigma funcional}
 
-\item Los que son distribuidos lo consiguen a través de mensajes que unos elementos emiten y otros elementos leen.
+\includegraphics[scale=1]{encapsulacion en paradigma funcional}
+
+\item Los que son distribuidos lo definen a través de mensajes. Mensajes que unos elementos emiten y otros elementos leen.
+
+\includegraphics[width=\textwidth]{encapsulacion en cola de mensajes}
 
 \end{itemize}
 
@@ -2249,7 +2257,7 @@ El Santo Grial del software consiste en llegar a algo parecido a los componentes
 
 Es decir, llegar a tener módulos de software o servicios que podamos obtener directamente ``off-the-shelf'' (``comprandolos en el mostrador de una tienda''); y utilizarlos tal cual en la construcción de nuestros programas.
 
-nota: \footnotesize{Ver detalles prácticos sobre arquitecturas en el capítulo 14 ``Organización interna del código'' del documento \url{https://www.susosise.es/documentos/Mas_alla_del_IF_y_del_WHILE.pdf}}
+nota: Ver detalles prácticos sobre arquitecturas en el capítulo 9 ``Organización interna del código'' del documento \url{https://www.susosise.es/documentos/Mas_alla_del_IF_y_del_WHILE.pdf}
 
 
 \subsection{Según se reparte el código, se puede distinguir entre:}
