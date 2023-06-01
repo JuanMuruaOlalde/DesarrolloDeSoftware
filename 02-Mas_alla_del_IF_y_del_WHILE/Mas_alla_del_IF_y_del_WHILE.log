@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8) (preloaded format=pdflatex 2022.9.8)  20 MAR 2023 17:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8) (preloaded format=pdflatex 2022.9.8)  1 JUN 2023 13:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -489,8 +489,8 @@ File: l3backend-pdftex.def 2022-08-23 L3 backend support: PDF output (pdfTeX)
 \l__pdf_internal_box=\box61
 )
 (Mas_alla_del_IF_y_del_WHILE.aux
-LaTeX Info: Redefining \. on input line 25.
-LaTeX Info: Redefining \% on input line 25.
+LaTeX Info: Redefining \. on input line 22.
+LaTeX Info: Redefining \% on input line 22.
 )
 \openout1 = `Mas_alla_del_IF_y_del_WHILE.aux'.
 
@@ -1054,494 +1054,499 @@ Cap\'{\i }tulo 3.
 [30
 
 ]
-LaTeX Info: Redefining \. on input line 749.
-LaTeX Info: Redefining \% on input line 749.
-Package cleveref Info: loaded `spanish' language definitions on input line 749.
+LaTeX Info: Redefining \. on input line 752.
+LaTeX Info: Redefining \% on input line 752.
+Package cleveref Info: loaded `spanish' language definitions on input line 752.
 
  [31]
-LaTeX Info: Redefining \. on input line 789.
-LaTeX Info: Redefining \% on input line 789.
-Package cleveref Info: loaded `spanish' language definitions on input line 789.
+LaTeX Info: Redefining \. on input line 786.
+LaTeX Info: Redefining \% on input line 786.
+Package cleveref Info: loaded `spanish' language definitions on input line 786.
 
  [32]
-Overfull \hbox (11.20866pt too wide) in paragraph at lines 789--789
+Overfull \hbox (11.20866pt too wide) in paragraph at lines 799--799
 []\OT1/pcr/m/n/10 fuenteDeDatos = FactoriaDeGestores.getGestorDeDatos(tipoDeFue
 nteDeDatos);[] 
  []
 
 
-Overfull \hbox (114.70844pt too wide) in paragraph at lines 819--820
+Overfull \hbox (114.70844pt too wide) in paragraph at lines 829--830
 [][][]$\OT1/pcr/m/n/12 https : / / github . com / JuanMuruaOlalde / sugerencias
 -[]para-[]practicar-[]programacion /
  []
 
 
-Overfull \hbox (114.70844pt too wide) in paragraph at lines 821--822
+Overfull \hbox (114.70844pt too wide) in paragraph at lines 831--832
 [][][]$\OT1/pcr/m/n/12 https : / / github . com / JuanMuruaOlalde / sugerencias
 -[]para-[]practicar-[]programacion /
  []
 
-LaTeX Info: Redefining \. on input line 826.
-LaTeX Info: Redefining \% on input line 826.
-Package cleveref Info: loaded `spanish' language definitions on input line 826.
+LaTeX Info: Redefining \. on input line 832.
+LaTeX Info: Redefining \% on input line 832.
+Package cleveref Info: loaded `spanish' language definitions on input line 832.
 
 [33]
+LaTeX Info: Redefining \. on input line 836.
+LaTeX Info: Redefining \% on input line 836.
+Package cleveref Info: loaded `spanish' language definitions on input line 836.
+
+ [34]
 Cap\'{\i }tulo 4.
-[34
+[35
 
 ]
-LaTeX Info: Redefining \. on input line 910.
-LaTeX Info: Redefining \% on input line 910.
-Package cleveref Info: loaded `spanish' language definitions on input line 910.
-
- [35]
-LaTeX Info: Redefining \. on input line 940.
-LaTeX Info: Redefining \% on input line 940.
-Package cleveref Info: loaded `spanish' language definitions on input line 940.
+LaTeX Info: Redefining \. on input line 920.
+LaTeX Info: Redefining \% on input line 920.
+Package cleveref Info: loaded `spanish' language definitions on input line 920.
 
  [36]
-LaTeX Info: Redefining \. on input line 992.
-LaTeX Info: Redefining \% on input line 992.
-Package cleveref Info: loaded `spanish' language definitions on input line 992.
+LaTeX Info: Redefining \. on input line 950.
+LaTeX Info: Redefining \% on input line 950.
+Package cleveref Info: loaded `spanish' language definitions on input line 950.
 
  [37]
-LaTeX Info: Redefining \. on input line 1045.
-LaTeX Info: Redefining \% on input line 1045.
-Package cleveref Info: loaded `spanish' language definitions on input line 1045
+LaTeX Info: Redefining \. on input line 1002.
+LaTeX Info: Redefining \% on input line 1002.
+Package cleveref Info: loaded `spanish' language definitions on input line 1002
 .
  [38]
-LaTeX Info: Redefining \. on input line 1097.
-LaTeX Info: Redefining \% on input line 1097.
-Package cleveref Info: loaded `spanish' language definitions on input line 1097
+LaTeX Info: Redefining \. on input line 1055.
+LaTeX Info: Redefining \% on input line 1055.
+Package cleveref Info: loaded `spanish' language definitions on input line 1055
 .
  [39]
+LaTeX Info: Redefining \. on input line 1107.
+LaTeX Info: Redefining \% on input line 1107.
+Package cleveref Info: loaded `spanish' language definitions on input line 1107
+.
+ [40]
 LaTeX Font Info:    Trying to load font information for TS1+pcr on input line 1
-113.
+123.
 
 (C:\Program Files\MiKTeX\tex/latex/psnfss\ts1pcr.fd
 File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
 )
-Overfull \hbox (46.2133pt too wide) in paragraph at lines 1114--1115
+Overfull \hbox (46.2133pt too wide) in paragraph at lines 1124--1125
 [][][][][] 
  []
 
 
-Overfull \hbox (60.21324pt too wide) in paragraph at lines 1114--1115
+Overfull \hbox (60.21324pt too wide) in paragraph at lines 1124--1125
 [][] 
  []
 
 
-Overfull \hbox (72.21336pt too wide) in paragraph at lines 1114--1115
+Overfull \hbox (72.21336pt too wide) in paragraph at lines 1124--1125
 [][] 
  []
 
 
-Overfull \hbox (54.21318pt too wide) in paragraph at lines 1114--1115
+Overfull \hbox (54.21318pt too wide) in paragraph at lines 1124--1125
 [][] 
  []
 
 
-Overfull \hbox (48.21312pt too wide) in paragraph at lines 1114--1115
+Overfull \hbox (48.21312pt too wide) in paragraph at lines 1124--1125
 []  
  []
 
 
-Overfull \hbox (3.33656pt too wide) in paragraph at lines 1124--1124
+Overfull \hbox (3.33656pt too wide) in paragraph at lines 1134--1134
 []\OT1/cmr/bx/n/17.28 Estructuras arb^^Soreas (trees) y gra-fos (graphs) 
  []
 
 
-Overfull \hbox (8.2057pt too wide) in paragraph at lines 1129--1130
+Overfull \hbox (8.2057pt too wide) in paragraph at lines 1139--1140
 []\OT1/cmr/m/n/12 nota: Si te-ne-mos cu-rio-si-dad,...una re-fe-ren-cia don-de 
 pro-fun-di-zar en el te-ma...[][]$\OT1/pcr/m/n/12 https :
  []
 
-LaTeX Info: Redefining \. on input line 1133.
-LaTeX Info: Redefining \% on input line 1133.
-Package cleveref Info: loaded `spanish' language definitions on input line 1133
+LaTeX Info: Redefining \. on input line 1143.
+LaTeX Info: Redefining \% on input line 1143.
+Package cleveref Info: loaded `spanish' language definitions on input line 1143
 .
-[40]
-Overfull \hbox (1.60042pt too wide) in paragraph at lines 1141--1142
+[41]
+Overfull \hbox (1.60042pt too wide) in paragraph at lines 1151--1152
 []\OT1/cmr/m/n/12 : Tra-ba-jan con tria-das `objeto-<tipo de re-la-ci^^Son>-obj
 eto', (tri-ples RDF).
  []
 
 
-Overfull \hbox (49.40846pt too wide) in paragraph at lines 1153--1154
+Overfull \hbox (49.40846pt too wide) in paragraph at lines 1163--1164
 [][][]$\OT1/pcr/m/n/12 https : / / www . tutorialsteacher . com / csharp / csha
 rp-[]generic-[]collections$[][] 
  []
 
-LaTeX Info: Redefining \. on input line 1157.
-LaTeX Info: Redefining \% on input line 1157.
-Package cleveref Info: loaded `spanish' language definitions on input line 1157
-.
-[41]
-Underfull \hbox (badness 10000) in paragraph at lines 1160--1163
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1160--1163
-
- []
-
-
-Overfull \hbox (114.70844pt too wide) in paragraph at lines 1206--1207
-[][][]$\OT1/pcr/m/n/12 https : / / github . com / JuanMuruaOlalde / sugerencias
--[]para-[]practicar-[]programacion /
- []
-
-LaTeX Info: Redefining \. on input line 1207.
-LaTeX Info: Redefining \% on input line 1207.
-Package cleveref Info: loaded `spanish' language definitions on input line 1207
+LaTeX Info: Redefining \. on input line 1167.
+LaTeX Info: Redefining \% on input line 1167.
+Package cleveref Info: loaded `spanish' language definitions on input line 1167
 .
 [42]
-Overfull \hbox (114.70844pt too wide) in paragraph at lines 1208--1209
+Underfull \hbox (badness 10000) in paragraph at lines 1170--1173
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1170--1173
+
+ []
+
+
+Overfull \hbox (114.70844pt too wide) in paragraph at lines 1216--1217
 [][][]$\OT1/pcr/m/n/12 https : / / github . com / JuanMuruaOlalde / sugerencias
 -[]para-[]practicar-[]programacion /
  []
 
-LaTeX Info: Redefining \. on input line 1213.
-LaTeX Info: Redefining \% on input line 1213.
-Package cleveref Info: loaded `spanish' language definitions on input line 1213
+LaTeX Info: Redefining \. on input line 1217.
+LaTeX Info: Redefining \% on input line 1217.
+Package cleveref Info: loaded `spanish' language definitions on input line 1217
 .
 [43]
+Overfull \hbox (114.70844pt too wide) in paragraph at lines 1218--1219
+[][][]$\OT1/pcr/m/n/12 https : / / github . com / JuanMuruaOlalde / sugerencias
+-[]para-[]practicar-[]programacion /
+ []
+
+LaTeX Info: Redefining \. on input line 1223.
+LaTeX Info: Redefining \% on input line 1223.
+Package cleveref Info: loaded `spanish' language definitions on input line 1223
+.
+[44]
 Cap\'{\i }tulo 5.
-[44
+[45
 
 ]
-Overfull \hbox (6.20848pt too wide) in paragraph at lines 1278--1281
+Overfull \hbox (6.20848pt too wide) in paragraph at lines 1288--1291
 [][]$\OT1/pcr/m/n/12 https : / / docs . microsoft . com / es-[]es / dotnet / st
 andard / base-[]types /
  []
 
-LaTeX Info: Redefining \. on input line 1282.
-LaTeX Info: Redefining \% on input line 1282.
-Package cleveref Info: loaded `spanish' language definitions on input line 1282
+LaTeX Info: Redefining \. on input line 1292.
+LaTeX Info: Redefining \% on input line 1292.
+Package cleveref Info: loaded `spanish' language definitions on input line 1292
 .
-[45]
+[46]
 LaTeX Font Info:    Trying to load font information for OML+cmr on input line 1
-286.
+296.
  (C:\Program Files\MiKTeX\tex/latex/base\omlcmr.fd
 File: omlcmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <8> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 1286.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 1296.
 
-LaTeX Info: Redefining \. on input line 1329.
-LaTeX Info: Redefining \% on input line 1329.
-Package cleveref Info: loaded `spanish' language definitions on input line 1329
+LaTeX Info: Redefining \. on input line 1339.
+LaTeX Info: Redefining \% on input line 1339.
+Package cleveref Info: loaded `spanish' language definitions on input line 1339
 .
- [46]
+ [47]
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 1
-338.
+348.
 
 (C:\Program Files\MiKTeX\tex/latex/base\omscmr.fd
 File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1338.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1348.
 
-LaTeX Info: Redefining \. on input line 1386.
-LaTeX Info: Redefining \% on input line 1386.
-Package cleveref Info: loaded `spanish' language definitions on input line 1386
+LaTeX Info: Redefining \. on input line 1396.
+LaTeX Info: Redefining \% on input line 1396.
+Package cleveref Info: loaded `spanish' language definitions on input line 1396
 .
- [47]
-Overfull \hbox (114.70844pt too wide) in paragraph at lines 1395--1396
+ [48]
+Overfull \hbox (114.70844pt too wide) in paragraph at lines 1405--1406
 [][][]$\OT1/pcr/m/n/12 https : / / github . com / JuanMuruaOlalde / sugerencias
 -[]para-[]practicar-[]programacion /
  []
 
 
-Overfull \hbox (114.70844pt too wide) in paragraph at lines 1397--1398
+Overfull \hbox (114.70844pt too wide) in paragraph at lines 1407--1408
 [][][]$\OT1/pcr/m/n/12 https : / / github . com / JuanMuruaOlalde / sugerencias
 -[]para-[]practicar-[]programacion /
  []
 
-LaTeX Info: Redefining \. on input line 1399.
-LaTeX Info: Redefining \% on input line 1399.
-Package cleveref Info: loaded `spanish' language definitions on input line 1399
+LaTeX Info: Redefining \. on input line 1409.
+LaTeX Info: Redefining \% on input line 1409.
+Package cleveref Info: loaded `spanish' language definitions on input line 1409
 .
-[48]
+[49]
 Cap\'{\i }tulo 6.
 
-Overfull \hbox (14.63324pt too wide) in paragraph at lines 1436--1437
+Overfull \hbox (14.63324pt too wide) in paragraph at lines 1446--1447
 [][] 
  []
 
-[49
+[50
 
 ]
-LaTeX Info: Redefining \. on input line 1462.
-LaTeX Info: Redefining \% on input line 1462.
-Package cleveref Info: loaded `spanish' language definitions on input line 1462
-.
- [50]
 LaTeX Info: Redefining \. on input line 1472.
 LaTeX Info: Redefining \% on input line 1472.
 Package cleveref Info: loaded `spanish' language definitions on input line 1472
 .
  [51]
+LaTeX Info: Redefining \. on input line 1482.
+LaTeX Info: Redefining \% on input line 1482.
+Package cleveref Info: loaded `spanish' language definitions on input line 1482
+.
+ [52]
 Cap\'{\i }tulo 7.
-[52
+[53
 
 ]
-LaTeX Info: Redefining \. on input line 1544.
-LaTeX Info: Redefining \% on input line 1544.
-Package cleveref Info: loaded `spanish' language definitions on input line 1544
+LaTeX Info: Redefining \. on input line 1554.
+LaTeX Info: Redefining \% on input line 1554.
+Package cleveref Info: loaded `spanish' language definitions on input line 1554
 .
- [53]
+ [54]
 Cap\'{\i }tulo 8.
-[54
+[55
 
 ]
-LaTeX Info: Redefining \. on input line 1586.
-LaTeX Info: Redefining \% on input line 1586.
-Package cleveref Info: loaded `spanish' language definitions on input line 1586
-.
- [55]
-LaTeX Info: Redefining \. on input line 1626.
-LaTeX Info: Redefining \% on input line 1626.
-Package cleveref Info: loaded `spanish' language definitions on input line 1626
+LaTeX Info: Redefining \. on input line 1596.
+LaTeX Info: Redefining \% on input line 1596.
+Package cleveref Info: loaded `spanish' language definitions on input line 1596
 .
  [56]
-LaTeX Info: Redefining \. on input line 1668.
-LaTeX Info: Redefining \% on input line 1668.
-Package cleveref Info: loaded `spanish' language definitions on input line 1668
+LaTeX Info: Redefining \. on input line 1636.
+LaTeX Info: Redefining \% on input line 1636.
+Package cleveref Info: loaded `spanish' language definitions on input line 1636
 .
  [57]
-LaTeX Info: Redefining \. on input line 1695.
-LaTeX Info: Redefining \% on input line 1695.
-Package cleveref Info: loaded `spanish' language definitions on input line 1695
+LaTeX Info: Redefining \. on input line 1678.
+LaTeX Info: Redefining \% on input line 1678.
+Package cleveref Info: loaded `spanish' language definitions on input line 1678
 .
  [58]
-LaTeX Info: Redefining \. on input line 1727.
-LaTeX Info: Redefining \% on input line 1727.
-Package cleveref Info: loaded `spanish' language definitions on input line 1727
+LaTeX Info: Redefining \. on input line 1705.
+LaTeX Info: Redefining \% on input line 1705.
+Package cleveref Info: loaded `spanish' language definitions on input line 1705
 .
  [59]
-LaTeX Info: Redefining \. on input line 1752.
-LaTeX Info: Redefining \% on input line 1752.
-Package cleveref Info: loaded `spanish' language definitions on input line 1752
+LaTeX Info: Redefining \. on input line 1737.
+LaTeX Info: Redefining \% on input line 1737.
+Package cleveref Info: loaded `spanish' language definitions on input line 1737
 .
  [60]
+LaTeX Info: Redefining \. on input line 1762.
+LaTeX Info: Redefining \% on input line 1762.
+Package cleveref Info: loaded `spanish' language definitions on input line 1762
+.
+ [61]
 Cap\'{\i }tulo 9.
-[61
+[62
 
 ]
-LaTeX Info: Redefining \. on input line 1794.
-LaTeX Info: Redefining \% on input line 1794.
-Package cleveref Info: loaded `spanish' language definitions on input line 1794
+LaTeX Info: Redefining \. on input line 1804.
+LaTeX Info: Redefining \% on input line 1804.
+Package cleveref Info: loaded `spanish' language definitions on input line 1804
 .
- [62]
-<./imagenes//arquitecturas multicapa.png, id=1390, 1265.43353pt x 999.02647pt>
+ [63]
+<./imagenes//arquitecturas multicapa.png, id=1395, 1265.43353pt x 999.02647pt>
 File: ./imagenes//arquitecturas multicapa.png Graphic file (type png)
 <use ./imagenes//arquitecturas multicapa.png>
 Package pdftex.def Info: ./imagenes//arquitecturas multicapa.png  used on input
- line 1803.
+ line 1813.
 (pdftex.def)             Requested size: 469.47307pt x 370.6401pt.
 
-Overfull \hbox (42.68173pt too wide) in paragraph at lines 1802--1804
+Overfull \hbox (42.68173pt too wide) in paragraph at lines 1812--1814
 [] 
  []
 
-LaTeX Info: Redefining \. on input line 1809.
-LaTeX Info: Redefining \% on input line 1809.
-Package cleveref Info: loaded `spanish' language definitions on input line 1809
+LaTeX Info: Redefining \. on input line 1819.
+LaTeX Info: Redefining \% on input line 1819.
+Package cleveref Info: loaded `spanish' language definitions on input line 1819
 .
-[63 <./imagenes//arquitecturas multicapa.png>]
-LaTeX Info: Redefining \. on input line 1844.
-LaTeX Info: Redefining \% on input line 1844.
-Package cleveref Info: loaded `spanish' language definitions on input line 1844
+[64 <./imagenes//arquitecturas multicapa.png>]
+LaTeX Info: Redefining \. on input line 1854.
+LaTeX Info: Redefining \% on input line 1854.
+Package cleveref Info: loaded `spanish' language definitions on input line 1854
 .
- [64]
-<./imagenes//division en capas - MVC.png, id=1399, 434.37282pt x 341.77687pt>
+ [65]
+<./imagenes//division en capas - MVC.png, id=1404, 434.37282pt x 341.77687pt>
 File: ./imagenes//division en capas - MVC.png Graphic file (type png)
 <use ./imagenes//division en capas - MVC.png>
 Package pdftex.def Info: ./imagenes//division en capas - MVC.png  used on input
- line 1845.
+ line 1855.
 (pdftex.def)             Requested size: 298.75262pt x 235.08054pt.
-<./imagenes//division en capas - MVC - distintas interpretaciones.png, id=1400,
+<./imagenes//division en capas - MVC - distintas interpretaciones.png, id=1405,
  453.695pt x 419.5675pt>
 File: ./imagenes//division en capas - MVC - distintas interpretaciones.png Grap
 hic file (type png)
 <use ./imagenes//division en capas - MVC - distintas interpretaciones.png>
 Package pdftex.def Info: ./imagenes//division en capas - MVC - distintas interp
-retaciones.png  used on input line 1848.
+retaciones.png  used on input line 1858.
 (pdftex.def)             Requested size: 298.75262pt x 276.28159pt.
-LaTeX Info: Redefining \. on input line 1851.
-LaTeX Info: Redefining \% on input line 1851.
-Package cleveref Info: loaded `spanish' language definitions on input line 1851
+LaTeX Info: Redefining \. on input line 1861.
+LaTeX Info: Redefining \% on input line 1861.
+Package cleveref Info: loaded `spanish' language definitions on input line 1861
 .
- [65 <./imagenes//division en capas - MVC.png> <./imagenes//division en capas -
+ [66 <./imagenes//division en capas - MVC.png> <./imagenes//division en capas -
  MVC - distintas interpretaciones.png>]
-<./imagenes//division en capas - MVC -ampliada-.png, id=1406, 641.39626pt x 444
+<./imagenes//division en capas - MVC -ampliada-.png, id=1412, 641.39626pt x 444
 .66125pt>
 File: ./imagenes//division en capas - MVC -ampliada-.png Graphic file (type png
 )
 <use ./imagenes//division en capas - MVC -ampliada-.png>
 Package pdftex.def Info: ./imagenes//division en capas - MVC -ampliada-.png  us
-ed on input line 1858.
+ed on input line 1868.
 (pdftex.def)             Requested size: 341.43436pt x 236.70743pt.
 
-Overfull \hbox (8.91531pt too wide) in paragraph at lines 1860--1862
+Overfull \hbox (8.91531pt too wide) in paragraph at lines 1870--1872
 []\OT1/cmr/m/n/12 Al ex-ten-der-la, quiz^^Sa fue-ra me-jor cam-biar-le el nom-b
 re de MVC (\OT1/cmr/m/n/10 Modelo-Vista-Controlador\OT1/cmr/m/n/12 )
  []
 
-LaTeX Info: Redefining \. on input line 1876.
-LaTeX Info: Redefining \% on input line 1876.
-Package cleveref Info: loaded `spanish' language definitions on input line 1876
+LaTeX Info: Redefining \. on input line 1886.
+LaTeX Info: Redefining \% on input line 1886.
+Package cleveref Info: loaded `spanish' language definitions on input line 1886
 .
-[66 <./imagenes//division en capas - MVC -ampliada-.png>]
-<./imagenes//Arquitectura Hexagonal.png, id=1414, 1077.02374pt x 768.8725pt>
+[67 <./imagenes//division en capas - MVC -ampliada-.png>]
+<./imagenes//Arquitectura Hexagonal.png, id=1419, 1077.02374pt x 768.8725pt>
 File: ./imagenes//Arquitectura Hexagonal.png Graphic file (type png)
 <use ./imagenes//Arquitectura Hexagonal.png>
 Package pdftex.def Info: ./imagenes//Arquitectura Hexagonal.png  used on input 
-line 1880.
+line 1890.
 (pdftex.def)             Requested size: 341.43436pt x 243.74475pt.
-LaTeX Info: Redefining \. on input line 1900.
-LaTeX Info: Redefining \% on input line 1900.
-Package cleveref Info: loaded `spanish' language definitions on input line 1900
+LaTeX Info: Redefining \. on input line 1910.
+LaTeX Info: Redefining \% on input line 1910.
+Package cleveref Info: loaded `spanish' language definitions on input line 1910
 .
- [67 <./imagenes//Arquitectura Hexagonal.png>]
-LaTeX Info: Redefining \. on input line 1938.
-LaTeX Info: Redefining \% on input line 1938.
-Package cleveref Info: loaded `spanish' language definitions on input line 1938
+ [68 <./imagenes//Arquitectura Hexagonal.png>]
+LaTeX Info: Redefining \. on input line 1948.
+LaTeX Info: Redefining \% on input line 1948.
+Package cleveref Info: loaded `spanish' language definitions on input line 1948
 .
- [68]
-<./imagenes//division en capas - DDD.png, id=1431, 1346.02875pt x 1065.9825pt>
+ [69]
+<./imagenes//division en capas - DDD.png, id=1436, 1346.02875pt x 1065.9825pt>
 File: ./imagenes//division en capas - DDD.png Graphic file (type png)
 <use ./imagenes//division en capas - DDD.png>
 Package pdftex.def Info: ./imagenes//division en capas - DDD.png  used on input
- line 1943.
+ line 1953.
 (pdftex.def)             Requested size: 384.10959pt x 304.19855pt.
 
-Overfull \hbox (11.70866pt too wide) in paragraph at lines 1955--1957
+Overfull \hbox (11.70866pt too wide) in paragraph at lines 1965--1967
 [][]$\OT1/pcr/m/n/10 https : / / github . com / JuanMuruaOlalde / DesarrolloDeS
 oftware / tree / main / 02-[]Mas _
  []
 
 
-Overfull \hbox (15.77945pt too wide) in paragraph at lines 1959--1961
+Overfull \hbox (15.77945pt too wide) in paragraph at lines 1969--1971
 \OT1/cmr/bx/n/10 SO-LID\OT1/cmr/m/n/10 . Por ejem-plo, le-yen-do la co-rres-pon
 -dien-te sec-ci^^Son en el do-cu-men-to [][]$\OT1/pcr/m/n/10 https : / / www . 
 susosise .
  []
 
-LaTeX Info: Redefining \. on input line 1963.
-LaTeX Info: Redefining \% on input line 1963.
-Package cleveref Info: loaded `spanish' language definitions on input line 1963
+LaTeX Info: Redefining \. on input line 1973.
+LaTeX Info: Redefining \% on input line 1973.
+Package cleveref Info: loaded `spanish' language definitions on input line 1973
 .
-[69 <./imagenes//division en capas - DDD.png>]
-LaTeX Info: Redefining \. on input line 1980.
-LaTeX Info: Redefining \% on input line 1980.
-Package cleveref Info: loaded `spanish' language definitions on input line 1980
+[70 <./imagenes//division en capas - DDD.png>]
+LaTeX Info: Redefining \. on input line 1990.
+LaTeX Info: Redefining \% on input line 1990.
+Package cleveref Info: loaded `spanish' language definitions on input line 1990
 .
- [70]
-Overfull \hbox (43.20847pt too wide) in paragraph at lines 1988--1992
+ [71]
+Overfull \hbox (43.20847pt too wide) in paragraph at lines 1998--2002
 [][]$\OT1/pcr/m/n/12 https : / / www . mpi-[]forum . org / docs / mpi-[]3 . 1 /
  mpi31-[]report / mpi31-[]report .
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 1995.
+(hyperref)                removing `\\' on input line 2005.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 2006.
+(hyperref)                removing `\\' on input line 2016.
 
-LaTeX Info: Redefining \. on input line 2018.
-LaTeX Info: Redefining \% on input line 2018.
-Package cleveref Info: loaded `spanish' language definitions on input line 2018
+LaTeX Info: Redefining \. on input line 2028.
+LaTeX Info: Redefining \% on input line 2028.
+Package cleveref Info: loaded `spanish' language definitions on input line 2028
 .
-[71]
-Overfull \hbox (19.60847pt too wide) in paragraph at lines 2048--2050
+[72]
+Overfull \hbox (19.60847pt too wide) in paragraph at lines 2058--2060
 [][]$\OT1/pcr/m/n/12 https : / / martinfowler . com / articles / richardsonMatu
 rityModel . html$[][] 
  []
 
-LaTeX Info: Redefining \. on input line 2050.
-LaTeX Info: Redefining \% on input line 2050.
-Package cleveref Info: loaded `spanish' language definitions on input line 2050
-.
-[72]
-Overfull \hbox (114.70844pt too wide) in paragraph at lines 2064--2065
-[][][]$\OT1/pcr/m/n/12 https : / / github . com / JuanMuruaOlalde / sugerencias
--[]para-[]practicar-[]programacion /
- []
-
-
-Overfull \hbox (114.70844pt too wide) in paragraph at lines 2066--2067
-[][][]$\OT1/pcr/m/n/12 https : / / github . com / JuanMuruaOlalde / sugerencias
--[]para-[]practicar-[]programacion /
- []
-
-
-Overfull \hbox (114.70844pt too wide) in paragraph at lines 2068--2069
-[][][]$\OT1/pcr/m/n/12 https : / / github . com / JuanMuruaOlalde / sugerencias
--[]para-[]practicar-[]programacion /
- []
-
-
-Overfull \hbox (114.70844pt too wide) in paragraph at lines 2072--2073
-[][][]$\OT1/pcr/m/n/12 https : / / github . com / JuanMuruaOlalde / sugerencias
--[]para-[]practicar-[]programacion /
- []
-
-LaTeX Info: Redefining \. on input line 2077.
-LaTeX Info: Redefining \% on input line 2077.
-Package cleveref Info: loaded `spanish' language definitions on input line 2077
+LaTeX Info: Redefining \. on input line 2060.
+LaTeX Info: Redefining \% on input line 2060.
+Package cleveref Info: loaded `spanish' language definitions on input line 2060
 .
 [73]
+Overfull \hbox (114.70844pt too wide) in paragraph at lines 2074--2075
+[][][]$\OT1/pcr/m/n/12 https : / / github . com / JuanMuruaOlalde / sugerencias
+-[]para-[]practicar-[]programacion /
+ []
+
+
+Overfull \hbox (114.70844pt too wide) in paragraph at lines 2076--2077
+[][][]$\OT1/pcr/m/n/12 https : / / github . com / JuanMuruaOlalde / sugerencias
+-[]para-[]practicar-[]programacion /
+ []
+
+
+Overfull \hbox (114.70844pt too wide) in paragraph at lines 2078--2079
+[][][]$\OT1/pcr/m/n/12 https : / / github . com / JuanMuruaOlalde / sugerencias
+-[]para-[]practicar-[]programacion /
+ []
+
+
+Overfull \hbox (114.70844pt too wide) in paragraph at lines 2082--2083
+[][][]$\OT1/pcr/m/n/12 https : / / github . com / JuanMuruaOlalde / sugerencias
+-[]para-[]practicar-[]programacion /
+ []
+
+LaTeX Info: Redefining \. on input line 2087.
+LaTeX Info: Redefining \% on input line 2087.
+Package cleveref Info: loaded `spanish' language definitions on input line 2087
+.
+[74]
 Cap\'{\i }tulo 10.
 
-Overfull \hbox (23.76233pt too wide) in paragraph at lines 2083--2087
+Overfull \hbox (23.76233pt too wide) in paragraph at lines 2093--2097
 \OT1/cmr/m/n/12 (o el JDK co-mer-cial de Ora-cle: [][]$\OT1/pcr/m/n/12 https : 
 / / www . oracle . com / java / technologies /
  []
 
-[74
+[75
 
 ]
-Overfull \hbox (45.6416pt too wide) in paragraph at lines 2104--2107
+Overfull \hbox (45.6416pt too wide) in paragraph at lines 2114--2117
 \OT1/cmr/m/n/12 ::: Ma-ven PMD Plu-gin: [][]$\OT1/pcr/m/n/12 https : / / maven 
 . apache . org / plugins / maven-[]pmd-[]plugin$[][] 
  []
 
 
-Overfull \hbox (55.64522pt too wide) in paragraph at lines 2112--2115
+Overfull \hbox (55.64522pt too wide) in paragraph at lines 2122--2125
 \OT1/cmr/m/n/12 JProfiler: [][]$\OT1/pcr/m/n/12 https : / / www . ej-[]technolo
 gies . com / products / jprofiler / overview .
  []
 
-LaTeX Info: Redefining \. on input line 2147.
-LaTeX Info: Redefining \% on input line 2147.
-Package cleveref Info: loaded `spanish' language definitions on input line 2147
+LaTeX Info: Redefining \. on input line 2157.
+LaTeX Info: Redefining \% on input line 2157.
+Package cleveref Info: loaded `spanish' language definitions on input line 2157
 .
-[75]
-Overfull \hbox (38.28004pt too wide) in paragraph at lines 2179--2180
+[76]
+Overfull \hbox (38.28004pt too wide) in paragraph at lines 2189--2190
 []\OT1/cmr/m/n/12 Un ana-li-za-dor de ren-di-mien-to (pro-fi-ler) ::: PyVm-Mo-n
 i-tor: [][]$\OT1/pcr/m/n/12 https : / / www . pyvmmonitor .
  []
 
-LaTeX Info: Redefining \. on input line 2186.
-LaTeX Info: Redefining \% on input line 2186.
-Package cleveref Info: loaded `spanish' language definitions on input line 2186
+LaTeX Info: Redefining \. on input line 2196.
+LaTeX Info: Redefining \% on input line 2196.
+Package cleveref Info: loaded `spanish' language definitions on input line 2196
 .
-[76]
-Overfull \hbox (3.20647pt too wide) in paragraph at lines 2187--2187
+[77]
+Overfull \hbox (3.20647pt too wide) in paragraph at lines 2197--2197
 []\OT1/cmr/bx/n/17.28 Para pro-gra-mar en HTML5/CSS/Javascript 
  []
 
-LaTeX Info: Redefining \. on input line 2226.
-LaTeX Info: Redefining \% on input line 2226.
-Package cleveref Info: loaded `spanish' language definitions on input line 2226
+LaTeX Info: Redefining \. on input line 2236.
+LaTeX Info: Redefining \% on input line 2236.
+Package cleveref Info: loaded `spanish' language definitions on input line 2236
 .
-[77]
-Overfull \hbox (7.38095pt too wide) in paragraph at lines 2228--2228
+[78]
+Overfull \hbox (7.38095pt too wide) in paragraph at lines 2238--2238
 []\OT1/cmr/bx/n/17.28 Una he-rra-mien-ta trans-ver-sal: al-ma-ce-na-mien-
  []
 
@@ -1549,30 +1554,24 @@ Overfull \hbox (7.38095pt too wide) in paragraph at lines 2228--2228
 Package caption Warning: Unused \captionsetup[verbatim] on input line 75.
 See the caption package documentation for explanation.
 
-LaTeX Info: Redefining \. on input line 2245.
-LaTeX Info: Redefining \% on input line 2245.
-Package cleveref Info: loaded `spanish' language definitions on input line 2245
+LaTeX Info: Redefining \. on input line 2255.
+LaTeX Info: Redefining \% on input line 2255.
+Package cleveref Info: loaded `spanish' language definitions on input line 2255
 .
-[78] (Mas_alla_del_IF_y_del_WHILE.aux
+[79] (Mas_alla_del_IF_y_del_WHILE.aux
 LaTeX Info: Redefining \. on input line 22.
 LaTeX Info: Redefining \% on input line 22.
 Package cleveref Info: loaded `spanish' language definitions on input line 22.
 )
-
-Package rerunfilecheck Warning: File `Mas_alla_del_IF_y_del_WHILE.out' has chan
-ged.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Mas_alla_del_IF_y_del_WHILE.out':
-(rerunfilecheck)             Before: 4AD0144E44DC409200CE974300AAD63A;7074
-(rerunfilecheck)             After:  97CFEFA9DEBC8D4F311BAC93D45697E1;19091.
+Package rerunfilecheck Info: File `Mas_alla_del_IF_y_del_WHILE.out' has not cha
+nged.
+(rerunfilecheck)             Checksum: 97CFEFA9DEBC8D4F311BAC93D45697E1;19091.
  ) 
 Here is how much of TeX's memory you used:
  18526 strings out of 477843
- 316283 string characters out of 2833369
+ 316275 string characters out of 2833369
  942640 words of memory out of 3000000
- 36482 multiletter control sequences out of 15000+600000
+ 36481 multiletter control sequences out of 15000+600000
  483575 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  72i,13n,77p,716b,2534s stack positions out of 10000i,1000n,20000p,200000b,80000s
@@ -1590,9 +1589,9 @@ cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb
 ><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program
  Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTe
 X/fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on Mas_alla_del_IF_y_del_WHILE.pdf (79 pages, 1454640 bytes).
+Output written on Mas_alla_del_IF_y_del_WHILE.pdf (80 pages, 1468323 bytes).
 PDF statistics:
- 1783 PDF objects out of 2073 (max. 8388607)
- 703 named destinations out of 1000 (max. 500000)
+ 1788 PDF objects out of 2073 (max. 8388607)
+ 704 named destinations out of 1000 (max. 500000)
  860 words of extra memory for PDF output out of 10000 (max. 10000000)
 

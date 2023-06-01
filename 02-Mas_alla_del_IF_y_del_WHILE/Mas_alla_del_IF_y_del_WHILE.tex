@@ -707,10 +707,18 @@ De ponerse a producirlo, suele ser más rentable enfocar el manual de usuario co
 \chapter{Objetos: clases e instancias}
 
 \section{Encapsulación}
-nota: ver más adelante la sección \ref{oop} \nameref{oop}.
+En la programación orientada a objeto, cada módulo (clase)(objeto) contiene todo lo que necesita para realizar una tarea o misión concreta: 
+\begin{itemize}
+\item tanto los datos (propiedades),
+\item como el comportamiento (métodos).
+\end{itemize}
+
+Y se garantiza que ningún objeto pueda interferir en los entresijos internos de otro. Un objeto solo puede interactuar con otro a través de los caminos expresamente habilitados para ello (propiedades o métodos declarados como ‘public’).
+
+nota: ver más detalles más adelante, en la sección \ref{oop} \nameref{oop}.
 
 \section{Polimorfismo}
-Posibilidad de definir varias funciones con el mismo nombre, pero con diferentes signaturas (diferencias en alguno de los parámetros de entrada o datos de salida).
+Es la posibilidad de definir varias funciones (métodos) con el mismo nombre, pero con diferentes signaturas (diferencias en alguno de los parámetros de entrada o en los datos de salida).
 
 \section{Herencia}
 Se utiliza cuando hay varias clases similares, clases que comparten todas ellas algunas propiedades y métodos comunes que son idénticos en todas ellas. 
@@ -720,16 +728,18 @@ Es posible definir una clase madre con la parte común, y luego derivar varias c
 Cuando se vaya a utilizar solo su parte común, podemos declarar variables, parámetros o colecciones del tipo madre, para referirnos o contener instancias de cualquiera de las clases hijas.
 
 \section{Sobrecarga de funciones (overwrite)}
-Se utiliza junto con la herencia, cuando alguna clase hija necesita hacer algo peculiar en la implementación interna de alguno de los métodos comunes que recibe de la clase madre. Puede redefinirlo sobreescribiendolo (ovewrite) con una declaración propia de ese método. 
+Se utiliza junto con la herencia. Cuando alguna clase hija necesita hacer algo diferente en la implementación interna de alguno de los métodos comunes que recibe de la clase madre. Puede redefinir ese método sobreescribiendolo (overwrite) con una declaración propia. 
 
 \section{Interface (clase abstracta)}
-Se utiliza cuando se necesitan unos ciertos métodos con forma exactamente igual, con una signatura concreta (parámetros de entrada y salida concretos) en unas cuantas clases distintas. Pero esos métodos realizan trabajos internos distintos según cada clase.
+Se utiliza cuando se necesitan unos ciertos métodos con una misma signatura concreta (parámetros de entrada y salida concretos) en varias clases distintas. 
+
+Según cada clase, esos métodos comunes pueden realizar trabajos internos distintos. Pero para un tercero que vaya a usar objetos de alguna de esas clases, todos ellos se manejan igual.
 
 (nota: Se podría utilizar herencia, pero habría que sobreescribir los métodos en todas las clases hijas. La clase madre tan solo dictará la signatura de los métodos. Y eso es precisamente lo que hace un interface.)
 
-Cuando una clase dice que implementa un interface, el compilador le obliga a que implemente todos y cada uno de los métodos de ese interface. Los puede implementar como quiera, pero ha de implementarlos; y ha de hacerlo respetando las signaturas (los parámetros de entrada y salida) definidas.
+Cuando una clase dice que implementa un interface, el compilador le obliga a que implemente todos y cada uno de los métodos de ese interface. Los puede implementar como quiera, pero ha de implementarlos todos; y ha de implementarlos respetando escrupulosamente las signaturas (los parámetros de entrada y salida) definidas.
 
-Cuando se vaya a utilizar solo su parte común, podemos declarar variables, parámetros o colecciones del tipo del interface, para referirnos o contener instancias de cualquiera de las clases que implementen dicho interface.
+Cuando se vaya a utilizar solo su parte común, podemos declarar variables, parámetros o colecciones del tipo del interface. Para referirnos o contener instancias de objetos de cualquiera de las clases que implementen dicho interface.
 
 \section{Cuándo usar herencia y cuándo interface}
 Ambas se utilizan cuando se ha de garantizar que un cierto número de clases/objetos tienen ciertos elementos comunes a todos ellos; Permitiendo así ser utilizados en ciertas ocasiones como si todos fueran el mismo tipo de objeto. Pero, ¿cuándo usar herencia y cuando interfaz?
