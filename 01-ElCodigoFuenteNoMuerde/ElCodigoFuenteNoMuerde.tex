@@ -2513,37 +2513,55 @@ Por ejemplo, una excepción (situación anómala)  que se produzca al guardar al
 \section{Estructuración básica de una aplicación en funciones (programación `estructurada')}
 El concepto de \textbf{función}: una porción de código que realiza una tarea concreta y que puede ser llamada repetidamente desde otras partes del código.
 
-El concepto de \textbf{argumento}: variables que pasan información a la función (argumentos de entrada) ;
-variables que recuperan resultados de la función (argumentos de salida). 
-
+El concepto de \textbf{argumento}:
+\begin{itemize}
+\item variables que pasan información a la función (argumentos de entrada)
+\item variables que recuperan resultados de la función (argumento de retorno). 
+\end{itemize}
+La descripción de los argumentos de una función es lo que se suele denominar la `signatura' de esa función.
 
 \section{Algunos consejos prácticos}
 
 
 \subsection{Usar nombres claros y descriptivos}
 
-Aprovecho para recordar la importancia de poner nombres claros y descriptivos a todas las variables, argumentos y funciones. De esta forma, se facilita la legibilidad del código. (En un código bien escrito se comprende lo que hace con solo leerlo, sin necesidad de ``comentarios explicativos'').
+Aprovecho para recordar la importancia de poner nombres claros y descriptivos a todas las variables, argumentos y funciones. De esta forma, se facilita la legibilidad del código. (En un código bien escrito se deberia comprender lo que hace con solo leerlo, sin necesidad de ``comentarios explicativos'' adiccionales).
 
 
 \subsection{Organizar bien el código}
 
-Poner las funciones relacionadas entre sí dentro de una misma parte del programa.
+Normalmente suele haber grupos de funciones con una cierta relación entre sí. Es importante ir distinguiendo de forma clara estos grupos a medida que vamos construyendo el programa. Para ir poniendo las funciones relacionadas entre sí dentro de un mismo ``trozo'' del programa.
 
-Las funciones dentro una misma parte se suelen poder llamar directamente. Llamar desde una parte a una función de otra parte suele requerir hacer algo ``un poco especial''.
+Estos ``trozos'' o grupos de funciones se suelen llamar `módulo' o `clase' o `archivo' o `carpeta' o `espacio de nombres' o\ldots Según sea el lenguaje de programación que se esté empleando. Cada lenguaje tiene su propia idiosincrasia para estructurar programas grandes.
 
-De esta forma, vamos viendo las dependencias entre partes. Con la idea de limitar esas dependencias a las mínimas necesarias, a las que sean lógicas según el trabajo a realizar por cada parte.
+Las funciones dentro un mismo ``trozo'' se suelen poder llamar directamente entre sí. Pero para llamar a una función residente en un ``trozo'' desde otro ``trozo'', suele requerir hacer algo ``un poco especial'' (como, por ejemplo, `importar' previamente el módulo donde reside).
 
-Cada parte del programa ha de ser consistente y tener una ``responsabilidad'' clara y definida. Lo ideal es que cada parte tenga unas ``entradas'' (unos puntos de acceso) bien definidas y proporcione unas ``salidas'' (unas respuestas) también bien definidas. (Es decir, existan unos `\textbf{interfaces}' concretos entre parte y parte.)
+De esta forma, van quedando claras las dependencias entre partes. 
 
-De esta forma, se pueden modificar/ampliar (o sustituir) unas partes sin afectar a las otras.
+Siendo el objetivo el limitar esas dependencias a las mínimas imprescindibles. Teniendo solo aquellas dependencias que sean lógicas según el trabajo a realizar por cada ``trozo'' del programa.
+
+Del mismo modo que cada función del programa ha de ser consistente y tener una única ``responsabilidad'' clara y definida.  Cada ``trozo'' (módulo, clase,\ldots) también ha de ser coherente y tener una única misión clara y definida.
+
+Lo ideal es que cada ``trozo'' tenga unos puntos de acceso bien definios y que cada uno de esos puntos de acceso proporcione unos servicios o respuestas concretos. Es lo que se suele denominar `\textbf{interfaces}' entre parte y parte.
+
+Si estas interfaces están bien definidas y se mantienen estables en el tiempo, permiten modificar/ampliar (o sustituir) unas partes del programa sin afectar a las otras.
+
+Resultando en un programa sencillo de mantener y de evolucionar.
 
 \vspace{0.5cm}
-nota: Según qué lenguaje, cada parte del programa se puede llamar `módulo' o `clase' o `archivo' o `carpeta' o `espacio de nombres' o\ldots (lo que el lenguaje use para estructurar los programas grandes)
+nota: 
+
+Este es el aspecto más difícil de dominar en la programación. 
+
+Llegar a pensar en todo el programa como un conjunto coherente, formado por múltiples partes. Cada parte con una responsabilidad concreta, clara y definida. Pero todas ellas trabajando conjuntamente para conseguir los fines (globales) que se persiguen.
+
+No pocas veces, la presión del momento nos lleva a hacer ``algo que funcione''. Sin pararnos a pensar en cómo encaja ese algo con la globalidad (la arquitectura) del sistema.
+\\Si luego no volvemos sobre nuestros pasos a refactorizar ese ``algo que funciona'', para integrarlo bien dentro del conjunto. Acabaremos con el temido `Big Ball of Mud'.
 
 
 \subsection{Refactorizar de forma continua (y sin miedo)}
 
-Refactorizar: modificar (reescribir) el código sin afectar a lo que hace (manteniendo su funcionalidad tal cual)
+Refactorizar: modificar el código sin afectar a lo que hace (es decir, rescribirlo para que quede mejor, pero manteniendo su funcionalidad tal cual)
 
 La arquitectura interna de un programa no es fija. Sino suele ir evolucionando a lo largo del tiempo, a medida que van evolucionando las tecnologías o van variando las funcionalidades requeridas del programa.
 
@@ -2561,17 +2579,23 @@ La idea es ir adaptando las partes ya existentes del código según va evolucion
 
 \subsection{Programación `orientada a objeto' (OO)}
 El concepto de \textbf{clase}: la definición de un tipo concreto de objeto
-\\ y de \textbf{instancia}: cada uno de los objetos concretos que se manejan de un determinado tipo.
+\\ y de \textbf{instancia}: cada uno de los objetos concretos de un determinado tipo que tenemos activo en el programa en un momento dado.
 
 El concepto de \textbf{atributo}: información contenida dentro del objeto.
 
 El concepto de \textbf{método}: funciones que realizan acciones dentro del objeto.
 
-Con estos conceptos, es posible ``encapsular'' dentro de cada objeto tanto el estado interno que lo define como las acciones que pueden manipular dicho estado.
+Con estos conceptos, es posible ``encapsular'' dentro de cada objeto tanto el estado interno que lo define como las acciones que manipulan dicho estado interno.
 
-Un objeto solo ha de interactuar con otro a base de realizar llamadas a los métodos que este otro expone de forma pública.
+De tal manera que un objeto solo interactua con otro a base de realizar llamadas a los métodos que este otro exponga de forma pública.
+
+Cada objeto es autónomo y encapsulado. Con un interface público claro y definido, para que otros objetos puedan hacer uso de él.
 
 La idea es llegar a un adecuado reparto de responsabilidades entre objetos. Una estructura donde cada tipo de objeto se encarga de una determinada tarea y donde cada tarea es responsabilidad de un solo tipo de objeto.
+
+\vspace{0.5cm}
+nota: Para visualizar mejor lo que es un objeto. Podemos pensar en que es simplemente un ``trozo'' de código con unas variables y funciones concretas. Algunas públicas (se pueden ver y utilizar desde otras partes del código) y otras privadas (solo se pueden ver y utilizar dentro de ese ``trozo'' de código).
+
 
 \subsection{Arquitecturas `limpias' (multi-capa)}
 

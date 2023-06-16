@@ -35,43 +35,43 @@
 \contentsline {section}{\numberline {9.1}Estructuración básica de una aplicación en funciones (programación `estructurada')}{63}{section.9.1}%
 \contentsline {section}{\numberline {9.2}Algunos consejos prácticos}{63}{section.9.2}%
 \contentsline {subsection}{\numberline {9.2.1}Usar nombres claros y descriptivos}{63}{subsection.9.2.1}%
-\contentsline {subsection}{\numberline {9.2.2}Organizar bien el código}{63}{subsection.9.2.2}%
-\contentsline {subsection}{\numberline {9.2.3}Refactorizar de forma continua (y sin miedo)}{64}{subsection.9.2.3}%
+\contentsline {subsection}{\numberline {9.2.2}Organizar bien el código}{64}{subsection.9.2.2}%
+\contentsline {subsection}{\numberline {9.2.3}Refactorizar de forma continua (y sin miedo)}{65}{subsection.9.2.3}%
 \contentsline {section}{\numberline {9.3}Unas breves pinceladas acerca de formas más avanzadas de estructuración}{65}{section.9.3}%
 \contentsline {subsection}{\numberline {9.3.1}Programación `orientada a objeto' (OO)}{65}{subsection.9.3.1}%
-\contentsline {subsection}{\numberline {9.3.2}Arquitecturas `limpias' (multi-capa)}{65}{subsection.9.3.2}%
-\contentsline {chapter}{\numberline {10}Breve introducción al interface de usuario habitual: \\el GUI (Graphical User Interface)}{66}{chapter.10}%
-\contentsline {section}{\numberline {10.1}Cómo mostrar una ventana y unos controles en ella}{66}{section.10.1}%
-\contentsline {section}{\numberline {10.2}El concepto de `bucle de eventos'}{66}{section.10.2}%
-\contentsline {section}{\numberline {10.3}La interacción básica: usuario$\rightarrow $control$\rightarrow $codigo \\ y viceversa, código$\rightarrow $control$\rightarrow $usuario}{67}{section.10.3}%
-\contentsline {chapter}{\numberline {11}Breve introducción a los almacenamientos persistentes habituales.}{68}{chapter.11}%
-\contentsline {section}{\numberline {11.1}Formatos para organizar información dentro de archivos de texto}{68}{section.11.1}%
-\contentsline {subsection}{\numberline {11.1.1}valores delimitados con separadores}{68}{subsection.11.1.1}%
-\contentsline {subsection}{\numberline {11.1.2}JSON}{69}{subsection.11.1.2}%
-\contentsline {subsection}{\numberline {11.1.3}XML}{69}{subsection.11.1.3}%
-\contentsline {section}{\numberline {11.2}Bases de datos relacionales.}{69}{section.11.2}%
-\contentsline {section}{\numberline {11.3}Otros tipos de bases de datos: no-SQL, semáticas,\ldots }{70}{section.11.3}%
-\contentsline {chapter}{\numberline {12}Desarrollando buenos hábitos desde el principio: implementar tests en el propio código.}{71}{chapter.12}%
-\contentsline {chapter}{\numberline {13}Desarrollando buenos hábitos desde el principio: guardar el código en un gestor de versiones.}{72}{chapter.13}%
-\contentsline {chapter}{\numberline {14}Apéndices}{74}{chapter.14}%
-\contentsline {section}{\numberline {14.1}Manos a la obra (1): herramientas para el lenguaje escogido}{74}{section.14.1}%
-\contentsline {subsection}{\numberline {14.1.1}lenguaje Python}{74}{subsection.14.1.1}%
-\contentsline {subsection}{\numberline {14.1.2}lenguaje Java}{74}{subsection.14.1.2}%
-\contentsline {subsection}{\numberline {14.1.3}lenguaje C\#}{75}{subsection.14.1.3}%
-\contentsline {subsection}{\numberline {14.1.4}lenguaje C o C++}{75}{subsection.14.1.4}%
-\contentsline {section}{\numberline {14.2}Manos a la obra (2): un entorno de trabajo gráfico integrado (IDE)}{76}{section.14.2}%
-\contentsline {subsection}{\numberline {14.2.1}Geany}{76}{subsection.14.2.1}%
-\contentsline {subsection}{\numberline {14.2.2}BlueJ}{76}{subsection.14.2.2}%
-\contentsline {subsection}{\numberline {14.2.3}Jet Brains edu}{77}{subsection.14.2.3}%
-\contentsline {subsection}{\numberline {14.2.4}Visual Studio Code}{78}{subsection.14.2.4}%
-\contentsline {section}{\numberline {14.3}Manos a la obra (3): comentarios y consejos varios}{79}{section.14.3}%
-\contentsline {subsection}{\numberline {14.3.1}Algunas peculiaridades de la sintaxis de Python}{79}{subsection.14.3.1}%
-\contentsline {subsection}{\numberline {14.3.2}El gestor de paquetes de Python}{81}{subsection.14.3.2}%
-\contentsline {subsection}{\numberline {14.3.3}Uso del IDE Geany}{82}{subsection.14.3.3}%
-\contentsline {subsection}{\numberline {14.3.4}Uso del IDE Visual Studio Code}{83}{subsection.14.3.4}%
-\contentsline {section}{\numberline {14.4}Enlaces a referencias sobre la sintaxis de los lenguajes y sus bibliotecas base}{85}{section.14.4}%
-\contentsline {subsection}{\numberline {14.4.1}referencias Python}{85}{subsection.14.4.1}%
-\contentsline {subsection}{\numberline {14.4.2}referencias Java}{85}{subsection.14.4.2}%
-\contentsline {subsection}{\numberline {14.4.3}referencias C\#}{85}{subsection.14.4.3}%
-\contentsline {subsection}{\numberline {14.4.4}referencias C o C++}{86}{subsection.14.4.4}%
-\contentsline {section}{\numberline {14.5}Enlaces a referencias sobre bibliotecas de funciones}{86}{section.14.5}%
+\contentsline {subsection}{\numberline {9.3.2}Arquitecturas `limpias' (multi-capa)}{66}{subsection.9.3.2}%
+\contentsline {chapter}{\numberline {10}Breve introducción al interface de usuario habitual: \\el GUI (Graphical User Interface)}{67}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Cómo mostrar una ventana y unos controles en ella}{67}{section.10.1}%
+\contentsline {section}{\numberline {10.2}El concepto de `bucle de eventos'}{67}{section.10.2}%
+\contentsline {section}{\numberline {10.3}La interacción básica: usuario$\rightarrow $control$\rightarrow $codigo \\ y viceversa, código$\rightarrow $control$\rightarrow $usuario}{68}{section.10.3}%
+\contentsline {chapter}{\numberline {11}Breve introducción a los almacenamientos persistentes habituales.}{69}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Formatos para organizar información dentro de archivos de texto}{69}{section.11.1}%
+\contentsline {subsection}{\numberline {11.1.1}valores delimitados con separadores}{69}{subsection.11.1.1}%
+\contentsline {subsection}{\numberline {11.1.2}JSON}{70}{subsection.11.1.2}%
+\contentsline {subsection}{\numberline {11.1.3}XML}{70}{subsection.11.1.3}%
+\contentsline {section}{\numberline {11.2}Bases de datos relacionales.}{70}{section.11.2}%
+\contentsline {section}{\numberline {11.3}Otros tipos de bases de datos: no-SQL, semáticas,\ldots }{71}{section.11.3}%
+\contentsline {chapter}{\numberline {12}Desarrollando buenos hábitos desde el principio: implementar tests en el propio código.}{72}{chapter.12}%
+\contentsline {chapter}{\numberline {13}Desarrollando buenos hábitos desde el principio: guardar el código en un gestor de versiones.}{73}{chapter.13}%
+\contentsline {chapter}{\numberline {14}Apéndices}{75}{chapter.14}%
+\contentsline {section}{\numberline {14.1}Manos a la obra (1): herramientas para el lenguaje escogido}{75}{section.14.1}%
+\contentsline {subsection}{\numberline {14.1.1}lenguaje Python}{75}{subsection.14.1.1}%
+\contentsline {subsection}{\numberline {14.1.2}lenguaje Java}{75}{subsection.14.1.2}%
+\contentsline {subsection}{\numberline {14.1.3}lenguaje C\#}{76}{subsection.14.1.3}%
+\contentsline {subsection}{\numberline {14.1.4}lenguaje C o C++}{76}{subsection.14.1.4}%
+\contentsline {section}{\numberline {14.2}Manos a la obra (2): un entorno de trabajo gráfico integrado (IDE)}{77}{section.14.2}%
+\contentsline {subsection}{\numberline {14.2.1}Geany}{77}{subsection.14.2.1}%
+\contentsline {subsection}{\numberline {14.2.2}BlueJ}{77}{subsection.14.2.2}%
+\contentsline {subsection}{\numberline {14.2.3}Jet Brains edu}{78}{subsection.14.2.3}%
+\contentsline {subsection}{\numberline {14.2.4}Visual Studio Code}{79}{subsection.14.2.4}%
+\contentsline {section}{\numberline {14.3}Manos a la obra (3): comentarios y consejos varios}{80}{section.14.3}%
+\contentsline {subsection}{\numberline {14.3.1}Algunas peculiaridades de la sintaxis de Python}{80}{subsection.14.3.1}%
+\contentsline {subsection}{\numberline {14.3.2}El gestor de paquetes de Python}{82}{subsection.14.3.2}%
+\contentsline {subsection}{\numberline {14.3.3}Uso del IDE Geany}{83}{subsection.14.3.3}%
+\contentsline {subsection}{\numberline {14.3.4}Uso del IDE Visual Studio Code}{84}{subsection.14.3.4}%
+\contentsline {section}{\numberline {14.4}Enlaces a referencias sobre la sintaxis de los lenguajes y sus bibliotecas base}{86}{section.14.4}%
+\contentsline {subsection}{\numberline {14.4.1}referencias Python}{86}{subsection.14.4.1}%
+\contentsline {subsection}{\numberline {14.4.2}referencias Java}{86}{subsection.14.4.2}%
+\contentsline {subsection}{\numberline {14.4.3}referencias C\#}{86}{subsection.14.4.3}%
+\contentsline {subsection}{\numberline {14.4.4}referencias C o C++}{87}{subsection.14.4.4}%
+\contentsline {section}{\numberline {14.5}Enlaces a referencias sobre bibliotecas de funciones}{87}{section.14.5}%
