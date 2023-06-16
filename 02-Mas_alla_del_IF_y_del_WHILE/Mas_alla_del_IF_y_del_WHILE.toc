@@ -39,7 +39,7 @@
 \contentsline {section}{\numberline {3.5}Interface (clase abstracta)}{31}{section.3.5}%
 \contentsline {section}{\numberline {3.6}Cuándo usar herencia y cuándo interface}{31}{section.3.6}%
 \contentsline {section}{\numberline {3.7}Factorias para ``fabricar'' objetos (inyección de dependencias)}{32}{section.3.7}%
-\contentsline {section}{\numberline {3.8}Ejercicios}{33}{section.3.8}%
+\contentsline {section}{\numberline {3.8}Ejercicios y ejemplos}{33}{section.3.8}%
 \contentsline {chapter}{\numberline {4}Datos en memoria de trabajo}{35}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Estructuras lineales (arrays, colas,\ldots )}{35}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Listas (list, vector,...)}{37}{section.4.2}%
