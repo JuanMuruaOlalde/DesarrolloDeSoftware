@@ -1563,11 +1563,11 @@ Algunos ejemplos ilustrativos:
 
 
 
-\chapter{Procesamiento paralelo y/o distribuido}
+\chapter{Procesamiento concurrente, paralelo y/o distribuido}
 
 Una forma de realizar un trabajo más rápido, es poner más trabajadores trabajando en ello. Pero, ¡ojo!, es vital que los trabajadores no se estorben entre sí, ni se bloqueen o retrasen excesivamente por esperarse unos a otros.
 
-Es más, hay situaciones en que el procesamiento paralelo puede ser imposible. Por ejemplo:
+Es más, hay situaciones en que el procesamiento concurrente o paralelo puede ser imposible. Por ejemplo:
 \begin{itemize}
 \item Tareas que, por su intrínseco carácter secuencial, solo pueden aprovechar un único trabajador. 
 \item Tareas que, por los requisitos de sincronización o de preparación que tienen, llega un punto en que el coste de incorporar más trabajadores es mayor que el beneficio aportado por esos trabajadores adicionales.
@@ -1579,13 +1579,28 @@ Hasta hace unos años, este paralelismo era virtual (una sola unidad de procesam
 
 Pero hoy en día, el paralelismo es real. El hardware de computación está llegando al límite de frecuencia de reloj y de optimización interna de cada unidad. Para seguir mejorando, los fabricantes han optado por integrar múltiples unidades de computación (cores) en cada procesador y multiples (co)procesadores en cada sistema.
 
-Es decir, la programación de software paralelo está cobrando cada vez más importancia. Hoy en día es imprescindible para aprovechar toda la capacidad de los sistemas hardware.
+Es decir, la programación de software concurrente o paralelo está cobrando cada vez más importancia. Hoy en día es imprescindible para aprovechar toda la capacidad de los sistemas hardware.
 
-\section{Algunos usos del procesamiento paralelo}
+\section{Definiciones}
+\begin{description}
+
+\item[Secuencial:] Se realiza un trabajo. Cuando termina, se realiza otro. Cuando termina, se realiza otro. Y así sucesivamente, un trabajo tras otro.
+
+\item[Concurrente:] Múltiples trabajos ejecutandose de forma simultánea; bien sea un paso o tarea de cada trabajo en cada momento (intercalandose los trabajos entre ellos) o bien varios pasos simultáneamente. Pero sin que un trabajo deba esperar a que otro termine completamente.
+\\Se puede realizar con una sola unidad de procesamiento o con varias.
+
+\item[Paralelo:] Multiples pasos o tareas ejecutandose de forma simultánea; todos ellos pertenecientes a un mismo trabajo secuencial o pertenecientes a varios trabajos concurrentes. 
+\\Paralelismo implica tener varias unidades de procesamiento.
+
+\item[Distribuido:] Los trabajos (o los pasos/tareas) se realizan en varios equipos diferentes, usualmente conectados entre sí a través de una red de comunicaciones.
+
+\end{description}
+
+\section{Algunos usos donde es imprescindible}
 
 
 \subsection{Multitarea}
-Por ejemplo, para evitar que una tarea muy larga acapare el sistema y parezca que este ha quedado congelado por no visualizar lo que está haciendo. O, por ejemplo, para aprovechar los espacios de tiempo entre los lentos procesos humanos; de tal forma que se pueda realizar otros trabajos mientras se atiende el interfaz de usuario. O, por ejemplo, para atender a varios eventos o a varios usuarios a la vez.
+Por ejemplo, para evitar que una tarea muy larga acapare el sistema y parezca que este ha quedado congelado por no visualizar lo que está haciendo. O, por ejemplo, para aprovechar los espacios de tiempo entre los lentos procesos humanos; de tal forma que se puedan realizar otros trabajos mientras se atiende el interfaz de usuario. O, por ejemplo, para atender a varios eventos o a varios usuarios a la vez.
 
 Cuando cohabitan varias tareas, el control de las mismas puede ser:
 \begin{itemize}
@@ -1598,12 +1613,12 @@ Cuando múltiples tareas comparten un mismo recurso, pueden surgir situaciones p
 La coordinación de procesos, hebras y recursos es un tema con problemáticas complejas y sutiles. Es importante conocer y utilizar las bibliotecas específicas que traiga el compilador para tratar de forma segura con estos elementos.
 
 \subsection{Gráficos}
-El procesamiento de gráficos ha sido uno de los primeros usos donde se han venido utilizando múltiples (co)procesadores. Hoy en día prácticamente todos los sistemas tienen algún tipo de GPU (Graphics Processing Unit) complementando la CPU (Central Processing Unit) y liberándola de la tarea de manejar la pantalla. 
+Debido a la enorme múltitud de pequeños cálculos que se han de realizar. El procesamiento de gráficos ha sido uno de los primeros usos donde se han venido utilizando múltiples (co)procesadores. Hoy en día prácticamente todos los sistemas tienen algún tipo de GPU (Graphics Processing Unit)con multitud de núcleos, complementando la CPU (Central Processing Unit) y liberándola de la tarea de manejar la pantalla. 
 
-Cuando se vaya a trabajar con gráficos en pantalla, procurar utilizar bibliotecas y funciones que aprovechan dicha GPU. Estas bibliotecas (OpenGL, DirectX, Metal,\ldots) suelen ser algo más complejas de usar que las ``tradicionales'' (gtk, GDI, QuickDraw,\ldots), pero merece la pena utilizarlas.
+Cuando se vaya a trabajar con gráficos, procurar utilizar bibliotecas y funciones que aprovechan dicha GPU. Estas bibliotecas (OpenGL, DirectX, Metal,\ldots) suelen ser algo más complejas de usar que las ``tradicionales'' de gráficos con CPU (gtk, GDI, QuickDraw,\ldots). Pero merece la pena el esfuerzo de aprender a utilizarlas.
 
 
-\subsection{Cálculos}
+\subsection{Cálculos ``masivos''}
 Cuando se realizan grandes cálculos de ingenieria o científicos. O cuando se procesan enormes cantidades de datos para destilar información. Es importante aprovechar plenamente las memorias caché, las unidades vectoriales y los múltiples núcleos que tienen los procesadores actuales. 
 
 Más aún si se están utilizando clusters con cientos o miles de esos procesadores, dedicados expresamente a tareas HPC (High Performance Computing). 
@@ -1629,31 +1644,18 @@ Se necesita un sistema flexible donde se puedan poner a trabajar más o menos re
 
 \section{Estrategias para repartir tareas}
 
-Este es el ``caballo de batalla'' del procesamiento paralelo: cómo dividir cada trabajo en múltiples tareas que puedan ser ejecutadas de forma independiente y cómo ir recombinando resultados parciales de todas ellas para obtener el resultado final perseguido. Todo ello sin que las múltiples tareas se ``estorben'' entre sí.
+Este es el ``caballo de batalla'' del procesamiento concurrente/paralelo: cómo dividir cada trabajo en múltiples tareas que puedan ser ejecutadas de forma independiente y cómo ir recombinando resultados parciales de todas ellas para obtener el resultado final perseguido. Todo ello sin que las múltiples tareas se ``estorben'' entre sí.
 
-
-En un sentido informático, podemos distinguir distintos tipos de procesamiento:
-
-\begin{itemize}
-
-\item Concurrente: acciones realizadas ``simultáneamente'' en una sola unidad de proceso.
-
-\item Paralelo: acciones realizadas simultáneamente en varias unidades de proceso que comparten una memoria principal.
-
-\item Distribuido: acciones que se van realizando en una red de procesos autónomos que no comparten una memoria principal.
-
-\end{itemize}
-
-Mirándolo desde el punto de vista de los procesos. Estos pueden interactuar entre sí:
+Mirándolo desde el punto de vista de la coordinación. Los distintos trabajos o tareas pueden interactuar entre sí:
 
 \begin{itemize}
 
-\item De forma independiente $\rightarrow$ compitiendo solo por recursos de procesamiento, los procesos se van repartiendo los recursos disponibles $\rightarrow$ COORDINADOR (SCHEDULER)
+\item De forma independiente $\rightarrow$ Cada uno compite solo por recursos de procesamiento. Todos ellos se van repartiendo los recursos disponibles según estén disponibles $\rightarrow$ COORDINADOR (SCHEDULER)
 
 
-\item De forma colaborativa $\rightarrow$ unos procesos generan información o dan servicios que otros procesos necesitan, los procesos se van coordinando entre sí para llegar al resultado final $\rightarrow$ ejecución ASINCrona, COLAS de mensajes,\ldots
+\item De forma colaborativa $\rightarrow$ Unos generan información o dan servicios que otros necesitan. Todos ellos se van coordinando entre sí para llegar al resultado final $\rightarrow$ ejecución ASINCrona, COLAS de mensajes,\ldots
 
-\item De forma competitiva $\rightarrow$  compitiendo por usar unos ciertos recursos comunes, los procesos se van turnando para usarlos en régimen de exclusividad (si un proceso lo está usando, otro no puede usarlo) $\rightarrow$ CANDADOS (MUTEX), SEMÁFOROS,\ldots
+\item De forma competitiva $\rightarrow$  Se utilizan algunos recursos comunes que solo pueden ser utilizados por uno cada vez. Quien está usando uno de dichos recursos, lo tiene en exclusividad hasta que lo libera. Todos se van turnando para usarlos $\rightarrow$ CANDADOS (MUTEX), SEMÁFOROS,\ldots
 
 \end{itemize}
 
@@ -1672,11 +1674,11 @@ De ahí la importancia de diseñar las arquitecturas y los algoritmos de tal for
 
 \begin{itemize}
 
-\item Independiente (no necesita recursos compartidos con otras, ni depende de que otras se hayan ejecutado o se vayan a ejecutar). 
+\item Independiente (no necesita recursos compartidos con otros, ni depende de que otros se hayan ejecutado o se vayan a ejecutar). 
 
-\item Idempotente (no tiene efectos nocivos si se reintenta por algún problema y acaba procesando lo mismo más de una vez).
+\item Idempotente (no tiene efectos nocivos si se reintenta por algún problema y acaba repitiendo lo mismo más de una vez).
 
-\item Lo suficientemente rápida (no hace esperar durante demasiado tiempo a otras que necesitan algo de esta).
+\item Lo suficientemente rápido (no hace esperar durante demasiado tiempo a otros que necesitan algo de él).
 
 
 \end{itemize}
@@ -1685,7 +1687,9 @@ De ahí la importancia de diseñar las arquitecturas y los algoritmos de tal for
 
 \section{Salvaguardas para evitar problemas al usar recursos exclusivos}
 
-Como se ha comentado, es mejor evitar utilizar recursos compartidos. Pero prácticamente casi siempre no suele ser posible. Y, cuando se utilizan, es básico garantizar que unas tareas no interfieran ni estropeen el trabajo de otras. 
+Como se ha comentado, es mejor evitar utilizar recursos compartidos que se han de utilizar en exclusividad. Pero en la práctica no suele ser siempre posible evitarlos. 
+
+Cuando se utilizen, es básico garantizar que unas tareas no interfieran ni estropeen el trabajo de otras. 
 
 \subsection{operaciones atómicas}
 Atención al modificar cualquier dato, la secuencia leer-modificar-escribir ha de hacerse siempre de forma monolítica (atómica) (en un solo paso).
@@ -1737,17 +1741,17 @@ Es decir, tarea1 tiene bloqueado recurso1 y está esperando a recurso2. Mientras
 
 
 
-\section{Procesos cooperativos, orientación a servicios}
+\section{Procesos cooperativos, \\orientación a servicios}
 
 Como ya se ha comentado, el escenario ideal para el paralelismo y la distributividad es aquel donde cada funcionalidad o servicio:
 
 \begin{itemize}
 
-\item Es independiente (no necesita recursos compartidos con otras, ni depende de que otras se hayan ejecutado previamente) 
+\item Es independiente (no necesita recursos compartidos con otros, ni depende de que otros se hayan ejecutado o se vayan a ejecutar). 
 
-\item Es idempotente (no tiene efectos nocivos si se reintenta por algún problema y acaba procesando lo mismo más de una vez).
+\item Es idempotente (no tiene efectos nocivos si se reintenta por algún problema y acaba repitiendo lo mismo más de una vez).
 
-\item Es lo suficientemente rápida (no hace esperar durante mucho tiempo a otra funcionalidad o servicio que necesita algo que esta realiza)
+\item Es lo suficientemente rápido (no hace esperar durante demasiado tiempo a otros que necesitan algo de él).
 
 
 \end{itemize}
