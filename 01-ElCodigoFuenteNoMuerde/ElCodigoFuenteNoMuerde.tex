@@ -2518,59 +2518,60 @@ El concepto de \textbf{argumento}:
 \item variables que pasan información a la función (argumentos de entrada)
 \item variables que recuperan resultados de la función (argumento de retorno). 
 \end{itemize}
-La descripción de los argumentos de una función es lo que se suele denominar la `signatura' de esa función.
+La descripción de los argumentos de una función es lo que se suele denominar la `\textit{signatura}' de esa función.
 
 \section{Algunos consejos prácticos}
 
 
 \subsection{Usar nombres claros y descriptivos}
 
-Aprovecho para recordar la importancia de poner nombres claros y descriptivos a todas las variables, argumentos y funciones. De esta forma, se facilita la legibilidad del código. (En un código bien escrito se deberia comprender lo que hace con solo leerlo, sin necesidad de ``comentarios explicativos'' adiccionales).
+Aprovecho para recordar la importancia de poner nombres claros y descriptivos a todas las variables, argumentos y funciones. De esta forma, se facilita la legibilidad del código. (Cuando un código está bien escrito se deberia comprender lo que hace con solo leerlo, sin necesidad de ``comentarios explicativos'' adiccionales).
 
 
 \subsection{Organizar bien el código}
 
-Normalmente suele haber grupos de funciones con una cierta relación entre sí. Es importante ir distinguiendo de forma clara estos grupos a medida que vamos construyendo el programa. Para ir poniendo las funciones relacionadas entre sí dentro de un mismo ``trozo'' del programa.
+Siempre suele haber grupos de funciones con una mayor relación entre sí. A medida que vamos construyendo el programa, es importante ir distinguiendo de forma clara estos grupos. De tal forma que se vayan poniendo cada uno de esos grupos dentro de su propio ``trozo'' del programa.
 
 Estos ``trozos'' o grupos de funciones se suelen llamar `módulo' o `clase' o `archivo' o `carpeta' o `espacio de nombres' o\ldots Según sea el lenguaje de programación que se esté empleando. Cada lenguaje tiene su propia idiosincrasia para estructurar programas grandes.
 
-Las funciones dentro un mismo ``trozo'' se suelen poder llamar directamente entre sí. Pero para llamar a una función residente en un ``trozo'' desde otro ``trozo'', suele requerir hacer algo ``un poco especial'' (como, por ejemplo, `importar' previamente el módulo donde reside).
+Del mismo modo que cada función individual del programa ha de ser consistente y tener una única responsabilidad clara y definida. Cada ``trozo'' (módulo, clase,\ldots) también ha de ser coherente y tener una única misión clara y definida.
+
+En cuanto a su funcionamiento, entre las funciones dentro un mismo ``trozo'' las llamadas son directas. Pero para que una función en un ``trozo'' llame a otra de otro ``trozo'', se suele requerir hacer algo ``un poco especial'' (como, por ejemplo, `importar' previamente el módulo donde reside).
 
 De esta forma, van quedando claras las dependencias entre partes. 
 
-Siendo el objetivo el limitar esas dependencias a las mínimas imprescindibles. Teniendo solo aquellas dependencias que sean lógicas según el trabajo a realizar por cada ``trozo'' del programa.
+El objetivo suele ser limitar esas dependencias a las mínimas imprescindibles. Dentro de un programa es importante tener solo aquellas dependencias que sean lógicas según el trabajo a realizar por cada ``trozo'' del programa.
 
-Del mismo modo que cada función del programa ha de ser consistente y tener una única ``responsabilidad'' clara y definida.  Cada ``trozo'' (módulo, clase,\ldots) también ha de ser coherente y tener una única misión clara y definida.
+Si estas dependencias y relaciones entre partes están bien definidas, permiten modificar/ampliar (o sustituir) unas partes del programa (casi) sin afectar a las otras partes. De esta manera, resulta un programa más sencillo de mantener y de evolucionar.
 
-Lo ideal es que cada ``trozo'' tenga unos puntos de acceso bien definios y que cada uno de esos puntos de acceso proporcione unos servicios o respuestas concretos. Es lo que se suele denominar `\textbf{interfaces}' entre parte y parte.
+\vspace{0.2cm}
+({\tiny \url{https://github.com/JuanMuruaOlalde/Hotel/blob/main/documentacion/arquitectura%20interna.drawio.png}}) 
+\\Un ejemplo ilustrativo: {\tiny \url{https://github.com/JuanMuruaOlalde/DesarrolloDeSoftware/tree/main/02-Mas_alla_del_IF_y_del_WHILE/soluciones_java/OrganizacionSegunDominio/src/es/susosise/hotel}}
 
-Si estas interfaces están bien definidas y se mantienen estables en el tiempo, permiten modificar/ampliar (o sustituir) unas partes del programa sin afectar a las otras.
-
-Resultando en un programa sencillo de mantener y de evolucionar.
+Otra posibilidad: {\tiny \url{https://github.com/JuanMuruaOlalde/DesarrolloDeSoftware/tree/main/02-Mas_alla_del_IF_y_del_WHILE/soluciones_java/OrganizacionSegunTecnologia/src/es/susosise/hotel}}
 
 \vspace{0.5cm}
-nota: 
+nota: Este es el aspecto más difícil de dominar en la programación. 
 
-Este es el aspecto más difícil de dominar en la programación. 
+Llegar a pensar en todo el programa como un conjunto coherente, formado por múltiples partes. Cada parte con una responsabilidad concreta, clara y definida. Pero todas ellas trabajando de forma colaborativa para conseguir los fines (globales) que se persiguen.
 
-Llegar a pensar en todo el programa como un conjunto coherente, formado por múltiples partes. Cada parte con una responsabilidad concreta, clara y definida. Pero todas ellas trabajando conjuntamente para conseguir los fines (globales) que se persiguen.
-
-No pocas veces, la presión del momento nos lleva a hacer ``algo que funcione''. Sin pararnos a pensar en cómo encaja ese algo con la globalidad (la arquitectura) del sistema.
-\\Si luego no volvemos sobre nuestros pasos a refactorizar ese ``algo que funciona'', para integrarlo bien dentro del conjunto. Acabaremos con el temido `Big Ball of Mud'.
+No pocas veces, la presión del momento nos lleva a hacer ``algo que funcione''. Sin pararnos a pensar demasiado en cómo encaja ese algo con la globalidad (la arquitectura) del sistema. 
+\\Es importante volver más tarde sobre nuestros pasos a refactorizar ese ``algo que funciona'', procurando integrarlo bien dentro del conjunto. 
+Porque si no, acabaremos construyendo un `Big Ball of Mud'.
 
 
 \subsection{Refactorizar de forma continua (y sin miedo)}
 
-Refactorizar: modificar el código sin afectar a lo que hace (es decir, rescribirlo para que quede mejor, pero manteniendo su funcionalidad tal cual)
+Refactorizar: modificar el código sin afectar a lo que hace (es decir, rescribirlo para que quede mejor, pero manteniendo su funcionalidad tal cual estaba)
 
-La arquitectura interna de un programa no es fija. Sino suele ir evolucionando a lo largo del tiempo, a medida que van evolucionando las tecnologías o van variando las funcionalidades requeridas del programa.
+La arquitectura interna de un programa nunca es fija. Suele ir evolucionando a lo largo del tiempo, a medida que van evolucionando las tecnologías o van variando las funcionalidades requeridas del programa.
 
-La idea es ir adaptando las partes ya existentes del código según va evolucionando este. Para mantener la coherencia general del programa, para sustituir tecnologias que van siendo retiradas (``deprecated''), para incorporar nuevas tecnologias que nos facilitan el trabajo,\ldots
+La idea es ir adaptando las partes ya existentes del código según va evolucionando este. Para mantener la coherencia general del programa. Para sustituir tecnologias que van siendo retiradas (``deprecated''). Para incorporar nuevas tecnologias que nos facilitan el trabajo.Para\ldots
 
 \vspace{1cm}
-¡Aviso!, es muy peligroso ponerse a refactorizar código sin contar con:
+¡Aviso!, es muy peligroso ponerse a refactorizar código sin contar con el paraguas de:
 \begin{itemize}
-\item Herramientas especializadas para ello. Herramientas presentes en todo IDE profesional moderno. Herramientas que permiten realizar de forma segura operaciones tales como: renombrar variables o funciones, extraer trozos de una función para formar otra, mover una función de un módulo a otro, etc.
+\item Herramientas especializadas para ello. Herramientas que hoy en día están presentes en todo IDE profesional moderno. Herramientas que permiten realizar de forma segura operaciones tales como: renombrar variables o funciones, extraer trozos de una función para formar otra, mover una función de un módulo a otro, etc.
 \item Una buena batería de test automatizados. Tests escritos en el propio código. Tests que permiten comprobar rápidamente que el programa sigue haciendo bien todo lo que hacia, avisándonos si hemos ``roto'' inadvertidamente algo al refactorizar.
 \end{itemize}
 
