@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2023.4.16)  29 OCT 2023 12:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2023.4.16)  29 OCT 2023 15:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1334,18 +1334,18 @@ File: ./imagenes//portada-DomainDrivenDesign-EricEvans.jpg Graphic file (type j
 pg)
 <use ./imagenes//portada-DomainDrivenDesign-EricEvans.jpg>
 Package pdftex.def Info: ./imagenes//portada-DomainDrivenDesign-EricEvans.jpg  
-used on input line 1229.
+used on input line 1230.
 (pdftex.def)             Requested size: 113.81102pt x 154.40758pt.
 <./imagenes//portada-CleanCode-RobertCMartin.jpg, id=898, 292.09125pt x 386.443
 76pt>
 File: ./imagenes//portada-CleanCode-RobertCMartin.jpg Graphic file (type jpg)
 <use ./imagenes//portada-CleanCode-RobertCMartin.jpg>
 Package pdftex.def Info: ./imagenes//portada-CleanCode-RobertCMartin.jpg  used 
-on input line 1234.
+on input line 1236.
 (pdftex.def)             Requested size: 113.81102pt x 150.57683pt.
-LaTeX Info: Redefining \. on input line 1236.
-LaTeX Info: Redefining \% on input line 1236.
-Package cleveref Info: loaded `spanish' language definitions on input line 1236
+LaTeX Info: Redefining \. on input line 1238.
+LaTeX Info: Redefining \% on input line 1238.
+Package cleveref Info: loaded `spanish' language definitions on input line 1238
 .
 
 
@@ -1363,18 +1363,18 @@ File: ./imagenes//portada-CleanArchitecture-RoberCMartin.jpg Graphic file (type
  jpg)
 <use ./imagenes//portada-CleanArchitecture-RoberCMartin.jpg>
 Package pdftex.def Info: ./imagenes//portada-CleanArchitecture-RoberCMartin.jpg
-  used on input line 1239.
+  used on input line 1242.
 (pdftex.def)             Requested size: 113.81102pt x 148.53069pt.
 <./imagenes//portada-Refactoring-MartinFowler.jpg, id=904, 343.2825pt x 425.59p
 t>
 File: ./imagenes//portada-Refactoring-MartinFowler.jpg Graphic file (type jpg)
 <use ./imagenes//portada-Refactoring-MartinFowler.jpg>
 Package pdftex.def Info: ./imagenes//portada-Refactoring-MartinFowler.jpg  used
- on input line 1243.
+ on input line 1246.
 (pdftex.def)             Requested size: 113.81102pt x 141.09451pt.
-LaTeX Info: Redefining \. on input line 1246.
-LaTeX Info: Redefining \% on input line 1246.
-Package cleveref Info: loaded `spanish' language definitions on input line 1246
+LaTeX Info: Redefining \. on input line 1248.
+LaTeX Info: Redefining \% on input line 1248.
+Package cleveref Info: loaded `spanish' language definitions on input line 1248
 .
 
 
@@ -1386,15 +1386,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [50 <./imagenes//portada-CleanCode-RobertCMartin.jpg> <./imagenes//portada-Clea
-nArchitecture-RoberCMartin.jpg> <./imagenes//portada-Refactoring-MartinFowler.j
-pg>]
+nArchitecture-RoberCMartin.jpg>]
 <./imagenes//portada-TestDrivenDevelopment-KentBeck.jpg, id=909, 308.15125pt x 
 386.44376pt>
 File: ./imagenes//portada-TestDrivenDevelopment-KentBeck.jpg Graphic file (type
  jpg)
 <use ./imagenes//portada-TestDrivenDevelopment-KentBeck.jpg>
 Package pdftex.def Info: ./imagenes//portada-TestDrivenDevelopment-KentBeck.jpg
-  used on input line 1247.
+  used on input line 1250.
 (pdftex.def)             Requested size: 113.81102pt x 142.72249pt.
 <./imagenes//portada-FiftyQuickIdeasToImproveYourUserStories-.jpg, id=910, 386.
 44376pt x 386.44376pt>
@@ -1402,7 +1401,7 @@ File: ./imagenes//portada-FiftyQuickIdeasToImproveYourUserStories-.jpg Graphic
 file (type jpg)
 <use ./imagenes//portada-FiftyQuickIdeasToImproveYourUserStories-.jpg>
 Package pdftex.def Info: ./imagenes//portada-FiftyQuickIdeasToImproveYourUserSt
-ories-.jpg  used on input line 1251.
+ories-.jpg  used on input line 1254.
 (pdftex.def)             Requested size: 113.81102pt x 113.81122pt.
 <./imagenes//portada-FiftyQuickIdeasToImproveYourTests-.jpg, id=911, 343.2825pt
  x 343.2825pt>
@@ -1410,11 +1409,11 @@ File: ./imagenes//portada-FiftyQuickIdeasToImproveYourTests-.jpg Graphic file (
 type jpg)
 <use ./imagenes//portada-FiftyQuickIdeasToImproveYourTests-.jpg>
 Package pdftex.def Info: ./imagenes//portada-FiftyQuickIdeasToImproveYourTests-
-.jpg  used on input line 1255.
+.jpg  used on input line 1258.
 (pdftex.def)             Requested size: 113.81102pt x 113.80737pt.
-LaTeX Info: Redefining \. on input line 1264.
-LaTeX Info: Redefining \% on input line 1264.
-Package cleveref Info: loaded `spanish' language definitions on input line 1264
+LaTeX Info: Redefining \. on input line 1261.
+LaTeX Info: Redefining \% on input line 1261.
+Package cleveref Info: loaded `spanish' language definitions on input line 1261
 .
 
 
@@ -1425,12 +1424,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[51 <./imagenes//portada-TestDrivenDevelopment-KentBeck.jpg> <./imagenes//porta
-da-FiftyQuickIdeasToImproveYourUserStories-.jpg> <./imagenes//portada-FiftyQuic
-kIdeasToImproveYourTests-.jpg>]
-LaTeX Info: Redefining \. on input line 1282.
-LaTeX Info: Redefining \% on input line 1282.
-Package cleveref Info: loaded `spanish' language definitions on input line 1282
+[51 <./imagenes//portada-Refactoring-MartinFowler.jpg> <./imagenes//portada-Tes
+tDrivenDevelopment-KentBeck.jpg> <./imagenes//portada-FiftyQuickIdeasToImproveY
+ourUserStories-.jpg> <./imagenes//portada-FiftyQuickIdeasToImproveYourTests-.jp
+g>]
+LaTeX Info: Redefining \. on input line 1280.
+LaTeX Info: Redefining \% on input line 1280.
+Package cleveref Info: loaded `spanish' language definitions on input line 1280
 .
 
 
@@ -1442,9 +1442,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [52]
-LaTeX Info: Redefining \. on input line 1302.
-LaTeX Info: Redefining \% on input line 1302.
-Package cleveref Info: loaded `spanish' language definitions on input line 1302
+LaTeX Info: Redefining \. on input line 1301.
+LaTeX Info: Redefining \% on input line 1301.
+Package cleveref Info: loaded `spanish' language definitions on input line 1301
 .
 
 
@@ -1456,27 +1456,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [53]
-Overfull \hbox (30.81679pt too wide) in paragraph at lines 1323--1324
-[]\OT1/cmr/m/n/12 Monolith De-com-po-si-tion Pat-terns - Sam New-man: [][]$\OT1
-/pcr/m/n/12 https : / / youtu . be / 9I9GdSQ1bbM$[][] 
- []
-
-
-Overfull \hbox (56.87135pt too wide) in paragraph at lines 1331--1332
-[]\OT1/cmr/m/n/12 The Log - Jay Kreps[][]$\OT1/pcr/m/n/12 https : / / engineeri
-ng . linkedin . com / distributed-[]systems /
- []
-
-
-Overfull \hbox (118.70844pt too wide) in paragraph at lines 1331--1332
-\OT1/pcr/m/n/12 log-[]what-[]every-[]software-[]engineer-[]should-[]know-[]abou
-t-[]real-[]time-[]datas-[]unifying$[][] 
- []
-
-LaTeX Info: Redefining \. on input line 1338.
-LaTeX Info: Redefining \% on input line 1338.
-Package cleveref Info: loaded `spanish' language definitions on input line 1338
+LaTeX Info: Redefining \. on input line 1326.
+LaTeX Info: Redefining \% on input line 1326.
+Package cleveref Info: loaded `spanish' language definitions on input line 1326
 .
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1486,32 +1470,50 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [54]
-Overfull \hbox (22.4845pt too wide) in paragraph at lines 1346--1347
+Overfull \hbox (30.81679pt too wide) in paragraph at lines 1326--1327
+[]\OT1/cmr/m/n/12 Monolith De-com-po-si-tion Pat-terns - Sam New-man: [][]$\OT1
+/pcr/m/n/12 https : / / youtu . be / 9I9GdSQ1bbM$[][] 
+ []
+
+
+Overfull \hbox (56.87135pt too wide) in paragraph at lines 1334--1335
+[]\OT1/cmr/m/n/12 The Log - Jay Kreps[][]$\OT1/pcr/m/n/12 https : / / engineeri
+ng . linkedin . com / distributed-[]systems /
+ []
+
+
+Overfull \hbox (118.70844pt too wide) in paragraph at lines 1334--1335
+\OT1/pcr/m/n/12 log-[]what-[]every-[]software-[]engineer-[]should-[]know-[]abou
+t-[]real-[]time-[]datas-[]unifying$[][] 
+ []
+
+
+Overfull \hbox (22.4845pt too wide) in paragraph at lines 1349--1350
 []\OT1/cmr/m/n/12 SFIAplus - IT skills fra-me-work: [][]$\OT1/pcr/m/n/12 https 
 : / / www . bcs . org / develop-[]your-[]people /
  []
 
 
-Overfull \hbox (30.30847pt too wide) in paragraph at lines 1346--1347
+Overfull \hbox (30.30847pt too wide) in paragraph at lines 1349--1350
 \OT1/pcr/m/n/12 develop-[]your-[]team-[]or-[]organisation / sfiaplus-[]it-[]ski
 lls-[]framework/$[][] 
  []
 
 
-Overfull \hbox (31.95198pt too wide) in paragraph at lines 1354--1356
+Overfull \hbox (31.95198pt too wide) in paragraph at lines 1357--1359
 \OT1/cmr/m/n/12 Wirth . J^^?urg Gutk-necht . [][]$\OT1/pcr/m/n/12 www . ethober
 on . ethz . ch / WirthPubl / ProjectOberon .
  []
 
 
-Overfull \hbox (9.75426pt too wide) in paragraph at lines 1357--1358
+Overfull \hbox (9.75426pt too wide) in paragraph at lines 1360--1361
 []\OT1/cmr/m/n/12 ``The World's Best In-tro to TDD'', J.B.Rainsberger: [][]$\OT
 1/pcr/m/n/12 https : / / online-[]training .
  []
 
-LaTeX Info: Redefining \. on input line 1364.
-LaTeX Info: Redefining \% on input line 1364.
-Package cleveref Info: loaded `spanish' language definitions on input line 1364
+LaTeX Info: Redefining \. on input line 1367.
+LaTeX Info: Redefining \% on input line 1367.
+Package cleveref Info: loaded `spanish' language definitions on input line 1367
 .
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1526,9 +1528,9 @@ Cap\'{\i }tulo 6.
 [56
 
 ]
-LaTeX Info: Redefining \. on input line 1406.
-LaTeX Info: Redefining \% on input line 1406.
-Package cleveref Info: loaded `spanish' language definitions on input line 1406
+LaTeX Info: Redefining \. on input line 1409.
+LaTeX Info: Redefining \% on input line 1409.
+Package cleveref Info: loaded `spanish' language definitions on input line 1409
 .
 
 
@@ -1540,14 +1542,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [57]
-Overfull \hbox (12.90848pt too wide) in paragraph at lines 1409--1413
+Overfull \hbox (12.90848pt too wide) in paragraph at lines 1412--1416
 [][]$\OT1/pcr/m/n/12 https : / / docs . microsoft . com / es-[]es / visualstudi
 o / msbuild / msbuild$[][] 
  []
 
-LaTeX Info: Redefining \. on input line 1430.
-LaTeX Info: Redefining \% on input line 1430.
-Package cleveref Info: loaded `spanish' language definitions on input line 1430
+LaTeX Info: Redefining \. on input line 1433.
+LaTeX Info: Redefining \% on input line 1433.
+Package cleveref Info: loaded `spanish' language definitions on input line 1433
 .
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1558,13 +1560,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [58]
-Overfull \hbox (14.63324pt too wide) in paragraph at lines 1466--1467
+Overfull \hbox (14.63324pt too wide) in paragraph at lines 1469--1470
 [][] 
  []
 
-LaTeX Info: Redefining \. on input line 1469.
-LaTeX Info: Redefining \% on input line 1469.
-Package cleveref Info: loaded `spanish' language definitions on input line 1469
+LaTeX Info: Redefining \. on input line 1472.
+LaTeX Info: Redefining \% on input line 1472.
+Package cleveref Info: loaded `spanish' language definitions on input line 1472
 .
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1577,11 +1579,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [59]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 1487.
+(hyperref)                removing `\\' on input line 1490.
 
-LaTeX Info: Redefining \. on input line 1490.
-LaTeX Info: Redefining \% on input line 1490.
-Package cleveref Info: loaded `spanish' language definitions on input line 1490
+LaTeX Info: Redefining \. on input line 1493.
+LaTeX Info: Redefining \% on input line 1493.
+Package cleveref Info: loaded `spanish' language definitions on input line 1493
 .
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1592,9 +1594,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [60]
-LaTeX Info: Redefining \. on input line 1511.
-LaTeX Info: Redefining \% on input line 1511.
-Package cleveref Info: loaded `spanish' language definitions on input line 1511
+LaTeX Info: Redefining \. on input line 1514.
+LaTeX Info: Redefining \% on input line 1514.
+Package cleveref Info: loaded `spanish' language definitions on input line 1514
 .
 
 
@@ -1606,9 +1608,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [61]
-LaTeX Info: Redefining \. on input line 1538.
-LaTeX Info: Redefining \% on input line 1538.
-Package cleveref Info: loaded `spanish' language definitions on input line 1538
+LaTeX Info: Redefining \. on input line 1541.
+LaTeX Info: Redefining \% on input line 1541.
+Package cleveref Info: loaded `spanish' language definitions on input line 1541
 .
 
 
@@ -1620,14 +1622,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [62]
-Overfull \hbox (44.06595pt too wide) in paragraph at lines 1546--1551
+Overfull \hbox (44.06595pt too wide) in paragraph at lines 1549--1554
 []\OT1/cmr/m/n/12 Como co-men-ta-ba Do-nald Knuth en su art^^S^^Pcu-lo[][][][][
 ] [][][][][] [][]$\OT1/pcr/m/n/12 http : / / www . literateprogramming .
  []
 
-LaTeX Info: Redefining \. on input line 1558.
-LaTeX Info: Redefining \% on input line 1558.
-Package cleveref Info: loaded `spanish' language definitions on input line 1558
+LaTeX Info: Redefining \. on input line 1561.
+LaTeX Info: Redefining \% on input line 1561.
+Package cleveref Info: loaded `spanish' language definitions on input line 1561
 .
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1638,26 +1640,26 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [63]
-Overfull \hbox (86.98315pt too wide) in paragraph at lines 1561--1565
+Overfull \hbox (86.98315pt too wide) in paragraph at lines 1564--1568
 [][]$\OT1/pcr/m/n/12 https : / / cacm . acm . org / magazines / 2011 / 11 / 138
 203-[]ocaml-[]for-[]the-[]masses /
  []
 
 
-Overfull \hbox (78.28316pt too wide) in paragraph at lines 1566--1569
+Overfull \hbox (78.28316pt too wide) in paragraph at lines 1569--1572
 [][]$\OT1/pcr/m/n/12 https : / / www . electronicdesign . com / technologies / 
 embedded-[]revolution /
  []
 
 
-Overfull \hbox (210.8831pt too wide) in paragraph at lines 1566--1569
+Overfull \hbox (210.8831pt too wide) in paragraph at lines 1569--1572
 \OT1/pcr/m/n/12 article / 21795884 / contractdriven-[]programming-[]takes-[]spe
 cification-[]beyond-[]the-[]stone-[]age$[][] 
  []
 
-LaTeX Info: Redefining \. on input line 1581.
-LaTeX Info: Redefining \% on input line 1581.
-Package cleveref Info: loaded `spanish' language definitions on input line 1581
+LaTeX Info: Redefining \. on input line 1584.
+LaTeX Info: Redefining \% on input line 1584.
+Package cleveref Info: loaded `spanish' language definitions on input line 1584
 .
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1670,11 +1672,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [64]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 1599.
+(hyperref)                removing `\\' on input line 1602.
 
-LaTeX Info: Redefining \. on input line 1609.
-LaTeX Info: Redefining \% on input line 1609.
-Package cleveref Info: loaded `spanish' language definitions on input line 1609
+LaTeX Info: Redefining \. on input line 1612.
+LaTeX Info: Redefining \% on input line 1612.
+Package cleveref Info: loaded `spanish' language definitions on input line 1612
 .
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1685,9 +1687,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [65]
-LaTeX Info: Redefining \. on input line 1643.
-LaTeX Info: Redefining \% on input line 1643.
-Package cleveref Info: loaded `spanish' language definitions on input line 1643
+LaTeX Info: Redefining \. on input line 1646.
+LaTeX Info: Redefining \% on input line 1646.
+Package cleveref Info: loaded `spanish' language definitions on input line 1646
 .
 
 
@@ -1699,9 +1701,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [66]
-LaTeX Info: Redefining \. on input line 1689.
-LaTeX Info: Redefining \% on input line 1689.
-Package cleveref Info: loaded `spanish' language definitions on input line 1689
+LaTeX Info: Redefining \. on input line 1692.
+LaTeX Info: Redefining \% on input line 1692.
+Package cleveref Info: loaded `spanish' language definitions on input line 1692
 .
 
 
@@ -1713,9 +1715,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [67]
-LaTeX Info: Redefining \. on input line 1730.
-LaTeX Info: Redefining \% on input line 1730.
-Package cleveref Info: loaded `spanish' language definitions on input line 1730
+LaTeX Info: Redefining \. on input line 1733.
+LaTeX Info: Redefining \% on input line 1733.
+Package cleveref Info: loaded `spanish' language definitions on input line 1733
 .
 
 
@@ -1728,18 +1730,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [68]
 LaTeX Font Info:    Trying to load font information for TS1+pcr on input line 1
-734.
+737.
  (C:\Users\zzz\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1pcr.fd
 File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
 )
-Overfull \hbox (23.10416pt too wide) in paragraph at lines 1759--1760
+Overfull \hbox (23.10416pt too wide) in paragraph at lines 1762--1763
 []\OT1/cmr/m/n/12 SELECCI[]ON CON-DI-CIO-NAL de dis-tin-tos ca-mi-nos de eje-cu
 -ci^^Son, (IF, SWITCH,...) 
  []
 
-LaTeX Info: Redefining \. on input line 1784.
-LaTeX Info: Redefining \% on input line 1784.
-Package cleveref Info: loaded `spanish' language definitions on input line 1784
+LaTeX Info: Redefining \. on input line 1787.
+LaTeX Info: Redefining \% on input line 1787.
+Package cleveref Info: loaded `spanish' language definitions on input line 1787
 .
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1750,9 +1752,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [69]
-LaTeX Info: Redefining \. on input line 1837.
-LaTeX Info: Redefining \% on input line 1837.
-Package cleveref Info: loaded `spanish' language definitions on input line 1837
+LaTeX Info: Redefining \. on input line 1840.
+LaTeX Info: Redefining \% on input line 1840.
+Package cleveref Info: loaded `spanish' language definitions on input line 1840
 .
 
 
@@ -1770,11 +1772,11 @@ File: ./imagenes//Paradigma de programacion - PROCEDURAL.png Graphic file (type
  png)
 <use ./imagenes//Paradigma de programacion - PROCEDURAL.png>
 Package pdftex.def Info: ./imagenes//Paradigma de programacion - PROCEDURAL.png
-  used on input line 1844.
+  used on input line 1847.
 (pdftex.def)             Requested size: 426.79134pt x 310.12964pt.
-LaTeX Info: Redefining \. on input line 1858.
-LaTeX Info: Redefining \% on input line 1858.
-Package cleveref Info: loaded `spanish' language definitions on input line 1858
+LaTeX Info: Redefining \. on input line 1861.
+LaTeX Info: Redefining \% on input line 1861.
+Package cleveref Info: loaded `spanish' language definitions on input line 1861
 .
 
 
@@ -1786,9 +1788,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [71 <./imagenes//Paradigma de programacion - PROCEDURAL.png>]
-LaTeX Info: Redefining \. on input line 1908.
-LaTeX Info: Redefining \% on input line 1908.
-Package cleveref Info: loaded `spanish' language definitions on input line 1908
+LaTeX Info: Redefining \. on input line 1911.
+LaTeX Info: Redefining \% on input line 1911.
+Package cleveref Info: loaded `spanish' language definitions on input line 1911
 .
 
 
@@ -1800,9 +1802,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [72]
-LaTeX Info: Redefining \. on input line 1944.
-LaTeX Info: Redefining \% on input line 1944.
-Package cleveref Info: loaded `spanish' language definitions on input line 1944
+LaTeX Info: Redefining \. on input line 1947.
+LaTeX Info: Redefining \% on input line 1947.
+Package cleveref Info: loaded `spanish' language definitions on input line 1947
 .
 
 
@@ -1820,11 +1822,11 @@ File: ./imagenes//Paradigma de programacion - ORIENTADO A OBJETO.png Graphic fi
 le (type png)
 <use ./imagenes//Paradigma de programacion - ORIENTADO A OBJETO.png>
 Package pdftex.def Info: ./imagenes//Paradigma de programacion - ORIENTADO A OB
-JETO.png  used on input line 1949.
+JETO.png  used on input line 1952.
 (pdftex.def)             Requested size: 426.79134pt x 313.60803pt.
-LaTeX Info: Redefining \. on input line 1971.
-LaTeX Info: Redefining \% on input line 1971.
-Package cleveref Info: loaded `spanish' language definitions on input line 1971
+LaTeX Info: Redefining \. on input line 1974.
+LaTeX Info: Redefining \% on input line 1974.
+Package cleveref Info: loaded `spanish' language definitions on input line 1974
 .
 
 
@@ -1836,9 +1838,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [74 <./imagenes//Paradigma de programacion - ORIENTADO A OBJETO.png>]
-LaTeX Info: Redefining \. on input line 2024.
-LaTeX Info: Redefining \% on input line 2024.
-Package cleveref Info: loaded `spanish' language definitions on input line 2024
+LaTeX Info: Redefining \. on input line 2027.
+LaTeX Info: Redefining \% on input line 2027.
+Package cleveref Info: loaded `spanish' language definitions on input line 2027
 .
 
 
@@ -1850,9 +1852,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [75]
-LaTeX Info: Redefining \. on input line 2076.
-LaTeX Info: Redefining \% on input line 2076.
-Package cleveref Info: loaded `spanish' language definitions on input line 2076
+LaTeX Info: Redefining \. on input line 2079.
+LaTeX Info: Redefining \% on input line 2079.
+Package cleveref Info: loaded `spanish' language definitions on input line 2079
 .
 
 
@@ -1864,9 +1866,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [76]
-LaTeX Info: Redefining \. on input line 2131.
-LaTeX Info: Redefining \% on input line 2131.
-Package cleveref Info: loaded `spanish' language definitions on input line 2131
+LaTeX Info: Redefining \. on input line 2134.
+LaTeX Info: Redefining \% on input line 2134.
+Package cleveref Info: loaded `spanish' language definitions on input line 2134
 .
 
 
@@ -1878,9 +1880,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [77]
-LaTeX Info: Redefining \. on input line 2162.
-LaTeX Info: Redefining \% on input line 2162.
-Package cleveref Info: loaded `spanish' language definitions on input line 2162
+LaTeX Info: Redefining \. on input line 2165.
+LaTeX Info: Redefining \% on input line 2165.
+Package cleveref Info: loaded `spanish' language definitions on input line 2165
 .
 
 
@@ -1898,11 +1900,11 @@ File: ./imagenes//Paradigma de programacion - FUNCIONAL.png Graphic file (type
 png)
 <use ./imagenes//Paradigma de programacion - FUNCIONAL.png>
 Package pdftex.def Info: ./imagenes//Paradigma de programacion - FUNCIONAL.png 
- used on input line 2183.
+ used on input line 2186.
 (pdftex.def)             Requested size: 426.79134pt x 291.29689pt.
-LaTeX Info: Redefining \. on input line 2188.
-LaTeX Info: Redefining \% on input line 2188.
-Package cleveref Info: loaded `spanish' language definitions on input line 2188
+LaTeX Info: Redefining \. on input line 2191.
+LaTeX Info: Redefining \% on input line 2191.
+Package cleveref Info: loaded `spanish' language definitions on input line 2191
 .
 
 
@@ -1914,9 +1916,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [79 <./imagenes//Paradigma de programacion - FUNCIONAL.png>]
-LaTeX Info: Redefining \. on input line 2242.
-LaTeX Info: Redefining \% on input line 2242.
-Package cleveref Info: loaded `spanish' language definitions on input line 2242
+LaTeX Info: Redefining \. on input line 2245.
+LaTeX Info: Redefining \% on input line 2245.
+Package cleveref Info: loaded `spanish' language definitions on input line 2245
 .
 
 
@@ -1931,12 +1933,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 <./imagenes//encapsulacion.png, id=1469, 161.60374pt x 352.31625pt>
 File: ./imagenes//encapsulacion.png Graphic file (type png)
 <use ./imagenes//encapsulacion.png>
-Package pdftex.def Info: ./imagenes//encapsulacion.png  used on input line 2258
+Package pdftex.def Info: ./imagenes//encapsulacion.png  used on input line 2261
 .
 (pdftex.def)             Requested size: 129.28316pt x 281.85338pt.
-LaTeX Info: Redefining \. on input line 2262.
-LaTeX Info: Redefining \% on input line 2262.
-Package cleveref Info: loaded `spanish' language definitions on input line 2262
+LaTeX Info: Redefining \. on input line 2265.
+LaTeX Info: Redefining \% on input line 2265.
+Package cleveref Info: loaded `spanish' language definitions on input line 2265
 .
 
 
@@ -1954,11 +1956,11 @@ File: ./imagenes//encapsulacion en paradigma orientado a objeto.png Graphic fil
 e (type png)
 <use ./imagenes//encapsulacion en paradigma orientado a objeto.png>
 Package pdftex.def Info: ./imagenes//encapsulacion en paradigma orientado a obj
-eto.png  used on input line 2269.
+eto.png  used on input line 2272.
 (pdftex.def)             Requested size: 349.30414pt x 511.91125pt.
-LaTeX Info: Redefining \. on input line 2271.
-LaTeX Info: Redefining \% on input line 2271.
-Package cleveref Info: loaded `spanish' language definitions on input line 2271
+LaTeX Info: Redefining \. on input line 2274.
+LaTeX Info: Redefining \% on input line 2274.
+Package cleveref Info: loaded `spanish' language definitions on input line 2274
 .
 
 
@@ -1976,7 +1978,7 @@ File: ./imagenes//encapsulacion en paradigma funcional.png Graphic file (type p
 ng)
 <use ./imagenes//encapsulacion en paradigma funcional.png>
 Package pdftex.def Info: ./imagenes//encapsulacion en paradigma funcional.png  
-used on input line 2274.
+used on input line 2277.
 (pdftex.def)             Requested size: 331.23668pt x 390.70872pt.
 <./imagenes//encapsulacion en cola de mensajes.png, id=1482, 1206.5075pt x 502.
 87875pt>
@@ -1984,16 +1986,16 @@ File: ./imagenes//encapsulacion en cola de mensajes.png Graphic file (type png)
 
 <use ./imagenes//encapsulacion en cola de mensajes.png>
 Package pdftex.def Info: ./imagenes//encapsulacion en cola de mensajes.png  use
-d on input line 2278.
+d on input line 2281.
 (pdftex.def)             Requested size: 426.79134pt x 177.88248pt.
 
-Overfull \hbox (29.3747pt too wide) in paragraph at lines 2278--2279
+Overfull \hbox (29.3747pt too wide) in paragraph at lines 2281--2282
 [][] 
  []
 
-LaTeX Info: Redefining \. on input line 2286.
-LaTeX Info: Redefining \% on input line 2286.
-Package cleveref Info: loaded `spanish' language definitions on input line 2286
+LaTeX Info: Redefining \. on input line 2289.
+LaTeX Info: Redefining \% on input line 2289.
+Package cleveref Info: loaded `spanish' language definitions on input line 2289
 .
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2009,17 +2011,17 @@ lacion en cola de mensajes.png>]
 File: ./imagenes//arquitectura - ball of mud.png Graphic file (type png)
 <use ./imagenes//arquitectura - ball of mud.png>
 Package pdftex.def Info: ./imagenes//arquitectura - ball of mud.png  used on in
-put line 2301.
+put line 2304.
 (pdftex.def)             Requested size: 213.39566pt x 155.38573pt.
 <./imagenes//arquitectura - monolito.png, id=1491, 259.56975pt x 343.88475pt>
 File: ./imagenes//arquitectura - monolito.png Graphic file (type png)
 <use ./imagenes//arquitectura - monolito.png>
 Package pdftex.def Info: ./imagenes//arquitectura - monolito.png  used on input
- line 2311.
+ line 2314.
 (pdftex.def)             Requested size: 213.39566pt x 282.71669pt.
-LaTeX Info: Redefining \. on input line 2312.
-LaTeX Info: Redefining \% on input line 2312.
-Package cleveref Info: loaded `spanish' language definitions on input line 2312
+LaTeX Info: Redefining \. on input line 2315.
+LaTeX Info: Redefining \% on input line 2315.
+Package cleveref Info: loaded `spanish' language definitions on input line 2315
 .
 
 
@@ -2035,11 +2037,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 File: ./imagenes//arquitectura - distribuido.png Graphic file (type png)
 <use ./imagenes//arquitectura - distribuido.png>
 Package pdftex.def Info: ./imagenes//arquitectura - distribuido.png  used on in
-put line 2320.
+put line 2323.
 (pdftex.def)             Requested size: 426.79134pt x 205.74873pt.
-LaTeX Info: Redefining \. on input line 2329.
-LaTeX Info: Redefining \% on input line 2329.
-Package cleveref Info: loaded `spanish' language definitions on input line 2329
+LaTeX Info: Redefining \. on input line 2332.
+LaTeX Info: Redefining \% on input line 2332.
+Package cleveref Info: loaded `spanish' language definitions on input line 2332
 .
 
 
@@ -2052,9 +2054,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [85 <./imagenes//arquitectura - monolito.png> <./imagenes//arquitectura - distr
 ibuido.png>]
-LaTeX Info: Redefining \. on input line 2358.
-LaTeX Info: Redefining \% on input line 2358.
-Package cleveref Info: loaded `spanish' language definitions on input line 2358
+LaTeX Info: Redefining \. on input line 2361.
+LaTeX Info: Redefining \% on input line 2361.
+Package cleveref Info: loaded `spanish' language definitions on input line 2361
 .
 
 
@@ -2066,9 +2068,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [86]
-LaTeX Info: Redefining \. on input line 2385.
-LaTeX Info: Redefining \% on input line 2385.
-Package cleveref Info: loaded `spanish' language definitions on input line 2385
+LaTeX Info: Redefining \. on input line 2388.
+LaTeX Info: Redefining \% on input line 2388.
+Package cleveref Info: loaded `spanish' language definitions on input line 2388
 .
 
 
@@ -2080,9 +2082,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [87]
-LaTeX Info: Redefining \. on input line 2403.
-LaTeX Info: Redefining \% on input line 2403.
-Package cleveref Info: loaded `spanish' language definitions on input line 2403
+LaTeX Info: Redefining \. on input line 2406.
+LaTeX Info: Redefining \% on input line 2406.
+Package cleveref Info: loaded `spanish' language definitions on input line 2406
 .
 
 
@@ -2094,9 +2096,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [88]
-LaTeX Info: Redefining \. on input line 2430.
-LaTeX Info: Redefining \% on input line 2430.
-Package cleveref Info: loaded `spanish' language definitions on input line 2430
+LaTeX Info: Redefining \. on input line 2433.
+LaTeX Info: Redefining \% on input line 2433.
+Package cleveref Info: loaded `spanish' language definitions on input line 2433
 .
 
 
@@ -2108,9 +2110,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [89]
-LaTeX Info: Redefining \. on input line 2450.
-LaTeX Info: Redefining \% on input line 2450.
-Package cleveref Info: loaded `spanish' language definitions on input line 2450
+LaTeX Info: Redefining \. on input line 2453.
+LaTeX Info: Redefining \% on input line 2453.
+Package cleveref Info: loaded `spanish' language definitions on input line 2453
 .
 
 
@@ -2122,9 +2124,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [90]
-LaTeX Info: Redefining \. on input line 2477.
-LaTeX Info: Redefining \% on input line 2477.
-Package cleveref Info: loaded `spanish' language definitions on input line 2477
+LaTeX Info: Redefining \. on input line 2480.
+LaTeX Info: Redefining \% on input line 2480.
+Package cleveref Info: loaded `spanish' language definitions on input line 2480
 .
 
 
@@ -2136,9 +2138,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [91]
-LaTeX Info: Redefining \. on input line 2505.
-LaTeX Info: Redefining \% on input line 2505.
-Package cleveref Info: loaded `spanish' language definitions on input line 2505
+LaTeX Info: Redefining \. on input line 2508.
+LaTeX Info: Redefining \% on input line 2508.
+Package cleveref Info: loaded `spanish' language definitions on input line 2508
 .
 
 
@@ -2150,9 +2152,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [92]
-LaTeX Info: Redefining \. on input line 2517.
-LaTeX Info: Redefining \% on input line 2517.
-Package cleveref Info: loaded `spanish' language definitions on input line 2517
+LaTeX Info: Redefining \. on input line 2520.
+LaTeX Info: Redefining \% on input line 2520.
+Package cleveref Info: loaded `spanish' language definitions on input line 2520
 .
 
 
@@ -2166,20 +2168,20 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [93] [94
 
 ]
-Overfull \hbox (2.34296pt too wide) in paragraph at lines 2549--2551
+Overfull \hbox (2.34296pt too wide) in paragraph at lines 2552--2554
 []\OT1/cmr/m/n/12 resumen ex-tra-ido del li-bro ``Ex-tre-me Pro-gram-ming. Poc-
 ket Gui-de'', O'Reilly [][]$\OT1/pcr/m/n/12 https :
  []
 
 
-Overfull \hbox (92.60844pt too wide) in paragraph at lines 2549--2551
+Overfull \hbox (92.60844pt too wide) in paragraph at lines 2552--2554
 \OT1/pcr/m/n/12 / / www . oreilly . com / library / view / extreme-[]programmin
 g-[]pocket / 9781449399849/$[][] 
  []
 
-LaTeX Info: Redefining \. on input line 2568.
-LaTeX Info: Redefining \% on input line 2568.
-Package cleveref Info: loaded `spanish' language definitions on input line 2568
+LaTeX Info: Redefining \. on input line 2571.
+LaTeX Info: Redefining \% on input line 2571.
+Package cleveref Info: loaded `spanish' language definitions on input line 2571
 .
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2194,9 +2196,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 Package caption Warning: Unused \captionsetup[verbatim] on input line 74.
 See the caption package documentation for explanation.
 
-LaTeX Info: Redefining \. on input line 2590.
-LaTeX Info: Redefining \% on input line 2590.
-Package cleveref Info: loaded `spanish' language definitions on input line 2590
+LaTeX Info: Redefining \. on input line 2593.
+LaTeX Info: Redefining \% on input line 2593.
+Package cleveref Info: loaded `spanish' language definitions on input line 2593
 .
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2211,19 +2213,13 @@ LaTeX Info: Redefining \. on input line 22.
 LaTeX Info: Redefining \% on input line 22.
 Package cleveref Info: loaded `spanish' language definitions on input line 22.
 )
-
-Package rerunfilecheck Warning: File `Proyecto_Software.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Proyecto_Software.out':
-(rerunfilecheck)             Before: 466F18191CCB8C767121DB33B8974715;26462
-(rerunfilecheck)             After:  FE396EBA2E5F6C787F74B9C8695446DA;26402.
+Package rerunfilecheck Info: File `Proyecto_Software.out' has not changed.
+(rerunfilecheck)             Checksum: 8C7210DBF61F65071CD8D5693F5FA166;26405.
  ) 
 Here is how much of TeX's memory you used:
  18505 strings out of 475385
  315556 string characters out of 2777851
- 970021 words of memory out of 3000000
+ 971021 words of memory out of 3000000
  38876 multiletter control sequences out of 15000+600000
  483749 words of font info for 83 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2244,7 +2240,7 @@ cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/zzz/AppDa
 ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/zz
 z/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/U
 sers/zzz/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on Proyecto_Software.pdf (97 pages, 1757445 bytes).
+Output written on Proyecto_Software.pdf (97 pages, 1757295 bytes).
 PDF statistics:
  1819 PDF objects out of 2073 (max. 8388607)
  753 named destinations out of 1000 (max. 500000)
