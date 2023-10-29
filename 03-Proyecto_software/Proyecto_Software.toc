@@ -56,12 +56,12 @@
 \contentsline {section}{\numberline {4.11}Una forma de recoger especificaciones: BDD (Behavior Driven Development)}{41}{section.4.11}%
 \contentsline {section}{\numberline {4.12}Una reflexión acerca de las ventajas de manejar datos inmutables}{43}{section.4.12}%
 \contentsline {section}{\numberline {4.13}Una reflexión personal acerca de poner controles en el programa para evitar ``errores de usuario''}{45}{section.4.13}%
-\contentsline {chapter}{\numberline {5}Algo de bibliografia}{48}{chapter.5}%
-\contentsline {section}{\numberline {5.1}notas históricas: para situarnos en los distintos marcos temporales}{48}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Mis libros favoritos}{49}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Libros muy recomendables}{49}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Libros interesantes}{52}{subsection.5.2.2}%
-\contentsline {section}{\numberline {5.3}Otros libros, documentos, referencias,\ldots }{54}{section.5.3}%
+\contentsline {chapter}{\numberline {5}Bibliografia}{48}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Unas notas históricas para situarnos en los distintos marcos temporales}{48}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Algunos libros interesantes}{49}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Si solo vas a leer unos pocos, conviene empezar por estos\ldots }{49}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Si te animas, podrías continuar con algunos de estos otros\ldots }{52}{subsection.5.2.2}%
+\contentsline {section}{\numberline {5.3}Otros documentos, referencias,\ldots }{54}{section.5.3}%
 \contentsline {chapter}{\numberline {6}apéndice: Un repaso rápido de elementos importantes.}{56}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Herramientas}{56}{section.6.1}%
 \contentsline {subsection}{\numberline {6.1.1}Editor, compilador (``compiler'') y enlazador (``linker'')}{57}{subsection.6.1.1}%
