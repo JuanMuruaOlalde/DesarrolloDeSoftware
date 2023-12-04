@@ -56,13 +56,13 @@ De ahí que sea necesario lidiar con las incertidumbres que eso conlleva. Es dec
 
 Con una evolución exponencial (2, 4, 8, 16, 32, 256, 512, 1024, 4048,...) en lugar de lineal (1, 2, 3, 4, 5, 6, 7, 8, 9,...). No nos podemos permitir el lujo de quedarnos estancados.
 
-Es importante ir siguiendo el paso de las distintas versiones de las herramientas. Prestando atención a los "warning" al compilar el código; sobre todo aquellos que avisan de elementos "deprecated". Estudiando las novedades que traen y las nuevas formas de trabajar que esas novedades permiten.
+Es importante ir siguiendo el paso de las distintas versiones de las herramientas. Prestando atención a las novedades que traen, procurando estudiar/practicar las nuevas formas de trabajar que esas novedades permiten. Prestando atención a las partes que "deprecan", para ir dejando de utilizarlas.
 
 A la larga. Es mucho más rentable la evolución contínua (ir cambiando nuestas cosas siguiendo más o menos los cambios en el entorno). Que la evolución a saltos (mantenernos más o menos en lo nuestro hasta que deje de funcionar y, entonces, cambiarlo completamente según sea el entorno en ese momento).
 
-Atrás han quedado los tiempos en que podiamos mantenernos mas o menos en lo nuestro hasta jubilarnos, dejando que fuera la siguente generación la que implementara los cambios importantes. Hoy en día los saltos tecnológicos son tán rápidos que estamos obligados a cambiar cada pocas décadas. Mejor hacerlo pausadamente con un esfuerzo constante, que tener uno o dos cambios traumáticos.
+Atrás han quedado los tiempos en que podiamos mantenernos mas o menos en lo nuestro hasta jubilarnos, dejando que fuera la siguente generación la que implementara los cambios importantes. Hoy en día los saltos tecnológicos son tán rápidos que estamos obligados a cambiar cada pocas décadas. Mejor hacerlo pausadamente con un esfuerzo constante, que hacerlo de golpe en uno o dos cambios traumáticos.
 
-Dos conceptos muy importantes:
+## Dos conceptos muy importantes:
 
 - DEPRECATED: Algo está "deprecated" cuando ha sido substituido por otro algo (se supone que mejor). Lo que está "deprecated" aún funciona, pero se mantiene simplemente por compatibilidad con lo que ya está hecho. No se debe utilizar para hacer cosas nuevas. Es más, cuando se vaya a modificar alguna parte de lo ya hecho hay que procurar rehacerlo (refactorizar) para eliminar aquello "deprecated" e incorporar los correspondientes substitutos.
 
