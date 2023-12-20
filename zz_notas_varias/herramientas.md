@@ -2,7 +2,7 @@
 
 ## Imprescindibles
 
-- Compilador y biblioteca estandar.
+- Compilador y biblioteca estandar del lenguaje que estemos utilizando.
 
 - Bibliotecas y gestor de dependencias.
 
