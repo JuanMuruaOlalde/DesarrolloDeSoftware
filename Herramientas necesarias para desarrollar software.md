@@ -1,4 +1,4 @@
-# Herramientas necesarias para desarrollo de software
+# Herramientas necesarias para desarrollar software
 
 ## Imprescindibles
 
