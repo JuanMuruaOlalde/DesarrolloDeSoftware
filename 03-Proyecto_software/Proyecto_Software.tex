@@ -1377,7 +1377,7 @@ Niklaus Wirth: \url{https://inf.ethz.ch/personal/wirth/index.html}
 ``Structure and Interpretation of Computer Programs'' . Harold Abelson . Gerald Jay Sussman . Julie Sussman . MIT Press, 1996.
 \url{https://mitpress.mit.edu/sites/default/files/sicp/index.html}
 
-\chapter{apéndice: un repaso rápido sobre algunos conceptos importantes.}
+\chapter{apéndice: repaso rápido sobre algunos conceptos importantes.}
 
 \section{Herramientas}
 
@@ -2431,9 +2431,24 @@ nota: Una referencia para profundizar en algunas de las estructuras de datos y a
 \vspace{0.5cm}
 nota: A la hora de hablar sobre algoritmos es importante conocer la notación `big O'. Se usa para indicar los límites máximo \textbf{O}( ), mínimo \textbf{$\Omega$}( ) y medio \textbf{$\Theta$}( ) de consumo de recursos (memoria, tiempo,...) por parte de un algoritmo. Esto permite comparar el rendimiento de distintos algoritmos con respecto al número de casos a tratar.
 
-Por ejemplo, algoritmos con evoluciones lineales del orden de \textbf{O}(n) son manejables: 1, 2, 3, 4, 5, 6, 7, 8,\ldots, 14, 15,\ldots, 19, 20,\ldots 
-\\pero algoritmos con evoluciones exponenciales del orden de \textbf{O}($2^n$) pronto se vuelven  imposibles: 2, 4, 8, 16, 32, 64, 128, 256, 512,\ldots, 16.384, 32768,\ldots, 524.288, 1.048.576,\ldots 
-\\y mucho más con evoluciones combinatorias del orden de \textbf{O}(n!)  1, 2, 6, 24, 120, 720, 5.040, 40.320,\ldots, 87.178.291.200, 1.307.674.368.000,\ldots, 6.758.061.133.824.000, 1,35·E+17,\ldots
+Haciendo un resumen rápido acerca de la complejidad de los algoritmos:
+\begin{itemize}
+    \item \textbf{O}(1), constante: el esfuerzo necesario es independiente del tamaño de los datos a tratar. Es siempre el mismo, sean muchos o pocos datos.
+    \item \textbf{O}(n), lineal: el esfuerzo crece al mismo ratio que el tamaño de los datos a tratar.
+    \item \textbf{O}(log n), logarítmica: el esfuerzo crece con el tamaño de los datos a tratar, pero mucho más suavemente.
+    \item \textbf{O}($n^{2}$), cuadrática: el esfuerzo crece con el tamaño de los datos a tratar, pero mucho más rápidamente.
+    \item \textbf{O}($2^{n}$), exponencial: la pesadilla en cualquier situación en que se presenta una complejidad de este tipo. El esfuerzo parece crecer razonablemente al principio, pero pronto se vuelve desmesurado. El comportamiento de los algoritmos de este tipo suele sorprender a la mayoria de la gente: con pocos datos es manejable; pero en muy poco recorrido, el algoritmo se vuelve prácticamente inútil.
+    \item \textbf{O}(n!), combinatoria: la pesadilla de las pesadillas. Salvo para conjuntos de datos pequeños, mejor evitar este tipo de algoritmos.
+\end{itemize}
+
+Por ejemplo, algoritmos con evoluciones lineales del orden de \textbf{O}(n) son manejables. Para tratar 1 dato se necesita 1 de esfuerzo, para tratar 2 datos se necesita 2 de esfuerzo, para tratar 3 datos se necesita 3, etc: 1, 2, 3, 4, 5, 6, 7, 8,\ldots, 14, 15,\ldots, 19, 20,\ldots 
+
+Algoritmos con evoluciones cuadráticas, del orden de \textbf{O}($n^{2}$) siguen siendo todavia más o menos manejables: 1, 2, 9, 16, 25, 36, 49, 64, 81,\ldots, 196, 225,\ldots, 441, 484,\ldots, 961, 1.024,\ldots
+
+Pero algoritmos con evoluciones exponenciales del orden de \textbf{O}($2^n$) pronto se vuelven imposibles: 2, 4, 8, 16, 32, 64, 128, 256, 512,\ldots, 16.384, 32.768,\ldots, 524.288, 1.048.576,\ldots 
+
+Y mucho peor con evoluciones combinatorias del orden de \textbf{O}(n!): 1, 2, 6, 24, 120, 720, 5.040, 40.320,\ldots, 87.178.291.200, 1.307.674.368.000,\ldots, 6.758.061.133.824.000, 1,35·E+17,\ldots
+
 
 \subsection{Ordenación, clasificación y búsqueda}
 Situaciones donde se han de almacenar y organizar datos.  Usando criterios de ordenación o de cercania entre ellos. Para luego facilitar la búsqueda de información dentro de esos datos.

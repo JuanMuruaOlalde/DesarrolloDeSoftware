@@ -61,7 +61,7 @@
 \contentsline {section}{\numberline {6.1}muy recomendables}{50}{section.6.1}%
 \contentsline {section}{\numberline {6.2}interesantes}{54}{section.6.2}%
 \contentsline {section}{\numberline {6.3}enlaces y referencias}{56}{section.6.3}%
-\contentsline {chapter}{\numberline {7}apéndice: un repaso rápido sobre algunos conceptos importantes.}{58}{chapter.7}%
+\contentsline {chapter}{\numberline {7}apéndice: repaso rápido sobre algunos conceptos importantes.}{58}{chapter.7}%
 \contentsline {section}{\numberline {7.1}Herramientas}{58}{section.7.1}%
 \contentsline {subsection}{\numberline {7.1.1}Editor, compilador (``compiler'') y enlazador (``linker'')}{59}{subsection.7.1.1}%
 \contentsline {subsection}{\numberline {7.1.2}Automatización del proceso de compilación}{59}{subsection.7.1.2}%
@@ -101,21 +101,21 @@
 \contentsline {subsubsection}{facade}{90}{section*.29}%
 \contentsline {subsubsection}{proxy}{91}{section*.30}%
 \contentsline {section}{\numberline {7.6}Algoritmos}{91}{section.7.6}%
-\contentsline {subsection}{\numberline {7.6.1}Ordenación, clasificación y búsqueda}{91}{subsection.7.6.1}%
-\contentsline {subsubsection}{búsquedas directas}{91}{section*.31}%
+\contentsline {subsection}{\numberline {7.6.1}Ordenación, clasificación y búsqueda}{92}{subsection.7.6.1}%
+\contentsline {subsubsection}{búsquedas directas}{92}{section*.31}%
 \contentsline {subsubsection}{estructuración arbórea}{92}{section*.32}%
 \contentsline {subsubsection}{estructuración indexada}{92}{section*.33}%
 \contentsline {subsubsection}{estructuración semántica}{92}{section*.34}%
-\contentsline {subsection}{\numberline {7.6.2}Cálculo numérico o simbólico}{92}{subsection.7.6.2}%
-\contentsline {subsubsection}{ecuaciones lineales}{92}{section*.35}%
-\contentsline {subsubsection}{derivación e integración}{92}{section*.36}%
-\contentsline {subsubsection}{series de Taylor}{92}{section*.37}%
+\contentsline {subsection}{\numberline {7.6.2}Cálculo numérico o simbólico}{93}{subsection.7.6.2}%
+\contentsline {subsubsection}{ecuaciones lineales}{93}{section*.35}%
+\contentsline {subsubsection}{derivación e integración}{93}{section*.36}%
+\contentsline {subsubsection}{series de Taylor}{93}{section*.37}%
 \contentsline {subsubsection}{transformadas de Fourier}{93}{section*.38}%
 \contentsline {subsection}{\numberline {7.6.3}Optimización, programación lineal}{93}{subsection.7.6.3}%
-\contentsline {subsection}{\numberline {7.6.4}Combinatorios}{93}{subsection.7.6.4}%
-\contentsline {subsubsection}{búsqueda por ``fuerza bruta''}{93}{section*.39}%
-\contentsline {subsubsection}{búsquedas reducidas, en profundidad o en anchura}{94}{section*.40}%
-\contentsline {subsubsection}{heurísticas}{94}{section*.41}%
+\contentsline {subsection}{\numberline {7.6.4}Combinatorios}{94}{subsection.7.6.4}%
+\contentsline {subsubsection}{búsqueda por ``fuerza bruta''}{94}{section*.39}%
+\contentsline {subsubsection}{búsquedas reducidas, en profundidad o en anchura}{95}{section*.40}%
+\contentsline {subsubsection}{heurísticas}{95}{section*.41}%
 \contentsline {subsubsection}{métodos de Montecarlo}{95}{section*.42}%
 \contentsline {subsection}{\numberline {7.6.5}Algoritmos que aprenden}{95}{subsection.7.6.5}%
-\contentsline {subsection}{\numberline {7.6.6}Algoritmos que evolucionan}{95}{subsection.7.6.6}%
+\contentsline {subsection}{\numberline {7.6.6}Algoritmos que evolucionan}{96}{subsection.7.6.6}%

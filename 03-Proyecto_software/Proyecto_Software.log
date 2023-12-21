@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.7.13)  16 NOV 2023 14:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.7.13)  21 DEC 2023 11:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1319,10 +1319,10 @@ Package cleveref Info: loaded `spanish' language definitions on input line 1423.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 26.1967pt, for example:
-(fancyhdr)                \setlength{\headheight}{26.1967pt}.
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-14.1967pt}.
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [59]
 Overfull \hbox (12.90848pt too wide) in paragraph at lines 1426--1430
@@ -1334,10 +1334,10 @@ LaTeX Info: Redefining \% on input line 1447.
 Package cleveref Info: loaded `spanish' language definitions on input line 1447.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 26.1967pt, for example:
-(fancyhdr)                \setlength{\headheight}{26.1967pt}.
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-14.1967pt}.
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [60]
 Overfull \hbox (14.63324pt too wide) in paragraph at lines 1483--1484
@@ -1349,10 +1349,10 @@ LaTeX Info: Redefining \% on input line 1486.
 Package cleveref Info: loaded `spanish' language definitions on input line 1486.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 26.1967pt, for example:
-(fancyhdr)                \setlength{\headheight}{26.1967pt}.
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-14.1967pt}.
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [61]
 
@@ -1364,10 +1364,10 @@ LaTeX Info: Redefining \% on input line 1507.
 Package cleveref Info: loaded `spanish' language definitions on input line 1507.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 26.1967pt, for example:
-(fancyhdr)                \setlength{\headheight}{26.1967pt}.
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-14.1967pt}.
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [62]
 LaTeX Info: Redefining \. on input line 1528.
@@ -1376,10 +1376,10 @@ Package cleveref Info: loaded `spanish' language definitions on input line 1528.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 26.1967pt, for example:
-(fancyhdr)                \setlength{\headheight}{26.1967pt}.
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-14.1967pt}.
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [63]
 LaTeX Info: Redefining \. on input line 1555.
@@ -1388,10 +1388,10 @@ Package cleveref Info: loaded `spanish' language definitions on input line 1555.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 26.1967pt, for example:
-(fancyhdr)                \setlength{\headheight}{26.1967pt}.
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-14.1967pt}.
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [64]
 Overfull \hbox (44.06595pt too wide) in paragraph at lines 1563--1568
@@ -1403,10 +1403,10 @@ LaTeX Info: Redefining \% on input line 1575.
 Package cleveref Info: loaded `spanish' language definitions on input line 1575.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 26.1967pt, for example:
-(fancyhdr)                \setlength{\headheight}{26.1967pt}.
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-14.1967pt}.
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [65]
 Overfull \hbox (86.98315pt too wide) in paragraph at lines 1578--1582
@@ -1428,10 +1428,10 @@ LaTeX Info: Redefining \% on input line 1598.
 Package cleveref Info: loaded `spanish' language definitions on input line 1598.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 26.1967pt, for example:
-(fancyhdr)                \setlength{\headheight}{26.1967pt}.
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-14.1967pt}.
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [66]
 
@@ -1443,10 +1443,10 @@ LaTeX Info: Redefining \% on input line 1626.
 Package cleveref Info: loaded `spanish' language definitions on input line 1626.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 26.1967pt, for example:
-(fancyhdr)                \setlength{\headheight}{26.1967pt}.
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-14.1967pt}.
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [67]
 LaTeX Info: Redefining \. on input line 1660.
@@ -1455,10 +1455,10 @@ Package cleveref Info: loaded `spanish' language definitions on input line 1660.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 26.1967pt, for example:
-(fancyhdr)                \setlength{\headheight}{26.1967pt}.
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-14.1967pt}.
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [68]
 LaTeX Info: Redefining \. on input line 1706.
@@ -1467,10 +1467,10 @@ Package cleveref Info: loaded `spanish' language definitions on input line 1706.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 26.1967pt, for example:
-(fancyhdr)                \setlength{\headheight}{26.1967pt}.
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-14.1967pt}.
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [69]
 LaTeX Info: Redefining \. on input line 1747.
@@ -1479,10 +1479,10 @@ Package cleveref Info: loaded `spanish' language definitions on input line 1747.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 26.1967pt, for example:
-(fancyhdr)                \setlength{\headheight}{26.1967pt}.
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-14.1967pt}.
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [70]
 LaTeX Font Info:    Trying to load font information for TS1+pcr on input line 1751.
@@ -1498,10 +1498,10 @@ LaTeX Info: Redefining \% on input line 1801.
 Package cleveref Info: loaded `spanish' language definitions on input line 1801.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 26.1967pt, for example:
-(fancyhdr)                \setlength{\headheight}{26.1967pt}.
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-14.1967pt}.
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [71]
 LaTeX Info: Redefining \. on input line 1854.
@@ -1510,10 +1510,10 @@ Package cleveref Info: loaded `spanish' language definitions on input line 1854.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 26.1967pt, for example:
-(fancyhdr)                \setlength{\headheight}{26.1967pt}.
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-14.1967pt}.
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [72]
 <./imagenes/Paradigma de programacion - PROCEDURAL.png, id=1146, 1064.97874pt x 773.89125pt>
@@ -1527,10 +1527,10 @@ Package cleveref Info: loaded `spanish' language definitions on input line 1875.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 26.1967pt, for example:
-(fancyhdr)                \setlength{\headheight}{26.1967pt}.
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-14.1967pt}.
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [73 <./imagenes/Paradigma de programacion - PROCEDURAL.png>]
 LaTeX Info: Redefining \. on input line 1925.
@@ -1539,10 +1539,10 @@ Package cleveref Info: loaded `spanish' language definitions on input line 1925.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 26.1967pt, for example:
-(fancyhdr)                \setlength{\headheight}{26.1967pt}.
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-14.1967pt}.
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [74]
 LaTeX Info: Redefining \. on input line 1961.
@@ -1551,10 +1551,10 @@ Package cleveref Info: loaded `spanish' language definitions on input line 1961.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 26.1967pt, for example:
-(fancyhdr)                \setlength{\headheight}{26.1967pt}.
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-14.1967pt}.
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [75]
 <./imagenes/Paradigma de programacion - ORIENTADO A OBJETO.png, id=1231, 1090.0725pt x 800.9925pt>
@@ -1568,10 +1568,10 @@ Package cleveref Info: loaded `spanish' language definitions on input line 1988.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 26.1967pt, for example:
-(fancyhdr)                \setlength{\headheight}{26.1967pt}.
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-14.1967pt}.
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [76 <./imagenes/Paradigma de programacion - ORIENTADO A OBJETO.png>]
 LaTeX Info: Redefining \. on input line 2041.
@@ -1580,10 +1580,10 @@ Package cleveref Info: loaded `spanish' language definitions on input line 2041.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 26.1967pt, for example:
-(fancyhdr)                \setlength{\headheight}{26.1967pt}.
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-14.1967pt}.
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [77]
 LaTeX Info: Redefining \. on input line 2093.
@@ -1592,10 +1592,10 @@ Package cleveref Info: loaded `spanish' language definitions on input line 2093.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 26.1967pt, for example:
-(fancyhdr)                \setlength{\headheight}{26.1967pt}.
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-14.1967pt}.
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [78]
 LaTeX Info: Redefining \. on input line 2148.
@@ -1604,10 +1604,10 @@ Package cleveref Info: loaded `spanish' language definitions on input line 2148.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 26.1967pt, for example:
-(fancyhdr)                \setlength{\headheight}{26.1967pt}.
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-14.1967pt}.
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [79]
 LaTeX Info: Redefining \. on input line 2179.
@@ -1616,10 +1616,10 @@ Package cleveref Info: loaded `spanish' language definitions on input line 2179.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 26.1967pt, for example:
-(fancyhdr)                \setlength{\headheight}{26.1967pt}.
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-14.1967pt}.
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [80]
 <./imagenes/Paradigma de programacion - FUNCIONAL.png, id=1432, 1075.01625pt x 733.74126pt>
@@ -1633,10 +1633,10 @@ Package cleveref Info: loaded `spanish' language definitions on input line 2205.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 26.1967pt, for example:
-(fancyhdr)                \setlength{\headheight}{26.1967pt}.
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-14.1967pt}.
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [81 <./imagenes/Paradigma de programacion - FUNCIONAL.png>]
 LaTeX Info: Redefining \. on input line 2259.
@@ -1645,10 +1645,10 @@ Package cleveref Info: loaded `spanish' language definitions on input line 2259.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 26.1967pt, for example:
-(fancyhdr)                \setlength{\headheight}{26.1967pt}.
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-14.1967pt}.
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [82]
 <./imagenes/encapsulacion.png, id=1491, 161.60374pt x 352.31625pt>
@@ -1662,10 +1662,10 @@ Package cleveref Info: loaded `spanish' language definitions on input line 2279.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 26.1967pt, for example:
-(fancyhdr)                \setlength{\headheight}{26.1967pt}.
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-14.1967pt}.
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [83 <./imagenes/encapsulacion.png>]
 <./imagenes/encapsulacion en paradigma orientado a objeto.png, id=1497, 349.305pt x 511.9125pt>
@@ -1679,10 +1679,10 @@ Package cleveref Info: loaded `spanish' language definitions on input line 2288.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 26.1967pt, for example:
-(fancyhdr)                \setlength{\headheight}{26.1967pt}.
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-14.1967pt}.
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [84 <./imagenes/encapsulacion en paradigma orientado a objeto.png>]
 <./imagenes/encapsulacion en paradigma funcional.png, id=1504, 331.2375pt x 390.70969pt>
@@ -1705,10 +1705,10 @@ LaTeX Info: Redefining \% on input line 2303.
 Package cleveref Info: loaded `spanish' language definitions on input line 2303.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 26.1967pt, for example:
-(fancyhdr)                \setlength{\headheight}{26.1967pt}.
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-14.1967pt}.
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [85 <./imagenes/encapsulacion en paradigma funcional.png> <./imagenes/encapsulacion en cola de mensajes.png>]
 <./imagenes/arquitectura - ball of mud.png, id=1513, 248.127pt x 180.675pt>
@@ -1727,10 +1727,10 @@ Package cleveref Info: loaded `spanish' language definitions on input line 2329.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 26.1967pt, for example:
-(fancyhdr)                \setlength{\headheight}{26.1967pt}.
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-14.1967pt}.
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [86 <./imagenes/arquitectura - ball of mud.png>]
 <./imagenes/arquitectura - distribuido.png, id=1523, 570.933pt x 275.22826pt>
@@ -1744,10 +1744,10 @@ Package cleveref Info: loaded `spanish' language definitions on input line 2346.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 26.1967pt, for example:
-(fancyhdr)                \setlength{\headheight}{26.1967pt}.
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-14.1967pt}.
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [87 <./imagenes/arquitectura - monolito.png> <./imagenes/arquitectura - distribuido.png>]
 LaTeX Info: Redefining \. on input line 2375.
@@ -1756,10 +1756,10 @@ Package cleveref Info: loaded `spanish' language definitions on input line 2375.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 26.1967pt, for example:
-(fancyhdr)                \setlength{\headheight}{26.1967pt}.
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-14.1967pt}.
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [88]
 LaTeX Info: Redefining \. on input line 2402.
@@ -1768,10 +1768,10 @@ Package cleveref Info: loaded `spanish' language definitions on input line 2402.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 26.1967pt, for example:
-(fancyhdr)                \setlength{\headheight}{26.1967pt}.
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-14.1967pt}.
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [89]
 LaTeX Info: Redefining \. on input line 2420.
@@ -1780,109 +1780,121 @@ Package cleveref Info: loaded `spanish' language definitions on input line 2420.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 26.1967pt, for example:
-(fancyhdr)                \setlength{\headheight}{26.1967pt}.
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-14.1967pt}.
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [90]
-LaTeX Info: Redefining \. on input line 2447.
-LaTeX Info: Redefining \% on input line 2447.
-Package cleveref Info: loaded `spanish' language definitions on input line 2447.
+LaTeX Info: Redefining \. on input line 2445.
+LaTeX Info: Redefining \% on input line 2445.
+Package cleveref Info: loaded `spanish' language definitions on input line 2445.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 26.1967pt, for example:
-(fancyhdr)                \setlength{\headheight}{26.1967pt}.
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-14.1967pt}.
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [91]
-LaTeX Info: Redefining \. on input line 2467.
-LaTeX Info: Redefining \% on input line 2467.
-Package cleveref Info: loaded `spanish' language definitions on input line 2467.
+LaTeX Info: Redefining \. on input line 2468.
+LaTeX Info: Redefining \% on input line 2468.
+Package cleveref Info: loaded `spanish' language definitions on input line 2468.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 26.1967pt, for example:
-(fancyhdr)                \setlength{\headheight}{26.1967pt}.
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-14.1967pt}.
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [92]
-LaTeX Info: Redefining \. on input line 2494.
-LaTeX Info: Redefining \% on input line 2494.
-Package cleveref Info: loaded `spanish' language definitions on input line 2494.
+LaTeX Info: Redefining \. on input line 2492.
+LaTeX Info: Redefining \% on input line 2492.
+Package cleveref Info: loaded `spanish' language definitions on input line 2492.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 26.1967pt, for example:
-(fancyhdr)                \setlength{\headheight}{26.1967pt}.
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-14.1967pt}.
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [93]
-LaTeX Info: Redefining \. on input line 2522.
-LaTeX Info: Redefining \% on input line 2522.
-Package cleveref Info: loaded `spanish' language definitions on input line 2522.
+LaTeX Info: Redefining \. on input line 2521.
+LaTeX Info: Redefining \% on input line 2521.
+Package cleveref Info: loaded `spanish' language definitions on input line 2521.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 26.1967pt, for example:
-(fancyhdr)                \setlength{\headheight}{26.1967pt}.
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-14.1967pt}.
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [94]
-LaTeX Info: Redefining \. on input line 2534.
-LaTeX Info: Redefining \% on input line 2534.
-Package cleveref Info: loaded `spanish' language definitions on input line 2534.
+LaTeX Info: Redefining \. on input line 2545.
+LaTeX Info: Redefining \% on input line 2545.
+Package cleveref Info: loaded `spanish' language definitions on input line 2545.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 26.1967pt, for example:
-(fancyhdr)                \setlength{\headheight}{26.1967pt}.
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-14.1967pt}.
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[95] [96
+[95]
+LaTeX Info: Redefining \. on input line 2549.
+LaTeX Info: Redefining \% on input line 2549.
+Package cleveref Info: loaded `spanish' language definitions on input line 2549.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[96] [97
 
 ]
-Overfull \hbox (2.34296pt too wide) in paragraph at lines 2566--2568
+Overfull \hbox (2.34296pt too wide) in paragraph at lines 2581--2583
 []\OT1/cmr/m/n/12 resumen ex-tra-ido del li-bro ``Ex-tre-me Pro-gram-ming. Poc-ket Gui-de'', O'Reilly [][]$\OT1/pcr/m/n/12 https :
  []
 
 
-Overfull \hbox (92.60844pt too wide) in paragraph at lines 2566--2568
+Overfull \hbox (92.60844pt too wide) in paragraph at lines 2581--2583
 \OT1/pcr/m/n/12 / / www . oreilly . com / library / view / extreme-[]programming-[]pocket / 9781449399849/$[][] 
  []
 
-LaTeX Info: Redefining \. on input line 2585.
-LaTeX Info: Redefining \% on input line 2585.
-Package cleveref Info: loaded `spanish' language definitions on input line 2585.
+LaTeX Info: Redefining \. on input line 2600.
+LaTeX Info: Redefining \% on input line 2600.
+Package cleveref Info: loaded `spanish' language definitions on input line 2600.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 26.1967pt, for example:
-(fancyhdr)                \setlength{\headheight}{26.1967pt}.
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-14.1967pt}.
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[97]
+[98]
 
 Package caption Warning: Unused \captionsetup[verbatim] on input line 74.
 See the caption package documentation for explanation.
 
-LaTeX Info: Redefining \. on input line 2607.
-LaTeX Info: Redefining \% on input line 2607.
-Package cleveref Info: loaded `spanish' language definitions on input line 2607.
+LaTeX Info: Redefining \. on input line 2622.
+LaTeX Info: Redefining \% on input line 2622.
+Package cleveref Info: loaded `spanish' language definitions on input line 2622.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 26.1967pt, for example:
-(fancyhdr)                \setlength{\headheight}{26.1967pt}.
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-14.1967pt}.
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[98] (./Proyecto_Software.aux
+[99] (./Proyecto_Software.aux
 LaTeX Info: Redefining \. on input line 22.
 LaTeX Info: Redefining \% on input line 22.
 Package cleveref Info: loaded `spanish' language definitions on input line 22.
@@ -1892,21 +1904,21 @@ LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-06-30>
  ***********
 Package rerunfilecheck Info: File `Proyecto_Software.out' has not changed.
-(rerunfilecheck)             Checksum: 22FD9B9002C603514B730D2E262FBC6C;26052.
+(rerunfilecheck)             Checksum: 646FD27C35B8D10E3A8B5DA29064B7FA;26034.
  ) 
 Here is how much of TeX's memory you used:
- 18764 strings out of 475237
- 316776 string characters out of 5762068
+ 18765 strings out of 475237
+ 316783 string characters out of 5762068
  2207238 words of memory out of 5000000
  39038 multiletter control sequences out of 15000+600000
  572559 words of font info for 91 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,13n,79p,1009b,2535s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/Users/jmurua/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/Users/jmurua/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/Users/jmurua/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/Users/jmurua/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/Users/jmurua/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/Users/jmurua/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/Users/jmurua/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/Users/jmurua/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/Users/jmurua/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/Users/jmurua/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/Users/jmurua/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/Users/jmurua/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/Users/jmurua/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/Users/jmurua/texlive/2023/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on Proyecto_Software.pdf (99 pages, 1674525 bytes).
+Output written on Proyecto_Software.pdf (100 pages, 1675729 bytes).
 PDF statistics:
- 1845 PDF objects out of 2073 (max. 8388607)
- 1650 compressed objects within 17 object streams
- 754 named destinations out of 1000 (max. 500000)
+ 1849 PDF objects out of 2073 (max. 8388607)
+ 1653 compressed objects within 17 object streams
+ 755 named destinations out of 1000 (max. 500000)
  903 words of extra memory for PDF output out of 10000 (max. 10000000)
 
