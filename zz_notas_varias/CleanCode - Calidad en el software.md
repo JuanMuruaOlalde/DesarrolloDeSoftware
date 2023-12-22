@@ -1,8 +1,7 @@
-# Calidad del software
+# Calidad en el software
 
 Ideas extraidas de la charla "Why Clean Code Is Not the Norm?" de Sandor Dargo
-<https://www.youtube.com/watch?v=zJ1eHxT_nCM>
-Con algunos añadidos de mi propia cosecha.
+<https://www.youtube.com/watch?v=zJ1eHxT_nCM>. Y el artículo "Is High Quality Software Worth the Cost?" de Martin Flowler <https://martinfowler.com/articles/is-quality-worth-cost.html>. Con algunos añadidos de mi propia cosecha.
 
 ## El concepto de `calidad`
 
@@ -52,7 +51,7 @@ Conseguir esto es costoso. Requiere de:
 - cuidado
 - tiempo
 
-Es necesario invertir en aprender y compartir conocimiento. Es necesario preparar los adecuados sistemas y herramientas, tener ejemplos adecuados y un entorno que permita hacerlo.
+Es necesario invertir en aprender y compartir conocimiento. Es necesario preparar los adecuados sistemas y herramientas, tener ejemplos adecuados y un entorno empresarial que permita hacerlo.
 
 Algunas referencias de por dónde empezar...
 
