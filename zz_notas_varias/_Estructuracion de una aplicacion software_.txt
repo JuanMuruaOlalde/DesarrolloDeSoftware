@@ -1,0 +1,47 @@
+Hace unos días me he topado con la mejor definición que he leido nunca sobre cómo empezar a ESTRUCTURAR NUESTROS PROGRAMAS EN FUNCIONES. Las funciones son el primer nivel de estructuración en los programas.
+
+El segundo nivel de estructuración pasa por AGRUPAR ESAS FUNCIONES en carpetas, módulos, clases, espacios de nombres, paquetes,...(o como sea que se llamen las agrupaciones en el lenguaje en que se esté trabajando). Cada agrupación reflejando una entidad, un concepto del dominio en el que estemos trabajando. Con la mayor cohesión posible dentro de cada grupo y con el mínimo de interdependencias entre grupos.
+
+
+Pasando a la parte práctica. Respecto a cómo construir una función:
+
+1. Identificar la información a tratar. Pensar en las estructuras de datos más adecuadas para soportarla en el lenguaje de programación que se esté utilizando. Ilustrar con ejemplos concretos.
+
+2. Establecer los datos que va a consumir la función y los datos va a producir. Elaborar la signatura de la función (parámetros de entrada recogidos y resultado devuelto).
+
+3. Identificar el propósito de la función. Pensar en lo que se desea que haga, en los distintos casos que se puedan presentar. Ilustrar con ejemplos concretos.
+
+4. Implementar una plantilla de la función. Código que funciona, una función a la que se puede llamar; aunque todavia no haga casi nada.
+
+5. Completar la implementación de la función. Rellenando lo que falta. Aprovechando los ejemplos recopilados en los pasos 1. y 3.
+
+6. Implementar los test necesarios para ir comprobando que la función realmente hace lo que se desea que haga. 
+  Test: llamar a la función con unos parámetros conocidos y comprobar que el resultado devuelto es el esperado en ese caso.
+  Los test pueden irse implementando conjuntamente durante el paso 5. Es decir, el paso 6. y el 5. están interrelacionados.
+
+Esos seis pasos aparecen en el prefacio de este libro: https://htdp.org/2023-8-14/Book/part_preface.html
+Un manual de enseñanza del grupo "Program by Design" https://programbydesign.org/ 
+Por cierto, este grupo es curioso. Trabaja los ejemplos en Racket, un derivado de Scheme, que es a su vez un dialecto de Lisp. Una familia de lenguajes muy productiva; aunque es una pena que no haya llegado a consolidarse (hasta hace poco las máquinas habituales no eran lo suficientemente potentes como para trabajar con esos lenguajes).
+https://en.wikipedia.org/wiki/Racket_(programming_language)
+https://en.wikipedia.org/wiki/Scheme_(programming_language)
+https://en.wikipedia.org/wiki/Lisp_(programming_language)
+
+
+
+Respecto al siguiente nivel de estructuración. Acerca de cómo pensar en clave de conceptos del dominio. Es conveniente estudiar DDD (Domain Driven Design)
+https://en.wikipedia.org/wiki/Domain-driven_design
+
+Para esto os recomendaria un par de libros:
+https://www.amazon.es/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/ref=sr_1_1
+https://www.amazon.es/Learning-Domain-Driven-Design-Aligning-Architecture/dp/1098100131/ref=sr_1_3
+
+El primer libro (Domain-Driven Design: Tackling Complexity in the Heart of Software) es en el que Eric Evans fundó las bases del tema. (Por cierto también podeis hacer una búsqueda por Internet de: Eric Evans DDD)
+
+El segundo libro (Learning Domain-Driven Design: Aligning Software Architecture and Business Strategy) es interesante porque contiene muchos ejemplos prácticos sobre cómo trabajar pensando en el dominio.
+
+
+Resumiendo:
+Importante trabajar en pequeños pasos incrementales (funciones). Pero sin perder de vista la arquitectura general del programa (DDD).
+
+Un abrazo,
+
