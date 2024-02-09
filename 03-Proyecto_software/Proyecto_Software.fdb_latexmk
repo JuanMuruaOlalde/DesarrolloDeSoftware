@@ -1,10 +1,10 @@
 # Fdb version 4
-["pdflatex"] 1703155673 "c:/Users/jmurua/Documents/murolaju/MisLibrosYDemasDocumentos/DesarrolloDeSoftware/03-Proyecto_software/Proyecto_Software.tex" "Proyecto_Software.pdf" "Proyecto_Software" 1703155677 0
-  "Proyecto_Software.aux" 1703155677 18232 d8fa055b8180acfeb7da029924be1f4a "pdflatex"
-  "Proyecto_Software.out" 1703155677 26034 646fd27c35b8d10e3a8b5da29064b7fa "pdflatex"
-  "Proyecto_Software.tex" 1703155673 176932 334aff54585a850225806d3c24643510 ""
-  "Proyecto_Software.toc" 1703155677 12001 9a99fb98923c50853bbedb0d16806c34 "pdflatex"
-  "c:/Users/jmurua/Documents/murolaju/MisLibrosYDemasDocumentos/DesarrolloDeSoftware/03-Proyecto_software/Proyecto_Software.tex" 1703155673 176932 334aff54585a850225806d3c24643510 ""
+["pdflatex"] 1707468382 "c:/Users/jmurua/Documents/murolaju/MisLibrosYDemasDocumentos/DesarrolloDeSoftware/03-Proyecto_software/Proyecto_Software.tex" "Proyecto_Software.pdf" "Proyecto_Software" 1707468386 0
+  "Proyecto_Software.aux" 1707468385 18232 d98cf738eb5be762733ed4d43ee060bc "pdflatex"
+  "Proyecto_Software.out" 1707468385 26034 646fd27c35b8d10e3a8b5da29064b7fa "pdflatex"
+  "Proyecto_Software.tex" 1707468373 177221 2eaa8203d47a86abd0382cfc3a0cae0c ""
+  "Proyecto_Software.toc" 1707468385 12001 1d923905ee60c902912df494032b36c9 "pdflatex"
+  "c:/Users/jmurua/Documents/murolaju/MisLibrosYDemasDocumentos/DesarrolloDeSoftware/03-Proyecto_software/Proyecto_Software.tex" 1707468373 177221 2eaa8203d47a86abd0382cfc3a0cae0c ""
   "c:/Users/jmurua/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc" 1689234506 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "c:/Users/jmurua/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1689233768 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/Users/jmurua/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1689235114 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -159,6 +159,7 @@
   "imagenes/portada-FiftyQuickIdeasToImproveYourTests-.jpg" 1698672397 19245 9993be2b9c3dafd3df5aa137a171f4d5 ""
   "imagenes/portada-FiftyQuickIdeasToImproveYourUserStories-.jpg" 1698672397 20875 3faef04d9f84b6d36a4ee0e7f7a5883f ""
   "imagenes/portada-IloveLogs-JayKreps.jpg" 1698933359 24451 0deea27edc3f7e7bbda606b25dfa56de ""
+  "imagenes/portada-LearningDomainDrivenDesign-Vlad Khononov.jpg" 1707468359 14373 4012891589bf31ecde310cac5de77fce ""
   "imagenes/portada-MasteringReguarExpressions-JeffreyEFFriedl.jpg" 1698933359 24938 48b69b1024e98cdbb060caa72c2fc7b1 ""
   "imagenes/portada-Refactoring-MartinFowler.jpg" 1698672397 20717 bb1fe55d73021fa4f9c9fd0a0367ceb0 ""
   "imagenes/portada-TestDrivenDevelopment-KentBeck.jpg" 1698672397 19934 7c958f1c845d1b54ba9b19318f69c738 ""
