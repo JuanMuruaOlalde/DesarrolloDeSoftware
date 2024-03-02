@@ -230,3 +230,44 @@ aumentar la X o la Y o la p según corresponda, y poner c a uno.
 =>	Cuando llega el momento de emitir una nueva versión, justo antes de compilarla, 
 revertir a .c0 o a .p0.c0 según corresponda.
 
+
+
+
+Una alternativa más sencilla:
+
+Trabajando solo con P.p.c (Producción, pruebas, compilacion).
+
+Siguiendo con la misma idea de que versiones con algún cero en alguna posición son las que se han lanzado a los usuarios. Bien sea a los usuarios de pruebas (P.p.0) o a los usuarios de producción (P.0.0).
+
+La secuencia seria:
+
+- Iniciamos con 0.1.1  (es la única excepción al tema de los ceros)
+- 0.1.0 la primera prueba que se lance. (0.p1.c0)
+- 0.2.1 seguimos trabajando...
+- 0.2.0 la segunda prueba que se lance. (0.p2.c0)
+- 0.3.1 seguimos trabajando...
+- 0.3.0 la tercera prueba que se lance. (0.p3.c0)
+- 0.4.1 seguimos trabajando...
+etc, etc
+- 0.32.0 la trigesimo segunda prueba que se lance. (0.p32.c0)
+- 0.33.1 seguimos trabajando...
+- 1.0.0 la primera versión de producción que se lance. (1.p0.c0)
+- 1.1.1 seguimos trabajando...
+- 1.1.0 la primera prueba que se lance. (1.p1.c0)
+- 1.2.1 seguimos trabajando...
+- 1.2.0 la segunda prueba que se lance. (1.p2.c0)
+etc, etc
+- 1.57.0 la quinquagésimo séptima prueba que se lance. (1.p57.c0)
+- 1.58.1 seguimos trabajando....
+- 2.0.0 la segunda versión de producción que se lance. (2.p0.c0)
+- 2.1.1 seguimos trabajando...
+- 2.1.0 la primera prueba que se lance. (2.p1.c0)
+- 2.2.1 seguimos trabajando...
+- 2.2.0 la segunda prueba que se lance. (2.p2.c0)
+etc, etc
+- 2.24.0 la vigesimo cuarta prueba que se lance. (2.p24.c0)
+- 1.25.1 seguimos trabajando....
+- 3.0.0 la tercera versión de producción que se lance. (3.p0.c0)
+etc, etc
+
+
