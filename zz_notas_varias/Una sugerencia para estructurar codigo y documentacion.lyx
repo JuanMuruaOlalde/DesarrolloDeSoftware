@@ -1,0 +1,442 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 3cm
+\topmargin 2.5cm
+\rightmargin 1.5cm
+\bottommargin 2cm
+\headsep 0.8cm
+\footskip 0.8cm
+\secnumdepth 3
+\tocdepth 2
+\paragraph_separation skip
+\defskip smallskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+Es conveniente tener todo 
+\begin_inset Quotes eld
+\end_inset
+
+lo importante
+\begin_inset Quotes erd
+\end_inset
+
+ de un proyecto junto, bajo una misma carpeta y bajo el paraguas de un gestor
+ de versiones.
+\end_layout
+
+\begin_layout Standard
+Por 
+\begin_inset Quotes eld
+\end_inset
+
+lo importante
+\begin_inset Quotes erd
+\end_inset
+
+ entiendo:
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+CÓDIGO FUENTE
+\emph default
+.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+RECURSOS
+\emph default
+: imágenes, archivos de configuración, localizaciones, archivos de datos,
+ etc.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+SCRIPT DE COMPILACIÓN
+\emph default
+: un archivo o una configuración del IDE que permita generar el programa
+ final automáticamente (sin necesidad de ninguna intervención manual posterior).
+\end_layout
+
+\begin_layout Itemize
+Programa compilado: No es tan importante, ya que siempre se puede generar
+ a partir del código fuente y de los recursos.
+ Pero suele ser útil tenerlo por si alguien quiere simplemente ejecutarlo
+ para probarlo y no tiene a mano el entorno de desarrollo.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+BACKLOG
+\emph default
+: lista (priorizada en las primeras entradas) (sin mucho detalle) de tareas
+ pendientes o funcionalidades a implementar => para no olvidar cosas y para
+ saber qué abordar a continuación tras terminar lo que se tiene entre manos.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+BITÁCORA
+\emph default
+: lista (en orden cronológico inverso) de anotaciones y comentarios sobre
+ sucesos importantes => para quien desee ponerse al día de cómo ha ido evolucion
+ando el proyecto.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+DOCUMENTOS
+\emph default
+: manuales de usuario, instrucciones de trabajo, diagramas explicativos,
+ etc.
+ => para quien desee ponerse al día de los aspectos prácticos técnico/operativos.
+\end_layout
+
+\begin_layout Standard
+Cada cual puede organizarse como mejor le parezca; cuanto menos estrictas/puntil
+losas sean las normas de estilo, más probable que se utilicen.
+ Pero suele ser útil respetar al menos los usos y costumbres básicos del
+ entorno de desarrollo que se esté utilizando.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Por ejemplo, en Visual Studio de Microsoft
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Una sugerencia de estructura carpetas de un proyecto Visual Studio.PNG
+	lyxscale 70
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Código fuente
+\begin_inset Newline newline
+\end_inset
+
+
+\emph default
+nota: si hay muchos archivos, utilizar clic-dcho 'Add new foder...' a discrección
+ para agruparlos en subcarpetas.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Recursos
+\emph default
+ => carpeta 'Resources' (y los recursos base, archivos .resx ocultos bajo
+ 'My Project' o bajo cada 'Form', accesibles a través de las 'propiedades'
+ del proyecto o del formulario)
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Script de compilación
+\emph default
+ => utilizar las 'Propiedades' ('Build Action' y 'Copy to Output Directory')
+ de los distintos archivos 'incluidos'(clic-dcho 'Add existing item...') en
+ el proyecto.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename Una sugerencia propiedades de archivos externos a incluir en proyecto Visual Studio.PNG
+	lyxscale 70
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Programa compilado => carpeta 'bin', con las subcarpetas 'Release' y 'Debug'
+\end_layout
+
+\begin_layout Itemize
+Backlog => archivo de texto 
+\begin_inset Quotes eld
+\end_inset
+
+BACKLOG
+\begin_inset Quotes erd
+\end_inset
+
+ o similar
+\end_layout
+
+\begin_layout Itemize
+Bitácora => archivo de texto 
+\begin_inset Quotes eld
+\end_inset
+
+BITACORA
+\begin_inset Quotes erd
+\end_inset
+
+ o similar
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Documentos
+\emph default
+ => carpeta 'doc'
+\end_layout
+
+\begin_layout Section*
+Por ejemplo, en entornos C y C++ 
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Código fuente
+\emph default
+ => carpetas 'src', 'lib' e 'include'
+\emph on
+
+\begin_inset Newline newline
+\end_inset
+
+
+\emph default
+nota: si hay muchos archivos, utilizar subcarpetas a discrección para agruparlos.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Recursos
+\emph default
+ => carpeta 'resources'
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Script de compilación
+\emph default
+ => archivo 'makefile' para 
+\begin_inset Quotes eld
+\end_inset
+
+make
+\begin_inset Quotes erd
+\end_inset
+
+ u otra herramienta similar.
+\end_layout
+
+\begin_layout Itemize
+Programa compilado => carpeta 'bin'
+\end_layout
+
+\begin_layout Itemize
+Backlog => archivo de texto 
+\begin_inset Quotes eld
+\end_inset
+
+backlog
+\begin_inset Quotes erd
+\end_inset
+
+ o similar
+\end_layout
+
+\begin_layout Itemize
+Bitácora => archivo de texto 
+\begin_inset Quotes eld
+\end_inset
+
+readme
+\begin_inset Quotes erd
+\end_inset
+
+ o similar
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Documentos
+\emph default
+ => carpeta 'doc'
+\end_layout
+
+\begin_layout Section*
+Por ejemplo, en entornos java 
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Código fuente
+\emph default
+ => Carpeta 'src' y subcarpetas 'main', 'resources', 'test',...
+ bajo ella.
+ Carpeta 'lib' para librerias externas que se estén utilizando.
+\begin_inset Newline newline
+\end_inset
+
+nota: La estructura de 
+\begin_inset Quotes eld
+\end_inset
+
+packages
+\begin_inset Quotes erd
+\end_inset
+
+ (espacio de nombres) se suele reflejar en subcarpetas bajo '../src/main/......'
+ Muchas veces con un prefijo del estilo de '../src/main/com/nombrecompañia/nombrea
+plicacion/......'.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Recursos
+\emph default
+ => la citada carpeta ../src/resources
+\begin_inset Newline newline
+\end_inset
+
+nota: algunos frameworks, como Maven, ponen todo bajo 'main': ../src/main/java
+ para código, ../src/main/resources para los recursos, etc.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Script de compilación
+\emph default
+ => archivo .xml para 
+\begin_inset Quotes eld
+\end_inset
+
+ant
+\begin_inset Quotes erd
+\end_inset
+
+ u otra herramienta similar.
+\end_layout
+
+\begin_layout Itemize
+Programa compilado => carpeta 'bin'
+\end_layout
+
+\begin_layout Itemize
+Backlog => archivo de texto 
+\begin_inset Quotes eld
+\end_inset
+
+BACKLOG
+\begin_inset Quotes erd
+\end_inset
+
+ o similar
+\end_layout
+
+\begin_layout Itemize
+Bitácora => archivo de texto 
+\begin_inset Quotes eld
+\end_inset
+
+README
+\begin_inset Quotes erd
+\end_inset
+
+ o similar
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Documentos
+\emph default
+ => carpeta 'doc'
+\end_layout
+
+\end_body
+\end_document
