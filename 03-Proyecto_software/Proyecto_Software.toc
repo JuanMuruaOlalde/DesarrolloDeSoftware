@@ -80,42 +80,42 @@
 \contentsline {subsection}{\numberline {7.2.3}Orientado a objeto}{76}{subsection.7.2.3}%
 \contentsline {subsection}{\numberline {7.2.4}Funcional}{81}{subsection.7.2.4}%
 \contentsline {section}{\numberline {7.3}Encapsulación}{84}{section.7.3}%
-\contentsline {section}{\numberline {7.4}Arquitecturas de software}{87}{section.7.4}%
-\contentsline {subsection}{\numberline {7.4.1}Según se reparte el código, se puede distinguir entre:}{87}{subsection.7.4.1}%
-\contentsline {subsubsection}{Pella de arcilla (``ball of mud'')}{87}{section*.17}%
-\contentsline {subsubsection}{Monolito}{87}{section*.18}%
-\contentsline {subsubsection}{Distribuido}{88}{section*.19}%
-\contentsline {subsection}{\numberline {7.4.2}Según cómo se reparte la funcionalidad, se puede distinguir entre:}{89}{subsection.7.4.2}%
-\contentsline {subsubsection}{Desktop, ``de escritorio''}{89}{section*.20}%
-\contentsline {subsubsection}{Cliente/Servidor}{89}{section*.21}%
-\contentsline {subsubsection}{(micro)Servicios distribuidos}{89}{section*.22}%
-\contentsline {section}{\numberline {7.5}Patrones de programación (patterns)}{90}{section.7.5}%
-\contentsline {subsection}{\numberline {7.5.1}Rationale, el por qué de los patrones}{90}{subsection.7.5.1}%
-\contentsline {subsection}{\numberline {7.5.2}Ejemplos de algunos patrones}{91}{subsection.7.5.2}%
-\contentsline {subsubsection}{observer}{91}{section*.23}%
-\contentsline {subsubsection}{chain of responsibility}{91}{section*.24}%
-\contentsline {subsubsection}{command}{91}{section*.25}%
-\contentsline {subsubsection}{memento}{91}{section*.26}%
-\contentsline {subsubsection}{adapter}{91}{section*.27}%
-\contentsline {subsubsection}{decorator}{91}{section*.28}%
-\contentsline {subsubsection}{facade}{91}{section*.29}%
-\contentsline {subsubsection}{proxy}{92}{section*.30}%
-\contentsline {section}{\numberline {7.6}Algoritmos}{92}{section.7.6}%
-\contentsline {subsection}{\numberline {7.6.1}Ordenación, clasificación y búsqueda}{93}{subsection.7.6.1}%
-\contentsline {subsubsection}{búsquedas directas}{93}{section*.31}%
-\contentsline {subsubsection}{estructuración arbórea}{93}{section*.32}%
-\contentsline {subsubsection}{estructuración indexada}{93}{section*.33}%
-\contentsline {subsubsection}{estructuración semántica}{93}{section*.34}%
-\contentsline {subsection}{\numberline {7.6.2}Cálculo numérico o simbólico}{94}{subsection.7.6.2}%
-\contentsline {subsubsection}{ecuaciones lineales}{94}{section*.35}%
-\contentsline {subsubsection}{derivación e integración}{94}{section*.36}%
-\contentsline {subsubsection}{series de Taylor}{94}{section*.37}%
-\contentsline {subsubsection}{transformadas de Fourier}{94}{section*.38}%
-\contentsline {subsection}{\numberline {7.6.3}Optimización, programación lineal}{94}{subsection.7.6.3}%
-\contentsline {subsection}{\numberline {7.6.4}Combinatorios}{95}{subsection.7.6.4}%
-\contentsline {subsubsection}{búsqueda por ``fuerza bruta''}{95}{section*.39}%
-\contentsline {subsubsection}{búsquedas reducidas, en profundidad o en anchura}{96}{section*.40}%
-\contentsline {subsubsection}{heurísticas}{96}{section*.41}%
-\contentsline {subsubsection}{métodos de Montecarlo}{96}{section*.42}%
-\contentsline {subsection}{\numberline {7.6.5}Algoritmos que aprenden}{96}{subsection.7.6.5}%
-\contentsline {subsection}{\numberline {7.6.6}Algoritmos que evolucionan}{97}{subsection.7.6.6}%
+\contentsline {section}{\numberline {7.4}Arquitecturas de software}{88}{section.7.4}%
+\contentsline {subsection}{\numberline {7.4.1}Según se reparte el código, se puede distinguir entre:}{88}{subsection.7.4.1}%
+\contentsline {subsubsection}{Pella de arcilla (``ball of mud'')}{88}{section*.17}%
+\contentsline {subsubsection}{Monolito}{88}{section*.18}%
+\contentsline {subsubsection}{Distribuido}{89}{section*.19}%
+\contentsline {subsection}{\numberline {7.4.2}Según cómo se reparte la funcionalidad, se puede distinguir entre:}{90}{subsection.7.4.2}%
+\contentsline {subsubsection}{Desktop, ``de escritorio''}{90}{section*.20}%
+\contentsline {subsubsection}{Cliente/Servidor}{90}{section*.21}%
+\contentsline {subsubsection}{(micro)Servicios distribuidos}{90}{section*.22}%
+\contentsline {section}{\numberline {7.5}Patrones de programación (patterns)}{91}{section.7.5}%
+\contentsline {subsection}{\numberline {7.5.1}Rationale, el por qué de los patrones}{91}{subsection.7.5.1}%
+\contentsline {subsection}{\numberline {7.5.2}Ejemplos de algunos patrones}{92}{subsection.7.5.2}%
+\contentsline {subsubsection}{observer}{92}{section*.23}%
+\contentsline {subsubsection}{chain of responsibility}{92}{section*.24}%
+\contentsline {subsubsection}{command}{92}{section*.25}%
+\contentsline {subsubsection}{memento}{92}{section*.26}%
+\contentsline {subsubsection}{adapter}{92}{section*.27}%
+\contentsline {subsubsection}{decorator}{92}{section*.28}%
+\contentsline {subsubsection}{facade}{92}{section*.29}%
+\contentsline {subsubsection}{proxy}{93}{section*.30}%
+\contentsline {section}{\numberline {7.6}Algoritmos}{93}{section.7.6}%
+\contentsline {subsection}{\numberline {7.6.1}Ordenación, clasificación y búsqueda}{94}{subsection.7.6.1}%
+\contentsline {subsubsection}{búsquedas directas}{94}{section*.31}%
+\contentsline {subsubsection}{estructuración arbórea}{94}{section*.32}%
+\contentsline {subsubsection}{estructuración indexada}{94}{section*.33}%
+\contentsline {subsubsection}{estructuración semántica}{94}{section*.34}%
+\contentsline {subsection}{\numberline {7.6.2}Cálculo numérico o simbólico}{95}{subsection.7.6.2}%
+\contentsline {subsubsection}{ecuaciones lineales}{95}{section*.35}%
+\contentsline {subsubsection}{derivación e integración}{95}{section*.36}%
+\contentsline {subsubsection}{series de Taylor}{95}{section*.37}%
+\contentsline {subsubsection}{transformadas de Fourier}{95}{section*.38}%
+\contentsline {subsection}{\numberline {7.6.3}Optimización, programación lineal}{95}{subsection.7.6.3}%
+\contentsline {subsection}{\numberline {7.6.4}Combinatorios}{96}{subsection.7.6.4}%
+\contentsline {subsubsection}{búsqueda por ``fuerza bruta''}{96}{section*.39}%
+\contentsline {subsubsection}{búsquedas reducidas, en profundidad o en anchura}{97}{section*.40}%
+\contentsline {subsubsection}{heurísticas}{97}{section*.41}%
+\contentsline {subsubsection}{métodos de Montecarlo}{97}{section*.42}%
+\contentsline {subsection}{\numberline {7.6.5}Algoritmos que aprenden}{97}{subsection.7.6.5}%
+\contentsline {subsection}{\numberline {7.6.6}Algoritmos que evolucionan}{98}{subsection.7.6.6}%
