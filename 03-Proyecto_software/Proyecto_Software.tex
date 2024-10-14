@@ -2351,24 +2351,26 @@ El sistema operativo se encarga de interactuar con el hardware y de ofrecer unos
 
 El programa realiza el trabajo concreto para el que ha sido desarrollado. Aprovechando, allá donde le sean útiles, los servicios del sistema operativo.
 
-\subsubsection{Cliente/Servidor}
+\subsubsection{Cliente/Servidor básico}
+Algunas partes del trabajo (por ejemplo, el almacenamiento y gestion de datos) se delegan en máquinas externas (servidores).
+
+\subsubsection{Cliente/Servidor o Frontend/Backend}
 La división de tareas es más avanzada y ya no está restringida al interior de una sola máquina. Una parte del programa se ubica en otra máquina externa.
 
 Habitualmente, 
 \begin{itemize}
-\item La parte en la máquina del usuario (cliente) se encarga de interactuar con este. 
-\item Y la parte exterior (servidor) se encarga de manejar/almacenar la información.
+\item La parte en la máquina del usuario (cliente, frontend) se encarga de interactuar con este. 
+\item Y la parte exterior (servidor, backend) se encarga de manejar/almacenar la información y la lógica de negocio.
 \end{itemize}
 
-En cierto modo, se podrian englobar también en esta categoria las `aplicaciones web'. En ellas el cliente es un navegador web estándar y el servidor es quien lleva la mayor parte del peso del trabajo a realizar. De esta forma, se ahorran problemas derivados de la instalación/mantenimiento de un programa cliente ad-hoc.
 
 \subsubsection{(micro)Servicios distribuidos}
-La división de tareas es total. El sistema lo componen multitud de pequeños programas, en una sola o en multitud de máquinas. Cada programa se encarga de una tarea concreta y es autosuficiente para realizarla; ofreciendo sus servicios al resto del sistema.
+La división de tareas es total. El sistema lo componen multitud de pequeños programas, en una sola o en multitud de máquinas. Cada programa se encarga de una tarea concreta y es autosuficiente para realizarla; ofreciendo su servicio al resto del sistema.
 
 Obviamente, son necesarios una serie de mecanismos estandarizados para:
 \begin{itemize}
 \item buscar el servicio requerido (no se puede llamar a algo que no se sabe que existe o no se sabe dónde está) 
-\item hacer uso de él (llamarlo, pasarle los datos/comandos de entrada correspondientes y recoger de él los datos/avisos de salida respectivos)
+\item hacer uso de un servicio (llamarlo, pasarle los datos/comandos de entrada correspondientes y recoger de él los datos/avisos de salida respectivos)
 \end{itemize}
 
 Los programas de aplicación, hacen uso de ese ``universo'' de servicios para completar el trabajo que vayan a realizar.
@@ -2384,7 +2386,7 @@ Si esa anotación es compartida y refinada por muchas personas a lo largo del ti
 
 
 \subsection{Rationale, el por qué de los patrones}
-Un patrón de programación es la descripción detallada de un elemento software que resuelve un problema de  aparición frecuente en la construcción de programas. 
+Un patrón de programación es la descripción detallada de un elemento software que resuelve un problema de aparición frecuente en la construcción de programas. 
 
 Hay bastantes ya identificados, resueltos y documentados. Pero la técnica es también útil si nos encontramos repetidamente con un determinado problema: una vez resuelto, conviene escribir un patrón documentándolo.
 

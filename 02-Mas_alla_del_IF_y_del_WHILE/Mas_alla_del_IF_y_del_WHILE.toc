@@ -68,30 +68,31 @@
 \contentsline {chapter}{\numberline {8}Procesamiento concurrente, paralelo y/o distribuido}{54}{chapter.8}%
 \contentsline {section}{\numberline {8.1}Definiciones}{55}{section.8.1}%
 \contentsline {section}{\numberline {8.2}Algunos usos donde es imprescindible}{55}{section.8.2}%
-\contentsline {subsection}{\numberline {8.2.1}Multitarea}{55}{subsection.8.2.1}%
+\contentsline {subsection}{\numberline {8.2.1}Tiempo Real}{55}{subsection.8.2.1}%
 \contentsline {subsection}{\numberline {8.2.2}Gráficos}{56}{subsection.8.2.2}%
 \contentsline {subsection}{\numberline {8.2.3}Cálculos ``masivos''}{56}{subsection.8.2.3}%
 \contentsline {subsection}{\numberline {8.2.4}Sistemas ``a escala Internet''}{56}{subsection.8.2.4}%
-\contentsline {section}{\numberline {8.3}Estrategias para repartir tareas}{57}{section.8.3}%
-\contentsline {section}{\numberline {8.4}Salvaguardas para evitar problemas al usar recursos exclusivos}{58}{section.8.4}%
-\contentsline {subsection}{\numberline {8.4.1}operaciones atómicas}{58}{subsection.8.4.1}%
-\contentsline {subsection}{\numberline {8.4.2}transacciones}{58}{subsection.8.4.2}%
-\contentsline {subsection}{\numberline {8.4.3}semáforos}{59}{subsection.8.4.3}%
-\contentsline {subsection}{\numberline {8.4.4}evitar bloqueos permanentes}{59}{subsection.8.4.4}%
-\contentsline {section}{\numberline {8.5}Procesos cooperativos, \\orientación a servicios}{59}{section.8.5}%
-\contentsline {chapter}{\numberline {9}Organización interna del código}{61}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Orientación a eventos (event-driven)}{61}{section.9.1}%
-\contentsline {section}{\numberline {9.2}Orientación a objetos (object-oriented)}{62}{section.9.2}%
-\contentsline {section}{\numberline {9.3}Arquitecturas multi-capa (n-tier)}{63}{section.9.3}%
-\contentsline {section}{\numberline {9.4}Aplicaciones distribuidas}{69}{section.9.4}%
-\contentsline {section}{\numberline {9.5}Orientación a servicios \\ (SOA, SaaS, microservices,...) }{71}{section.9.5}%
-\contentsline {section}{\numberline {9.6}Orientación a servicios, arquitectura REST \\(REpresentational State Transfer)}{71}{section.9.6}%
-\contentsline {section}{\numberline {9.7}Ejercicios}{73}{section.9.7}%
-\contentsline {chapter}{\numberline {10}apéndice A: ejemplos de posibles herramientas de trabajo}{74}{chapter.10}%
-\contentsline {section}{\numberline {10.1}Para programar en Java}{74}{section.10.1}%
-\contentsline {section}{\numberline {10.2}Para programar en C++}{75}{section.10.2}%
-\contentsline {section}{\numberline {10.3}Para programar en C\#}{75}{section.10.3}%
-\contentsline {section}{\numberline {10.4}Para programar en Python}{76}{section.10.4}%
-\contentsline {section}{\numberline {10.5}Para programar en HTML5/CSS/Javascript}{76}{section.10.5}%
-\contentsline {section}{\numberline {10.6}Una herramienta transversal: almacenamiento de código con control de versiones}{77}{section.10.6}%
-\contentsline {section}{\numberline {10.7}Otra herramienta transversal: motor de base de datos}{78}{section.10.7}%
+\contentsline {section}{\numberline {8.3}Estrategias para repartir y colaborar}{57}{section.8.3}%
+\contentsline {section}{\numberline {8.4}Salvaguardas para evitar problemas al usar recursos compartidos}{58}{section.8.4}%
+\contentsline {subsection}{\numberline {8.4.1}detección y recuperación}{58}{subsection.8.4.1}%
+\contentsline {subsection}{\numberline {8.4.2}operaciones atómicas}{59}{subsection.8.4.2}%
+\contentsline {subsection}{\numberline {8.4.3}transacciones}{59}{subsection.8.4.3}%
+\contentsline {subsection}{\numberline {8.4.4}semáforos}{60}{subsection.8.4.4}%
+\contentsline {subsection}{\numberline {8.4.5}evitar bloqueos permanentes}{60}{subsection.8.4.5}%
+\contentsline {section}{\numberline {8.5}Procesos cooperativos, \\orientación a servicios}{60}{section.8.5}%
+\contentsline {chapter}{\numberline {9}Organización interna del código}{62}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Orientación a eventos (event-driven)}{62}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Orientación a objetos (object-oriented)}{63}{section.9.2}%
+\contentsline {section}{\numberline {9.3}Arquitecturas multi-capa (n-tier)}{64}{section.9.3}%
+\contentsline {section}{\numberline {9.4}Aplicaciones distribuidas}{70}{section.9.4}%
+\contentsline {section}{\numberline {9.5}Orientación a servicios \\ (SOA, SaaS, microservices,...) }{72}{section.9.5}%
+\contentsline {section}{\numberline {9.6}Orientación a servicios, arquitectura REST \\(REpresentational State Transfer)}{72}{section.9.6}%
+\contentsline {section}{\numberline {9.7}Ejercicios}{74}{section.9.7}%
+\contentsline {chapter}{\numberline {10}apéndice A: ejemplos de posibles herramientas de trabajo}{75}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Para programar en Java}{75}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Para programar en C++}{76}{section.10.2}%
+\contentsline {section}{\numberline {10.3}Para programar en C\#}{76}{section.10.3}%
+\contentsline {section}{\numberline {10.4}Para programar en Python}{77}{section.10.4}%
+\contentsline {section}{\numberline {10.5}Para programar en HTML5/CSS/Javascript}{77}{section.10.5}%
+\contentsline {section}{\numberline {10.6}Una herramienta transversal: almacenamiento de código con control de versiones}{78}{section.10.6}%
+\contentsline {section}{\numberline {10.7}Otra herramienta transversal: motor de base de datos}{79}{section.10.7}%

@@ -1581,31 +1581,35 @@ Es más, hay situaciones en que el procesamiento concurrente o paralelo puede se
 
 De todas formas, en todos los sistemas siempre ha habido necesidad de realizar varias tareas en paralelo. Si no es más, para aprovechar los ``espacios muertos'' entre los momentos de interacción con el usuario (el aspecto más lento del sistema); o para refrescar convenientemente la presentación al usuario según se están realizando tareas largas.
 
-Hasta hace unos años, este paralelismo era virtual (una sola unidad de procesamiento atendía todas las tareas) y suponía una carga adicional al sistema (la sobrecarga de congelar una tarea para reactivar otra, y de hacerlo a una velocidad tal que todas las tareas parecieran estar funcionando a la vez). De ahí que solo se utilizara cuando era estrictamente necesario.
+Hasta hace unos años, esta multitarea era virtual (una sola unidad de procesamiento atendía todas las tareas) y suponía una carga adicional al sistema (la sobrecarga de congelar una tarea para reactivar otra, y de hacerlo a una velocidad tal que todas las tareas parecieran estar funcionando a la vez). De ahí que solo se utilizara cuando era estrictamente necesario.
 
-Pero hoy en día, el paralelismo es real. El hardware de computación está llegando al límite de frecuencia de reloj y de optimización interna de cada unidad. Para seguir mejorando, los fabricantes han optado por integrar múltiples unidades de computación (cores) en cada procesador y multiples (co)procesadores en cada sistema.
+Pero hoy en día, la multitarea es real. El hardware de computación está llegando al límite de frecuencia de reloj y de optimización interna de cada unidad. Para seguir mejorando, los fabricantes han optado por integrar múltiples unidades de computación (cores) en cada procesador y multiples (co)procesadores en cada sistema.
 
-Es decir, la programación de software concurrente o paralelo está cobrando cada vez más importancia. Hoy en día es imprescindible para aprovechar toda la capacidad de los sistemas hardware.
+Es decir, la programación de software concurrente o paralelo está cobrando cada vez más importancia. Siendo hoy en día imprescindible para aprovechar toda la capacidad de los sistemas hardware.
 
 \section{Definiciones}
 \begin{description}
 
-\item[Secuencial:] Se realiza un trabajo. Cuando termina, se realiza otro. Cuando termina, se realiza otro. Y así sucesivamente, un trabajo tras otro.
+\item[Batch:] Se prepara una lista de trabajos. Para irlos ejecutando uno a continuación de otro, según la secuencia preprogramada.
 
-\item[Concurrente:] Múltiples trabajos ejecutandose de forma simultánea; bien sea un paso o tarea de cada trabajo en cada momento (intercalandose los trabajos entre ellos) o bien varios pasos simultáneamente. Pero sin que un trabajo deba esperar a que otro termine completamente.
-\\Se puede realizar con una sola unidad de procesamiento o con varias.
+\item[Secuencial:] Se va realizando un trabajo tras otro, según van llegando. Un trabajo no comienza hasta que no termina el anterior.
 
-\item[Paralelo:] Multiples pasos o tareas ejecutandose de forma simultánea; todos ellos pertenecientes a un mismo trabajo secuencial o pertenecientes a varios trabajos concurrentes. 
-\\Paralelismo implica tener varias unidades de procesamiento.
+\item[Concurrente:] Múltiples trabajos se van solapando en el tiempo, pero su ejecución no es necesariamente simultánea.
+\\Se suele utilizar cuando se necesita garantizar un tiempo máximo de respuesta para cada trabajo. Es decir, cuando un trabajo no puede obligar a todos los demás a permanecer inativos hasta que termine.
+\\Se puede realizar con varias unidades de procesamiento (repartiendo trabajos entre ellas) o también con una sola unidad de procesamiento (alternando entornos de ejecución).
 
-\item[Distribuido:] Los trabajos (o los pasos/tareas) se realizan en varios equipos diferentes, usualmente conectados entre sí a través de una red de comunicaciones.
+\item[Paralelo:] Multiples trabajos ejecutandose de forma simultánea. Pudiendo ser algunos de ellos partes de una tarea mayor.
+\\Se suele utilizar para completar los trabajos en menos tiempo.
+\\Implica disponer de varias unidades de procesamiento.
+
+\item[Distribuido:] Los trabajos se realizan en varias máquinas diferentes, cada una de ellas independiente de las demás. Conectadas entre sí a través de una red de comunicaciones, para intercambiar información y coordinar trabajos.
 
 \end{description}
 
 \section{Algunos usos donde es imprescindible}
 
 
-\subsection{Multitarea}
+\subsection{Tiempo Real}
 Por ejemplo, para evitar que una tarea muy larga acapare el sistema y parezca que este ha quedado congelado por no visualizar lo que está haciendo. O, por ejemplo, para aprovechar los espacios de tiempo entre los lentos procesos humanos; de tal forma que se puedan realizar otros trabajos mientras se atiende el interfaz de usuario. O, por ejemplo, para atender a varios eventos o a varios usuarios a la vez.
 
 Cuando cohabitan varias tareas, el control de las mismas puede ser:
@@ -1648,16 +1652,30 @@ No hay sistema dedicado capaz de hacer frente a ese tipo de demanda. Ya que si s
 Se necesita un sistema flexible donde se puedan poner a trabajar más o menos recursos según sea la demanda en cada momento. Recursos que cuando no se utilizan en este sistema se puedan emplear para dar servicio a otros sistemas cuyos picos de demanda tengan la gracia de no coincidir con los picos de este.
 
 
-\section{Estrategias para repartir tareas}
+\section{Estrategias para repartir y colaborar}
 
 Este es el ``caballo de batalla'' del procesamiento concurrente/paralelo: cómo dividir cada trabajo en múltiples tareas que puedan ser ejecutadas de forma independiente y cómo ir recombinando resultados parciales de todas ellas para obtener el resultado final perseguido. Todo ello sin que las múltiples tareas se ``estorben'' entre sí.
 
-Mirándolo desde el punto de vista de la coordinación. Los distintos trabajos o tareas pueden interactuar entre sí:
+
+Mirandolo desde el punto de vista de las dependencias. Los distintos trabajos pueden necesitar:
+
+\begin{itemize}
+
+  \item Usar a turnos un recurso compartido que solo puede ser usado por un trabajo a la vez.
+  \item Actualizar un estado común utilizado por varios trabajos.
+  \item Compartir información con otros trabajos.
+
+\end{itemize}
+
+Para lidiar con recursos o estados compartidos, se suelen utilizar o bien bloqueos que reservan el uso para un solo trabajo cada vez durante todo el tiempo que necesite para completarse, o bien operaciones atómicas que puedan ser realizadas sin dar tiempo a otro trabajo a interponerse.
+
+Para lidiar con la compartición de información, se suele utilizar o bien esperas (await) por parte de un trabajo al otro al que ha pedido la información, o bien mensajes que un trabajo envia (send-and-forget) cuando termina su parte y que otro recibe/procesa cuando pueda leerlo.
+
+Mirándolo desde el punto de vista de la coordinación. Los distintos trabajos pueden interactuar entre sí:
 
 \begin{itemize}
 
 \item De forma independiente $\rightarrow$ Cada uno compite solo por recursos de procesamiento. Todos ellos se van repartiendo los recursos disponibles según estén disponibles $\rightarrow$ COORDINADOR (SCHEDULER)
-
 
 \item De forma colaborativa $\rightarrow$ Unos generan información o dan servicios que otros necesitan. Todos ellos se van coordinando entre sí para llegar al resultado final $\rightarrow$ ejecución ASINCrona, COLAS de mensajes,\ldots
 
@@ -1691,11 +1709,32 @@ De ahí la importancia de diseñar las arquitecturas y los algoritmos de tal for
 
 
 
-\section{Salvaguardas para evitar problemas al usar recursos exclusivos}
+\section{Salvaguardas para evitar problemas al usar recursos compartidos}
 
-Como se ha comentado, es mejor evitar utilizar recursos compartidos que se han de utilizar en exclusividad. Pero en la práctica no suele ser siempre posible evitarlos. 
+Como se ha comentado, es mejor evitar recursos compartidos que se hayan de utilizar en exclusividad. Pero en la práctica no siempre es posible evitarlos. 
 
-Cuando se utilizen, es básico garantizar que unas tareas no interfieran ni estropeen el trabajo de otras. 
+Cuando se utilizen, es básico garantizar que unas tareas no interfieran ni estropeen el trabajo de otras. Los problemas más habituales suelen ser:
+
+\begin{itemize}
+  \item Una tarea acapara algo y no lo libera. Deteniendo indefinidamente el trabajo de otras que están a la espera de ese algo.
+  \item Una tarea espera algo de otra. Pero no se entera de que esa otra tiene problemas y no se lo va a poder suministrar; quedando indefinidamente a la espera.
+  \item Una tarea lee unos datos y trabaja en base a ellos. Sin percatarse que otra tarea, entremedio, ha alterado dichos datos; invalidando el trabajo que está realizando.
+\end{itemize}
+
+\subsection{detección y recuperación}
+La forma más básica de soslayar problemas es tener algún mecanismo de vigilancia. Que:
+\begin{itemize}
+  \item O bien detecta el problema y lo notifica a las partes afectadas. Para que cada una actue en consecuencia.
+  \item O bien establece unos tiempos máximos de espera (timeout). De tal forma que, al alcanzarse el tiempo máximo establecido, la tarea se da por perdida y se recupera el uso o se actua en consecuencia para permitir que el sistema continue trabajando.
+\end{itemize}
+
+Habitualmente se suele complementar con algún mecanismo de reintento. Siempre y cuando sea viable reintentar las tareas fallidas.
+
+Con los reintentos, dos problemas muy típicos son:
+\begin{itemize}
+  \item Malinterpretar un reintento como una nueva operación, duplicando resultados. Para evitarlo, se suele recurrir a identificar de algún modo unívoco cada operación, de tal forma que tanto la operación inicial como sus reintentos tengan la misma identificación y pueda saberse si está o no ya realizada.
+  \item Reintentos masivos en un sistema congestionado, provocando una congestión aún mayor. Para evitarlo, se suele recurrir a lanzar cada reintento con un cierto retraso aleatório; siendo ese retraso progresivamente mayor para un segundo, tercer, cuarto,... reintento de una misma operación.
+\end{itemize}
 
 \subsection{operaciones atómicas}
 Atención al modificar cualquier dato, la secuencia leer-modificar-escribir ha de hacerse siempre de forma monolítica (atómica) (en un solo paso).
