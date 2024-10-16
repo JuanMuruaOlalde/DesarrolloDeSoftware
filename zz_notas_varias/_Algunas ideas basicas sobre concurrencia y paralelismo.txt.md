@@ -100,7 +100,7 @@ Si una hebra necesita interactuar con algo compartido con otras hebras:
 
 Lo mejor es evitar en la medida de lo posible las interacciones entre hebras o procesos. Si cada trabajo es independiente, se puede realizar dónde, cuándo y cómo se estime oportuno.
 
-En caso de ser imprescindible una comunicación (traspaso de información la hebra y el exterior a ella), procurar que las interacciones sean atómicas, rápidas y definitivas; solo intercambios puntuales de información. Idealmente, antes de la interacción, cada hebra participante no ha de esperar a ninguna otra; tras la interacción, cada hebra participante no adquiere ninguna dependencia respecto a ninguna de las otras.
+En caso de ser imprescindible una comunicación (traspaso de información entre una hebra y el exterior a ella), procurar que las interacciones sean atómicas, rápidas y definitivas; solo intercambios puntuales de información. Idealmente, antes de la interacción, cada hebra participante no deberia tener que esperar a ninguna otra; tras la interacción, cada hebra participante no deberia adquirir ninguna dependencia respecto a ninguna de las otras.
 
 En caso de no haber más remedio que esperar a una respuesta o al uso compartido de algo. Es donde se complica la cosa... ya que requiere pensar en toda la posible casuística que se pueda producir. Y ya se sabe: "cuanto más puntos de interacción => más cantidad de posibles fallos o problemas a tener en cuenta"
 
