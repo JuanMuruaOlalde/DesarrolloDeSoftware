@@ -105,3 +105,86 @@ En caso de ser imprescindibles, procurar que las interacciones sean atómicas, r
 Cada vez que sea imprescindible el esperar a una respuesta o el uso compartido de algo. Es donde se complica la cosa... ya que requiere pensar en toda la posible casuística que se pueda producir. Y ya se sabe: "cuanto más puntos de interacción => más cantidad de posibles fallos o problemas a tener en cuenta"
 
 
+## apéndices
+
+### en Rust
+
+El propio compilador te ayuda. (Si tienes claros los conceptos de "[ownership](https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html)" y de "[lifetime](https://doc.rust-lang.org/book/ch10-03-lifetime-syntax.html)".)
+
+El trabajo con hebras está muy bien documentado en el capítulo 16 de "The Book" (https://doc.rust-lang.org/book/ch16-00-concurrency.html)
+
+Ese manual trae también un buen ejemplo de un programa no trivial que utiliza hebras (https://doc.rust-lang.org/book/ch20-02-multithreaded.html)
+
+### una aclaración: shallow copy vs deep copy
+
+Según Copilot:
+
+The concepts of shallow and deep copying are crucial, especially in multithreaded environments where data consistency and thread safety are paramount.
+
+- Shallow Copy: This involves copying an object by copying its field values. If the object contains references to other objects, only the references are copied, not the objects themselves. This means that changes to the referenced objects will affect both the original and the copied object. Shallow copies are faster and less resource-intensive but can lead to issues if multiple threads modify shared objects.
+
+- Deep Copy: This involves copying an object and recursively copying all objects referenced by the original object. This creates a completely independent copy, ensuring that changes to the original object do not affect the copied object. Deep copies are more complex and slower but are safer in multithreaded environments as they prevent unintended side effects from shared references.
+
+In multithreaded environments, deep copying is often preferred to avoid concurrency issues, but it comes at the cost of performance. Shallow copying can be used when performance is critical and you are certain that the referenced objects will not be modified concurrently.
+
+
+
+### en Java
+
+Tienes que preocuparte tú de utilizar "deep copy"s al pasar variables entre hebras:
+
+(https://stackoverflow.com/questions/6182565/deep-copy-shallow-copy-clone)
+
+Es decir has de preocuparte tú de utilizar estructuras de datos "thread safe" para comunicaciones entre hebras durante su ejecución:
+
+[java.util.concurrent](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/concurrent/package-summary.html)
+
+[BlockingQueue](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/concurrent/BlockingQueue.html)
+
+[Concurrent Collections](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/concurrent/package-summary.html#concurrent-collections-heading)
+
+
+Por lo demás, el tema de los "mutex" para proteger recursos compartidos de acceso secuencial exclusivo es muy similar a como lo es en cualquier otro lenguaje de programación:
+
+[Synchronizers](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/concurrent/package-summary.html#synchronizers-heading)
+
+[Semaphore](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/concurrent/Semaphore.html)
+
+
+### en C#, .NET
+
+Tienes que preocuparte tú de utilizar "deep copy"s al pasar variables entre hebras:
+
+(https://stackoverflow.com/questions/18066429/shallow-copy-or-deep-copy)
+
+Es decir has de preocuparte tú de utilizar estructuras de datos "thread safe" para comunicaciones entre hebras durante su ejecución:
+
+[System.Collections.Concurrent](https://learn.microsoft.com/en-us/dotnet/api/system.collections.concurrent?view=net-8.0)
+
+[BlockingCollection](https://learn.microsoft.com/en-us/dotnet/api/system.collections.concurrent.blockingcollection-1?view=net-8.0)
+
+[System.Collections and Synchronized property](https://learn.microsoft.com/en-us/dotnet/standard/collections/thread-safe/)
+
+Por lo demás, el tema de los "mutex" para proteger recursos compartidos de acceso secuencial es muy similar a como lo es en cualquier otro lenguaje de programación:
+
+[System.Threading](https://learn.microsoft.com/en-us/dotnet/api/system.threading?view=net-8.0)
+
+[Semaphore](https://learn.microsoft.com/en-us/dotnet/api/system.threading.semaphore?view=net-8.0)
+
+### en Python
+
+Tienes que preocuparte tú de utilizar "deep copy"s al pasar variables entre hebras:
+
+(https://realpython.com/copying-python-objects/)
+
+Es decir has de preocuparte tú de utilizar estructuras de datos "thread safe" para comunicaciones entre hebras durante su ejecución:
+
+[queue.Queue](https://docs.python.org/3/library/queue.html)
+
+Por lo demás, el tema de los "mutex" para proteger recursos compartidos de acceso secuencial es muy similar a como lo es en cualquier otro lenguaje de programación:
+
+[multiprocessing](https://docs.python.org/3/library/multiprocessing.html#synchronization-between-processes)
+
+[threading](https://docs.python.org/3/library/multiprocessing.html#synchronization-between-processes)
+
+[Semaphore](https://docs.python.org/3/library/threading.html#semaphore-objects)
