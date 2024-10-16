@@ -94,15 +94,15 @@ Si una hebra necesita interactuar con algo compartido con otras hebras:
   
   - Prever algún mecanismo para que las hebras que están esperando puedan "hacer cola" en un cierto orden. Idealmente esa cola avisaria de vuelta a cada hebra cuando le toque, para evitar que estén todas consultando repetidamente si pueden o no adquirir el mutex.
   
-  - En el caso de interacciones que requieran mucho tiempo para completarse. Prever la posibilidad de haber muchas hebras en la cola y que alguna renuncie a apuntare en la misma. Prever también la posibilidad de que alguna hebra quiera abandonar la cola porque está tardando demasiado en tener acceso al mutex.
+  - En el caso de interacciones que requieran mucho tiempo para completarse. Prever la posibilidad de haber muchas hebras en la cola y que alguna renuncie a apuntarse en la misma. Prever también la posibilidad de que alguna hebra quiera abandonar la cola porque está tardando demasiado en tener acceso al mutex.
   
 ## Conclusión
 
 Lo mejor es evitar en la medida de lo posible las interacciones entre hebras o procesos. Si cada trabajo es independiente, se puede realizar dónde, cuándo y cómo se estime oportuno.
 
-En caso de ser imprescindibles, procurar que las interacciones sean atómicas, rápidas y definitivas; solo intercambios puntuales de información. Antes de la interacción, cada hebra participante no ha de esperar a ninguna otra. Tras la interacción, cada hebra participante no adquiere ninguna dependencia respecto a ninguna de las otras.
+En caso de ser imprescindible una comunicación (traspaso de información la hebra y el exterior a ella), procurar que las interacciones sean atómicas, rápidas y definitivas; solo intercambios puntuales de información. Idealmente, antes de la interacción, cada hebra participante no ha de esperar a ninguna otra; tras la interacción, cada hebra participante no adquiere ninguna dependencia respecto a ninguna de las otras.
 
-Cada vez que sea imprescindible el esperar a una respuesta o el uso compartido de algo. Es donde se complica la cosa... ya que requiere pensar en toda la posible casuística que se pueda producir. Y ya se sabe: "cuanto más puntos de interacción => más cantidad de posibles fallos o problemas a tener en cuenta"
+En caso de no haber más remedio que esperar a una respuesta o al uso compartido de algo. Es donde se complica la cosa... ya que requiere pensar en toda la posible casuística que se pueda producir. Y ya se sabe: "cuanto más puntos de interacción => más cantidad de posibles fallos o problemas a tener en cuenta"
 
 
 ## apéndices
