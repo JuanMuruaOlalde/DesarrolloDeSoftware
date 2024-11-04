@@ -20,7 +20,13 @@ Estas ideas indican claramente que programar en un entorno multiejecución es di
 
 *Hebra* (thread) : cada parte de un programa que se está ejecutando de forma independiente, dentro del proceso donde este se ejecuta.
 
-¡Importante!, tener en cuenta que no hay ninguna garantía acerca del orden en que vayan a ejecutarse distintas partes ejecutándose en distintas hebras, ni mucho menos distintos programas ejecutándose en distintos procesos. El flujo temporal en esos casos no es lineal, con la serie de complicaciones que eso conlleva.
+¡Importante!: 
+
+Realizando tareas de forma concurrente, paralela o distribuida, nunca hay ninguna garantia acerca del orden en que vayan a ejecutarse. 
+
+No hay ninguna garantía acerca del orden en que vayan a ejecutarse distintas partes de un programa ejecutándose en distintas hebras, ni mucho menos distintos programas ejecutándose en distintos procesos. 
+
+Realizando tareas de forma concurrente, paralela o distribuida, el flujo temporal no es lineal; con la serie de complicaciones que eso conlleva. Es necesario tener en cuenta todas las combinaciones posibles de interacción/interferencia entre tareas.
 
 ¡Importante!, si encima se necesita comunicación entre hebras o entre procesos, tener bien presentes las ["ocho falacias del procesamiento distribuido"](https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing). Los mecanismos de comunicación introducen también su propia serie de complicaciones que se han de prever.
 
@@ -188,3 +194,283 @@ Por lo demás, el tema de los "mutex" para proteger recursos compartidos de acce
 [threading](https://docs.python.org/3/library/multiprocessing.html#synchronization-between-processes)
 
 [Semaphore](https://docs.python.org/3/library/threading.html#semaphore-objects)
+
+### en Java (ampliación)
+
+#### Repartir tareas con Procesos
+
+- **Proceso** : cada espacio aislado donde se está ejecutando el código de un determinado programa.
+
+La manera más simple de lanzar procesos desde código Java es usar `Runtime.exec()`
+
+[java.lang.Runtime](https://docs.oracle.com/en/java/javase/20/docs/api/java.base/java/lang/Runtime.html)
+
+[Runtime.exec()](https://docs.oracle.com/en/java/javase/20/docs/api/java.base/java/lang/Runtime.html#exec(java.lang.String%5B%5D,java.lang.String%5B%5D,java.io.File))
+
+Pero la manera más robusta de lanzar procesos desde código Java es usar `ProcessBuilder.start()`
+
+[java.land.ProcessBuilder](https://docs.oracle.com/en/java/javase/20/docs/api/java.base/java/lang/ProcessBuilder.html)
+
+[ProcessBuilder.start()](https://docs.oracle.com/en/java/javase/20/docs/api/java.base/java/lang/ProcessBuilder.html#start())
+
+En ambos casos obtenemos un objeto de tipo [java.lang.Process](https://docs.oracle.com/en/java/javase/20/docs/api/java.base/java/lang/Process.html)
+
+##### Gestión de un proceso
+
+Para controlar el proceso: [ProcessHandle](https://docs.oracle.com/en/java/javase/20/docs/api/java.base/java/lang/ProcessHandle.html)
+
+Para obtener información acerca del proceso: [ProcesHandle.Info](https://docs.oracle.com/en/java/javase/20/docs/api/java.base/java/lang/ProcessHandle.Info.html)
+
+Para hacer que el proceso espere a que terminen todos sus subprocesos antes de terminarse él mismo:  `.waitFor()`
+
+¡aviso!: Cuando un proceso termina, también se terminan automáticamente todas las hebras de ejecución que hubiera arrancado; hayan o no completado sus trabajos. De ahí que se necesite usar .waitFor() si deseamos esperar a que se completen.
+
+##### Comunicación entre procesos
+
+Cuando arrancamos un programa desde la linea de comandos, el proceso de ese programa:
+- recibe información a través de `stdin` (normalmente teclado)
+- muestra información a través de `stdout` o `stderr` (normalmente pantalla).
+
+Pero cuando arrancamos un programa (un proceso) desde el código de otro programa (otro proceso), los canales stdin, stdout y stderr físicos de la máquina están conectados al proceso padre. Los de los procesos hijo han de ser expresamente redirigidos.
+
+[Handling Process Streams - Baeldung](https://www.baeldung.com/java-process-api#handlingprocess-streams)
+
+Estos canales de comunicación (stdin, stdout y stderr) se utilizan siguiendo el clásico paradigma de "tuberias" (pipes) de Unix: un programa recibe una entrada desde su stdin, hace algo y vuelca el resultado sobre su stdout/stderr; donde otro programa ha enganchado su stdin... y así se van encadenando un programa tras otro... cada uno haciendo su parte del trabajo, hasta que el último devuelve el resultado final por su stdout/stderr.
+
+Por ejemplo en este encadenamiento...
+````
+cat /var/log/syslog | grep -i 'error' | wc -l
+````
+...se ven tres programas que colaboran para obtener un resultado: `cat` lee y muestra el contenido del archivo, `grep` busca las lineas que contienen la palabra indicada y `wc` cuenta las lineas encontradas.
+
+[Pipeline commands in Linux - Youtube](https://www.youtube.com/watch?v=5-wnAO5G7n0&list=PLSmXPSsgkZLuJKJhvL1U384aHesbVDekO&index=13)
+
+
+#### Repartir tareas con Hebras (thread)
+
+- **Hebra (thread)** : cada parte de un programa que se está ejecutando de forma independiente, dentro del proceso donde este se ejecuta.
+
+La forma más sencilla de crear hebras en Java es heredando desde la clase `Thread`
+
+[java.lang.Thread](https://docs.oracle.com/en/java/javase/20/docs/api/java.base/java/lang/Thread.html)
+
+````
+class MyThread extends Thread {
+
+    public void run() {
+        // Este es el trabajo que va a realizar la hebra.
+        for (int i = 1; i <= 5; i++) {
+            System.out.println("Thread " + i);
+        }
+    }
+    
+}
+
+public class ThreadExample {
+    public static void main(String[] args) {
+    
+        MyThread thread1 = new MyThread();
+        MyThread thread2 = new MyThread();
+
+        thread1.start();
+        thread2.start();
+        
+    }
+}
+````
+
+Aunque también se puede hacer implementando directamente el interface `Runnable`.
+
+[java.lang.Runnable](https://docs.oracle.com/en/java/javase/20/docs/api/java.base/java/lang/Runnable.html)
+
+````
+class MyRunnable implements Runnable {
+
+    @Override
+    public void run() {
+        // Este es el trabajo que va a realizar.
+        for (int i = 1; i <= 5; i++) {
+            System.out.println("Thread " + i);
+        }
+    }
+    
+}
+
+public class ThreadExample {
+    public static void main(String[] args) {
+    
+        MyRunnable myRunnable = new MyRunnable();
+        
+        Thread thread1 = new Thread(myRunnable);
+        Thread thread2 = new Thread(myRunnable);
+        
+        thread1.start();
+        thread2.start();
+    }
+}
+````
+
+El control de ejecución se puede hacer usando variables internas de control en la propia hebra.
+````
+class MyThread extends Thread {
+
+    private volatile boolean stopRequested = false;
+    
+    public void run() {
+        while (!stopRequested) {
+            // Realizar el trabajo.
+            for (int i = 1; i <= 5; i++) {
+                System.out.println("Thread " + i);
+            }
+        }
+    }
+    
+    public void stopThread() {
+        stopRequested = true;
+    }
+    
+}
+````
+Si se hace así, es importante que dichas variables sean del tipo `volatile`. Para evitar problemas con las caché internas de las CPUs.
+
+##### Comunicación entre Hebras
+
+Normalmente varias hebras se comunican a través de algún objeto común donde leen o escriben de forma compartida.
+
+Es importante garantizar que no se van a interferir entre sí en esas lecturas o escrituras.
+
+###### atomicidad
+
+Lo ideal es que cada una de estas lecturas/escrituras sea atómica (se realice en un solo golpe, sin dar tiempo a que nada interfiera en la operación)
+
+- La forma más sencilla de hacer eso es usando variables de alguno de los TIPOS DE DATOS ATÓMICOS del paquete [java.util.concurrent.atomic](https://docs.oracle.com/en/java/javase/20/docs/api/java.base/java/util/concurrent/atomic/package-summary.html)
+
+- Otra buena opción suele ser utilizar alguna de las [COLAS CONCURRENTES](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/concurrent/package-summary.html#queues-heading) o alguna de las [COLECCIONES CONCURRENTES](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/concurrent/package-summary.html#concurrent-collections-heading) 
+
+###### monitorización, bloqueos automáticos (synchronized)
+
+En caso de no poder utilizar lecturas/escrituras atómicas. Suele ser necesario recurrir a controlar manualmente el uso de las partes comunes donde una hebra puede interferir con otra. Suele ser necesario "monitorizar" o "sincronizar" el acceso a esa parte común. 
+
+Es decir, la hebra que accede a un recurso "monitorizado" o "sincronizado" lo bloquea para su uso exclusivo mientras lo esté utilizando; hasta que termina de utilizarlo y lo libera para que otra pueda usarlo.
+
+- Las [COLAS SINCRONIZADAS](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/concurrent/SynchronousQueue.html) incluyen de serie esa forma de funcionar. Se dice que son "thread-safe".
+
+- [La palabra clave `synchronized`](https://www.baeldung.com/java-synchronized) permite marcar expresamente funciones o partes críticas de nuestro código que han de funcionar de esa forma.
+
+    [wait()](https://docs.oracle.com/en/java/javase/20/docs/api/java.base/java/lang/Object.html#wait())
+
+    [notify() y notifyAll()](https://docs.oracle.com/en/java/javase/20/docs/api/java.base/java/lang/Object.html#notify())
+
+###### bloqueos manuales (lock)
+
+Para arreglos más sofisticados, se puede utilizar:
+
+- Alguno de los [sincronizadores específicos](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/concurrent/package-summary.html#synchronizers-heading), tales como los semáforos.
+
+- O, incluso, directamente alguno de los [mecanismos de bloqueo](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/concurrent/locks/package-summary.html)
+
+
+#### Expresiones `Lambda`
+
+Las expresiones Lambda son una forma abreviada de escribir una función.
+
+En lugar de
+````
+Integer Sumar(Integer a, Integer b) {
+    return a + b;
+}
+````
+Podemos escribir
+````
+(Integer a, Integer b) -> { a + b }
+````
+O incluso, en algunas ocasiones, podriamos escribir
+````
+(a, b) -> { a + b }
+````
+
+Es muy útil sobre todo cuando vamos a pasar una función como argumento a otra función.
+
+Por ejemplo, en la documentación de Oracle (https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html) aparece que después de
+````
+public class Person {
+
+    public enum Sex {
+        MALE, FEMALE
+    }
+
+    String name;
+    LocalDate birthday;
+    Sex gender;
+    String emailAddress;
+
+    public int getAge() {
+        // ...
+    }
+
+    public void printPerson() {
+        // ...
+    }
+}
+
+ ../..
+
+interface CheckPerson {
+    boolean test(Person p);
+}
+
+ ../..
+
+public static void printPersons(List<Person> roster, CheckPerson tester) {
+    for (Person p : roster) {
+        if (tester.test(p)) {
+            p.printPerson();
+        }
+    }
+}
+
+ ../..
+
+````
+podemos escribir
+````
+ ../..
+
+printPersons(
+    listaDeGente,
+    (Person x) -> {
+        x.getGender() == Person.Sex.MALE
+        && x.getAge() >= 18
+        && x.getAge() <= 25
+    }
+);
+````
+en lugar de
+````
+class CheckPersonEligibleForSelectiveService implements CheckPerson {
+    public boolean test(Person x) {
+        return x.gender == Person.Sex.MALE &&
+            x.getAge() >= 18 &&
+            x.getAge() <= 25;
+    }
+}
+
+ ../..
+ 
+printPersons(
+    listaDeGente, new CheckPersonEligibleForSelectiveService());
+````
+
+Las expresiones Lambda son muy utiles si las utilizamos junto con las modernas construcciones inspiradas en lenguajes funcionales. Por ejemplo, en las últimas versiones de Java es posible escribir cosas como esta:
+````
+listaDeGente
+    .stream()
+    .filter(
+        x -> x.getGender() == Person.Sex.MALE
+            && x.getAge() >= 18
+            && x.getAge() <= 25)
+    .map(y -> y.getEmailAddress())
+    .forEach(email -> System.out.println(email));
+````
+Primero filtramos la lista de gente, luego extraemos otra lista con las direcciones de correo de esa gente filtrada y, finalmente, escribimos dichas direcciones en la consola.
+
