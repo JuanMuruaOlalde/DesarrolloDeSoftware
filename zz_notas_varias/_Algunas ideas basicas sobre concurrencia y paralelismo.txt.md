@@ -53,7 +53,7 @@ Si se necesita comunicación entre hebras o entre procesos, tener bien presentes
 
 ¡Aviso!
 
-Cuando se trabaja "a escala Internet" (es decir, teniendo picos de cientos de miles o  de millones de peticiones por segundo). Los aspectos de escalabilidad (es decir, de no-dependencia entre partes y de minimización de esfuerzos de coordinación) pasan a cobrar una importancia primordial.
+Cuando se trabaja "a escala Internet" (es decir, teniendo picos de decenas o cientos de miles de peticiones por segundo). Los aspectos de escalabilidad (es decir, de no-dependencia entre partes y de minimización de esfuerzos de coordinación) pasan a cobrar una importancia primordial.
 
 Nota final: 
 
