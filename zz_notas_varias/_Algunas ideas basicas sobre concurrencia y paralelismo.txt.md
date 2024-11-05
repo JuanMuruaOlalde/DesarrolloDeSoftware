@@ -1,48 +1,73 @@
 # Concurrencia y Paralelismo
 
-Dos ideas clave:
+Tres ideas clave:
 
 - Hay momentos en que se debe estar atendiendo a varios trabajos diferentes. No pudiéndose descuidar ninguno de ellos por mucho tiempo.
 
-- Un solo procesador trabajando llega hasta donde llega. Un grupo de procesadores trabajando simultáneamente puede alcanzar mucho más; tanto más cuantos más sean en el grupo. Eso sí, siempre y cuando el trabajo se pueda organizar adecuadamente, para que el sistema escale lo más linealmente posible. (Es decir, cuando el esfuerzo de coordinación no vaya reduciendo progresivamente los beneficios de agregar más procesadores.)
+- Por otro lado, un solo procesador trabajando llega hasta donde llega. Un grupo de procesadores trabajando conjuntamente puede alcanzar mucho más; tanto más cuantos más sean en el grupo. 
 
-Estas ideas indican claramente que programar en un entorno multiejecución es diferente de hacerlo en un entorno monoejecución. Un entorno multiejecución es bastante más complejo. Tanto las estructuras de datos como las operaciones a realizar requieren una forma diferente de organización.
+  Eso sí, siempre y cuando el trabajo se pueda organizar adecuadamente, para que el sistema escale lo más linealmente posible. (Es decir, cuando el esfuerzo de coordinación no vaya reduciendo progresivamente los beneficios de agregar más procesadores.)
 
-## Consideraciones previas
+- Y lo más importante:
 
-*Secuencia* : diferentes tareas realizándose una a continuación de otra; una tarea no comienza hasta que haya terminado la anterior. El flujo temporal es totalmente lineal.
+  - Realizando tareas de una en una, una detrás de otra. La relación entre tareas es clara, siendo fácil seguir el flujo de ejecución.
 
-*Concurrencia* : diferentes tareas realizándose en momentos temporales que se pueden solapar.
+  - Realizando varias tareas simultáneamente, no hay ninguna garantía acerca del orden en que vayan a ejecutarse. Se han de tener siempre en cuenta todas las posibilidades de interacción/interferencia entre ellas. 
 
-*Paralelismo* : diferentes tareas realizándose simultáneamente.
+Estas ideas indican claramente que programar en un entorno multiejecución es diferente de hacerlo en un entorno monoejecución. Un entorno multiejecución es bastante más complejo. Tanto las estructuras de datos como las operaciones a realizar, requieren una forma diferente de organización.
 
-*Proceso* : cada espacio aislado donde se está ejecutando el código de un determinado programa.
+## Algunos conceptos
 
-*Hebra* (thread) : cada parte de un programa que se está ejecutando de forma independiente, dentro del proceso donde este se ejecuta.
+Mirando desde el punto de vista del flujo de ejecución:
 
-¡Importante!: 
+- **Secuencial**  : diferentes tareas realizándose una a continuación de otra; una tarea no comienza hasta que haya terminado la anterior.
 
-Realizando tareas de forma concurrente, paralela o distribuida, nunca hay ninguna garantia acerca del orden en que vayan a ejecutarse. 
+- **Concurrente** : diferentes tareas realizándose en momentos temporales que se pueden solapar.
+
+- **Paralelo** : diferentes tareas realizándose simultáneamente.
+
+- **Distribuido** : diferentes tareas realizándose en distintas máquinas (o en distintos programas).
+
+Mirando desde el punto de vista de la propia ejecución:
+
+- **Proceso** : cada espacio aislado donde se está ejecutando el código de un determinado programa.
+
+- **Hebra** (thread) : cada parte del código de un programa que se esté ejecutando de forma independiente, dentro del proceso donde el programa se ejecuta.
+
+## Algunas advertencias
+
+¡Muy importante!: 
+
+Realizando tareas de forma concurrente, paralela o distribuida, no hay ninguna garantia acerca del orden en que vayan a ejecutarse. 
 
 No hay ninguna garantía acerca del orden en que vayan a ejecutarse distintas partes de un programa ejecutándose en distintas hebras, ni mucho menos distintos programas ejecutándose en distintos procesos. 
 
 Realizando tareas de forma concurrente, paralela o distribuida, el flujo temporal no es lineal; con la serie de complicaciones que eso conlleva. Es necesario tener en cuenta todas las combinaciones posibles de interacción/interferencia entre tareas.
 
-¡Importante!, si encima se necesita comunicación entre hebras o entre procesos, tener bien presentes las ["ocho falacias del procesamiento distribuido"](https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing). Los mecanismos de comunicación introducen también su propia serie de complicaciones que se han de prever.
+Cuanto menos relación tengan las distintas tareas entre sí, más fácil será seguir el flujo de ejecución . Y viceversa, más complicaciones habrá cuanto más dependencias tengan unas tareas con otras. Por tanto, el objetivo principal es organizar los trabajo de forma que cada tarea sea lo más independiente posible.
 
-¡Aviso!, cuando se vaya a necesitar trabajar "a escala Internet" (es decir, pudiendo atender cientos de miles o millones de peticiones por segundo). Los aspectos de escalabilidad (es decir, de no-dependencia entre partes y minimización de esfuerzos de coordinación) pasan a cobrar una importancia primordial.
 
-Nota final: Es de Perogrullo, pero nunca está de más recordar que no todos los trabajos son concurrelizables o paralelizables. Hay trabajos que simplemente estamos obligados a realizarlos de forma secuencial. En estos casos, solo queda trabajar más rápido (o, renunciar a alguna de las partes secuenciales).
+¡Importante!
+
+Si se necesita comunicación entre hebras o entre procesos, tener bien presentes las ["ocho falacias del procesamiento distribuido"](https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing). Los mecanismos de comunicación introducen también su propia serie de complicaciones que se han de prever: latencias, pérdidas de paquetes, interrupciones de servicio, reintentos,...
+
+¡Aviso!
+
+Cuando se trabaja "a escala Internet" (es decir, teniendo picos de cientos de miles o  de millones de peticiones por segundo). Los aspectos de escalabilidad (es decir, de no-dependencia entre partes y de minimización de esfuerzos de coordinación) pasan a cobrar una importancia primordial.
+
+Nota final: 
+
+Es de Perogrullo, pero nunca está de más recordar que no todos los trabajos son concurrelizables o paralelizables. Hay trabajos que simplemente estamos obligados a realizarlos de forma secuencial. En estos casos, solo queda trabajar más rápido (máquina más potente) o renunciar a alguna de las partes secuenciales (mejorar la escalabilidad).
 
 ## Cómo hacerlo (teoria)
 
 ### Problemáticas a evitar
 
-- Interaciones dañinas (race conditions) :  hebras accediendo a datos o a recursos en un orden inconsistente.
+- Interaciones dañinas (race conditions) :  hebras accediendo a datos o a recursos en un orden inconsistente, estropeando unas el trabajo de otras.
 
-- Bloqueos (deadlocks) : dos hebras esperándose indefinidamente la una a la otra.
+- Bloqueos (deadlocks o livelocks) : una hebra esperando a algo que no llegará nunca o dos hebras esperándose indefinidamente la una a la otra.
 
-- Atascos (bottlenecks) : alguna hebra acaparando demasiado un recurso, o algún recurso que no da a basto para atender a todas las hebras que lo requieren.
+- Atascos (bottlenecks) : alguna hebra acaparando demasiado un recurso o algún recurso que no da a basto para atender a todas las hebras que lo requieren.
 
 ### Rasgos beneficiosos a perseguir
 
@@ -60,7 +85,7 @@ nota: Todo en programación es un compromiso entre lo que es deseamos tener y lo
 
 ### Recursos propios
 
-La mejor manera de no tener problemas es que cada hebra sea dueña de todos los datos y recursos que maneja. Evitando todo tipo de dependencias (posibles causas de interferencia) externas. Por ejemplo:
+La mejor manera para no tener problemas es que cada hebra sea dueña de todos los datos y recursos que maneja. Evitando todo tipo de dependencias externas (posibles causas de interferencia exterior). Por ejemplo:
 
 - Enviar a la hebra copias explícitas de los datos que recibe en sus parámetros. No enviar referencias, ni siquiera si las variables son solo para lectura dentro de la hebra; ya que no se puede garantizar el ciclo de vida de ninguna variable externa. Para cuando la hebra vaya a leerla a través de su referencia, es posible que ya no exista o que tenga otro valor porque ha sido alterada por otra hebra.
 
@@ -72,15 +97,15 @@ La mejor manera de no tener problemas es que cada hebra sea dueña de todos los 
 
 Si una hebra necesita servicios de algo externo:
 
-- La petición deberia ser del tipo "dispara y olvida", sin necesidad de esperar al resultado del servicio. Por ejemplo, enviando un mensaje autocontenido (incluyendo en él todo lo necesario para que quien lo reciba pueda procesar la petición, cuando pueda procesarla).
+- La petición deberia ser del tipo "dispara y olvida", sin necesidad de esperar al resultado del servicio. Por ejemplo, enviando un mensaje autosuficiente (incluyendo en él todo lo necesario para que quien lo reciba pueda procesar la petición).
 
   Podemos pensar como si la comunicación fuera a través de un rio o canal de agua. Quien va a enviar algo deposita su mensaje en la corriente. Quien vaya a recibirlo/procesarlo está aguas abajo y lo tratará cuando pase por su lado.
 
-- En caso de ser imprescindible esperar a un resultado. Se han de prever:
+- En caso de ser imprescindible esperar a un resultado o mantener un diálogo. Se han de prever:
  
   - Tanto la posibilidad de que se reciba una notificación de error o un resultado vacio (en cuyo caso hay que proceder en consecuencia).
-  
-  - Como que no se reciba ninguna respuesta (en cuyo caso hay que prever un tiempo de espera máximo). 
+
+  - Como la posibilidad que no se reciba ninguna respuesta (en cuyo caso hay que prever un tiempo de espera máximo). 
 
 En caso de problemas, si se va a reenviar la petición:
 
@@ -97,14 +122,14 @@ Si una hebra necesita interactuar con algo compartido con otras hebras:
   - Prever algún mecanismo para evitar que la hebra con acceso en un momento dado falle al liberar el mutex y lo deje bloqueado para siempre.
 
   - Diseñar el sistema evitando ciclos de mutua dependencia entre dos o más mutex. En caso de existir, podria darse el caso de que dos hebras necesiten sendos mutex para realizar cierta operación que requiere dos recursos para realizarse, pero que cada una de ellas haya obtenido solo uno de los mutex y quede esperando indefinidamente a que el otro se libere.
-  
+
   - Prever algún mecanismo para que las hebras que están esperando puedan "hacer cola" en un cierto orden. Idealmente esa cola avisaria de vuelta a cada hebra cuando le toque, para evitar que estén todas consultando repetidamente si pueden o no adquirir el mutex.
-  
+
   - En el caso de interacciones que requieran mucho tiempo para completarse. Prever la posibilidad de haber muchas hebras en la cola y que alguna renuncie a apuntarse en la misma. Prever también la posibilidad de que alguna hebra quiera abandonar la cola porque está tardando demasiado en tener acceso al mutex.
-  
+
 ## Conclusión
 
-Lo mejor es evitar en la medida de lo posible las interacciones entre hebras o procesos. Si cada trabajo es independiente, se puede realizar dónde, cuándo y cómo se estime oportuno.
+Lo mejor es evitar en la medida de lo posible las interacciones entre hebras o procesos. Cuando cada trabajo es independiente se puede realizar dónde, cuándo y cómo se estime oportuno.
 
 En caso de ser imprescindible una comunicación (traspaso de información entre una hebra y el exterior a ella), procurar que las interacciones sean atómicas, rápidas y definitivas; solo intercambios puntuales de información. Idealmente, antes de la interacción, cada hebra participante no deberia tener que esperar a ninguna otra; tras la interacción, cada hebra participante no deberia adquirir ninguna dependencia respecto a ninguna de las otras.
 
