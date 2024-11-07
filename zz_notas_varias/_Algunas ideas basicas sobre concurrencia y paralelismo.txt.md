@@ -83,7 +83,7 @@ Es de Perogrullo, pero nunca está de más recordar que no todos los trabajos so
 
 nota: Todo en programación es un compromiso entre lo que es deseamos tener y lo que nos podemos permitir tener. Así como entre las distintas prioridades que tiran en distintas direcciones. Dicho esto, se sobreentiende que todo lo que se cita aquí lleva implícito un "en la medida que sea posible".
 
-### Recursos propios
+### Uso de recursos propios en cada hebra
 
 La mejor manera para no tener problemas es que cada hebra sea dueña de todos los datos y recursos que maneja. Evitando todo tipo de dependencias externas (posibles causas de interferencia exterior). Por ejemplo:
 
@@ -93,13 +93,15 @@ La mejor manera para no tener problemas es que cada hebra sea dueña de todos lo
 
 - En caso de devolver resultados intermedios sobre los que la hebra vaya a seguir trabajando, devolver copias (mismo problema que con variables recibidas como parámetros).
 
-### Recursos externos
+### Uso de recursos compartidos entre hebras
 
-Si una hebra necesita servicios de algo externo:
+#### Desde el punto de vista de cuando se intenta acceder a un recurso
 
-- La petición deberia ser del tipo "dispara y olvida", sin necesidad de esperar al resultado del servicio. Por ejemplo, enviando un mensaje autosuficiente (incluyendo en él todo lo necesario para que quien lo reciba pueda procesar la petición).
+Si una hebra necesita utilizar los servicios de algo externo a ella:
 
-  Podemos pensar como si la comunicación fuera a través de un rio o canal de agua. Quien va a enviar algo deposita su mensaje en la corriente. Quien vaya a recibirlo/procesarlo está aguas abajo y lo tratará cuando pase por su lado.
+- La solicitud deberia ser del tipo "dispara y olvida", sin necesidad de esperar al resultado del servicio. Por ejemplo, enviando un mensaje autosuficiente (incluyendo en él todo lo necesario para que quien lo reciba pueda procesar la petición).
+
+  Podemos pensar como si la comunicación fuera a través de un rio o canal de agua. Quien va a solicitar/enviar algo deposita su mensaje en la corriente. Quien vaya a recibirlo/procesarlo está aguas abajo y lo tratará cuando pase por su lado.
 
 - En caso de ser imprescindible esperar a un resultado o mantener un diálogo. Se han de prever:
  
@@ -107,13 +109,15 @@ Si una hebra necesita servicios de algo externo:
 
   - Como la posibilidad que no se reciba ninguna respuesta (en cuyo caso hay que prever un tiempo de espera máximo). 
 
-En caso de problemas, si se va a reenviar la petición:
+En caso de problemas, si se va a reintentar de nuevo:
 
-- Es mejor hacerlo tras esperar un tiempo aleatorio (por si acaso el problema hubiera sido por saturación del servicio debido a multitud de hebras solicitándolo al mismo tiempo). En caso de más de un reintento, este tiempo de espera aleatorio ha de ser progresivamente mayor a cada subsiguiente reintento; y ha de preverse un número máximo de reintentos.
+- Es mejor hacerlo tras esperar un tiempo aleatorio (por si acaso el problema hubiera sido por saturación del recurso debido a multitud de hebras solicitándolo al mismo tiempo). En caso de más de un reintento, este tiempo de espera aleatorio ha de ser progresivamente mayor a cada subsiguiente reintento; y ha de preverse un número máximo de reintentos.
 
-- Es importante asegurarse de que no se van a provocar duplicidades ni otros efectos adversos (por si acaso la petición anterior hubiera llegado al servicio, se hubiera procesado y, simplemente, se hubiera perdido la respuesta por el camino de vuelta). Esto se consigue si el servicio solicitado es idempotente (múltiples ejecuciones de lo mismo no alteran el resultado final) o si cada petición lleva un identificador (único e únivoco) que permita al servicio reconocer peticiones ya procesadas.
+- Es importante asegurarse de que no se van a provocar duplicidades ni otros efectos adversos (por si acaso la solicitud anterior hubiera llegado al servicio, se hubiera procesado y, simplemente, se hubiera perdido la respuesta por el camino de vuelta). La mejor manera de hacerlo es asegurandose de que el servicio solicitado es idempotente (múltiples ejecuciones de lo mismo no alteran el resultado final). O, si la idempotencia no es posible, se puede hacer poniendo a cada solicitud un identificador (único e únivoco) que permita al servicio reconocer solicitudes ya procesadas.
 
-Si una hebra necesita interactuar con algo compartido con otras hebras:
+#### Desde el punto de vista de cuando se usa un recurso
+
+Si una hebra va a utilizar algo compartido con otras hebras:
 
 - La mejor opción es que la interacción sea atómica. Realizada en un solo golpe, sin dar cabida a que ninguna otra hebra cambie ni utilice entremedias ninguno de los recursos involucrados.
 
@@ -125,7 +129,13 @@ Si una hebra necesita interactuar con algo compartido con otras hebras:
 
   - Prever algún mecanismo para que las hebras que están esperando puedan "hacer cola" en un cierto orden. Idealmente esa cola avisaria de vuelta a cada hebra cuando le toque, para evitar que estén todas consultando repetidamente si pueden o no adquirir el mutex.
 
-  - En el caso de interacciones que requieran mucho tiempo para completarse. Prever la posibilidad de haber muchas hebras en la cola y que alguna renuncie a apuntarse en la misma. Prever también la posibilidad de que alguna hebra quiera abandonar la cola porque está tardando demasiado en tener acceso al mutex.
+    En el caso de interacciones que requieran mucho tiempo para completarse. Prever la posibilidad de haber muchas hebras en la cola y que alguna renuncie a apuntarse en la misma. Prever también la posibilidad de que alguna hebra quiera abandonar la cola porque está tardando demasiado en tener acceso al mutex.
+
+Para ciertos tipos de tareas concretas, existen ciertos tipos de mutex especializados:
+
+- Semáforos: son un tipo de mutex que permite a más de una hebra el acceso simultáneo al recurso compartido que protegen. El clásico mutex básico seria como un semáforo con un contador de 1. Los semáforos se suelen utilizar, por ejemplo, para limitar el acceso a conjuntos de recursos iguales (por ejemplo, a un "pool" de n conexiones abiertas contra una base de datos).
+
+- Barreras: son un tipo de mutex que permite sincronizarse a más de una hebra. La barrera protege un grupo de hebras; a medida que cada hebra adquiere la barrera, la hebra queda a la espera; hasta que todas ellas han adquirido la barrera y pueden seguir ejecutandose.
 
 ## Conclusión
 
