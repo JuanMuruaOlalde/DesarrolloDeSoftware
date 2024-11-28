@@ -2375,8 +2375,46 @@ Obviamente, son necesarios una serie de mecanismos estandarizados para:
 
 Los programas de aplicación, hacen uso de ese ``universo'' de servicios para completar el trabajo que vayan a realizar.
 
+\vspace{1cm}
+\begin{center}
+\fbox{
+    \parbox{0.8\textwidth}{Cuidado con los falsos ``servicios''.\par
+    Un servicio es una parte del sistema que realiza un determinado trabajo concreto de forma independiente, sin necesidad de otras partes para hacerlo.\par
+    Si un ``servicio'' requiere la colaboración de unos cuantos otros ``servicios'' para hacer su trabajo, se ha de considerar que todos ellos son los que conforman realmente el servicio.}
+}
+\end{center}
+\vspace{1cm}
 
 
+\subsection{Escalabilidad}
+
+Una aplicación puede escalar en dos sentidos:
+
+\begin{itemize}
+
+    \item Escalabilidad \textbf{vertical}: utilizando un ``trabajador'' con más capacidad, es decir añadiendo más recursos a la máquina. Por ejemplo, añadiendo más memoria, más CPU, más discos duros, más tarjetas de red, etc.
+
+    \item Escalabilidad \textbf{horizontal}: utilizando más ``trabajadores'', es decir añadiendo más máquinas al sistema. Por ejemplo, añadiendo más servidores, más nodos, etc.
+
+\end{itemize}
+
+Es imprescindible tener bien claros los conceptos de:
+
+\begin{description}
+
+    \item[lógica monolítica:] todas las partes del código están fuertemente acopladas unas a otras, se hace difícil separarlas.
+
+    \item[lógica distribuida:] el código está organizado en módulos bien definidos, con claros interfaces entre unos y otros.
+    
+    \item[implementación física monolítica:] todas las partes corren en una sola máquina.
+    
+    \item[implementación física distribuida:] diferentes partes corren en diferentes máquinas, esas máquinas están enlazadas entre sí a través de conexiones de red.
+
+\end{description}
+
+Las lógicas distribuidas pueden desplegarse sobre una implementación física monolítica o sobre una distribuida. Y pueden escalarse tanto vertical como horizontalmente. Esta última, si es que la distribución de la lógica permite beneficiarse de tener más instancias de algunos de los módulos de la aplicación; claro está.
+
+Sin embargo, las lógicas monolíticas solo pueden ser desplegadas sobre implementaciones físicas monolíticas. Es decir, solo pueden escarlar verticalmente. Cuando se intentan escalar horizontamente, la sobrecarga de las comunicaciones a través de la red no hace sino empeorar su rendimiento.
 
 \section{Patrones de programación (patterns)}
 

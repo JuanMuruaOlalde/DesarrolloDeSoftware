@@ -90,33 +90,34 @@
 \contentsline {subsubsection}{Cliente/Servidor básico}{90}{section*.21}%
 \contentsline {subsubsection}{Cliente/Servidor o Frontend/Backend}{90}{section*.22}%
 \contentsline {subsubsection}{(micro)Servicios distribuidos}{90}{section*.23}%
-\contentsline {section}{\numberline {7.5}Patrones de programación (patterns)}{91}{section.7.5}%
-\contentsline {subsection}{\numberline {7.5.1}Rationale, el por qué de los patrones}{91}{subsection.7.5.1}%
-\contentsline {subsection}{\numberline {7.5.2}Ejemplos de algunos patrones}{92}{subsection.7.5.2}%
-\contentsline {subsubsection}{observer}{92}{section*.24}%
-\contentsline {subsubsection}{chain of responsibility}{92}{section*.25}%
-\contentsline {subsubsection}{command}{92}{section*.26}%
-\contentsline {subsubsection}{memento}{92}{section*.27}%
-\contentsline {subsubsection}{adapter}{92}{section*.28}%
-\contentsline {subsubsection}{decorator}{92}{section*.29}%
-\contentsline {subsubsection}{facade}{92}{section*.30}%
-\contentsline {subsubsection}{proxy}{93}{section*.31}%
-\contentsline {section}{\numberline {7.6}Algoritmos}{93}{section.7.6}%
-\contentsline {subsection}{\numberline {7.6.1}Ordenación, clasificación y búsqueda}{94}{subsection.7.6.1}%
-\contentsline {subsubsection}{búsquedas directas}{94}{section*.32}%
-\contentsline {subsubsection}{estructuración arbórea}{94}{section*.33}%
-\contentsline {subsubsection}{estructuración indexada}{94}{section*.34}%
-\contentsline {subsubsection}{estructuración semántica}{94}{section*.35}%
-\contentsline {subsection}{\numberline {7.6.2}Cálculo numérico o simbólico}{95}{subsection.7.6.2}%
-\contentsline {subsubsection}{ecuaciones lineales}{95}{section*.36}%
-\contentsline {subsubsection}{derivación e integración}{95}{section*.37}%
-\contentsline {subsubsection}{series de Taylor}{95}{section*.38}%
-\contentsline {subsubsection}{transformadas de Fourier}{95}{section*.39}%
-\contentsline {subsection}{\numberline {7.6.3}Optimización, programación lineal}{95}{subsection.7.6.3}%
-\contentsline {subsection}{\numberline {7.6.4}Combinatorios}{96}{subsection.7.6.4}%
-\contentsline {subsubsection}{búsqueda por ``fuerza bruta''}{96}{section*.40}%
-\contentsline {subsubsection}{búsquedas reducidas, en profundidad o en anchura}{97}{section*.41}%
-\contentsline {subsubsection}{heurísticas}{97}{section*.42}%
-\contentsline {subsubsection}{métodos de Montecarlo}{97}{section*.43}%
-\contentsline {subsection}{\numberline {7.6.5}Algoritmos que aprenden}{97}{subsection.7.6.5}%
-\contentsline {subsection}{\numberline {7.6.6}Algoritmos que evolucionan}{98}{subsection.7.6.6}%
+\contentsline {subsection}{\numberline {7.4.3}Escalabilidad}{91}{subsection.7.4.3}%
+\contentsline {section}{\numberline {7.5}Patrones de programación (patterns)}{92}{section.7.5}%
+\contentsline {subsection}{\numberline {7.5.1}Rationale, el por qué de los patrones}{92}{subsection.7.5.1}%
+\contentsline {subsection}{\numberline {7.5.2}Ejemplos de algunos patrones}{93}{subsection.7.5.2}%
+\contentsline {subsubsection}{observer}{93}{section*.24}%
+\contentsline {subsubsection}{chain of responsibility}{93}{section*.25}%
+\contentsline {subsubsection}{command}{93}{section*.26}%
+\contentsline {subsubsection}{memento}{93}{section*.27}%
+\contentsline {subsubsection}{adapter}{93}{section*.28}%
+\contentsline {subsubsection}{decorator}{93}{section*.29}%
+\contentsline {subsubsection}{facade}{93}{section*.30}%
+\contentsline {subsubsection}{proxy}{94}{section*.31}%
+\contentsline {section}{\numberline {7.6}Algoritmos}{94}{section.7.6}%
+\contentsline {subsection}{\numberline {7.6.1}Ordenación, clasificación y búsqueda}{95}{subsection.7.6.1}%
+\contentsline {subsubsection}{búsquedas directas}{95}{section*.32}%
+\contentsline {subsubsection}{estructuración arbórea}{95}{section*.33}%
+\contentsline {subsubsection}{estructuración indexada}{95}{section*.34}%
+\contentsline {subsubsection}{estructuración semántica}{95}{section*.35}%
+\contentsline {subsection}{\numberline {7.6.2}Cálculo numérico o simbólico}{96}{subsection.7.6.2}%
+\contentsline {subsubsection}{ecuaciones lineales}{96}{section*.36}%
+\contentsline {subsubsection}{derivación e integración}{96}{section*.37}%
+\contentsline {subsubsection}{series de Taylor}{96}{section*.38}%
+\contentsline {subsubsection}{transformadas de Fourier}{96}{section*.39}%
+\contentsline {subsection}{\numberline {7.6.3}Optimización, programación lineal}{96}{subsection.7.6.3}%
+\contentsline {subsection}{\numberline {7.6.4}Combinatorios}{97}{subsection.7.6.4}%
+\contentsline {subsubsection}{búsqueda por ``fuerza bruta''}{97}{section*.40}%
+\contentsline {subsubsection}{búsquedas reducidas, en profundidad o en anchura}{98}{section*.41}%
+\contentsline {subsubsection}{heurísticas}{98}{section*.42}%
+\contentsline {subsubsection}{métodos de Montecarlo}{98}{section*.43}%
+\contentsline {subsection}{\numberline {7.6.5}Algoritmos que aprenden}{98}{subsection.7.6.5}%
+\contentsline {subsection}{\numberline {7.6.6}Algoritmos que evolucionan}{99}{subsection.7.6.6}%
