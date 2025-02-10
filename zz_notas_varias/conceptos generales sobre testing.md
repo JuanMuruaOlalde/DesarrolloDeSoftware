@@ -18,10 +18,9 @@ Como se ha dicho, cada test prepara el entorno adecuado para ejecutarse. Ninguno
 Cada test ha de crear, inicializar, cargar,... todos los elementos que necesite. Y los ha de preparar expresamente para que estén exactamente en el estado que necesite que estén, o para que contengan exactamente lo que necesite que contengan. Antes de empezar a realizar las operaciones a comprobar y los chequeos de resultados.
 
 
-
 ## Plataforma de tests unitarios ("Test Harness" o "Test Runner")
 
-Al poco de estar escribiendo ese tipo de funciones, se va echando de menos algún sistema que:
+Al poco de estar escribiendo ese tipo de funciones test, se va echando de menos algún sistema que:
 
 - Diferencie el código de test del código funcional propiamente dicho.
 
@@ -32,6 +31,34 @@ Al poco de estar escribiendo ese tipo de funciones, se va echando de menos algú
 - Permita abstraer las partes complicadas o costosas de preparar. Suministrado sucedáneos simplificados ("mocs"). Sucedáneos que simplemente permiten comprobar que las llamadas y respuestas a esas partes se realizan correctamente. Pero sin necesidad de utilizar las partes reales.
 
 Esos cuatro aspectos son los proporcionados por una plataforma de tests unitarios. Suele haber varias de dichas plataformas para cada lenguaje de programación y cada entorno de trabajo. Es cuestión de comparar y escoger la que más se adapte a nuestras necesidades o a nuestros gustos.
+
+## Algunas recomendaciones prácticas de trabajo
+
+### Lo que se ha de testear:
+
+-  Los casos "*felices*": Comprobar que se obtienen los resultados esperados, en el uso habitual que se espera. Con una muestra dentro de los datos típicos con los que se va a trabajar. Probando todas las ramas de la lógica implementada.
+
+-  Los casos "*límite*": Comprobar que se obtienen los resultados esperados, en los posibles usos extraños que puedan suceder. (Por ejemplo, una función para sumar una ristra de números recibe un solo número en lugar de una ristra; o, peor aún, recibe una ristra vacia; o recibe una ristra de textos; o...) Nota: En lugar de testear, si es posible, mejor evitar desde el principio que sucedan esos casos extraños. (Por ejemplo, usar la encapsulación de objetos y el tipado fuerte para evitar que ningún método reciba un tipo de parámetros que no debería recibir.)
+
+- Los casos "*erroneos*": Comprobar que se dan las reacciones esperadas, ante fallos que se preve puedan tener los usuarios al utilizar la aplicación. (Nota: Dentro de esas reacciones de nuestro programa, es muy importante asegurarnos de mantener informado al usuario.)
+
+- Los casos "*excepcionales*": Comprobar que se dan las reacciones esperadas, ante los errores y situaciones anómalas que se preve puedan darse en algún momento dado. (Por ejemplo: no existe un determinado archivo, la conexión con la base de datos esta caida,...)
+
+### En qué momento escribir los test:
+
+- Lo ideal es trabajar TDD (Test Driven Development). Es decir, escribir primero el código test y luego el código funcional.
+
+- Pero, en la práctica, sobre todo al comienzo, es muy posible que sigamos escribiendo primero el código que implementa una o varias funcionalidades; que sigamos probándolo de forma manual durante dicha escritura; y, cuando el código funcional esté ya funcionando, pensemos en los test. Una buena sugerencia es que, justo mientras tenemos fresco el trabajo que hemos hecho, usemos las pruebas manuales que hemos ido haciendo como inspiración para escribir esos test.
+
+De todas formas, como se comenta más adelante, si perseveramos en el tema de test, tarde o temprano es muy posible que acabemos llegando al TDD. A medida que vemos que los test ayudan a las pruebas manuales durante la escritura  del código funcional; es muy posible que vayamos tendiendo de forma natural a escribir primero test y luego funcional.
+
+### La falacia de la "cobertura"
+
+Un aviso importante: no obsesionarse con la "cobertura". Es una métrica perjudicial que lleva a escribir tests meramente para cubrir la exigencia del x% de cobertura requerido. 
+
+Los test no se escriben para intentar cubrir todos los casos posibles (cosa que es imposible). 
+
+Los test han de escribirse porque se ven útiles para comprobar de que el código funcional hace lo que se supone que ha de hacer. 
 
 
 ## Tests "end-to-end"
@@ -46,7 +73,7 @@ Pero este tipo de test "end-to-end" tienden a ser frágiles y pesados.
 
 Solo son efectivos en programas con funcionalidades e interfaces muy estables.
 
-Son útiles como comprobación completa de un sistema, con todos sus componentes reales.
+Son útiles como comprobación completa de un sistema, con todos sus componentes reales. Pero es muy fácil que dejen de mantenerse y de utilizarse por resultar demasiado farragosos e inestables.
 
 
 ## TDD (Test Driven Development)
@@ -70,9 +97,9 @@ Trabajar TDD se resume en RED-GREEN-REFACTOR:
 nota: En el punto 6 (refactorización), es impagable el paraguas que ofrecen todos los test ya escritos. En el momento en que metamos la pata al refactorizar y rompamos algo, es muy posible que casque algún test y nos avise de lo que hemos roto. Por otro lado, trabajando TDD, como avanzamos en pequeños pasos, con frecuentes ejecuciones de los test existentes, no suele costar mucho darnos cuenta de lo que hemos roto.
 
 
-TDD es algo que puede sonar un poco “alien” en un primer momento. Y, definitivamente, “se hace muy raro” las primeras veces que lo pruebas tal cual. (Creo que es muy conveniente practicar las primeras veces con alguien experimentado en el tema.) 
+TDD es algo que puede sonar un poco “alien” en un primer momento. Y, definitivamente, “se hace muy raro” las primeras veces que lo pruebas tal cual. (Creo que es muy conveniente practicar las primeras veces junto a alguien experimentado en el tema.) 
 
-Aunque cabe destacar que se acaba llegando a ello de forma natural: 
+Pero cabe destacar que se acaba llegando a ello de forma natural: 
 
 - Cuando se empieza a trabajar con tests, se tiende a escribir los test después de escribir el código funcional. 
 
@@ -88,6 +115,7 @@ nota: Como se explica en la introducción de este video [Test Driven DESIGN - St
 - para pensar primero en EL PROBLEMA (la funcionalidad) a resolver y en cómo lo vamos a resolver.
 
 nota: Para ponerle "cara y ojos" a esto del TDD, ver [ejercicio 'ascensores' resuelto siguiendo proceso TDD](https://github.com/JuanMuruaOlalde/sugerencias-para-practicar-programacion/tree/main/Ascensores/muestras_de_posibles_soluciones/javascript-TDD)
+
 
 ## Un poco de filosofía y algunos consejos prácticos
 
