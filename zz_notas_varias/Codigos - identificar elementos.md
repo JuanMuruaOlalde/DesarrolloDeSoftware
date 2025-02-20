@@ -68,7 +68,7 @@ Los UUID son códigos de 128 bits (2^128 = unos 9 trillones de posibilidades). U
 
 https://en.wikipedia.org/wiki/Universally_unique_identifier
 
-Casi todas las plataforma de programación modernas permiten trabajar con ellos. Por ejemplo:
+Casi todas las plataformas de programación modernas permiten trabajar con ellos. Por ejemplo:
 
 https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/util/UUID.html
 
