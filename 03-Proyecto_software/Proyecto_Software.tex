@@ -921,11 +921,17 @@ Pero hoy en día, manejando directamente datos digitales con códigos QR o traba
 
 \end{itemize}
 
-Es decir, es importante que los elementos en nuestro programa se manejen con un código identificador interno oculto. Y que los usuarios utilicen otro u otros códigos para referirse a ellos tanto al teclearlos como al mostrarlos en pantalla, en listados,...
-
-Por ejemplo, hacerlo de esta forma permite recodificar artículos (ID visible), sin afectar a históricos o a otros puntos de la operatoria interna (ID interno).O permite disponer fácilmente códigos alternativos equivalentes (ID para un pais, ID para proveedor, ID para cliente,\ldots), refiriéndose todos ellos a un mismo elemento (ID interno).
-
 \end{itemize}
+
+Es decir, es importante que:
+
+\begin{itemize}
+\item Los elementos en nuestro programa se manejen con un código identificador interno oculto. 
+\item Los usuarios utilicen otro u otros códigos para referirse a ellos al teclearlos, al mostrarlos en pantalla, en listados, etc.
+\end{itemize}
+
+Hacerlo de esta forma permite, por ejemplo,  recodificar artículos (ID visible) sin afectar a históricos o a otros puntos de la operatoria interna (ID interno oculto). O disponer fácilmente de códigos alternativos equivalentes (ID para un pais, ID para proveedor, ID para cliente,\ldots), refiriéndose todos ellos a un mismo elemento (ID interno oculto).
+
 
 
 \subsection{A tener en cuenta cuando haya varias partes que asignan codigos de forma distribuida}
@@ -935,14 +941,14 @@ Es decir, cada parte se convierte en ``autoridad única dadora de códigos'' par
 
 
 \subsection{Algunas reflexiones acerca de la cantidad de códigos posibles:}
-Trabajando con los diez dígitos naturales 0,1,2,....,7,8,9 $\Rightarrow$ 10 caracteres, se dispone de $10^n$ códigos posibles. Por ejemplo, con códigos de 4 símbolos de longitud, se pueden identificar $10^4 = 1.000$  elementos.
+Trabajando con los diez dígitos naturales 0,1,2,....,7,8,9 $\Rightarrow$ 10 caracteres, se dispone de $10^n$ códigos posibles. Por ejemplo, con códigos de 4 números de longitud, se pueden identificar $10^4 = 10.000 elementos$; con códigos de 5 números de longitud, se pueden identificar $10^5 = 100.000$  elementos; con códigos de 6 números de longitud, se pueden identificar $21^6 = 1.000.000$ de elementos; etc.
 
 truco: Los códigos numéricos deben comenzar por una letra, para evitarnos problemas con los ceros a la izquierda.
 
 Por ejemplo, códigos tales como:  234987, 8273462, ...  no dan problemas; pero 003487, 000023,.... pueden plantear problemas  (por ejemplo, en una hoja Excel; que se ``come'' los ceros a la izquierda) Poniendole una letra delante: P234987, P8273462, P003487, P000023,.... queda siempre bien claro que es un código y no un número para operar con él.
 
 \vspace{1cm}
-Trabajando con las consonantes mayúsculas B,C,D,F,....,X,Y,Z $\Rightarrow$ 21 caracteres, se dispone de $21^n$ códigos posibles. Por ejemplo, con códigos de 4 símbolos de longitud, se pueden identificar $21^4 = 194.481$  elementos.
+Trabajando con las consonantes mayúsculas B,C,D,F,....,X,Y,Z $\Rightarrow$ 21 caracteres, se dispone de $21^n$ códigos posibles. Por ejemplo, con códigos de 4 letras de longitud, se pueden identificar $21^4 = 194.481$ elementos; con códigos de 5 letras de longitud, se pueden identificar $21^5 = 4.084.101$ elementos; con códigos de 6 letras de longitud, se pueden identificar $21^6 = 85.766.121$  elementos; etc.
 
 ¡ importante ! $\Rightarrow$ Se utilizan SOLO LETRAS MAYUSCULAS,(para evitar malentendidos mayus-minus),  del código ASCII BÁSICO (para evitar problemas multiculturales) y SIN VOCALES (para evitar la formacion de palabras con significado: HPUTA, STONTO,...)
 
@@ -2313,8 +2319,8 @@ nota: Ver detalles prácticos sobre arquitecturas en el capítulo 9 ``Organizaci
 \subsection{Según se reparte el código, se puede distinguir entre:}
 
 
-\subsubsection{Pella de arcilla (``ball of mud'')}
-El programa se compone de un solo bloque (estructurado o no en funciones). Un solo bloque que se encarga de todo.
+\subsubsection{BBoM (``Big Ball of Mud'')}
+El programa se compone de un solo bloque. Estructurado o no en funciones. Pero sin separaciones claras entre partes. Cualquier parte hace uso libre de cualquier otra.
 
 Suele ser típico en pequeños sistemas embebidos o en pequeños programas de prueba.
 

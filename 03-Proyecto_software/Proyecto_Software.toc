@@ -51,7 +51,7 @@
 \contentsline {subsection}{\numberline {4.8.3}A tener en cuenta cuando haya varias partes que asignan codigos de forma distribuida}{38}{subsection.4.8.3}%
 \contentsline {subsection}{\numberline {4.8.4}Algunas reflexiones acerca de la cantidad de códigos posibles:}{38}{subsection.4.8.4}%
 \contentsline {subsection}{\numberline {4.8.5}El uso de UUIDs como identificadores internos de elementos}{39}{subsection.4.8.5}%
-\contentsline {section}{\numberline {4.9}Un truco muy útil: identificadores internos solo para uso interno e identificadores externos solo para uso externo}{39}{section.4.9}%
+\contentsline {section}{\numberline {4.9}Un truco muy útil: identificadores internos solo para uso interno e identificadores externos solo para uso externo}{40}{section.4.9}%
 \contentsline {section}{\numberline {4.10}Un truco muy útil: inactivar elementos en vez de borrarlos}{40}{section.4.10}%
 \contentsline {section}{\numberline {4.11}Una forma de recoger especificaciones: BDD (Behavior Driven Development)}{41}{section.4.11}%
 \contentsline {section}{\numberline {4.12}Una reflexión acerca de las ventajas de manejar datos inmutables}{43}{section.4.12}%
@@ -82,7 +82,7 @@
 \contentsline {section}{\numberline {7.3}Encapsulación}{84}{section.7.3}%
 \contentsline {section}{\numberline {7.4}Arquitecturas de software}{88}{section.7.4}%
 \contentsline {subsection}{\numberline {7.4.1}Según se reparte el código, se puede distinguir entre:}{88}{subsection.7.4.1}%
-\contentsline {subsubsection}{Pella de arcilla (``ball of mud'')}{88}{section*.17}%
+\contentsline {subsubsection}{BBoM (``Big Ball of Mud'')}{88}{section*.17}%
 \contentsline {subsubsection}{Monolito}{88}{section*.18}%
 \contentsline {subsubsection}{Distribuido}{89}{section*.19}%
 \contentsline {subsection}{\numberline {7.4.2}Según cómo se reparte la funcionalidad, se puede distinguir entre:}{90}{subsection.7.4.2}%
