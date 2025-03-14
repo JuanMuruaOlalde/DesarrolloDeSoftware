@@ -1,10 +1,10 @@
 # Fdb version 4
-["pdflatex"] 1740655875 "c:/Users/jmurua/Documents/murolaju/MisLibrosYDemasDocumentos/DesarrolloDeSoftware/03-Proyecto_software/Proyecto_Software.tex" "Proyecto_Software.pdf" "Proyecto_Software" 1740655878 0
-  "Proyecto_Software.aux" 1740655878 18483 8e0a45704678fab653af1034b020d6dd "pdflatex"
-  "Proyecto_Software.out" 1740655878 26161 fa5ec1852a8b9e5eca298ab4cad869f3 "pdflatex"
-  "Proyecto_Software.tex" 1740655870 179951 c761ac48b745d163a291d2ef60165383 ""
-  "Proyecto_Software.toc" 1740655878 12170 cca2499c3b9cdf6a09ae7871cee4831b "pdflatex"
-  "c:/Users/jmurua/Documents/murolaju/MisLibrosYDemasDocumentos/DesarrolloDeSoftware/03-Proyecto_software/Proyecto_Software.tex" 1740655870 179951 c761ac48b745d163a291d2ef60165383 ""
+["pdflatex"] 1741940301 "c:/Users/jmurua/Documents/murolaju/MisLibrosYDemasDocumentos/DesarrolloDeSoftware/03-Proyecto_software/Proyecto_Software.tex" "Proyecto_Software.pdf" "Proyecto_Software" 1741940304 0
+  "Proyecto_Software.aux" 1741940304 18483 c068f6900ad2656f28210b50b23f4c1c "pdflatex"
+  "Proyecto_Software.out" 1741940304 26161 fa5ec1852a8b9e5eca298ab4cad869f3 "pdflatex"
+  "Proyecto_Software.tex" 1741940296 180831 71338b314d844e41a396788127d1046b ""
+  "Proyecto_Software.toc" 1741940304 12170 f2a5b54b5aa0e6ec5407e9176ab6e24e "pdflatex"
+  "c:/Users/jmurua/Documents/murolaju/MisLibrosYDemasDocumentos/DesarrolloDeSoftware/03-Proyecto_software/Proyecto_Software.tex" 1741940296 180831 71338b314d844e41a396788127d1046b ""
   "c:/Users/jmurua/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc" 1689234506 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "c:/Users/jmurua/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1689233768 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/Users/jmurua/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1689235114 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -161,8 +161,10 @@
   "imagenes/portada-IloveLogs-JayKreps.jpg" 1698933359 24451 0deea27edc3f7e7bbda606b25dfa56de ""
   "imagenes/portada-LearningDomainDrivenDesign-Vlad Khononov.jpg" 1707468359 14373 4012891589bf31ecde310cac5de77fce ""
   "imagenes/portada-MasteringReguarExpressions-JeffreyEFFriedl.jpg" 1698933359 24938 48b69b1024e98cdbb060caa72c2fc7b1 ""
+  "imagenes/portada-ModernSoftwareEngineering-DavidFarley.jpg" 1741940136 26867 03717fc76ab404cff3c9384e0f3f5212 ""
   "imagenes/portada-Refactoring-MartinFowler.jpg" 1698672397 20717 bb1fe55d73021fa4f9c9fd0a0367ceb0 ""
   "imagenes/portada-TestDrivenDevelopment-KentBeck.jpg" 1698672397 19934 7c958f1c845d1b54ba9b19318f69c738 ""
+  "imagenes/portada-UnitTesting-VladimirKhorikov.jpg" 1741939467 14955 3723f74bd407a201840afd92eea293f0 ""
   "imagenes/portada-WorkingEffectiveyWithLegacyCode-MichaelCFeaters.jpg" 1698933359 39728 c8d88b40e7e939c4fa47e28b5f701d78 ""
   "imagenes/product backlog vs. sprint backlog.png" 1603466004 45577 da85370b69a694852be68f8c6052ec66 ""
   "imagenes/subordinacion de tareas a la cadena critica.png" 1603466432 14310 ea9aecd6299e6c7929d2c47b1533aba6 ""
