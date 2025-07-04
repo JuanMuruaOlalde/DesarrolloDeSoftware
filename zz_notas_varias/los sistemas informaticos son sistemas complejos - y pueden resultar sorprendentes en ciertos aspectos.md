@@ -19,11 +19,13 @@ No en el sentido de "difícil o complicado", sino en el sentido de "con gran can
 
 ## Computer arithmetic
 
-Los cálculos matemáticos no son tan sencillos como podríamos pensar en un principio. Hay casos en que es necesario tener en cuenta ciertas peculiaridades...
+Los cálculos matemáticos no son tan sencillos como podríamos pensar en un principio. Hay casos en que es necesario tener en cuenta la forma en que la máquina representa los números...
+
+[Computer arithmetic - Wikipedia](https://en.wikipedia.org/wiki/Computer_arithmetic)
 
 ### Floating Point numbers
 
-¡Cuidado con la acumulación de redondeos! en según qué casuísticas.
+¡Cuidado con la acumulación de redondeos y pérdidas de dígitos significativos! en según qué casuísticas.
 
 [Floating-point arithmetic - Wikipedia](https://en.wikipedia.org/wiki/Floating-point_arithmetic)
 
@@ -43,22 +45,12 @@ Los cálculos matemáticos no son tan sencillos como podríamos pensar en un pri
 
 Cada sistema informático tiene sus propias peculiaridades. Cuando se desea obtener el máximo rendimiento y se comienzan a exprimir al máximo esas peculiaridades... 
 
-[Undefinded behavior - Wikipedia - examples in C and C++](https://en.wikipedia.org/wiki/Undefined_behavior#Examples_in_C_and_C++)
-
-
-[Undefinded behavior - Wikipedia - examples in Rust](https://en.wikipedia.org/wiki/Undefined_behavior#Examples_in_Rust)
+[Undefinded behavior - Wikipedia - examples in C and C++](https://en.wikipedia.org/wiki/Undefined_behavior)
 
 [A Guide to Undefined Behavior in C and C++, Part 1](https://blog.regehr.org/archives/213)
 
-[A Guide to Undefined Behavior in C and C++, Part 2](https://blog.regehr.org/archives/226)
+[What Every C Programmer Should Know About Undefined Behavior](https://blog.llvm.org/2011/05/what-every-c-programmer-should-know.html)
 
-[A Guide to Undefined Behavior in C and C++, Part 3](https://blog.regehr.org/archives/232)
-
-[What Every C Programmer Should Know About Undefined Behavior #1](https://blog.llvm.org/2011/05/what-every-c-programmer-should-know.html)
-
-[What Every C Programmer Should Know About Undefined Behavior #2](https://blog.llvm.org/2011/05/what-every-c-programmer-should-know_14.html)
-
-[What Every C Programmer Should Know About Undefined Behavior #3](https://blog.llvm.org/2011/05/what-every-c-programmer-should-know_21.html)
 
 
 
