@@ -19,13 +19,50 @@ No en el sentido de "difícil o complicado", sino en el sentido de "con gran can
 
 ## Computer arithmetic
 
-Los cálculos matemáticos no son tan sencillos como podríamos pensar en un principio. Hay casos en que es necesario tener en cuenta la forma en que la máquina representa los números...
+Los cálculos matemáticos por ordenador no son tan sencillos como podríamos pensar en un principio. Hay casos en que es necesario tener en cuenta la forma en que la máquina representa los números...
 
 [Computer arithmetic - Wikipedia](https://en.wikipedia.org/wiki/Computer_arithmetic)
 
+### Un cándido fallo que suele ser bastante habitual
+
+No está directamente relacionado con cómo funciona la máquina, sino que se trata más bien de un despiste humano: se produce cuando ajustamos el formato para la impresión/presentación sin redondear los números internos usados para los cálculos.
+
+Por ejemplo:
+````
+números reales          lo que se visualiza    cantidad      totales       lo que deberia ser
+usados internamente                                       visualizados    según lo que se visualiza
+0,5688                     0,57                 10.000     5.688,00           5.700,00   
+0,32789                    0,33                 10.000     3.278,90           3.300,00   
+0,7399                     0,74                 10.000     7.399,00           7.400,00   
+                                                          16.365,90          16.400,00   
+````
+En el ejemplo se vé con claridad la discrepancia, ya que los números se han escogido expresamente para mostrarla. Pero en aplicaciones reales puede pasar desapercibida entre la diversidad de números utilizados. ¡Hasta que una persona muy puntillosa se pone a comprobar manualmente las operaciones y acaba presentando una queja por haber cobrado de más o de menos!.
+
+### Pero que también tiene una vertiente no tan cándida
+
+Las personas utilizamos representaciones decimales (base 10) para los números. Pero las máquinas usan representaciones binarias (base 2). Y eso provoca errores por pérdidas de precisión en la traslación de un formato a otro.
+
+De ahí que, por ejemplo, la aritmética de punto flotante no sea adecuada para cálculos financieros.
+
+[Why not use Double or Float to represent currency? - stackoverflow](https://stackoverflow.com/questions/3730019/why-not-use-double-or-float-to-represent-currency)
+
+[Why You Should Never Use Floating-Point or Double Data Types for Money Calculations! - The Problem with Floating-Point Arithmetic](https://swiftbydeya.com/never-use-floating-point-double-data-types-for-monetary-calculations/)
+
+En aplicaciones financieras con muchas transacciones. Se recomienda utilizar enteros (por ejemplo, en céntimos); o utilizar una representación binaria adecuada para cantidades decimales. Por ejemplo:
+
+[Java - BigDecimal](https://docs.oracle.com/en/java/javase/20/docs/api/java.base/java/math/BigDecimal.html)
+
+[rust_decimal](https://docs.rs/rust_decimal/latest/rust_decimal/)
+
+[C# decimal type](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/types#838-the-decimal-type)
+
+[Decimal numbers in Swif](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/NumbersandValues/Articles/DecimalNumbers.html)
+
+
+
 ### Floating Point numbers
 
-¡Cuidado con la acumulación de redondeos y pérdidas de dígitos significativos! en según qué casuísticas.
+La memoria de las máquinas es finita. Por eso, cuando se está trabajando con cálculos intensivos, es necesario prestar atención a la acumulación de redondeos y pérdidas de dígitos significativos.
 
 [Floating-point arithmetic - Wikipedia](https://en.wikipedia.org/wiki/Floating-point_arithmetic)
 
@@ -35,15 +72,20 @@ Los cálculos matemáticos no son tan sencillos como podríamos pensar en un pri
 
 ### Big integers
 
-¡Cuidado con la acumulación de truncamientos! en según qué casuísticas.
+La memoria de las máquinas es finita. Por eso, cuando se está trabajando con cálculos intensivos, es necesario prestar atención a la acumulación de truncamientos.
 
 [Arbitrary-precision arithmetic - Wikipedia](https://en.wikipedia.org/wiki/Arbitrary-precision_arithmetic)
 
+### ECC (Error Correction Code)
+
+Los circuitos electrónicos pueden sufrir errores. Por eso, cuando se está trabajando con cálculos intensivos, es necesario utilizar estrategias de detección y corrección adecuadas.
+
+[ECC memory - Wikipedia](https://en.wikipedia.org/wiki/ECC_memory)
 
 
 ## Undefined behavior
 
-Cada sistema informático tiene sus propias peculiaridades. Cuando se desea obtener el máximo rendimiento y se comienzan a exprimir al máximo esas peculiaridades... 
+Cada sistema informático tiene sus propias peculiaridades. Pero, cuando se desea obtener el máximo rendimiento y se comienzan a exprimir al máximo esas peculiaridades... 
 
 [Undefinded behavior - Wikipedia - examples in C and C++](https://en.wikipedia.org/wiki/Undefined_behavior)
 
