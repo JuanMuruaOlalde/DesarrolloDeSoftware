@@ -95,7 +95,7 @@ Merece destacar que hay dos tipos de tests:
 
 - **Test unitarios**: Comprueban pequeños aspectos de la funcionalidad. Se ejecutan con rapidez (unos pocos minutos si se ejecutan todos los tests del software; unos pocos segundos si se ejecutan solo el juego de tests unitarios de un módulo o parte concreta del software).
 
-- Test de integración, **test end-to-end**: Comprueban funcionalidades completas sobre el software funcionando en su entorno real. Suelen ser costosos de implementar y de ejecutar. Suelen necesitar herramientas especializadas para implementarlos y ejecutarlos. Algunas de esas herramientas sirven también para recoger requisitos funcionales y sus respectivos criterios de validación (una especie de requisitos/criterios validables por máquina).
+- Test de integración, **test end-to-end**: Comprueban funcionalidades completas sobre el software funcionando en su entorno real. Suelen ser costosos de implementar y de ejecutar. Suelen necesitar herramientas especializadas para implementarlos y ejecutarlos. Algunas de esas herramientas sirven también para recoger requisitos funcionales y sus respectivos criterios de validación (una especie de requisitos/criterios validables por máquina: test de aceptación).
 
 ### Pipeline CI o CI/CD
 
@@ -107,33 +107,61 @@ Según hasta donde se haya madurado, se distinguen dos etapas:
 
 - CD (Continous Deployment): además de cumplir con CI, la rama principal se despliega realmente a los usuarios en cada integración de cambios que se haga en ella. (nota: Este despliegue automatizado ha de contar también con los correspondientes mecanismos automatizados para revertirlo en caso de problemas. Así como también de los correspondientes mecanismos de observabilidad que permitan detectar rápidamente si hay problemas.)
 
-Los scripts del pipeline automatizado también son software. Y, por tanto, han de contar también con su propia gestión de versiones.
+> nota: Los repositorios en la nube suelen tener sus propias herramientas para automatizar procesos. Por ejemplo: los [Actions de GitHub](https://docs.github.com/en/actions), los [Pipelines, Jobs, and Runners de GitLab](https://docs.gitlab.com/topics/build_your_application/) o los [Pipelines de BitBucket](https://support.atlassian.com/bitbucket-cloud/docs/get-started-with-bitbucket-pipelines/)
+
 
 ### Observabilidad y trazabilidad
 
-Es muy útil contar con alguna manera de saber qué está haciendo el software de producción en cada momento. De tal manera que se pueda tener una línea base de comportamiento, conocer cómo es un momento normal y corriente (sin problemas). Para, así, poder detectar rápidamente cuando las cosas comienzan a torcerse y no van como debieran.
+Es muy útil contar con alguna manera de saber qué está haciendo el software de producción en cada momento. Vigilándolo de tal manera que se pueda tener una idea de su línea base de comportamiento, conocer cómo son los momentos normales y corrientes (sin problemas). Para, así, poder detectar rápidamente cuando las cosas comienzan a torcerse y no van como debieran.
 
 - Es imprescindible implementar siempre el primer nivel en este proceso: el típico sistema tradicional de **logs**. El software debe ir dejando rastros de lo que hace, bien en un archivo de texto local o bien en un sistema específico para recogerlos (como, por ejemplo, el venerable [`Syslog`](https://en.wikipedia.org/wiki/Syslog) o alguna de sus encarnaciones modernas). 
 
-  Además es importante que dichos rastros sean modulables. Es decir, que podamos escoger entre recoger solo errores (`critical`, `error`) o recoger información completa (`warning`, `debug`, `info`) de lo que el software está haciendo (lo primero siempre activo por defecto y lo segundo para casos en que estamos analizando un comportamiento extraño y necesitamos más detalles de los recogidos rutinariamente).
+  Además es importante que dichos rastros sean modulables. Es decir, que podamos escoger entre recoger solo errores (`critical`, `error`, `warning`) o recoger información completa (`info`, `debug`) de lo que el software está haciendo (lo primero siempre activo por defecto y lo segundo para casos en que estamos analizando un comportamiento extraño y necesitamos más detalles de los recogidos rutinariamente).
 
 - Si la complejidad o criticidad del sofware lo requiere, tenemos que pasar al segundo nivel: contar con **telemetria** y una **plataforma de observabilidad**. Permitiendo una vigilancia continua del software en producción y del uso que se está haciendo de él en cada momento. (Por ejemplo [OpenTelemetry](https://opentelemetry.io/), [Prometheus](https://prometheus.io/), [DataDog](https://www.datadoghq.com/), etc.)
+
+### Containers y Devcontainers
+
+Los contenerdores proporcionan un entorno consistente donde ejecutar sofware (container) o donde desarrollar software (devcontainer).
+
+Permiten asegurar que todo el equipo trabaja con el mismo entorno/configuración. Evitándose así problemas de que "en mi equipo funciona... ¿porqué en ese otro no?".
+
+Por un lado facilitan instalaciones en equipos físicos. Por otro lado, en la actual infraestructura virtual/cloud, permiten desplegar entornos a demanda según se necesiten.
+
+Además:
+- Trabajando con pipelines automatizados, permiten a estos levantar sus propios entornos virtuales donde ejecutar sus scripts de verificación.
+- Trabajando con agentes IA, permiten a estos levantar sus propios entornos virtuales donde trabajar temporalmente.
+
+Por ejemplo:
+
+[Developing inside a Container](https://code.visualstudio.com/docs/devcontainers/containers)
+
+[Contenedores en AWS](https://aws.amazon.com/es/containers/)
+
+[Contenedores de Azure](https://azure.microsoft.com/es-es/products/category/containers/)
+
+[Contenedores en Google Cloud](https://cloud.google.com/containers)
+
 
 ## Resumen/recopilación de herramientas
 
 ### Imprescindibles
 
-- **Compilador** y biblioteca estandar del lenguaje que estemos utilizando.
+- **Compilador** (o Intérprete) y biblioteca estandar del lenguaje que estemos utilizando.
 
 - **Bibliotecas** y gestor de dependencias.
 
 - Depurador, (*debugger*).
+  
+  Antaño los debuggers eran imprescindibles. Pero, en los actuales entornos de programación, tests y logs tienden a sustituirlos. (Y recientemente, los agentes IA se encargan también de autocomprobar/resolver problemas en el código que van generando.)
 
 - Repositorio donde almacenar el código, con **control de versiones**.
 
 - Marco de ejecución de **tests unitarios**.
 
   Los test unitarios son la red de seguridad. Avisan de las partes que se hayan podido ver afectadas por los cambios que se van introduciendo en el código. Ayudan a evolucionar y refactorizar sin miedo.
+
+- Sistema para monitorizar lo que el programa hace en tiempo de ejecución: **logs**
 
 ### Muy útiles
 
@@ -152,11 +180,11 @@ Es muy útil contar con alguna manera de saber qué está haciendo el software d
 
 ### Muy recomendables
 
-- Analizador de rendimiento, (**profiler**).
+- Analizador de rendimiento, (*profiler*).
 
   Permiten descubrir las partes de la aplicación que consumen más recursos/tiempo.
 
-- Marco de ejecución de *tests extremo-a-extremo* (también conocidos como test de aceptación o test de integración).
+- Marco de ejecución de *tests extremo-a-extremo* (tests de integración, tests de aceptación,...).
 
   Permiten validar cada funcionalidad, validar que la aplicación realiza bien lo que se supone que debe realizar.
 
@@ -166,7 +194,7 @@ Es muy útil contar con alguna manera de saber qué está haciendo el software d
 
 - Sistema para monitorizar el entorno de producción.
 
-  **Logs**, alertas, reportes y demás herramientas de *telemetría/diagnóstico*. Para poder realizar seguimiento del comportamiento cada aplicación en cada momento.
+  Logs, alertas, reportes y demás herramientas de *telemetría/diagnóstico*. Para poder realizar seguimiento del comportamiento cada aplicación en cada momento.
   
   Tenerlo previsto desde el principio, desde que se empieza a desarrollar una aplicación. Tratandolo como un aspecto más del código a escribir. Es parte de la forma de trabajar *DevOps*.
 
