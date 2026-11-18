@@ -10,22 +10,22 @@ Antes de nada, citar tres aspectos vitales:
   > Los usuarios van descubriendo lo que necesitan a medida que van usando el sofware. De ahí que sea importante *ir integrando cada funcionalidad, totalmente operativa*; para que los usuarios puedan trabajar con ella lo antes posible. Un **bucle de realimentación** de más de un mes no es operativo.
 
 3. Los dos principales enemigos del sofware son:
-  - La **deuda técnica**. Eso que se va dejando para "cuando tengamos un rato para ponerlo bien". Tiene una tendencia muy grande a acumularse en exceso si no se dedica tiempo a refactorizar tras cada trozo (funcionalidad) que se integre en el software y dedicarle atención en cada iteración de planificación.
-  - Las **dependencias**. Eso que va atando unas partes del software a otras. Hasta que, si no se cuidan, acaban creando un enorme ovillo emarañado (Big Ball of Mud).
+    - La **deuda técnica**. Eso que se va dejando para "cuando tengamos un rato para ponerlo bien". Tiene una tendencia muy grande a acumularse en exceso si no se dedica tiempo a refactorizar tras cada trozo (cada funcionalidad) que se integre en el software. Hay que dedicarle atención en cada iteración de planificación.
+    - Las **dependencias**. Eso que va "atando" unas partes del software a otras. Hasta que, si no se cuidan, acaban creando un enorme ovillo emarañado (Big Ball of Mud). Hay que prestarles atención siempre que estemos planificando arquitecturas o escribiendo código.
 
 Y citar tres claves en el desarrollo de software:
 
-1. **trabajar de forma iterativa, implementando una pequeña funcionalidad cada vez**. Entendiendose por pequeña: algo que se pueda terminar en un dia o dos de trabajo. Y entendiendose por terminar: dejar la funcionalidad plenamente utilizable, con sus respectivos tests automáticos y adecuadamente integrada dentro del sistema.
+1. **Trabajar de forma iterativa, implementando una pequeña funcionalidad cada vez**. Entendiendose por pequeña: algo que se pueda terminar en un dia o dos de trabajo. Y entendiendose por terminar: dejar la funcionalidad plenamente utilizable, con sus respectivos tests automáticos y adecuadamente integrada dentro del sistema.
 
-  De esta manera, en cualquier momento, se puede poner el sistema a disposición de las personas interesadas para que lo prueben. Además, en caso de agotarse el tiempo o el presupuesto, siempre se tiene algo utilizable; no estará completo, pero lo que está funciona.
+    De esta manera, en cualquier momento, se puede poner el sistema a disposición de las personas interesadas para que lo prueben. Además, en caso de agotarse el tiempo o el presupuesto, siempre se tiene algo utilizable; no estará completo, pero lo que está funciona.
 
-2. **colaboración continua entre todas las personas involucradas**. Tanto la parte tecnológica (quienes desarrollan el software), como la parte del dominio (quienes saben acerca de las tareas que se quieren resolver), ambas partes han de trabajar codo con codo en todo momento.
+2. **Colaboración continua entre todas las personas involucradas**. Tanto la parte tecnológica (quienes desarrollan el software), como la parte del dominio (quienes saben acerca de las tareas que se quieren resolver), ambas partes han de trabajar codo con codo en todo momento.
 
-  Es importante **llegar a un lenguaje común, a un entendimiento compartido** de lo que se está haciendo y para qué se está haciendo. Un software es una herramienta que alguien utizará para desempeñar su trabajo. Es importante que herramientas y formas de trabajar estén en sintonia.
+    Es importante **llegar a un lenguaje común, a un entendimiento compartido** de lo que se está haciendo y para qué se está haciendo. Un software es una herramienta que alguien utizará para desempeñar su trabajo. Es importante que herramientas y formas de trabajar estén en sintonia.
 
 3. En los desarrollos de software rara vez se conocen o se pueden prever de antemano todos los avatares del viaje. Normalmente, o es la primera vez que intentamos hacer un software de ese tipo, o es la primera vez que trabajamos con alguna de las tecnologias involucradas, o ambas cosas a la vez.
-
-  Así es que toca ir evolucionando y adaptandose según se va trabajando. De ahí lo de **trabajar de forma iterativa, abordando una pequeña parte cada vez, y revisando frecuentemente lo realizado** (esta revisión, mejor si cuenta también con el feedback de los usuarios que usan el software).
+ 
+    Así es que toca ir evolucionando y adaptandose según se va trabajando. De ahí lo de **trabajar de forma iterativa, abordando una pequeña parte cada vez, y revisando frecuentemente lo realizado** (esta revisión, mejor si cuenta también con el feedback de los usuarios que usan el software).
 
 
 ## Algunas sugerencias prácticas de cómo organizarse
@@ -59,22 +59,22 @@ Aunque se alejan de las formas tradicionales de gestionar procesos o proyectos. 
 
 Hasta 2026 quizá podiamos haber obviado algunos de estos aspectos. Pero a partir de este año, con la incorporación de agentes IA a la programación, todos estos aspectos son imprescindibles. 
 
-Estas herramientas facilitaban mucho la vida a los equipos de personas humanas desarrollando sofware. Y también se la facilitan a los agentes IA que estamos incorporando al equipo. Permitiendonos a todo el equipo tener un mejor control sobre lo que se está desarrollando y de que lo desarrollado está bien desarrollado.
+Estas herramientas facilitaban mucho la vida a los equipos de personas humanas desarrollando sofware. Y también se la facilitan a los agentes IA que estamos incorporando al equipo. Permitiendo a todo el equipo tener un mejor control sobre lo que se está desarrollando y sobre la calidad de lo que se está desarrollando.
 
 ### Gestor de versiones
 
-Hoy en día, gestor de versiones es sinónimo de [Git](https://git-scm.com/); normalmente combinado con alguno de los repositorios en la nube que lo utilizan: [GitHub](https://github.com/), [GitLab](https://gitlab.com/), [BitBucket](https://bitbucket.org/), etc.
+Hoy en día, gestor de versiones es sinónimo de [Git](https://git-scm.com/). Normalmente combinado con alguno de los repositorios en la nube que lo utilizan: [GitHub](https://github.com/), [GitLab](https://gitlab.com/), [BitBucket](https://bitbucket.org/), etc.
 
-Esta herramienta permite ir guardando cada trozo que vamos añadiendo al software, junto con los metadatos pertinentes: fecha, autoria, explicación,... en cada guardado (en cada `commit`). De tal forma que se puede seguir su evolución. Y, más importante, volver a cualquier punto de la misma en cualquier momento.
+Un gestor de versiones permite ir guardando cada trozo que vamos añadiendo al software, junto con los metadatos pertinentes: fecha, autoria, explicación,... de cada guardado (cada `commit`). De tal forma que se puede seguir su evolución. Y, más importante, se puede volver a cualquier punto en cualquier momento.
 
-A lo largo del tiempo se ha visto que el esquema de trabajo más rentable es el `trunk based`: una rama `main` donde se va integrando todo lo que se va desarrollando:
+A lo largo del tiempo se ha visto que el esquema de trabajo más rentable es el `trunk based`: una rama `main` donde se va integrando todo lo que se va desarrollando. Siguiendo, más o menos, un proceso como este:
 - Cada persona que inicia un trabajo (recordar que se trabaja en pequeños pasos de uno o dos días). Hace una copia de la rama `main` en una rama temporal propia de trabajo.
-- Desarrolla en esa rama temporal de trabajo. Haciendo sobre ella los guardados (`commit`) que estime oportunos. 
+- Va trabajando en esa rama temporal de trabajo. Haciendo sobre ella los guardados (`commit`) que estime oportunos. 
 - Cuando termina, reconcilia su rama temporal de trabajo con la rama principal `main` e integra el trabajo "commiteandolo" en la rama principal.
 
 Respecto a la reconciliación/integración de cada trabajo desde rama temporal a la principal, hay dos grandes corrientes:
-- Quien prefiere hacer [`merge`](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging).
-- Quien prefiere hacer [`rebase`](https://git-scm.com/book/en/v2/Git-Branching-Rebasing).
+- Hay quien prefiere hacer [merge](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging).
+- Hay quien prefiere hacer [rebase](https://git-scm.com/book/en/v2/Git-Branching-Rebasing).
 
 > nota: Los repositorios en la nube suelen tener sus propias herramientas para integrar ramas temporales en la principal. Por ejemplo: los [Pull Request de GitHub](https://docs.github.com/en/pull-requests/reference/pull-requests), los [Merge Request de GitLab](https://docs.gitlab.com/user/project/merge_requests/) o los [Pull Request de BitBucket](https://support.atlassian.com/bitbucket-cloud/docs/use-pull-requests-for-code-review/)
 
@@ -93,9 +93,9 @@ Además, los tests son un pilar importante para que:
 
 Merece destacar que hay dos tipos de tests:
 
-- **Test unitarios**: Comprueban pequeños aspectos de la funcionalidad. Se ejecutan con rapidez (unos pocos minutos si se ejecutan todos los tests del software; unos pocos segundos si se ejecutan solo el juego de tests unitarios de un módulo o parte concreta del software).
+- **Tests unitarios**: Comprueban pequeños aspectos de la funcionalidad. Se ejecutan con rapidez (unos pocos minutos si se ejecutan todos los tests del software; unos pocos segundos si se ejecutan solo el juego de tests unitarios de un módulo o parte concreta del software).
 
-- Test de integración, **test end-to-end**: Comprueban funcionalidades completas sobre el software funcionando en su entorno real. Suelen ser costosos de implementar y de ejecutar. Suelen necesitar herramientas especializadas para implementarlos y ejecutarlos. Algunas de esas herramientas sirven también para recoger requisitos funcionales y sus respectivos criterios de validación (una especie de requisitos/criterios validables por máquina: test de aceptación).
+- *Tests de integración*, **tests end-to-end**: Comprueban funcionalidades completas sobre el software funcionando en su entorno real. Suelen ser costosos de implementar y de ejecutar. Suelen necesitar herramientas especializadas para implementarlos y ejecutarlos. Algunas de esas herramientas sirven también para recoger requisitos funcionales y sus respectivos criterios de validación (una especie de requisitos/criterios validables por máquina: *tests de aceptación*).
 
 ### Pipeline CI o CI/CD
 
@@ -116,7 +116,7 @@ Es muy útil contar con alguna manera de saber qué está haciendo el software d
 
 - Es imprescindible implementar siempre el primer nivel en este proceso: el típico sistema tradicional de **logs**. El software debe ir dejando rastros de lo que hace, bien en un archivo de texto local o bien en un sistema específico para recogerlos (como, por ejemplo, el venerable [`Syslog`](https://en.wikipedia.org/wiki/Syslog) o alguna de sus encarnaciones modernas). 
 
-  Además es importante que dichos rastros sean modulables. Es decir, que podamos escoger entre recoger solo errores (`critical`, `error`, `warning`) o recoger información completa (`info`, `debug`) de lo que el software está haciendo (lo primero siempre activo por defecto y lo segundo para casos en que estamos analizando un comportamiento extraño y necesitamos más detalles de los recogidos rutinariamente).
+  Además es importante que dichos rastros sean modulables. Es decir, que podamos escoger entre recoger solo errores (`critical`, `error`, `warning`) o recoger información completa (`info`, `debug`) de lo que el software está haciendo. Lo primero siempre activo por defecto y lo segundo activable solo cuando se está analizando un comportamiento extraño y se necesita más detalles de los recogidos rutinariamente).
 
 - Si la complejidad o criticidad del sofware lo requiere, tenemos que pasar al segundo nivel: contar con **telemetria** y una **plataforma de observabilidad**. Permitiendo una vigilancia continua del software en producción y del uso que se está haciendo de él en cada momento. (Por ejemplo [OpenTelemetry](https://opentelemetry.io/), [Prometheus](https://prometheus.io/), [DataDog](https://www.datadoghq.com/), etc.)
 
@@ -132,15 +132,7 @@ Además:
 - Trabajando con pipelines automatizados, permiten a estos levantar sus propios entornos virtuales donde ejecutar sus scripts de verificación.
 - Trabajando con agentes IA, permiten a estos levantar sus propios entornos virtuales donde trabajar temporalmente.
 
-Por ejemplo:
-
-[Developing inside a Container](https://code.visualstudio.com/docs/devcontainers/containers)
-
-[Contenedores en AWS](https://aws.amazon.com/es/containers/)
-
-[Contenedores de Azure](https://azure.microsoft.com/es-es/products/category/containers/)
-
-[Contenedores en Google Cloud](https://cloud.google.com/containers)
+Por ejemplo: [Developing inside a Container](https://code.visualstudio.com/docs/devcontainers/containers) , [Contenedores en AWS](https://aws.amazon.com/es/containers/) , [Contenedores de Azure](https://azure.microsoft.com/es-es/products/category/containers/) , [Contenedores en Google Cloud](https://cloud.google.com/containers) , ...
 
 
 ## Resumen/recopilación de herramientas
@@ -153,7 +145,7 @@ Por ejemplo:
 
 - Depurador, (*debugger*).
   
-  Antaño los debuggers eran imprescindibles. Pero, en los actuales entornos de programación, tests y logs tienden a sustituirlos. (Y recientemente, los agentes IA se encargan también de autocomprobar/resolver problemas en el código que van generando.)
+  nota: Antaño los debuggers eran imprescindibles. Pero, en los actuales entornos de programación, tests y logs tienden a sustituirlos. (Y recientemente, los agentes IA se encargan también de autocomprobar/resolver problemas en el código que van generando.)
 
 - Repositorio donde almacenar el código, con **control de versiones**.
 
@@ -175,7 +167,7 @@ Por ejemplo:
 
 - Sistema automatizado para gestionar el proceso de compilación y obtención de la aplicación plenamente utilizable.
 
-  Lo ideal es poder realizarlo con solo lanzar un comando. Es decir, evitar tareas manuales y tenerlo prácticamente todo automatizado. Es parte de la forma de trabajar CI (*Continous Integration*).
+  Lo ideal es poder realizarlo con solo lanzar un comando. Es decir, evitar tareas manuales y tenerlo prácticamente todo automatizado. Es parte de la forma de trabajar **CI** (*Continous Integration*).
 
 
 ### Muy recomendables
@@ -190,11 +182,11 @@ Por ejemplo:
 
 - Sistema para gestionar los procesos de despliegue de la aplicación a produción (y de revertir el despliegue).
 
-  Cuanto más automatizados esté estos procesos, mejor. Es parte de la forma de trabajar CD (*Continous Deployment*).
+  Cuanto más automatizados esté estos procesos, mejor. Es parte de la forma de trabajar *CD (Continous Deployment)*.
 
 - Sistema para monitorizar el entorno de producción.
 
-  Logs, alertas, reportes y demás herramientas de *telemetría/diagnóstico*. Para poder realizar seguimiento del comportamiento cada aplicación en cada momento.
+  Logs, alertas, reportes y demás herramientas de *telemetría/diagnóstico*. Para poder realizar seguimiento del comportamiento cada aplicación y de cada sistema, en cada momento.
   
-  Tenerlo previsto desde el principio, desde que se empieza a desarrollar una aplicación. Tratandolo como un aspecto más del código a escribir. Es parte de la forma de trabajar *DevOps*.
+  Estos sistemas de monitorización han de estar previstos desde el principio, desde que se empieza a desarrollar una aplicación. Y se han de tratar como un aspecto más del código a escribir. Es parte de la forma de trabajar *DevOps*.
 
